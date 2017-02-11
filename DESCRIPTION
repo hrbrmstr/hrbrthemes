@@ -1,0 +1,23 @@
+Package: hrbrthemes
+Type: Package
+Title: Additional Themes and Theme Components for 'ggplot2'
+Version: 0.1.0
+Date: 2017-02-11
+Author: Bob Rudis (bob@rud.is)
+Maintainer: Bob Rudis <bob@rud.is>
+Description: A compilation of extra themes and theme components for 'ggplot2'
+    with an emphasis on typography.
+URL: http://github.com/hrbrmstr/hrbrthemes
+BugReports: https://github.com/hrbrmstr/hrbrthemes/issues
+License: AGPL
+Suggests:
+    testthat,
+    dplyr
+Depends:
+    R (>= 3.2.0)
+Imports:
+    ggplot2 (>= 2.1.0),
+    grid,
+    scales,
+    extrafont
+RoxygenNote: 6.0.0
