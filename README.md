@@ -17,12 +17,6 @@ The following functions are implemented/objects are exported:
 -   `font_rc`: a short global alias for "`Roboto Condensed`"
 -   `font_rc_light`: a short global alias for "`Roboto Condensed Light`"
 
-### TODO
-
--   Creation of supplemental extra font packages with instructions for installation
--   Additional base themes to match ^^
--   Whatever ends up in a feature request in an issue that makes sense ;-)
-
 ### Installation
 
 ``` r
@@ -152,7 +146,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Sat Feb 11 17:07:33 2017"
+    ## [1] "Sat Feb 11 17:09:36 2017"
 
 ``` r
 test_dir("tests/")
