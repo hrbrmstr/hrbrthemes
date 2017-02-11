@@ -12,6 +12,7 @@ The following functions are implemented/objects are exported:
 -   `update_geom_font_defaults`: Update matching font defaults for text geoms (the default is — unsurprisingly — Arial Narrow)
 -   `scale_x_comma` / `scale_y_comma` : Comma format for axis text and `expand=c(0,0)` (you need to set limits)
 -   `scale_x_percent` / `scale_y_percent` : Percent format for axis text and `expand=c(0,0)` (you need to set limits)
+-   `scale_color_ipsum` / `scale_fill_ipsum` / `ipsum_pal` : A muted discrete color palette with 9 colors
 -   `font_an`: a short global alias for "`Arial Narrow`"
 -   `font_rc`: a short global alias for "`Roboto Condensed`"
 -   `font_rc_light`: a short global alias for "`Roboto Condensed Light`"
@@ -20,7 +21,6 @@ The following functions are implemented/objects are exported:
 
 -   Creation of supplemental extra font packages with instructions for installation
 -   Additional base themes to match ^^
--   At least one new custom color & fill scale
 -   Whatever ends up in a feature request in an issue that makes sense ;-)
 
 ### Installation
@@ -37,6 +37,7 @@ options(width=120)
 
 ``` r
 library(hrbrthemes)
+library(gcookbook)
 library(tidyverse)
 
 # current verison
@@ -73,7 +74,22 @@ ggplot(mtcars, aes(mpg, wt)) +
 
 <img src="README_files/figure-markdown_github/unnamed-chunk-5-1.png" width="672" />
 
-### Scales
+### Scales (Color/Fill)
+
+``` r
+ggplot(mtcars, aes(mpg, wt)) +
+  geom_point(aes(color=factor(carb))) +
+  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+       title="Seminal ggplot2 scatterplot example",
+       subtitle="A plot that is only useful for demonstration purposes",
+       caption="Brought to you by the letter 'g'") + 
+  scale_color_ipsum() +
+  theme_ipsum_rc()
+```
+
+<img src="README_files/figure-markdown_github/unnamed-chunk-6-1.png" width="672" />
+
+### Scales (Axis)
 
 ``` r
 count(mpg, class) %>% 
@@ -88,7 +104,23 @@ count(mpg, class) %>%
   theme_ipsum(grid="Y")
 ```
 
-<img src="README_files/figure-markdown_github/unnamed-chunk-6-1.png" width="672" />
+<img src="README_files/figure-markdown_github/unnamed-chunk-7-1.png" width="672" />
+
+``` r
+ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) + 
+  geom_area() +
+  scale_fill_ipsum() +
+  scale_x_continuous(expand=c(0,0)) +
+  scale_y_comma() +
+  labs(title="Age distribution of population in the U.S., 1900-2002",
+       subtitle="Example data from the R Graphics Cookbook",
+       caption="Source: R Graphics Cookbook") +
+  theme_ipsum_rc(grid="XY") +
+  theme(axis.text.x=element_text(hjust=c(0, 0.5, 0.5, 0.5, 1))) +
+  theme(legend.position="bottom")
+```
+
+<img src="README_files/figure-markdown_github/unnamed-chunk-8-1.png" width="672" />
 
 ``` r
 update_geom_font_defaults(font_rc_light)
@@ -109,7 +141,7 @@ count(mpg, class) %>%
   theme_ipsum_rc(grid="X")
 ```
 
-<img src="README_files/figure-markdown_github/unnamed-chunk-7-1.png" width="672" />
+<img src="README_files/figure-markdown_github/unnamed-chunk-9-1.png" width="672" />
 
 ### Test Results
 
@@ -120,7 +152,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Sat Feb 11 16:16:12 2017"
+    ## [1] "Sat Feb 11 17:07:33 2017"
 
 ``` r
 test_dir("tests/")
