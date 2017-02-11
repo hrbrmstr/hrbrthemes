@@ -10,10 +10,13 @@ The core theme: `theme_ipsum` ("ipsum" is Latin for "precise") uses Arial Narrow
 The following functions are implemented/objects are exported:
 
 - `theme_ipsum` : Arial Narrow-based theme
+- `theme_ipsum_rc` : Roboto Condensed-based theme
 - `update_geom_font_defaults`:	Update matching font defaults for text geoms (the default is — unsurprisingly — Arial Narrow)
 - `scale_x_comma` / `scale_y_comma` : Comma format for axis text and `expand=c(0,0)` (you need to set limits)
 - `scale_x_percent` / `scale_y_percent` : Percent format for axis text and `expand=c(0,0)` (you need to set limits)
 - `font_an`: a short global alias for "`Arial Narrow`"
+- `font_rc`: a short global alias for "`Roboto Condensed`"
+- `font_rc_light`: a short global alias for "`Roboto Condensed Light`"
 
 ### TODO
 
@@ -54,6 +57,18 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum()
 ```
 
+### Roboto Condensed
+
+```{r fig.retina=2}
+ggplot(mtcars, aes(mpg, wt)) +
+  geom_point() +
+  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+       title="Seminal ggplot2 scatterplot example",
+       subtitle="A plot that is only useful for demonstration purposes",
+       caption="Brought to you by the letter 'g'") + 
+  theme_ipsum_rc()
+```
+
 ### Scales
 
 ```{r fig.retina=2}
@@ -70,19 +85,22 @@ count(mpg, class) %>%
 ```
 
 ```{r fig.retina=2}
+update_geom_font_defaults(font_rc_light)
+
 count(mpg, class) %>% 
   mutate(n=n*2000) %>% 
   arrange(n) %>% 
   mutate(class=factor(class, levels=class)) %>% 
   ggplot(aes(class, n)) +
   geom_col() +
-  scale_y_comma() +
+  geom_text(aes(label=scales::comma(n)), hjust=0, nudge_y=2000) +
+  scale_y_comma(limits=c(0,150000)) +
   coord_flip() +
   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 column chart example with commas",
-       subtitle="A plot that is only useful for demonstration purposes",
+       subtitle="A plot that is only useful for demonstration purposes, esp since you'd never\nreally want direct labels and axis labels",
        caption="Brought to you by the letter 'g'") + 
-  theme_ipsum(grid="X")
+  theme_ipsum_rc(grid="X")
 ```
 
 ### Test Results
