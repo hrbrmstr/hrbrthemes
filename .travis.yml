@@ -1,0 +1,24 @@
+language: r
+warnings_are_errors: true
+sudo: required
+
+r:
+ - oldrel
+ - release
+ - devel
+
+apt_packages:
+  - libv8-dev
+  - xclip
+
+env:
+ global:
+   - CRAN: http://cran.rstudio.com
+
+notifications:
+  email:
+    - bob@rud.is
+  irc:
+    channels:
+      - "104.236.112.222#builds"
+    nick: travisci
