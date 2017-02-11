@@ -8,10 +8,13 @@ The core theme: `theme_ipsum` ("ipsum" is Latin for "precise") uses Arial Narrow
 The following functions are implemented/objects are exported:
 
 -   `theme_ipsum` : Arial Narrow-based theme
+-   `theme_ipsum_rc` : Roboto Condensed-based theme
 -   `update_geom_font_defaults`: Update matching font defaults for text geoms (the default is — unsurprisingly — Arial Narrow)
 -   `scale_x_comma` / `scale_y_comma` : Comma format for axis text and `expand=c(0,0)` (you need to set limits)
 -   `scale_x_percent` / `scale_y_percent` : Percent format for axis text and `expand=c(0,0)` (you need to set limits)
 -   `font_an`: a short global alias for "`Arial Narrow`"
+-   `font_rc`: a short global alias for "`Roboto Condensed`"
+-   `font_rc_light`: a short global alias for "`Roboto Condensed Light`"
 
 ### TODO
 
@@ -56,6 +59,20 @@ ggplot(mtcars, aes(mpg, wt)) +
 
 <img src="README_files/figure-markdown_github/unnamed-chunk-4-1.png" width="672" />
 
+### Roboto Condensed
+
+``` r
+ggplot(mtcars, aes(mpg, wt)) +
+  geom_point() +
+  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+       title="Seminal ggplot2 scatterplot example",
+       subtitle="A plot that is only useful for demonstration purposes",
+       caption="Brought to you by the letter 'g'") + 
+  theme_ipsum_rc()
+```
+
+<img src="README_files/figure-markdown_github/unnamed-chunk-5-1.png" width="672" />
+
 ### Scales
 
 ``` r
@@ -71,25 +88,28 @@ count(mpg, class) %>%
   theme_ipsum(grid="Y")
 ```
 
-<img src="README_files/figure-markdown_github/unnamed-chunk-5-1.png" width="672" />
+<img src="README_files/figure-markdown_github/unnamed-chunk-6-1.png" width="672" />
 
 ``` r
+update_geom_font_defaults(font_rc_light)
+
 count(mpg, class) %>% 
   mutate(n=n*2000) %>% 
   arrange(n) %>% 
   mutate(class=factor(class, levels=class)) %>% 
   ggplot(aes(class, n)) +
   geom_col() +
-  scale_y_comma() +
+  geom_text(aes(label=scales::comma(n)), hjust=0, nudge_y=2000) +
+  scale_y_comma(limits=c(0,150000)) +
   coord_flip() +
   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 column chart example with commas",
-       subtitle="A plot that is only useful for demonstration purposes",
+       subtitle="A plot that is only useful for demonstration purposes, esp since you'd never\nreally want direct labels and axis labels",
        caption="Brought to you by the letter 'g'") + 
-  theme_ipsum(grid="X")
+  theme_ipsum_rc(grid="X")
 ```
 
-<img src="README_files/figure-markdown_github/unnamed-chunk-6-1.png" width="672" />
+<img src="README_files/figure-markdown_github/unnamed-chunk-7-1.png" width="672" />
 
 ### Test Results
 
@@ -100,7 +120,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Sat Feb 11 12:01:25 2017"
+    ## [1] "Sat Feb 11 16:16:12 2017"
 
 ``` r
 test_dir("tests/")

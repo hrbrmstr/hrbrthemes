@@ -1,22 +1,12 @@
 #' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typoghraphy
 #'
+#' You should [import_roboto_condensed]() first and also install the fonts on your
+#' system before trying to use this theme.
+#'
 #' @md
-#' @section Why Arial Narrow?:
-#' First and foremost, Arial Narrow is generally installed by default or readily
-#' available on any modern system, so it's "free"-ish; plus, it is a condensed font
-#' with solid default kerning pairs and geometric numbers.
-#'
-#' @section Building upon `theme_ipsum`:
-#' The function is setup in such a way that you can customize your own one by just
-#' wrapping the call and changing the parameters. See source for examples.
-#'
-#' @section Gotchas:
-#' There are distinctions between font names and various devices. Names that work
-#' for display graphics devices and bitmap ones such as `png` may not work well
-#' for PostScript or PDF ones. You may need two versions of a font-based
-#' theme function for them to work in a particular situation. This situation
-#' usually only arises when using a newer font with many weights but somewhat
-#' irregular internal font name patterns.
+#' @section Why Roboto Condensed?:
+#' It's free, has tolerable kerning pairs and multiple weights. It's also different
+#' than Arial Narrow and the fonts most folks use in ggplot2 charts.
 #'
 #' @md
 #' @param base_family,base_size base font family and size
@@ -43,11 +33,11 @@
 #'        title="Seminal ggplot2 scatterplot example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum()
+#'   theme_ipsum_rc()
 #'
 #' # seminal bar chart
 #'
-#' update_geom_font_defaults()
+#' update_geom_font_defaults(family=font_rc_light)
 #'
 #' count(mpg, class) %>%
 #'   ggplot(aes(class, n)) +
@@ -57,22 +47,22 @@
 #'        title="Seminal ggplot2 bar chart example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum(grid="Y") +
+#'   theme_ipsum_rc(grid="Y") +
 #'   theme(axis.text.y=element_blank())
 #' }
-theme_ipsum <- function(base_family="Arial Narrow", base_size = 11,
-                        plot_title_family=base_family, plot_title_size = 18,
-                        plot_title_face="bold", plot_title_margin = 10,
-                        subtitle_family=base_family, subtitle_size = 12,
-                        subtitle_face = "plain", subtitle_margin = 15,
-                        strip_text_family = base_family, strip_text_size = 12,
-                        strip_text_face = "plain",
-                        caption_family = base_family, caption_size = 9,
-                        caption_face = "italic", caption_margin = 10,
-                        axis_title_family = subtitle_family, axis_title_size = 9,
-                        axis_title_face = "plain", axis_title_just = "rt",
-                        plot_margin = margin(30, 30, 30, 30),
-                        grid = TRUE, axis = FALSE, ticks = FALSE) {
+theme_ipsum_rc <- function(base_family="Roboto Condensed", base_size = 11,
+                           plot_title_family=base_family, plot_title_size = 18,
+                           plot_title_face="bold", plot_title_margin = 10,
+                           subtitle_family="Roboto Condensed Light", subtitle_size = 12,
+                           subtitle_face = "plain", subtitle_margin = 15,
+                           strip_text_family = base_family, strip_text_size = 12,
+                           strip_text_face = "plain",
+                           caption_family = "Roboto Condensed Light", caption_size = 9,
+                           caption_face = "plain", caption_margin = 10,
+                           axis_title_family = base_family, axis_title_size = 9,
+                           axis_title_face = "plain", axis_title_just = "rt",
+                           plot_margin = margin(30, 30, 30, 30),
+                           grid = TRUE, axis = FALSE, ticks = FALSE) {
 
   ret <- ggplot2::theme_minimal(base_family=base_family, base_size=base_size)
 
@@ -158,21 +148,38 @@ theme_ipsum <- function(base_family="Arial Narrow", base_size = 11,
 
 }
 
-#' Update matching font defaults for text geoms
+#' Import Roboto Condensed font for use in charts
 #'
-#' Updates [ggplot2::geom_label] and [ggplot2::geom_text] font defaults
+#' Roboto Condensed is a trademark of Google.
 #'
-#' @param family,face,size font family name, face and size
+#' @note This will take care of ensuring PDF/PostScript usage. The location of the
+#'   font directory is displayed after the base import is complete. It is highly
+#'   recommended that you install them on your system the same way you would any
+#'   other font you wish to use in other programs.
 #' @export
-update_geom_font_defaults <- function(family="Arial Narrow", face="plain", size=3.5) {
-  update_geom_defaults("text", list(family=family, face=face, size=size))
-  update_geom_defaults("label", list(family=family, face=face, size=size))
+import_roboto_condensed <- function() {
+
+  rc_font_dir <- system.file("fonts", "roboto-condensed", package="hrbrthemes")
+
+  suppressWarnings(suppressMessages(extrafont::font_import(rc_font_dir, prompt=FALSE)))
+
+  message(sprintf("You will likely need to install these fonts on your system as well.
+
+You can find them in [%s]", rc_font_dir))
+
 }
 
-#' @rdname ArialNarrow
+
+#' @rdname RobotoCondensed
 #' @md
-#' @title Arial Narrow font name R variable aliases
-#' @description `font_an` == "`Arial Narrow`"
+#' @title Roboto Condensed font name R variable aliases
+#' @description `font_rc` == "`Roboto Condensed`"
 #' @format length 1 character vector
 #' @export
-font_an <- "Arial Narrow"
+font_rc <- "Roboto Condensed"
+
+#' @rdname RobotoCondensed
+#' @md
+#' @description `font_fc_light` == "`Roboto Condensed Light`"
+#' @export
+font_rc_light <- "Roboto Condensed Light"
