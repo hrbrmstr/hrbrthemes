@@ -23,10 +23,6 @@ The following functions are implemented/objects are exported:
 devtools::install_github("hrbrmstr/hrbrthemes")
 ```
 
-``` r
-options(width=120)
-```
-
 ### Usage
 
 ``` r
@@ -146,7 +142,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Sat Feb 11 17:09:36 2017"
+    ## [1] "Sat Feb 11 17:10:08 2017"
 
 ``` r
 test_dir("tests/")
