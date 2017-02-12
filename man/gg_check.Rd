@@ -25,6 +25,8 @@ label that they are in. No messages will be printed if there are no misspelled
 words.
 }
 \examples{
+library(ggplot2)
+
 df <- data.frame(x=c(20, 25, 30), y=c(4, 4, 4), txt=c("One", "Two", "Three"))
 
 # piping
