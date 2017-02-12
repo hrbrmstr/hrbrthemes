@@ -9,6 +9,7 @@ The following functions are implemented/objects are exported:
 
 -   `theme_ipsum` : Arial Narrow-based theme
 -   `theme_ipsum_rc` : Roboto Condensed-based theme
+-   `gg_check`: Spell check ggplot2 plot labels
 -   `update_geom_font_defaults`: Update matching font defaults for text geoms (the default is — unsurprisingly — Arial Narrow)
 -   `scale_x_comma` / `scale_y_comma` : Comma format for axis text and `expand=c(0,0)` (you need to set limits)
 -   `scale_x_percent` / `scale_y_percent` : Percent format for axis text and `expand=c(0,0)` (you need to set limits)
@@ -133,6 +134,23 @@ count(mpg, class) %>%
 
 <img src="README_files/figure-markdown_github/unnamed-chunk-9-1.png" width="672" />
 
+### Spellcheck ggplot2 labels
+
+``` r
+df <- data.frame(x=c(20, 25, 30), y=c(4, 4, 4), txt=c("One", "Two", "Three"))
+
+ggplot(mtcars, aes(mpg, wt)) +
+  geom_point() +
+  geom_text(data=df, aes(x=x, y=y, label=txt)) +
+  labs(x="This is some txt", y="This is more text",
+       title="Thisy is a titlle",
+       subtitle="This is a subtitley",
+       caption="This is a captien") %>%
+  gg_check()
+```
+
+<img src="README_files/figure-markdown_github/unnamed-chunk-10-1.png" width="672" />
+
 ### Test Results
 
 ``` r
@@ -142,7 +160,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Sat Feb 11 17:10:08 2017"
+    ## [1] "Sat Feb 11 20:33:00 2017"
 
 ``` r
 test_dir("tests/")
