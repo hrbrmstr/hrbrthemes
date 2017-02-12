@@ -1,5 +1,20 @@
-# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+language: r
+warnings_are_errors: true
+sudo: required
 
-language: R
-sudo: false
-cache: packages
+r:
+ - oldrel
+ - release
+ - devel
+
+env:
+ global:
+   - CRAN: http://cran.rstudio.com
+
+notifications:
+  email:
+    - bob@rud.is
+  irc:
+    channels:
+      - "104.236.112.222#builds"
+    nick: travisci
