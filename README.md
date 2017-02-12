@@ -1,4 +1,6 @@
 
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes)
+
 `hrbrthemes` : Additional Themes and Theme Components for 'ggplot2'
 
 This is a very focused package that provides typography-centric themes and theme components for ggplot2. It's a an extract/riff of [`hrbrmisc`](http://github.com/hrbrmstr/hrbrmisc) created by request.
@@ -33,9 +35,8 @@ library(tidyverse)
 
 # current verison
 packageVersion("hrbrthemes")
+## [1] '0.1.0'
 ```
-
-    ## [1] '0.1.0'
 
 ### Base theme (Arial Narrow)
 
@@ -49,7 +50,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum()
 ```
 
-<img src="README_files/figure-markdown_github/unnamed-chunk-4-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-5-1.png" width="672" />
 
 ### Roboto Condensed
 
@@ -63,7 +64,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum_rc()
 ```
 
-<img src="README_files/figure-markdown_github/unnamed-chunk-5-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-6-1.png" width="672" />
 
 ### Scales (Color/Fill)
 
@@ -78,7 +79,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum_rc()
 ```
 
-<img src="README_files/figure-markdown_github/unnamed-chunk-6-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-7-1.png" width="672" />
 
 ### Scales (Axis)
 
@@ -95,7 +96,7 @@ count(mpg, class) %>%
   theme_ipsum(grid="Y")
 ```
 
-<img src="README_files/figure-markdown_github/unnamed-chunk-7-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-8-1.png" width="672" />
 
 ``` r
 ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) + 
@@ -111,7 +112,7 @@ ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
   theme(legend.position="bottom")
 ```
 
-<img src="README_files/figure-markdown_github/unnamed-chunk-8-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-9-1.png" width="672" />
 
 ``` r
 update_geom_font_defaults(font_rc_light)
@@ -132,7 +133,7 @@ count(mpg, class) %>%
   theme_ipsum_rc(grid="X")
 ```
 
-<img src="README_files/figure-markdown_github/unnamed-chunk-9-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-10-1.png" width="672" />
 
 ### Spellcheck ggplot2 labels
 
@@ -148,15 +149,12 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum_rc(grid="XY") -> gg
 
 gg_check(gg)
+## Possible misspelled words in [title]: (Thisy, titlle)
+## Possible misspelled words in [subtitle]: (subtitley)
+## Possible misspelled words in [caption]: (captien)
 ```
 
-    ## Possible misspelled words in [title]: (Thisy, titlle)
-
-    ## Possible misspelled words in [subtitle]: (subtitley)
-
-    ## Possible misspelled words in [caption]: (captien)
-
-<img src="README_files/figure-markdown_github/unnamed-chunk-10-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-11-1.png" width="672" />
 
 ### Test Results
 
@@ -165,18 +163,14 @@ library(hrbrthemes)
 library(testthat)
 
 date()
-```
+## [1] "Sun Feb 12 10:14:07 2017"
 
-    ## [1] "Sat Feb 11 20:58:58 2017"
-
-``` r
 test_dir("tests/")
+## testthat results ========================================================================================================
+## OK: 0 SKIPPED: 0 FAILED: 0
+## 
+## DONE ===================================================================================================================
 ```
-
-    ## testthat results ========================================================================================================
-    ## OK: 0 SKIPPED: 0 FAILED: 0
-    ## 
-    ## DONE ===================================================================================================================
 
 ### Code of Conduct
 
