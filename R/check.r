@@ -13,6 +13,8 @@
 #' @return the object that was passed in
 #' @export
 #' @examples
+#' library(ggplot2)
+#'
 #' df <- data.frame(x=c(20, 25, 30), y=c(4, 4, 4), txt=c("One", "Two", "Three"))
 #'
 #' # piping
