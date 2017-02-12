@@ -5,7 +5,6 @@ sudo: required
 r:
  - oldrel
  - release
- - devel
 
 env:
  global:
