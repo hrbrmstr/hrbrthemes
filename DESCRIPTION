@@ -22,5 +22,8 @@ Imports:
     ggplot2 (>= 2.1.0),
     grid,
     scales,
-    extrafont
+    extrafont,
+    hunspell,
+    stringi,
+    purrr
 RoxygenNote: 6.0.0

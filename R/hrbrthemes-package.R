@@ -15,8 +15,20 @@
 #' @name hrbrthemes
 #' @docType package
 #' @author Bob Rudis (bob@@rud.is)
-#' @import ggplot2
-#' @import grid
-#' @import scales
-#' @import extrafont
+#' @import ggplot2 grid scales extrafont hunspell stringi
+#' @importFrom purrr %>% map walk
+NULL
+
+#' hrbrthemes exported operators
+#'
+#' The following functions are imported and then re-exported
+#' from the hrbrthemes package to enable use of the magrittr
+#' pipe operator with no additional library calls
+#'
+#' @name hrbrthemes-exports
+NULL
+
+#' @name %>%
+#' @export
+#' @rdname hrbrthemes-exports
 NULL
