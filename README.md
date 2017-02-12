@@ -139,36 +139,13 @@ count(mpg, class) %>%
 ``` r
 df <- data.frame(x=c(20, 25, 30), y=c(4, 4, 4), txt=c("One", "Two", "Three"))
 
-# piped
-
 ggplot(mtcars, aes(mpg, wt)) +
   geom_point() +
-  geom_text(data=df, aes(x=x, y=y, label=txt)) +
   labs(x="This is some txt", y="This is more text",
        title="Thisy is a titlle",
        subtitle="This is a subtitley",
-       caption="This is a captien") %>%
-  gg_check()
-```
-
-    ## Possible misspelled words in [title]: (Thisy, titlle)
-
-    ## Possible misspelled words in [subtitle]: (subtitley)
-
-    ## Possible misspelled words in [caption]: (captien)
-
-<img src="README_files/figure-markdown_github/unnamed-chunk-10-1.png" width="672" />
-
-``` r
-# not-piped
-
-ggplot(mtcars, aes(mpg, wt)) +
-  geom_point() +
-  geom_text(data=df, aes(x=x, y=y, label=txt)) +
-  labs(x="This is some txt", y="This is more text",
-       title="Thisy is a titlle",
-       subtitle="This is a subtitley",
-       caption="This is a captien") -> gg
+       caption="This is a captien") +
+  theme_ipsum_rc(grid="XY") -> gg
 
 gg_check(gg)
 ```
@@ -179,7 +156,7 @@ gg_check(gg)
 
     ## Possible misspelled words in [caption]: (captien)
 
-<img src="README_files/figure-markdown_github/unnamed-chunk-10-2.png" width="672" />
+<img src="README_files/figure-markdown_github/unnamed-chunk-10-1.png" width="672" />
 
 ### Test Results
 
@@ -190,7 +167,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Sat Feb 11 20:45:48 2017"
+    ## [1] "Sat Feb 11 20:58:58 2017"
 
 ``` r
 test_dir("tests/")

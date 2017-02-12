@@ -18,8 +18,11 @@ gg_check(gg, dict = hunspell::dictionary("en_US"),
 the object that was passed in
 }
 \description{
-This function can be used in a piping context or standalone. Current
-functionality only looks for misspelled words in the labels of ggplot2 objects.
+Due to the way ggplot2 objects are created, this has to be used in a
+standalone context.
+}
+\details{
+Current functionality only looks for misspelled words in the labels of ggplot2 objects.
 When misspelled words are found, a message is printed with the words and the
 label that they are in. No messages will be printed if there are no misspelled
 words.
@@ -29,20 +32,9 @@ library(ggplot2)
 
 df <- data.frame(x=c(20, 25, 30), y=c(4, 4, 4), txt=c("One", "Two", "Three"))
 
-# piping
-ggplot(mtcars, aes(mpg, wt)) +
-  geom_point() +
-  geom_text(data=df, aes(x=x, y=y, label=txt)) +
-  labs(x="This is some txt", y="This is more text",
-       title="Thisy is a titlle",
-       subtitle="This is a subtitley",
-       caption="This is a captien") \%>\%
-  gg_check()
-
 # not piping
 ggplot(mtcars, aes(mpg, wt)) +
   geom_point() +
-  geom_text(data=df, aes(x=x, y=y, label=txt)) +
   labs(x="This is some txt", y="This is more text",
        title="Thisy is a titlle",
        subtitle="This is a subtitley",
