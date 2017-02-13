@@ -15,7 +15,9 @@ BugReports: https://github.com/hrbrmstr/hrbrthemes/issues
 License: AGPL
 Suggests:
     testthat,
-    dplyr
+    dplyr,
+    knitr,
+    rmarkdown
 Depends:
     R (>= 3.2.0)
 Imports:
@@ -27,3 +29,4 @@ Imports:
     stringi,
     purrr
 RoxygenNote: 6.0.0
+VignetteBuilder: knitr

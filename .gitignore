@@ -6,3 +6,4 @@ src/*.o
 src/*.so
 src/*.dll
 notes.txt
+inst/doc
