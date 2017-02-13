@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme-ipsum.r
 \name{theme_ipsum}
 \alias{theme_ipsum}
-\title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typoghraphy}
+\title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typography}
 \usage{
 theme_ipsum(base_family = "Arial Narrow", base_size = 11,
   plot_title_family = base_family, plot_title_size = 18,
@@ -20,7 +20,7 @@ theme_ipsum(base_family = "Arial Narrow", base_size = 11,
 \arguments{
 \item{base_family, base_size}{base font family and size}
 
-\item{plot_title_family, plot_title_face, plot_title_size, plot_title_margin}{plot tilte family, face, size and margi}
+\item{plot_title_family, plot_title_face, plot_title_size, plot_title_margin}{plot title family, face, size and margi}
 
 \item{subtitle_family, subtitle_face, subtitle_size}{plot subtitle family, face and size}
 
@@ -32,7 +32,7 @@ theme_ipsum(base_family = "Arial Narrow", base_size = 11,
 
 \item{axis_title_family, axis_title_face, axis_title_size}{axis title font family, face and size}
 
-\item{axis_title_just}{axis title font justificationk one of \code{[blmcrt]}}
+\item{axis_title_just}{axis title font justification, one of \code{[blmcrt]}}
 
 \item{plot_margin}{plot margin (specify with \link[ggplot2:margin]{ggplot2::margin})}
 
@@ -43,7 +43,7 @@ theme_ipsum(base_family = "Arial Narrow", base_size = 11,
 \item{ticks}{ticks if \code{TRUE} add ticks}
 }
 \description{
-A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typoghraphy
+A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typography
 }
 \section{Why Arial Narrow?}{
 
@@ -90,7 +90,7 @@ count(mpg, class) \%>\%
   ggplot(aes(class, n)) +
   geom_col() +
   geom_text(aes(label=n), nudge_y=3) +
-  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 bar chart example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") +
