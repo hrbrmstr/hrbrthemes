@@ -44,7 +44,8 @@ gg_check <- function(gg, dict = hunspell::dictionary("en_US"), ignore = hunspell
 
       words <- stri_extract_all_words(lbl[[lab]])
       words <- unlist(words)
-      words <- purrr::discard(hunspell(words, "text"), ~length(.)==0)
+      words <- purrr::discard(hunspell(words, "text", dict = dict, ignore = ignore),
+                              ~length(.)==0)
 
       if (length(words) > 0) {
         message(sprintf("Possible misspelled words in [%s]: (%s)",
