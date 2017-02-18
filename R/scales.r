@@ -11,6 +11,7 @@ is.formula <- function (x) { inherits(x, "formula") }
 #'
 #' @md
 #' @inheritParams ggplot2::scale_x_continuous
+#' @export
 scale_x_percent <- function (name = waiver(), breaks = waiver(), minor_breaks = waiver(),
                              labels = scales::percent, limits = NULL, expand = c(0,0), oob = censor,
                              na.value = NA_real_, trans = "identity", position = "bottom",
