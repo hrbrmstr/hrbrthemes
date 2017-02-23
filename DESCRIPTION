@@ -12,7 +12,7 @@ Description: A compilation of extra themes and theme components for 'ggplot2'
     with an emphasis on typography.
 URL: http://github.com/hrbrmstr/hrbrthemes
 BugReports: https://github.com/hrbrmstr/hrbrthemes/issues
-License: AGPL
+License: MIT
 Suggests:
     testthat,
     dplyr,
