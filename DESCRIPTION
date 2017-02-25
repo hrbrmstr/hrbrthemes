@@ -1,17 +1,20 @@
 Package: hrbrthemes
 Type: Package
-Title: Additional Themes and Theme Components for 'ggplot2'
+Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
 Version: 0.1.0
-Date: 2017-02-11
+Date: 2017-02-25
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")),
       person("Google", comment = "Roboto Condensed Font", role = c("cph"))
     )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: A compilation of extra themes and theme components for 'ggplot2'
-    with an emphasis on typography.
+Description: A compilation of extra 'ggplot2' themes, scales and utilities, including a 
+    spell check function plot label fields and an overall emphasis on typography. 
+    A copy of the 'Google' font 'Roboto Condensed' <https://github.com/google/roboto/> 
+    is also included to support one of the typography-oriented themes.
 URL: http://github.com/hrbrmstr/hrbrthemes
 BugReports: https://github.com/hrbrmstr/hrbrthemes/issues
+Copyright: file inst/COPYRIGHTS
 License: MIT + file LICENSE
 Suggests:
     testthat,
