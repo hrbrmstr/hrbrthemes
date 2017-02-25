@@ -1,6 +1,6 @@
 ## Test environments
 
-* local OS X install, R 3.3.2
+* local OS X install + travis-ci, R 3.3.2 & devel
 * ubuntu 14.04 (on travis-ci), R oldrel, current, devel
 * win-builder (devel and release)
 
@@ -16,4 +16,6 @@ This is a new release, so there are no reverse dependencies.
 
 ---
 
-* 
+* Full test suite (which ran within timings on win-builder) 
+  w/100% code-coverage
+* Vignette included
