@@ -6,19 +6,48 @@ cache: packages
 
 sudo: required
 
-r:
- - oldrel
- - release
- - devel
+matrix:
+  include:
+    - os: linux
+      dist: precise
+      sudo: false
+      r: devel
+      before_install:
+        - mkdir -p  ~/.R
+        - echo 'CXX1X=g++ -std=c++0x -g -O2 -fPIC' > ~/.R/Makevars
+    - os: linux
+      dist: precise
+      sudo: false
+    - os: linux
+      dist: trusty
+      sudo: required
+      env: R_CODECOV=true
+    - os: osx
+      osx_image: xcode7.2
+      brew_packages: hunspell
+      latex: false
+    - os: osx
+      osx_image: beta-xcode6.1
+      latex: false
+      disable_homebrew: true
 
 env:
  global:
    - CRAN: http://cran.rstudio.com
 
+addons:
+  apt:
+    packages:
+      - libhunspell-dev
+      - libpoppler-cpp-dev
+
+r_github_packages:
+  - jimhester/covr
+
+after_success:
+  - if [[ "${R_CODECOV}" ]]; then R -e 'covr::codecov()'; fi
+
 notifications:
   email:
-    - bob@rud.is
-  irc:
-    channels:
-      - "104.236.112.222#builds"
-    nick: travisci
+    on_success: change
+    on_failure: change

@@ -5,6 +5,7 @@ output: rmarkdown::github_document
 knitr::opts_chunk$set(collapse=TRUE, comment="##", fig.retina=2, fig.path = "README_figs/README-")
 ```
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) 
+[![codecov.io](https://codecov.io/github/hrbrmstr/hrbrthemes/coverage.svg?branch=master)](https://codecov.io/github/hrbrmstr/hrbrthemes?branch=master)
 [![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes)
 
 `hrbrthemes` : Additional Themes and Theme Components for 'ggplot2'
