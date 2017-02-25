@@ -1,5 +1,5 @@
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes)
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![codecov.io](https://codecov.io/github/hrbrmstr/hrbrthemes/coverage.svg?branch=master)](https://codecov.io/github/hrbrmstr/hrbrthemes?branch=master) [![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes)
 
 `hrbrthemes` : Additional Themes and Theme Components for 'ggplot2'
 
@@ -163,11 +163,11 @@ library(hrbrthemes)
 library(testthat)
 
 date()
-## [1] "Sun Feb 12 10:14:07 2017"
+## [1] "Sat Feb 25 11:36:47 2017"
 
 test_dir("tests/")
 ## testthat results ========================================================================================================
-## OK: 0 SKIPPED: 0 FAILED: 0
+## OK: 10 SKIPPED: 0 FAILED: 0
 ## 
 ## DONE ===================================================================================================================
 ```
