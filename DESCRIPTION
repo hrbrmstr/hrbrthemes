@@ -5,14 +5,14 @@ Version: 0.1.0
 Date: 2017-02-11
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")),
-      person("Google", "Fonts", comment = "Roboto Condensed Font", role = c("cph"))
+      person("Google", comment = "Roboto Condensed Font", role = c("cph"))
     )
 Maintainer: Bob Rudis <bob@rud.is>
 Description: A compilation of extra themes and theme components for 'ggplot2'
     with an emphasis on typography.
 URL: http://github.com/hrbrmstr/hrbrthemes
 BugReports: https://github.com/hrbrmstr/hrbrthemes/issues
-License: MIT
+License: MIT + file LICENSE
 Suggests:
     testthat,
     dplyr,

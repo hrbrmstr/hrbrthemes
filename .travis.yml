@@ -1,10 +1,15 @@
 language: r
+
 warnings_are_errors: true
+
+cache: packages
+
 sudo: required
 
 r:
  - oldrel
  - release
+ - devel
 
 env:
  global:
