@@ -7,3 +7,4 @@ src/*.so
 src/*.dll
 notes.txt
 inst/doc
+.DS_Store
