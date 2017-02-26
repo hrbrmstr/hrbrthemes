@@ -9,7 +9,7 @@ Authors@R: c(
     )
 Maintainer: Bob Rudis <bob@rud.is>
 Description: A compilation of extra 'ggplot2' themes, scales and utilities, including a 
-    spell check function plot label fields and an overall emphasis on typography. 
+    spell check function for plot label fields and an overall emphasis on typography. 
     A copy of the 'Google' font 'Roboto Condensed' <https://github.com/google/roboto/> 
     is also included to support one of the typography-oriented themes.
 URL: http://github.com/hrbrmstr/hrbrthemes
