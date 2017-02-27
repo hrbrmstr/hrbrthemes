@@ -4,13 +4,16 @@ output: rmarkdown::github_document
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(collapse=TRUE, comment="##", fig.retina=2, fig.path = "README_figs/README-")
 ```
+
+## `hrbrthemes` : Additional Themes and Theme Components for 'ggplot2'
+
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) 
 [![codecov](https://codecov.io/gh/hrbrmstr/hrbrthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/hrbrthemes)
 [![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/hrbrthemes)](https://cran.r-project.org/package=hrbrthemes)
 ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes)
 
-`hrbrthemes` : Additional Themes and Theme Components for 'ggplot2'
+----
 
 This is a very focused package that provides typography-centric themes and theme components for ggplot2. It's a an extract/riff of [`hrbrmisc`](http://github.com/hrbrmstr/hrbrmisc) created by request. 
 
@@ -159,7 +162,7 @@ library(testthat)
 
 date()
 
-test_dir("tests/")
+test_dir(system.file("tests", package = "hrbrthemes"))
 ```
 
 ### Code of Conduct
