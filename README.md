@@ -1,7 +1,14 @@
 
+<<<<<<< HEAD
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![codecov](https://codecov.io/gh/hrbrmstr/hrbrthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/hrbrthemes) [![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/hrbrthemes)](https://cran.r-project.org/package=hrbrthemes) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes) [![keybase verified](https://img.shields.io/badge/keybase-verified-brightgreen.svg)](https://gist.github.com/hrbrmstr/be2f2c14fd78cac24697)
-
+=======
 `hrbrthemes` : Additional Themes and Theme Components for 'ggplot2'
+-------------------------------------------------------------------
+
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![codecov](https://codecov.io/gh/hrbrmstr/hrbrthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/hrbrthemes) [![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/hrbrthemes)](https://cran.r-project.org/package=hrbrthemes) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes)
+>>>>>>> 47263e16b6cf138ede5e0bde1a6007cae4a3802c
+
+------------------------------------------------------------------------
 
 This is a very focused package that provides typography-centric themes and theme components for ggplot2. It's a an extract/riff of [`hrbrmisc`](http://github.com/hrbrmstr/hrbrmisc) created by request.
 
@@ -163,9 +170,13 @@ library(hrbrthemes)
 library(testthat)
 
 date()
+<<<<<<< HEAD
 ## [1] "Mon Feb 27 06:59:49 2017"
+=======
+## [1] "Sun Feb 26 20:28:39 2017"
+>>>>>>> 47263e16b6cf138ede5e0bde1a6007cae4a3802c
 
-test_dir("tests/")
+test_dir(system.file("tests", package = "hrbrthemes"))
 ## testthat results ========================================================================================================
 ## OK: 10 SKIPPED: 0 FAILED: 0
 ## 

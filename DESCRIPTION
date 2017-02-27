@@ -21,7 +21,8 @@ Suggests:
     dplyr,
     knitr,
     rmarkdown,
-    gridExtra
+    gridExtra,
+    gcookbook
 Depends:
     R (>= 3.2.0)
 Imports:
