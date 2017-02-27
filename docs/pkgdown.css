@@ -1,0 +1,103 @@
+body {
+  position: relative;
+}
+
+footer {
+  margin-top: 45px;
+  padding: 35px 0 36px;
+  border-top: 1px solid #e5e5e5;
+}
+footer p {
+  margin-bottom: 0;
+  color: #555;
+}
+
+code {
+  background-color: #f7f7f7;
+  color: #333;
+}
+code a {
+  color: #375f84;
+}
+
+@media screen and (min-width: 1024px) {
+  .side-by-side {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .side-by-side .section {
+    width: 45%;
+  }
+}
+
+/* Section anchors ---------------------------------*/
+
+.hasAnchor {
+  margin-left: -30px;
+}
+
+a.anchor {
+  display:inline-block;
+  width: 30px;
+  height: 30px;
+  visibility: hidden;
+
+  background-image: url(./link.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center center;
+}
+
+.hasAnchor:hover a.anchor {
+  visibility: visible;
+}
+
+/* Fixes for fixed navbar --------------------------*/
+
+body {
+  position: relative;
+  padding-top: 60px;
+}
+
+.section h1, .section h2, .section h3, .section h4 {
+  padding-top: 60px;
+  margin-top: -60px;
+}
+
+/* Table of contents --------------------------*/
+
+#sidebar {
+  margin-top: 40px;
+}
+#sidebar.affix {
+  margin-top: 5px;
+}
+
+#sidebar h2 {
+  font-size: 1.5em;
+}
+
+#sidebar h2:first-child {
+  margin-top: 0;
+}
+
+/* Syntax highlighting ---------------------------------------------------- */
+
+.fl,.number {color:rgb(21,20,181);}
+.fu,.functioncall {color:#264D66 ;}
+.ch,.st,.string {color:#375D81 ;}
+.kw,.keyword {color:black;}
+.argument {color:#264D66 ;}
+.co,.comment {color: #777;}
+.formalargs {color: #264D66;}
+.eqformalargs {color:#264D66;}
+.slot {font-style:italic;}
+.symbol {color:black ;}
+.prompt {color:black ;}
+
+pre img {
+  background-color: #fff;
+  display: block;
+}
