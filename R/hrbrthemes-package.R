@@ -15,7 +15,7 @@
 #' @name hrbrthemes
 #' @docType package
 #' @author Bob Rudis (bob@@rud.is)
-#' @import ggplot2 grid scales extrafont hunspell stringi
+#' @import ggplot2 grid scales extrafont
 #' @importFrom purrr %>% map walk
 NULL
 

@@ -38,7 +38,7 @@ library(tidyverse)
 
 # current verison
 packageVersion("hrbrthemes")
-## [1] '0.1.0'
+## [1] '0.2.0'
 ```
 
 ### Base theme (Arial Narrow)
@@ -166,11 +166,11 @@ library(hrbrthemes)
 library(testthat)
 
 date()
-## [1] "Mon Feb 27 07:03:41 2017"
+## [1] "Wed Mar  1 22:17:40 2017"
 
 test_dir("tests/")
 ## testthat results ========================================================================================================
-## OK: 10 SKIPPED: 0 FAILED: 0
+## OK: 12 SKIPPED: 0 FAILED: 0
 ## 
 ## DONE ===================================================================================================================
 ```

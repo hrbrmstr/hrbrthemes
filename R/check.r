@@ -10,8 +10,10 @@
 #'
 #' @md
 #' @param gg ggplot2 object
-#' @param dict a dictionary object or string which can be passed to [hunspell::dictionary]
-#' @param ignore character vector with additional approved words added to the dictionary
+#' @param dict a dictionary object or string which can be passed to [hunspell::dictionary].
+#'     Defaults to `hunspell::dictionary("en_US")`
+#' @param ignore character vector with additional approved words added to the dictionary.
+#'     Defaults to `hunspell::en_stats`
 #' @return the object that was passed in
 #' @export
 #' @examples
@@ -28,7 +30,13 @@
 #'        caption="This is a captien") -> gg
 #'
 #' gg_check(gg)
-gg_check <- function(gg, dict = hunspell::dictionary("en_US"), ignore = hunspell::en_stats) {
+gg_check <- function(gg, dict, ignore) {
+
+  try_require("hunspell", "hunspell")
+  try_require("stringi", "stri_extract_all_words")
+
+  if (missing(dict)) dict <- hunspell::dictionary("en_US")
+  if (missing(ignore)) ignore <- hunspell::en_stats
 
   if (inherits(gg, "labels")) {
     lbl <- gg
@@ -42,9 +50,9 @@ gg_check <- function(gg, dict = hunspell::dictionary("en_US"), ignore = hunspell
 
     purrr::walk(names(lbl), function(lab) {
 
-      words <- stri_extract_all_words(lbl[[lab]])
+      words <- stringi::stri_extract_all_words(lbl[[lab]])
       words <- unlist(words)
-      words <- purrr::discard(hunspell(words, "text", dict = dict, ignore = ignore),
+      words <- purrr::discard(hunspell::hunspell(words, "text", dict = dict, ignore = ignore),
                               ~length(.)==0)
 
       if (length(words) > 0) {

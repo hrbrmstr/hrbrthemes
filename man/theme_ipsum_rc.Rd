@@ -14,8 +14,8 @@ theme_ipsum_rc(base_family = "Roboto Condensed", base_size = 11,
   caption_size = 9, caption_face = "plain", caption_margin = 10,
   axis_title_family = base_family, axis_title_size = 9,
   axis_title_face = "plain", axis_title_just = "rt",
-  plot_margin = margin(30, 30, 30, 30), grid = TRUE, axis = FALSE,
-  ticks = FALSE)
+  plot_margin = margin(30, 30, 30, 30), grid_col = "#2b2b2b99",
+  grid = TRUE, axis_col = "#2b2b2b", axis = FALSE, ticks = FALSE)
 }
 \arguments{
 \item{base_family, base_size}{base font family and size}
@@ -36,7 +36,11 @@ theme_ipsum_rc(base_family = "Roboto Condensed", base_size = 11,
 
 \item{plot_margin}{plot margin (specify with \link[ggplot2:margin]{ggplot2::margin})}
 
+\item{grid_col}{grid color}
+
 \item{grid}{panel grid (\code{TRUE}, \code{FALSE}, or a combination of \code{X}, \code{x}, \code{Y}, \code{y})}
+
+\item{axis_col}{axis color}
 
 \item{axis}{add x or y axes? \code{TRUE}, \code{FALSE}, "\code{xy}"}
 
