@@ -3,6 +3,11 @@
 #' You should [import_roboto_condensed]() first and also install the fonts on your
 #' system before trying to use this theme.
 #'
+#' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
+#' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
+#' devices. If you are running under Windows, the package calls the same function
+#' to register non-core fonts with the Windows graphics device.
+#'
 #' @md
 #' @section Why Roboto Condensed?:
 #' It's free, has tolerable kerning pairs and multiple weights. It's also different
@@ -158,6 +163,11 @@ theme_ipsum_rc <- function(
 #' Import Roboto Condensed font for use in charts
 #'
 #' Roboto Condensed is a trademark of Google.
+#'
+#' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
+#' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
+#' devices. If you are running under Windows, the package calls the same function
+#' to register non-core fonts with the Windows graphics device.
 #'
 #' @note This will take care of ensuring PDF/PostScript usage. The location of the
 #'   font directory is displayed after the base import is complete. It is highly
