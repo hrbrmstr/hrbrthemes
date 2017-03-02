@@ -18,6 +18,11 @@
 #' usually only arises when using a newer font with many weights but somewhat
 #' irregular internal font name patterns.
 #'
+#' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
+#' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
+#' devices. If you are running under Windows, the package calls the same function
+#' to register non-core fonts with the Windows graphics device.
+#'
 #' @md
 #' @param base_family,base_size base font family and size
 #' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin plot title family, face, size and margi

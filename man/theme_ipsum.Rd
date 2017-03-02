@@ -68,6 +68,11 @@ for PostScript or PDF ones. You may need two versions of a font-based
 theme function for them to work in a particular situation. This situation
 usually only arises when using a newer font with many weights but somewhat
 irregular internal font name patterns.
+
+There is an option \code{hrbrthemes.loadfonts} which -- if set to \code{TRUE} -- will
+call \code{extrafont::loadfonts()} to register non-core fonts with R PDF & PostScript
+devices. If you are running under Windows, the package calls the same function
+to register non-core fonts with the Windows graphics device.
 }
 
 \examples{
