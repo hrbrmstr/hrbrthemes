@@ -12,8 +12,8 @@ theme_ipsum(base_family = "Arial Narrow", base_size = 11,
   strip_text_family = base_family, strip_text_size = 12,
   strip_text_face = "plain", caption_family = base_family,
   caption_size = 9, caption_face = "italic", caption_margin = 10,
-  axis_title_family = subtitle_family, axis_title_size = 9,
-  axis_title_face = "plain", axis_title_just = "rt",
+  axis_text_size = base_size, axis_title_family = subtitle_family,
+  axis_title_size = 9, axis_title_face = "plain", axis_title_just = "rt",
   plot_margin = margin(30, 30, 30, 30), grid_col = "#cccccc", grid = TRUE,
   axis_col = "#cccccc", axis = FALSE, ticks = FALSE)
 }
@@ -29,6 +29,8 @@ theme_ipsum(base_family = "Arial Narrow", base_size = 11,
 \item{strip_text_family, strip_text_face, strip_text_size}{facet label font family, face and size}
 
 \item{caption_family, caption_face, caption_size, caption_margin}{plot caption family, face, size and margin}
+
+\item{axis_text_size}{font size of axis text}
 
 \item{axis_title_family, axis_title_face, axis_title_size}{axis title font family, face and size}
 
