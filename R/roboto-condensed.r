@@ -18,7 +18,9 @@
 #' @param axis_title_family,axis_title_face,axis_title_size axis title font family, face and size
 #' @param axis_title_just axis title font justificationk one of `[blmcrt]`
 #' @param plot_margin plot margin (specify with [ggplot2::margin])
+#' @param grid_col grid color
 #' @param grid panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)
+#' @param axis_col axis color
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
 #' @export
@@ -62,7 +64,8 @@ theme_ipsum_rc <- function(base_family="Roboto Condensed", base_size = 11,
                            axis_title_family = base_family, axis_title_size = 9,
                            axis_title_face = "plain", axis_title_just = "rt",
                            plot_margin = margin(30, 30, 30, 30),
-                           grid = TRUE, axis = FALSE, ticks = FALSE) {
+                           grid_col = "#2b2b2b99", grid = TRUE,
+                           axis_col = "#2b2b2b", axis = FALSE, ticks = FALSE) {
 
   ret <- ggplot2::theme_minimal(base_family=base_family, base_size=base_size)
 
@@ -71,9 +74,9 @@ theme_ipsum_rc <- function(base_family="Roboto Condensed", base_size = 11,
 
   if (inherits(grid, "character") | grid == TRUE) {
 
-    ret <- ret + theme(panel.grid=element_line(color="#2b2b2bdd", size=0.10))
-    ret <- ret + theme(panel.grid.major=element_line(color="#2b2b2b99", size=0.10))
-    ret <- ret + theme(panel.grid.minor=element_line(color="#2b2b2b99", size=0.05))
+    ret <- ret + theme(panel.grid=element_line(color=grid_col, size=0.10))
+    ret <- ret + theme(panel.grid.major=element_line(color=grid_col, size=0.10))
+    ret <- ret + theme(panel.grid.minor=element_line(color=grid_col, size=0.05))
 
     if (inherits(grid, "character")) {
       if (regexpr("X", grid)[1] < 0) ret <- ret + theme(panel.grid.major.x=element_blank())
@@ -87,22 +90,22 @@ theme_ipsum_rc <- function(base_family="Roboto Condensed", base_size = 11,
   }
 
   if (inherits(axis, "character") | axis == TRUE) {
-    ret <- ret + theme(axis.line=element_line(color="#2b2b2b", size=0.15))
+    ret <- ret + theme(axis.line=element_line(color=axis_col, size=0.15))
     if (inherits(axis, "character")) {
       axis <- tolower(axis)
       if (regexpr("x", axis)[1] < 0) {
         ret <- ret + theme(axis.line.x=element_blank())
       } else {
-        ret <- ret + theme(axis.line.x=element_line(color="#2b2b2b", size=0.15))
+        ret <- ret + theme(axis.line.x=element_line(color=axis_col, size=0.15))
       }
       if (regexpr("y", axis)[1] < 0) {
         ret <- ret + theme(axis.line.y=element_blank())
       } else {
-        ret <- ret + theme(axis.line.y=element_line(color="#2b2b2b", size=0.15))
+        ret <- ret + theme(axis.line.y=element_line(color=axis_col, size=0.15))
       }
     } else {
-      ret <- ret + theme(axis.line.x=element_line(color="#2b2b2b", size=0.15))
-      ret <- ret + theme(axis.line.y=element_line(color="#2b2b2b", size=0.15))
+      ret <- ret + theme(axis.line.x=element_line(color=axis_col, size=0.15))
+      ret <- ret + theme(axis.line.y=element_line(color=axis_col, size=0.15))
     }
   } else {
     ret <- ret + theme(axis.line=element_blank())

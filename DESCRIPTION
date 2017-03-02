@@ -1,8 +1,8 @@
 Package: hrbrthemes
 Type: Package
 Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
-Version: 0.1.0
-Date: 2017-02-25
+Version: 0.2.0
+Date: 2017-03-01
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")),
       person("Google", comment = "Roboto Condensed Font", role = c("cph"))
@@ -22,7 +22,11 @@ Suggests:
     knitr,
     rmarkdown,
     gridExtra,
-    gcookbook
+    hunspell,
+    stringi,
+    gcookbook,
+    vdiffr,
+    svglite
 Depends:
     R (>= 3.2.0)
 Imports:
@@ -30,8 +34,6 @@ Imports:
     grid,
     scales,
     extrafont,
-    hunspell,
-    stringi,
     purrr
-RoxygenNote: 6.0.0
+RoxygenNote: 6.0.1
 VignetteBuilder: knitr

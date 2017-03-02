@@ -11,3 +11,4 @@
 ^notes$
 ^cran-comments\.md$
 ^README_figs$
+^docs$

@@ -4,15 +4,16 @@
 \alias{gg_check}
 \title{Spell check ggplot2 plot labels}
 \usage{
-gg_check(gg, dict = hunspell::dictionary("en_US"),
-  ignore = hunspell::en_stats)
+gg_check(gg, dict, ignore)
 }
 \arguments{
 \item{gg}{ggplot2 object}
 
-\item{dict}{a dictionary object or string which can be passed to \link[hunspell:dictionary]{hunspell::dictionary}}
+\item{dict}{a dictionary object or string which can be passed to \link[hunspell:dictionary]{hunspell::dictionary}.
+Defaults to \code{hunspell::dictionary("en_US")}}
 
-\item{ignore}{character vector with additional approved words added to the dictionary}
+\item{ignore}{character vector with additional approved words added to the dictionary.
+Defaults to \code{hunspell::en_stats}}
 }
 \value{
 the object that was passed in

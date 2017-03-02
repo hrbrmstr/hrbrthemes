@@ -54,7 +54,7 @@ If you work in a company, your communications department likely has a set of cor
 
 ### Kern-what?
 
-[Kerning](https://en.wikipedia.org/wiki/Kerning) is nothing more than a fancy word for spaces between letters and fonts have built-in tables for how various paris of letters should be placed next to each other. Great fonts have kerning tables that typography nerds immediately recognize and adore. Fonts with poor kerning tables are easily recognized as such by even the least font-aware viewer.
+[Kerning](https://en.wikipedia.org/wiki/Kerning) is nothing more than a fancy word for spaces between letters and fonts have built-in tables for how various pairs of letters should be placed next to each other. Great fonts have kerning tables that typography nerds immediately recognize and adore. Fonts with poor kerning tables are easily recognized as such by even the least font-aware viewer.
 
 <center>
 
