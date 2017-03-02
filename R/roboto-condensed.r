@@ -73,8 +73,8 @@ theme_ipsum_rc <- function(
   axis_title_family = base_family, axis_title_size = 9,
   axis_title_face = "plain", axis_title_just = "rt",
   plot_margin = margin(30, 30, 30, 30),
-  grid_col = "#2b2b2b99", grid = TRUE,
-  axis_col = "#2b2b2b", axis = FALSE, ticks = FALSE) {
+  grid_col = "#cccccc", grid = TRUE,
+  axis_col = "#cccccc", axis = FALSE, ticks = FALSE) {
 
   ret <- ggplot2::theme_minimal(base_family=base_family, base_size=base_size)
 
