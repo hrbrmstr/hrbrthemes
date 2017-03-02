@@ -15,8 +15,8 @@ theme_ipsum_rc(base_family = "Roboto Condensed", base_size = 11,
   "Roboto Condensed Light", caption_size = 9, caption_face = "plain",
   caption_margin = 10, axis_title_family = base_family,
   axis_title_size = 9, axis_title_face = "plain", axis_title_just = "rt",
-  plot_margin = margin(30, 30, 30, 30), grid_col = "#2b2b2b99",
-  grid = TRUE, axis_col = "#2b2b2b", axis = FALSE, ticks = FALSE)
+  plot_margin = margin(30, 30, 30, 30), grid_col = "#cccccc", grid = TRUE,
+  axis_col = "#cccccc", axis = FALSE, ticks = FALSE)
 }
 \arguments{
 \item{base_family, base_size}{base font family and size}
