@@ -16,4 +16,8 @@ font_rc_light
 
 \code{font_fc_light} == "\code{Roboto Condensed Light}"
 }
+\note{
+\code{font_rc_light} (a.k.a. "\code{Roboto Condensed Light}") is not available on
+Windows and will throw a warning if used in plots.
+}
 \keyword{datasets}
