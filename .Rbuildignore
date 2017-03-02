@@ -12,3 +12,4 @@
 ^cran-comments\.md$
 ^README_figs$
 ^docs$
+^appveyor\.yml$
