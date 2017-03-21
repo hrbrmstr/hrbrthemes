@@ -5,7 +5,8 @@ Version: 0.2.0
 Date: 2017-03-01
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")),
-      person("Google", comment = "Roboto Condensed Font", role = c("cph"))
+      person("Google", comment = "Roboto Condensed Font", role = c("cph")),
+      person("Dan", "Wilson", email = "dan@thedatacollective.com.au", role = c("ctb"))
     )
 Maintainer: Bob Rudis <bob@rud.is>
 Description: A compilation of extra 'ggplot2' themes, scales and utilities, including a 
