@@ -13,3 +13,4 @@ update_geom_font_defaults(family = "Arial Narrow", face = "plain",
 \description{
 Updates [ggplot2::geom_label] and [ggplot2::geom_text] font defaults
 }
+

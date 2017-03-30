@@ -13,3 +13,4 @@ A muted, qualitative color palette
 library(scales)
 scales::show_col(ipsum_pal()(9))
 }
+
