@@ -7,7 +7,9 @@
 * Added `dict` and `ignore` parameters (with defaults) to `gg_check()` (@karldw) [PR #3].
 * Fixed typos (@benmarwick) [PR #1].
 * Spelling in vignette fixed (@zx8754) [Issue #6].
-* New lighter grid color default (`#cccccc`) [Issue #7].
+* New lighter grid color default `#cccccc` [Issue #7].
+* Added font auto-loading (@alexwhan) [Issue #12].
+* Made base font 0.5 pts larger
 
 
 # hrbrthemes 0.1.0
