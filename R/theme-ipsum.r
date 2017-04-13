@@ -18,6 +18,11 @@
 #' usually only arises when using a newer font with many weights but somewhat
 #' irregular internal font name patterns.
 #'
+#' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
+#' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
+#' devices. If you are running under Windows, the package calls the same function
+#' to register non-core fonts with the Windows graphics device.
+#'
 #' @md
 #' @param base_family,base_size base font family and size
 #' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin plot title family, face, size and margi
@@ -30,6 +35,7 @@
 #' @param plot_margin plot margin (specify with [ggplot2::margin])
 #' @param grid_col,axis_col grid & axis colors; both default to `#cccccc`
 #' @param grid panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)
+#' @param axis_text_size font size of axis text
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
 #' @export
@@ -61,7 +67,7 @@
 #'   theme_ipsum(grid="Y") +
 #'   theme(axis.text.y=element_blank())
 #' }
-theme_ipsum <- function(base_family="Arial Narrow", base_size = 11,
+theme_ipsum <- function(base_family="Arial Narrow", base_size = 11.5,
                         plot_title_family=base_family, plot_title_size = 18,
                         plot_title_face="bold", plot_title_margin = 10,
                         subtitle_family=base_family, subtitle_size = 12,
@@ -70,6 +76,7 @@ theme_ipsum <- function(base_family="Arial Narrow", base_size = 11,
                         strip_text_face = "plain",
                         caption_family = base_family, caption_size = 9,
                         caption_face = "italic", caption_margin = 10,
+                        axis_text_size = base_size,
                         axis_title_family = subtitle_family, axis_title_size = 9,
                         axis_title_face = "plain", axis_title_just = "rt",
                         plot_margin = margin(30, 30, 30, 30),
@@ -83,9 +90,9 @@ theme_ipsum <- function(base_family="Arial Narrow", base_size = 11,
 
   if (inherits(grid, "character") | grid == TRUE) {
 
-    ret <- ret + theme(panel.grid=element_line(color=grid_col, size=0.10))
-    ret <- ret + theme(panel.grid.major=element_line(color=grid_col, size=0.10))
-    ret <- ret + theme(panel.grid.minor=element_line(color=grid_col, size=0.05))
+    ret <- ret + theme(panel.grid=element_line(color=grid_col, size=0.2))
+    ret <- ret + theme(panel.grid.major=element_line(color=grid_col, size=0.2))
+    ret <- ret + theme(panel.grid.minor=element_line(color=grid_col, size=0.15))
 
     if (inherits(grid, "character")) {
       if (regexpr("X", grid)[1] < 0) ret <- ret + theme(panel.grid.major.x=element_blank())
@@ -134,8 +141,8 @@ theme_ipsum <- function(base_family="Arial Narrow", base_size = 11,
   xj <- switch(tolower(substr(axis_title_just, 1, 1)), b=0, l=0, m=0.5, c=0.5, r=1, t=1)
   yj <- switch(tolower(substr(axis_title_just, 2, 2)), b=0, l=0, m=0.5, c=0.5, r=1, t=1)
 
-  ret <- ret + theme(axis.text.x=element_text(margin=margin(t=0)))
-  ret <- ret + theme(axis.text.y=element_text(margin=margin(r=0)))
+  ret <- ret + theme(axis.text.x=element_text(size=axis_text_size, margin=margin(t=0)))
+  ret <- ret + theme(axis.text.y=element_text(size=axis_text_size, margin=margin(r=0)))
   ret <- ret + theme(axis.title=element_text(size=axis_title_size, family=axis_title_family))
   ret <- ret + theme(axis.title.x=element_text(hjust=xj, size=axis_title_size,
                                                family=axis_title_family, face=axis_title_face))

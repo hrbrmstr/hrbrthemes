@@ -4,19 +4,20 @@
 \alias{theme_ipsum_rc}
 \title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typoghraphy}
 \usage{
-theme_ipsum_rc(base_family = "Roboto Condensed", base_size = 11,
+theme_ipsum_rc(base_family = "Roboto Condensed", base_size = 11.5,
   plot_title_family = base_family, plot_title_size = 18,
   plot_title_face = "bold", plot_title_margin = 10, subtitle_family = if
   (.Platform$OS.type == "windows") "Roboto Condensed" else
-  "Roboto Condensed Light", subtitle_size = 12, subtitle_face = "plain",
+  "Roboto Condensed Light", subtitle_size = 13, subtitle_face = "plain",
   subtitle_margin = 15, strip_text_family = base_family,
   strip_text_size = 12, strip_text_face = "plain", caption_family = if
   (.Platform$OS.type == "windows") "Roboto Condensed" else
   "Roboto Condensed Light", caption_size = 9, caption_face = "plain",
-  caption_margin = 10, axis_title_family = base_family,
-  axis_title_size = 9, axis_title_face = "plain", axis_title_just = "rt",
-  plot_margin = margin(30, 30, 30, 30), grid_col = "#2b2b2b99",
-  grid = TRUE, axis_col = "#2b2b2b", axis = FALSE, ticks = FALSE)
+  caption_margin = 10, axis_text_size = base_size,
+  axis_title_family = base_family, axis_title_size = 9,
+  axis_title_face = "plain", axis_title_just = "rt",
+  plot_margin = margin(30, 30, 30, 30), grid_col = "#cccccc", grid = TRUE,
+  axis_col = "#cccccc", axis = FALSE, ticks = FALSE)
 }
 \arguments{
 \item{base_family, base_size}{base font family and size}
@@ -30,6 +31,8 @@ theme_ipsum_rc(base_family = "Roboto Condensed", base_size = 11,
 \item{strip_text_family, strip_text_face, strip_text_size}{facet label font family, face and size}
 
 \item{caption_family, caption_face, caption_size, caption_margin}{plot caption family, face, size and margin}
+
+\item{axis_text_size}{font size of axis text}
 
 \item{axis_title_family, axis_title_face, axis_title_size}{axis title font family, face and size}
 
@@ -50,6 +53,12 @@ theme_ipsum_rc(base_family = "Roboto Condensed", base_size = 11,
 \description{
 You should \url{import_roboto_condensed} first and also install the fonts on your
 system before trying to use this theme.
+}
+\details{
+There is an option \code{hrbrthemes.loadfonts} which -- if set to \code{TRUE} -- will
+call \code{extrafont::loadfonts()} to register non-core fonts with R PDF & PostScript
+devices. If you are running under Windows, the package calls the same function
+to register non-core fonts with the Windows graphics device.
 }
 \section{Why Roboto Condensed?}{
 

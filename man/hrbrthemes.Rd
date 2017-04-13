@@ -17,6 +17,11 @@ That's what I consider the "font trifecta" must-have for charts. An additional
 quality for fonts for charts is that they have a diversity of weights. Arial
 Narrow (the one on most systems, anyway) does not have said diversity but this
 quality is not (IMO) a "must have".
+
+There is an option \code{hrbrthemes.loadfonts} which -- if set to \code{TRUE} -- will
+call \code{extrafont::loadfonts()} to register non-core fonts with R PDF & PostScript
+devices. If you are running under Windows, the package calls the same function
+to register non-core fonts with the Windows graphics device.
 }
 \author{
 Bob Rudis (bob@rud.is)
