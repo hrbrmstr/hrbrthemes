@@ -65,8 +65,10 @@ theme_ipsum_rc <- function(
   caption_family=if (.Platform$OS.type == "windows") "Roboto Condensed" else "Roboto Condensed Light",
   caption_size = 9,
   caption_face = "plain", caption_margin = 10,
-  axis_title_family = base_family, axis_title_size = 9,
-  axis_title_face = "plain", axis_title_just = "rt",
+  axis_title_family = base_family,
+  axis_title_size = 9,
+  axis_title_face = "plain",
+  axis_title_just = "rt",
   plot_margin = margin(30, 30, 30, 30),
   grid_col = "#2b2b2b99", grid = TRUE,
   axis_col = "#2b2b2b", axis = FALSE, ticks = FALSE) {
