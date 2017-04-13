@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme-ipsum.r
 \name{theme_ipsum}
 \alias{theme_ipsum}
-\title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typography}
+\title{A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typography}
 \usage{
 theme_ipsum(base_family = "Arial Narrow", base_size = 11.5,
   plot_title_family = base_family, plot_title_size = 18,
@@ -34,20 +34,20 @@ theme_ipsum(base_family = "Arial Narrow", base_size = 11.5,
 
 \item{axis_title_family, axis_title_face, axis_title_size}{axis title font family, face and size}
 
-\item{axis_title_just}{axis title font justification, one of \code{[blmcrt]}}
+\item{axis_title_just}{axis title font justification, one of `[blmcrt]`}
 
-\item{plot_margin}{plot margin (specify with \link[ggplot2:margin]{ggplot2::margin})}
+\item{plot_margin}{plot margin (specify with [ggplot2::margin])}
 
-\item{grid_col, axis_col}{grid & axis colors; both default to \code{#cccccc}}
+\item{grid_col, axis_col}{grid & axis colors; both default to `#cccccc`}
 
-\item{grid}{panel grid (\code{TRUE}, \code{FALSE}, or a combination of \code{X}, \code{x}, \code{Y}, \code{y})}
+\item{grid}{panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)}
 
-\item{axis}{add x or y axes? \code{TRUE}, \code{FALSE}, "\code{xy}"}
+\item{axis}{add x or y axes? `TRUE`, `FALSE`, "`xy`"}
 
-\item{ticks}{ticks if \code{TRUE} add ticks}
+\item{ticks}{ticks if `TRUE` add ticks}
 }
 \description{
-A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typography
+A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typography
 }
 \section{Why Arial Narrow?}{
 
@@ -56,7 +56,7 @@ available on any modern system, so it's "free"-ish; plus, it is a condensed font
 with solid default kerning pairs and geometric numbers.
 }
 
-\section{Building upon \code{theme_ipsum}}{
+\section{Building upon `theme_ipsum`}{
 
 The function is setup in such a way that you can customize your own one by just
 wrapping the call and changing the parameters. See source for examples.
@@ -65,18 +65,17 @@ wrapping the call and changing the parameters. See source for examples.
 \section{Gotchas}{
 
 There are distinctions between font names and various devices. Names that work
-for display graphics devices and bitmap ones such as \code{png} may not work well
+for display graphics devices and bitmap ones such as `png` may not work well
 for PostScript or PDF ones. You may need two versions of a font-based
 theme function for them to work in a particular situation. This situation
 usually only arises when using a newer font with many weights but somewhat
 irregular internal font name patterns.
 
-There is an option \code{hrbrthemes.loadfonts} which -- if set to \code{TRUE} -- will
-call \code{extrafont::loadfonts()} to register non-core fonts with R PDF & PostScript
+There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
+call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
 devices. If you are running under Windows, the package calls the same function
 to register non-core fonts with the Windows graphics device.
 }
-
 \examples{
 \dontrun{
 library(ggplot2)
@@ -107,3 +106,4 @@ count(mpg, class) \%>\%
   theme(axis.text.y=element_blank())
 }
 }
+

@@ -9,11 +9,11 @@ gg_check(gg, dict, ignore)
 \arguments{
 \item{gg}{ggplot2 object}
 
-\item{dict}{a dictionary object or string which can be passed to \link[hunspell:dictionary]{hunspell::dictionary}.
-Defaults to \code{hunspell::dictionary("en_US")}}
+\item{dict}{a dictionary object or string which can be passed to [hunspell::dictionary].
+Defaults to `hunspell::dictionary("en_US")`}
 
 \item{ignore}{character vector with additional approved words added to the dictionary.
-Defaults to \code{hunspell::en_stats}}
+Defaults to `hunspell::en_stats`}
 }
 \value{
 the object that was passed in
@@ -43,3 +43,4 @@ ggplot(mtcars, aes(mpg, wt)) +
 
 gg_check(gg)
 }
+

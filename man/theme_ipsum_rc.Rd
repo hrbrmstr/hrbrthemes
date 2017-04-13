@@ -2,7 +2,7 @@
 % Please edit documentation in R/roboto-condensed.r
 \name{theme_ipsum_rc}
 \alias{theme_ipsum_rc}
-\title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typoghraphy}
+\title{A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typoghraphy}
 \usage{
 theme_ipsum_rc(base_family = "Roboto Condensed", base_size = 11.5,
   plot_title_family = base_family, plot_title_size = 18,
@@ -36,27 +36,27 @@ theme_ipsum_rc(base_family = "Roboto Condensed", base_size = 11.5,
 
 \item{axis_title_family, axis_title_face, axis_title_size}{axis title font family, face and size}
 
-\item{axis_title_just}{axis title font justificationk one of \code{[blmcrt]}}
+\item{axis_title_just}{axis title font justificationk one of `[blmcrt]`}
 
-\item{plot_margin}{plot margin (specify with \link[ggplot2:margin]{ggplot2::margin})}
+\item{plot_margin}{plot margin (specify with [ggplot2::margin])}
 
 \item{grid_col}{grid color}
 
-\item{grid}{panel grid (\code{TRUE}, \code{FALSE}, or a combination of \code{X}, \code{x}, \code{Y}, \code{y})}
+\item{grid}{panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)}
 
 \item{axis_col}{axis color}
 
-\item{axis}{add x or y axes? \code{TRUE}, \code{FALSE}, "\code{xy}"}
+\item{axis}{add x or y axes? `TRUE`, `FALSE`, "`xy`"}
 
-\item{ticks}{ticks if \code{TRUE} add ticks}
+\item{ticks}{ticks if `TRUE` add ticks}
 }
 \description{
-You should \url{import_roboto_condensed} first and also install the fonts on your
+You should [import_roboto_condensed]() first and also install the fonts on your
 system before trying to use this theme.
 }
 \details{
-There is an option \code{hrbrthemes.loadfonts} which -- if set to \code{TRUE} -- will
-call \code{extrafont::loadfonts()} to register non-core fonts with R PDF & PostScript
+There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
+call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
 devices. If you are running under Windows, the package calls the same function
 to register non-core fonts with the Windows graphics device.
 }
@@ -65,7 +65,6 @@ to register non-core fonts with the Windows graphics device.
 It's free, has tolerable kerning pairs and multiple weights. It's also different
 than Arial Narrow and the fonts most folks use in ggplot2 charts.
 }
-
 \examples{
 \dontrun{
 library(ggplot2)
@@ -97,3 +96,4 @@ count(mpg, class) \%>\%
   theme(axis.text.y=element_blank())
 }
 }
+

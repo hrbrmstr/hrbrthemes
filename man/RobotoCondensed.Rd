@@ -12,12 +12,13 @@ font_rc
 font_rc_light
 }
 \description{
-\code{font_rc} == "\code{Roboto Condensed}"
+`font_rc` == "`Roboto Condensed`"
 
-\code{font_fc_light} == "\code{Roboto Condensed Light}"
+`font_fc_light` == "`Roboto Condensed Light`"
 }
 \note{
-\code{font_rc_light} (a.k.a. "\code{Roboto Condensed Light}") is not available on
-Windows and will throw a warning if used in plots.
+`font_rc_light` (a.k.a. "`Roboto Condensed Light`") is not available on
+    Windows and will throw a warning if used in plots.
 }
 \keyword{datasets}
+
