@@ -1,7 +1,7 @@
 Package: hrbrthemes
 Type: Package
 Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
-Version: 0.2.0
+Version: 0.3.0
 Date: 2017-03-01
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")),
@@ -34,6 +34,11 @@ Imports:
     grid,
     scales,
     extrafont,
-    purrr
+    knitr,
+    rmarkdown,
+    htmltools,
+    tools,
+    magrittr
 RoxygenNote: 6.0.1
 VignetteBuilder: knitr
+

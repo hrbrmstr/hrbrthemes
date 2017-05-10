@@ -1,6 +1,11 @@
-# Suggestion by @alexwhan
-
 .onAttach <- function(libname, pkgname) {
+
+  if (interactive()) {
+    packageStartupMessage(paste0("hrbrthemes is under *active* development. ",
+                                 "See https://github.com/hrbrmstr/hrbrthemes for info/news."))
+  }
+
+  # Suggestion by @alexwhan
 
   if (.Platform$OS.type == "windows")  { # nocov start
     if (interactive()) packageStartupMessage("Registering Windows fonts with R")
