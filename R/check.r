@@ -48,7 +48,7 @@ gg_check <- function(gg, dict, ignore) {
 
   if (length(lbl) > 0) {
 
-    purrr::walk(names(lbl), function(lab) {
+    tmp <- lapply(names(lbl), function(lab) {
 
       words <- stringi::stri_extract_all_words(lbl[[lab]])
       words <- unlist(words)

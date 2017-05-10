@@ -21,7 +21,9 @@
 #' @docType package
 #' @author Bob Rudis (bob@@rud.is)
 #' @import ggplot2 grid scales extrafont
-#' @importFrom purrr %>% map walk
+#' @importFrom magrittr %>%
+#' @import rmarkdown knitr htmltools
+#' @importFrom tools file_path_sans_ext
 NULL
 
 #' hrbrthemes exported operators
