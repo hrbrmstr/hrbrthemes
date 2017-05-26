@@ -1,5 +1,7 @@
 #' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typography
 #'
+#' Also has a "dark" / "modern" version for the new RStudio theme
+#'
 #' @md
 #' @section Why Arial Narrow?:
 #' First and foremost, Arial Narrow is generally installed by default or readily
@@ -173,9 +175,10 @@ theme_ipsum <- function(base_family="Arial Narrow", base_size = 11.5,
 #'
 #' @param family,face,size font family name, face and size
 #' @export
-update_geom_font_defaults <- function(family="Arial Narrow", face="plain", size=3.5) {
-  update_geom_defaults("text", list(family=family, face=face, size=size))
-  update_geom_defaults("label", list(family=family, face=face, size=size))
+update_geom_font_defaults <- function(family="Arial Narrow", face="plain", size=3.5,
+                                      color = "#2b2b2b") {
+  update_geom_defaults("text", list(family=family, face=face, size=size, color=color))
+  update_geom_defaults("label", list(family=family, face=face, size=size, color=color))
 }
 
 #' @rdname ArialNarrow
