@@ -47,7 +47,7 @@ theme_ipsum(base_family = "Arial Narrow", base_size = 11.5,
 \item{ticks}{ticks if \code{TRUE} add ticks}
 }
 \description{
-A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typography
+Also has a "dark" / "modern" version for the new RStudio theme
 }
 \section{Why Arial Narrow?}{
 
