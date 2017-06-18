@@ -9,23 +9,23 @@
 \usage{
 scale_x_percent(name = waiver(), breaks = waiver(),
   minor_breaks = waiver(), labels = scales::percent, limits = NULL,
-  expand = c(0, 0), oob = censor, na.value = NA_real_,
+  expand = c(0.01, 0), oob = censor, na.value = NA_real_,
   trans = "identity", position = "bottom", sec.axis = waiver())
 
 scale_y_percent(name = waiver(), breaks = waiver(),
   minor_breaks = waiver(), labels = scales::percent, limits = NULL,
-  expand = c(0, 0), oob = censor, na.value = NA_real_,
+  expand = c(0.01, 0), oob = censor, na.value = NA_real_,
   trans = "identity", position = "left", sec.axis = waiver())
 
 scale_x_comma(name = waiver(), breaks = waiver(), minor_breaks = waiver(),
-  labels = scales::comma, limits = NULL, expand = c(0, 0), oob = censor,
-  na.value = NA_real_, trans = "identity", position = "bottom",
-  sec.axis = waiver())
+  labels = scales::comma, limits = NULL, expand = c(0.01, 0),
+  oob = censor, na.value = NA_real_, trans = "identity",
+  position = "bottom", sec.axis = waiver())
 
 scale_y_comma(name = waiver(), breaks = waiver(), minor_breaks = waiver(),
-  labels = scales::comma, limits = NULL, expand = c(0, 0), oob = censor,
-  na.value = NA_real_, trans = "identity", position = "left",
-  sec.axis = waiver())
+  labels = scales::comma, limits = NULL, expand = c(0.01, 0),
+  oob = censor, na.value = NA_real_, trans = "identity",
+  position = "left", sec.axis = waiver())
 }
 \arguments{
 \item{name}{The name of the scale. Used as axis or legend title. If

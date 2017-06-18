@@ -1,3 +1,10 @@
+# hrbrthemes 0.3.2
+
+## Changed Stuff
+
+* Removed `purrr` dependency
+* Tweaked `scale_`s with `expand=c(0.01,0)`
+
 # hrbrthemes 0.2.0
 
 ## Changed Stuff
