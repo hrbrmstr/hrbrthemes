@@ -173,7 +173,7 @@ theme_ipsum <- function(base_family="Arial Narrow", base_size = 11.5,
 #'
 #' Updates [ggplot2::geom_label] and [ggplot2::geom_text] font defaults
 #'
-#' @param family,face,size font family name, face and size
+#' @param family,face,size,color font family name, face, size and color
 #' @export
 update_geom_font_defaults <- function(family="Arial Narrow", face="plain", size=3.5,
                                       color = "#2b2b2b") {

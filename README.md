@@ -165,7 +165,7 @@ gg_check(gg)
 library(hrbrthemes)
 
 date()
-## [1] "Thu Jun 22 07:53:55 2017"
+## [1] "Thu Jun 22 08:45:46 2017"
 
 devtools::test()
 ## basic functionality: ..........
