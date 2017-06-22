@@ -1,44 +1,47 @@
-body {
-  position: relative;
+/* Sticker footer */
+body > .container {
+  display: flex;
+  padding-top: 60px;
+  min-height: calc(100vh);
+  flex-direction: column;
+}
+
+body > .container .row {
+  flex: 1;
 }
 
 footer {
   margin-top: 45px;
   padding: 35px 0 36px;
   border-top: 1px solid #e5e5e5;
+  color: #666;
+  display: flex;
 }
 footer p {
   margin-bottom: 0;
-  color: #555;
+}
+footer div {
+  flex: 1;
+}
+footer .pkgdown {
+  text-align: right;
+}
+footer p {
+  margin-bottom: 0;
 }
 
-code {
-  background-color: #f7f7f7;
-  color: #333;
-}
-code a {
-  color: #375f84;
+img.icon {
+  float: right;
 }
 
-@media screen and (min-width: 1024px) {
-  .side-by-side {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .side-by-side .section {
-    width: 45%;
-  }
+img {
+  max-width: 100%;
 }
 
 /* Section anchors ---------------------------------*/
 
-.hasAnchor {
-  margin-left: -30px;
-}
-
 a.anchor {
+  margin-left: -30px;
   display:inline-block;
   width: 30px;
   height: 30px;
@@ -54,50 +57,102 @@ a.anchor {
   visibility: visible;
 }
 
-/* Fixes for fixed navbar --------------------------*/
-
-body {
-  position: relative;
-  padding-top: 60px;
+@media (max-width: 767px) {
+  .hasAnchor:hover a.anchor {
+    visibility: hidden;
+  }
 }
 
-.section h1, .section h2, .section h3, .section h4 {
+
+/* Fixes for fixed navbar --------------------------*/
+
+.contents h1, .contents h2, .contents h3, .contents h4 {
   padding-top: 60px;
   margin-top: -60px;
 }
 
-/* Table of contents --------------------------*/
+/* Static header placement on mobile devices */
+@media (max-width: 767px) {
+  .navbar-fixed-top {
+    position: absolute;
+  }
+  .navbar {
+    padding: 0;
+  }
+}
+
+
+/* Sidebar --------------------------*/
 
 #sidebar {
-  margin-top: 40px;
+  margin-top: 30px;
 }
-#sidebar.affix {
-  margin-top: 5px;
-}
-
 #sidebar h2 {
   font-size: 1.5em;
+  margin-top: 1em;
 }
 
 #sidebar h2:first-child {
   margin-top: 0;
 }
 
+#sidebar .list-unstyled li {
+  margin-bottom: 0.5em;
+}
+
+/* Reference index & topics ----------------------------------------------- */
+
+.ref-index th {font-weight: normal;}
+.ref-index h2 {font-size: 20px;}
+
+.ref-index td {vertical-align: top;}
+.ref-index .alias {width: 40%;}
+.ref-index .title {width: 60%;}
+
+.ref-index .alias {width: 40%;}
+.ref-index .title {width: 60%;}
+
+.ref-arguments th {text-align: right; padding-right: 10px;}
+.ref-arguments th, .ref-arguments td {vertical-align: top;}
+.ref-arguments .name {width: 20%;}
+.ref-arguments .desc {width: 80%;}
+
+/* Nice scrolling for wide elements --------------------------------------- */
+
+table {
+  display: block;
+  overflow: auto;
+}
+
 /* Syntax highlighting ---------------------------------------------------- */
 
-.fl,.number {color:rgb(21,20,181);}
-.fu,.functioncall {color:#264D66 ;}
-.ch,.st,.string {color:#375D81 ;}
-.kw,.keyword {color:black;}
-.argument {color:#264D66 ;}
-.co,.comment {color: #777;}
-.formalargs {color: #264D66;}
-.eqformalargs {color:#264D66;}
-.slot {font-style:italic;}
-.symbol {color:black ;}
-.prompt {color:black ;}
+pre {
+  word-wrap: normal;
+  word-break: normal;
+  border: 1px solid #eee;
+}
+
+pre, code {
+  background-color: #f8f8f8;
+  color: #333;
+}
 
 pre img {
   background-color: #fff;
   display: block;
 }
+
+code a, pre a {
+  color: #375f84;
+}
+
+.fl      {color: #1514b5;}
+.fu      {color: #000000;} /* function */
+.ch,.st  {color: #036a07;} /* string */
+.kw      {color: #264D66;} /* keyword */
+.co      {color: #888888;} /* comment */
+
+.message { color: black;   font-weight: bolder;}
+.error   { color: orange;  font-weight: bolder;}
+.warning { color: #6A0366; font-weight: bolder;}
+

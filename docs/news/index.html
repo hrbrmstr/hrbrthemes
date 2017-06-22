@@ -10,7 +10,6 @@
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -22,22 +21,25 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-news">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -50,9 +52,6 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">Home</a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
@@ -62,6 +61,7 @@
   <a href="../news/index.html">News</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="http://github.com/hrbrmstr/hrbrthemes">
@@ -73,6 +73,7 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
@@ -84,11 +85,44 @@
     </div>
 
     <div class="contents">
+    <div id="hrbrthemes-0-3-2" class="section level1">
+<h1 class="hasAnchor">
+<a href="#hrbrthemes-0-3-2" class="anchor"></a>hrbrthemes 0.3.2</h1>
+<div id="changed-stuff" class="section level2">
+<h2 class="hasAnchor">
+<a href="#changed-stuff" class="anchor"></a>Changed Stuff</h2>
+<ul>
+<li>Removed <code>purrr</code> dependency</li>
+<li>Tweaked <code>scale_</code>s with <code>expand=c(0.01,0)</code>
+</li>
+<li>Updated tests</li>
+</ul>
+</div>
+</div>
+    <div id="hrbrthemes-0-2-0" class="section level1">
+<h1 class="hasAnchor">
+<a href="#hrbrthemes-0-2-0" class="anchor"></a>hrbrthemes 0.2.0</h1>
+<div id="changed-stuff-1" class="section level2">
+<h2 class="hasAnchor">
+<a href="#changed-stuff-1" class="anchor"></a>Changed Stuff</h2>
+<ul>
+<li>Added <code>vdiffr</code> tests for the two core themes.</li>
+<li>Moved <code>hunspell</code> and <code>stringi</code> to <code>Suggests</code> and added namespace tests to <code><a href="../reference/gg_check.html">gg_check()</a></code>.</li>
+<li>Added <code>dict</code> and <code>ignore</code> parameters (with defaults) to <code><a href="../reference/gg_check.html">gg_check()</a></code> (@karldw) [PR #3].</li>
+<li>Fixed typos (@benmarwick) [PR #1].</li>
+<li>Spelling in vignette fixed (@zx8754) [Issue #6].</li>
+<li>New lighter grid color default <code>#cccccc</code> [Issue #7].</li>
+<li>Added font auto-loading (@alexwhan) [Issue #12].</li>
+<li>Made base font 0.5 pts larger</li>
+</ul>
+</div>
+</div>
     <div id="hrbrthemes-0-1-0" class="section level1">
-<h1>hrbrthemes 0.1.0</h1>
+<h1 class="hasAnchor">
+<a href="#hrbrthemes-0-1-0" class="anchor"></a>hrbrthemes 0.1.0</h1>
 <div id="new-stuff" class="section level2">
 <h2 class="hasAnchor">
-<a href="#hrbrthemes-0.1.0" class="anchor"></a>New Stuff</h2>
+<a href="#new-stuff" class="anchor"></a>New Stuff</h2>
 <ul>
 <li>Initial release with ‘Roboto Condensed’ and ‘Arial Narrow’ fonts based ‘ggplot2’ themes.</li>
 <li>Muted discrete color palette with 9 colors.</li>
@@ -99,19 +133,28 @@
     </div>
   </div>
 
-  <div class="col-md-3 hidden-xs">
-    <div id="sidebar"><div id="tocnav">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
+        <li><a href="#hrbrthemes-0-3-2">0.3.2</a></li>
+        <li><a href="#hrbrthemes-0-2-0">0.2.0</a></li>
         <li><a href="#hrbrthemes-0-1-0">0.1.0</a></li>
       </ul>
-    </div></div>
+    </div>
   </div>
 
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Bob Rudis.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 

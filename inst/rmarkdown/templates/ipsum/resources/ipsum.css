@@ -44,7 +44,10 @@ cite, em { font-style: italic; }
 
 strong { font-weight: 500; }
 
-img { border: 0; }
+img {
+  border: 0;
+  max-width: 100%;
+}
 
 a, a:visited, a:link, a:active, a:hover {
 	color: #00408f;

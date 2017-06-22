@@ -2,7 +2,7 @@
 `hrbrthemes` : Additional Themes and Theme Components for 'ggplot2'
 -------------------------------------------------------------------
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![codecov](https://codecov.io/gh/hrbrmstr/hrbrthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/hrbrthemes) [![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/hrbrthemes)](https://cran.r-project.org/package=hrbrthemes) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes) [![keybase verified](https://img.shields.io/badge/keybase-verified-brightgreen.svg)](https://gist.github.com/hrbrmstr/be2f2c14fd78cac24697)
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active) [![codecov](https://codecov.io/gh/hrbrmstr/hrbrthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/hrbrthemes) [![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/hrbrthemes)](https://cran.r-project.org/package=hrbrthemes) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes) <!-- [![keybase verified](https://img.shields.io/badge/keybase-verified-brightgreen.svg)](https://gist.github.com/hrbrmstr/be2f2c14fd78cac24697) -->
 
 ------------------------------------------------------------------------
 
@@ -38,7 +38,7 @@ library(tidyverse)
 
 # current verison
 packageVersion("hrbrthemes")
-## [1] '0.2.0'
+## [1] '0.3.2'
 ```
 
 ### Base theme (Arial Narrow)
@@ -163,17 +163,17 @@ gg_check(gg)
 
 ``` r
 library(hrbrthemes)
-library(testthat)
 
 date()
-## [1] "Thu Mar  2 10:25:50 2017"
+## [1] "Thu Jun 22 07:53:55 2017"
 
-test_dir("tests/")
-## testthat results ========================================================================================================
-## OK: 12 SKIPPED: 0 FAILED: 0
+devtools::test()
+## basic functionality: ..........
+## themes:
+## .
+## .
 ## 
 ## DONE ===================================================================================================================
-## You rock!
 ```
 
 ### Code of Conduct
