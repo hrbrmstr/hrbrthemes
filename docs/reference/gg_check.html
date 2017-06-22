@@ -122,8 +122,8 @@ words.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>ggplot2</span>)</div><div class='output co'>#&gt; <span class='message'>Want to understand how all the pieces fit together? Buy the ggplot2</span>
-#&gt; <span class='message'>book: http://ggplot2.org/book/</span></div><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>ggplot2</span>)
+
 <span class='no'>df</span> <span class='kw'>&lt;-</span> <span class='fu'>data.frame</span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>20</span>, <span class='fl'>25</span>, <span class='fl'>30</span>), <span class='kw'>y</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>4</span>, <span class='fl'>4</span>, <span class='fl'>4</span>), <span class='kw'>txt</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"One"</span>, <span class='st'>"Two"</span>, <span class='st'>"Three"</span>))
 
 <span class='co'># not piping</span>
@@ -134,7 +134,7 @@ words.</p>
        <span class='kw'>subtitle</span><span class='kw'>=</span><span class='st'>"This is a subtitley"</span>,
        <span class='kw'>caption</span><span class='kw'>=</span><span class='st'>"This is a captien"</span>) <span class='kw'>-&gt;</span> <span class='no'>gg</span>
 
-<span class='fu'>gg_check</span>(<span class='no'>gg</span>)</div><div class='output co'>#&gt; <span class='message'>Possible misspelled words in [title]: (Thisy, titlle)</span></div><div class='output co'>#&gt; <span class='message'>Possible misspelled words in [subtitle]: (subtitley)</span></div><div class='output co'>#&gt; <span class='message'>Possible misspelled words in [caption]: (captien)</span></div><img src='gg_check-7.png' alt='' width='540' height='400' /></pre>
+<span class='fu'>gg_check</span>(<span class='no'>gg</span>)</div><div class='output co'>#&gt; <span class='message'>Possible misspelled words in [title]: (Thisy, titlle)</span></div><div class='output co'>#&gt; <span class='message'>Possible misspelled words in [subtitle]: (subtitley)</span></div><div class='output co'>#&gt; <span class='message'>Possible misspelled words in [caption]: (captien)</span></div><img src='gg_check-5.png' alt='' width='540' height='400' /></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
