@@ -4,6 +4,7 @@
 
 * Removed `purrr` dependency
 * Tweaked `scale_`s with `expand=c(0.01,0)`
+* Updated tests
 
 # hrbrthemes 0.2.0
 

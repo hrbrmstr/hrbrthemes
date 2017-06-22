@@ -6,11 +6,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Additional Themes and Theme Components for &#39;ggplot2&#39; — hrbrthemes • hrbrthemes</title>
+<title>Additional Themes and Theme Components for 'ggplot2' — hrbrthemes • hrbrthemes</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
-
 <!-- Bootstrap -->
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -22,22 +21,25 @@
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
-    <div class="container">
+    <div class="container template-reference-topic">
       <header>
-      
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -50,9 +52,6 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">Home</a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
@@ -62,6 +61,7 @@
   <a href="../news/index.html">News</a>
 </li>
       </ul>
+      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="http://github.com/hrbrmstr/hrbrthemes">
@@ -73,35 +73,45 @@
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+
       
       </header>
 
-      <div class="page-header">
-  <h1>Additional Themes and Theme Components for &#39;ggplot2&#39;</h1>
-</div>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Additional Themes and Theme Components for 'ggplot2'</h1>
+    </div>
 
-<div class="row">
-  <div class="col-md-9">
     
-    <p>A compilation of extra themes and theme components for &#39;ggplot2&#39; with an
+    <p>A compilation of extra themes and theme components for 'ggplot2' with an
 emphasis on typography.</p>
     
 
         
-    <div class="section">
-      <h2>Details</h2>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-      <p>The core theme: <code>theme_ipsum</code> (&quot;ipsum&quot; is Latin for &quot;precise&quot;) uses Arial Narrow
-which should be installed on practically any modern system, so it&#39;s &quot;free&quot;-ish.
+    <p>The core theme: <code>theme_ipsum</code> ("ipsum" is Latin for "precise") uses Arial Narrow
+which should be installed on practically any modern system, so it's "free"-ish.
 This font is condensed, has solid default kerning pairs and geometric numbers.
-That&#39;s what I consider the &quot;font trifecta&quot; must-have for charts. An additional
+That's what I consider the "font trifecta" must-have for charts. An additional
 quality for fonts for charts is that they have a diversity of weights. Arial
 Narrow (the one on most systems, anyway) does not have said diversity but this
-quality is not (IMO) a &quot;must have&quot;.</p>
-    </div>
-        </div>
+quality is not (IMO) a "must have".</p>
+<p>There is an option <code>hrbrthemes.loadfonts</code> which -- if set to <code>TRUE</code> -- will
+call <code>extrafont::loadfonts()</code> to register non-core fonts with R PDF &amp; PostScript
+devices. If you are running under Windows, the package calls the same function
+to register non-core fonts with the Windows graphics device.</p>
+    
+
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#details">Details</a></li>
+          </ul>
+
     <h2>Author</h2>
     
 Bob Rudis (bob@rud.is)
@@ -110,7 +120,14 @@ Bob Rudis (bob@rud.is)
 </div>
 
       <footer>
-      <p>Built by <a href="http://hadley.github.io/pkgdown/">pkgdown</a>. Styled with <a href="http://getbootstrap.com">Bootstrap 3</a>.</p>
+      <div class="copyright">
+  <p>Developed by Bob Rudis.</p>
+</div>
+
+<div class="pkgdown">
+  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+</div>
+
       </footer>
    </div>
 
