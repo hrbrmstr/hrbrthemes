@@ -1,8 +1,8 @@
 Package: hrbrthemes
 Type: Package
 Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
-Version: 0.3.2
-Date: 2017-03-01
+Version: 0.3.3
+Date: 2017-07-19
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")),
       person("Google", comment = "Roboto Condensed Font", role = c("cph"))
