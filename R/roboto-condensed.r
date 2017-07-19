@@ -147,8 +147,7 @@ theme_ipsum_rc <- function(
                                                family=axis_title_family, face=axis_title_face))
   ret <- ret + theme(strip.text=element_text(hjust=0, size=strip_text_size,
                                              face=strip_text_face, family=strip_text_family))
-  ret <- ret + theme(panel.spacing.x=grid::unit(2, "lines"))
-  ret <- ret + theme(panel.spacing.y=grid::unit(2, "lines"))
+  ret <- ret + theme(panel.spacing=grid::unit(2, "lines"))
   ret <- ret + theme(plot.title=element_text(hjust=0, size=plot_title_size,
                                              margin=margin(b=plot_title_margin),
                                              family=plot_title_family, face=plot_title_face))
@@ -248,8 +247,7 @@ theme_modern_rc <- function (base_family = "Roboto Condensed", base_size = 11.5,
                                                family=axis_title_family, face=axis_title_face))
   ret <- ret + theme(strip.text=element_text(hjust=0, size=strip_text_size,
                                              face=strip_text_face, family=strip_text_family))
-  ret <- ret + theme(panel.spacing.x=grid::unit(2, "lines"))
-  ret <- ret + theme(panel.spacing.y=grid::unit(2, "lines"))
+  ret <- ret + theme(panel.spacing=grid::unit(2, "lines"))
   ret <- ret + theme(plot.title=element_text(hjust=0, size=plot_title_size,
                                              margin=margin(b=plot_title_margin),
                                              family=plot_title_family, face=plot_title_face))
