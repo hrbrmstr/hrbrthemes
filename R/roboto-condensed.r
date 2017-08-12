@@ -320,3 +320,22 @@ font_rc <- "Roboto Condensed"
 #' @description `font_fc_light` == "`Roboto Condensed Light`"
 #' @export
 font_rc_light <- "Roboto Condensed Light"
+
+
+#' Change geom defaults from black to white for the modern theme
+#'
+#' @export
+modern_geom_defaults <- function() {
+
+  geoms <- c("abline", "area", "bar", "boxplot", "col", "crossbar",
+             "density", "dotplot", "errorbar", "errorbar",
+             "hline", "label", "line", "linerange",
+             "map", "path", "point", "polygon", "rect", "ribbon", "rug", "segment",
+             "step", "text", "tile", "violin", "vline")
+
+  for (g in geoms) {
+    message(g)
+    update_geom_defaults(g, list(colour = "white", fill = "white"))
+  }
+
+}
