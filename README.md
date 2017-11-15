@@ -30,22 +30,23 @@ The following functions are implemented/objects are exported:
 
 Core themes & scales:
 
-  - `theme_ipsum` : Arial Narrow-based theme
-  - `theme_ipsum_rc` : Roboto Condensed-based theme
-  - `theme_ipsum_ps` : IBM Plex Sans-based theme
-  - `scale_x_comma` / `scale_y_comma` : Comma format for axis text and
+  - `theme_ipsum`: Arial Narrow-based theme
+  - `theme_ipsum_rc`: Roboto Condensed-based theme
+  - `theme_ipsum_ps`: IBM Plex Sans-based theme
+  - `scale_x_comma` / `scale_y_comma`: Comma format for axis text and
     better `expand` defaults (you need to set limits)
-  - `scale_x_percent` / `scale_y_percent` : Percent format for axis text
+  - `scale_x_percent` / `scale_y_percent`: Percent format for axis text
     and `expand=c(0,0)` (you need to set limits)
-  - `scale_color_ipsum` / `scale_fill_ipsum` / `ipsum_pal` : A muted
+  - `scale_color_ipsum` / `scale_fill_ipsum` / `ipsum_pal`: A muted
     discrete color palette with 9 colors
 
 Utilities:
 
+  - `flush_ticks`: Makes axis text labels flush on the ends
   - `gg_check`: Spell check ggplot2 plot labels
   - `update_geom_font_defaults`: Update matching font defaults for text
     geoms (the default is — unsurprisingly — Arial Narrow)
-    
+
 The following global variables are now in your namespace:
 
   - `font_an`: a short global alias for “`Arial Narrow`”
@@ -116,9 +117,9 @@ ggplot(mpg, aes(displ, hwy)) +
     caption="Source: hrbrthemes & IBM"
   ) +
   theme_ipsum_ps(grid="XY", axis="xy") +
-  theme(axis.text.x=element_text(hjust=c(0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))) +
-  theme(axis.text.y=element_text(vjust=c(0, 0.5, 0.5, 0.5, 1))) +
-  theme(legend.position="none")
+  theme(legend.position="none") -> gg
+
+flush_ticks(gg)
 ```
 
 <img src="README_figs/README-unnamed-chunk-7-1.png" width="960" />
@@ -219,7 +220,7 @@ gg_check(gg)
 library(hrbrthemes)
 
 date()
-## [1] "Wed Nov 15 08:34:26 2017"
+## [1] "Wed Nov 15 09:16:25 2017"
 
 devtools::test()
 ## basic functionality: ..........
