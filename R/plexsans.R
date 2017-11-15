@@ -1,6 +1,6 @@
 #' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typoghraphy
 #'
-#' You should [import_roboto_condensed]() first and also install the fonts on your
+#' You should [import_plex_sans]() first and also install the fonts on your
 #' system before trying to use this theme.
 #'
 #' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
@@ -9,9 +9,9 @@
 #' to register non-core fonts with the Windows graphics device.
 #'
 #' @md
-#' @section Why Roboto Condensed?:
+#' @section Why IBM Plex Sans?:
 #' It's free, has tolerable kerning pairs and multiple weights. It's also different
-#' than Arial Narrow and the fonts most folks use in ggplot2 charts.
+#' "not Helvetica".
 #'
 #' @md
 #' @param base_family,base_size base font family and size
@@ -59,19 +59,19 @@
 #'   theme_ipsum_rc(grid="Y") +
 #'   theme(axis.text.y=element_blank())
 #' }
-theme_ipsum_rc <- function(
-  base_family="Roboto Condensed", base_size = 11.5,
-  plot_title_family=base_family, plot_title_size = 18,
-  plot_title_face="bold", plot_title_margin = 10,
-  subtitle_family=if (.Platform$OS.type == "windows") "Roboto Condensed" else "Roboto Condensed Light",
+theme_ipsum_ps <- function(
+  base_family="IBMPlexSans", base_size = 11.5,
+  plot_title_family="IBMPlexSans-Bold", plot_title_size = 18,
+  plot_title_face="plain", plot_title_margin = 10,
+  subtitle_family=if (.Platform$OS.type == "windows") "IBMPlexSans" else "IBMPlexSans-Light",
   subtitle_size = 13,
   subtitle_face = "plain", subtitle_margin = 15,
-  strip_text_family = base_family, strip_text_size = 12,
+  strip_text_family = "IBMPlexSans-Medium", strip_text_size = 12,
   strip_text_face = "plain",
-  caption_family=if (.Platform$OS.type == "windows") "Roboto Condensed" else "Roboto Condensed Light",
+  caption_family=if (.Platform$OS.type == "windows") "IBMPlexSans" else "IBMPlexSans-Thin",
   caption_size = 9,
   caption_face = "plain", caption_margin = 10,
-  axis_text_size = base_size,
+  axis_text_size = 9,
   axis_title_family = base_family,
   axis_title_size = 9,
   axis_title_face = "plain",
@@ -163,9 +163,9 @@ theme_ipsum_rc <- function(
 
 }
 
-#' Import Roboto Condensed font for use in charts
+#' Import IBM Plex Sans font for use in charts
 #'
-#' Roboto Condensed is a trademark of Google.
+#' IBM Plex Sans is a trademark of IBM and distributed under the SIL Open Font License, Version 1.1.
 #'
 #' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
 #' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
@@ -178,9 +178,9 @@ theme_ipsum_rc <- function(
 #'   recommended that you install them on your system the same way you would any
 #'   other font you wish to use in other programs.
 #' @export
-import_roboto_condensed <- function() {
+import_plex_sans <- function() {
 
-  rc_font_dir <- system.file("fonts", "roboto-condensed", package="hrbrthemes")
+  rc_font_dir <- system.file("fonts", "plex-sans", package="hrbrthemes")
 
   suppressWarnings(suppressMessages(extrafont::font_import(rc_font_dir, prompt=FALSE)))
 
@@ -192,19 +192,19 @@ import_roboto_condensed <- function() {
 
 }
 
-#' @rdname RobotoCondensed
+#' @rdname PlexSans
 #' @md
-#' @title Roboto Condensed font name R variable aliases
-#' @description `font_rc` == "`Roboto Condensed`"
+#' @title PlexSans font name R variable aliases
+#' @description `font_ps` == "`IBMPlexSans`"
 #' @format length 1 character vector
 #' @export
-font_rc <- "Roboto Condensed"
+font_ps <- "IBMPlexSans"
 
-#' @rdname RobotoCondensed
+#' @rdname PlexSans
 #' @md
-#' @note `font_rc_light` (a.k.a. "`Roboto Condensed Light`") is not available on
+#' @note `font_ps_light` (a.k.a. "`IBMPlexSans-Light`") is not available on
 #'     Windows and will throw a warning if used in plots.
-#' @description `font_fc_light` == "`Roboto Condensed Light`"
+#' @description `font_ps_light` == "`IBMPlexSans-Light`"
 #' @export
-font_rc_light <- "Roboto Condensed Light"
+font_ps_light <- "IBMPlexSans-Light"
 
