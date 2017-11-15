@@ -5,7 +5,8 @@ Version: 0.4.0
 Date: 2017-11-15
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")),
-      person("Patrick", "Kennedy", role="ctb"),
+      person("Patrick", "Kennedy", role=c("ctb")),
+      person("Philipp", "Reiner", role = c("ctb")),
       person("Google", comment = "Roboto Condensed Font", role = c("cph")),
       person("IBM", comment = "Plex Sans Font", role = c("cph"))
     )
