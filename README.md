@@ -220,7 +220,7 @@ gg_check(gg)
 library(hrbrthemes)
 
 date()
-## [1] "Wed Nov 15 09:16:25 2017"
+## [1] "Wed Nov 15 16:36:52 2017"
 
 devtools::test()
 ## basic functionality: ..........
