@@ -3,6 +3,9 @@
 \name{expand_scale}
 \alias{expand_scale}
 \title{Generate expansion vector for scales.}
+\usage{
+expand_scale(mult = 0, add = 0)
+}
 \arguments{
 \item{mult}{vector of multiplicative range expansion factors.
 If length 1, both the lower and upper limits of the scale

@@ -17,4 +17,5 @@
 #'   are expanded outwards by \code{add} units. If length 2, the
 #'   lower limit is expanded by \code{add[1]} and the upper
 #'   limit by \code{add[2]}.
+expand_scale <- ggplot2::expand_scale
 NULL
