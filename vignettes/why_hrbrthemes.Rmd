@@ -11,7 +11,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-The `hrbrthemes` pacakge has two goals. First, it provides a base theme that focuses on typographic elements, including where various labels are placed as well as the fonts that are used. The second goal centers around productivity for a production workflow. In fact, this "production workflow" is the context for where the elements of `hrbrthemes` should be used. 
+The `hrbrthemes` package has two goals. First, it provides a base theme that focuses on typographic elements, including where various labels are placed as well as the fonts that are used. The second goal centers around productivity for a production workflow. In fact, this "production workflow" is the context for where the elements of `hrbrthemes` should be used. 
 
 A "production workflow" is when you intend for the output of your work to be put into a publication of some kind, whether it be a blog post, academic paper, presentation, internal report or industry publication. When you're cranking through an analysis, the visual elements don't need to be perfect. They are there to validate/support your work and are more of a starting point for the finished product than anything else. The level of attention to detail on the final graphical products can be a great motivator for your audience to either dive deep into your analysis text or relegate it to the TLDR pile.
 
