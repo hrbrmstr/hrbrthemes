@@ -30,7 +30,7 @@ Suggests:
 Depends:
     R (>= 3.2.0)
 Imports:
-    ggplot2 (>= 2.2.1),
+    ggplot2 (>= 2.2.1.9000),
     grid,
     scales,
     extrafont,
@@ -41,4 +41,4 @@ Imports:
     magrittr
 RoxygenNote: 6.0.1
 VignetteBuilder: knitr
-
+Remotes: tidyverse/ggplot2
