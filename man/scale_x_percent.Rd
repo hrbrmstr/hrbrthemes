@@ -29,8 +29,9 @@ scale_y_comma(name = waiver(), breaks = waiver(), minor_breaks = waiver(),
 }
 \arguments{
 \item{name}{The name of the scale. Used as axis or legend title. If
-\code{NULL}, the default, the name of the scale is taken from the first
-mapping used for that aesthetic.}
+\code{waiver()}, the default, the name of the scale is taken from the first
+mapping used for that aesthetic. If \code{NULL}, the legend title will be
+omitted.}
 
 \item{breaks}{One of:
 \itemize{
@@ -64,28 +65,19 @@ as output
 \item{limits}{A numeric vector of length two providing limits of the scale.
 Use \code{NA} to refer to the existing minimum or maximum.}
 
-\item{expand}{Vector of range expansion constants used to add some
-padding around the data, to ensure that they are placed some distance
-away from the axes. Use the convenience function \code{\link[=expand_scale]{expand_scale()}}
-to generate the values for the \code{expand} argument. The defaults are to
-expand the scale by 5\% on each side for continuous variables, and by
-0.6 units on each side for discrete variables.}
+\item{expand}{same as in ggplot2}
 
 \item{oob}{Function that handles limits outside of the scale limits
 (out of bounds). The default replaces out of bounds values with NA.}
 
-\item{na.value}{Missing values will be replaced with this value.}
+\item{na.value}{If \code{na.translate = TRUE}, what value aesthetic
+value should missing be displayed as? Does not apply to position scales
+where \code{NA} is always placed at the far right.}
 
 \item{trans}{Either the name of a transformation object, or the
 object itself. Built-in transformations include "asn", "atanh",
 "boxcox", "exp", "identity", "log", "log10", "log1p", "log2",
-"logit", "probability", "probit", "reciprocal", "reverse" and "sqrt".
-
-A transformation object bundles together a transform, it's inverse,
-and methods for generating breaks and labels. Transformation objects
-are defined in the scales package, and are called \code{name_trans}, e.g.
-\code{\link[scales:boxcox_trans]{scales::boxcox_trans()}}. You can create your own
-transformation with \code{\link[scales:trans_new]{scales::trans_new()}}.}
+"logit", "probability", "probit", "reciprocal", "reverse" and "sqrt".}
 
 \item{position}{The position of the axis. "left" or "right" for vertical
 scales, "top" or "bottom" for horizontal scales}

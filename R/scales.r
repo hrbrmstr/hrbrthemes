@@ -10,7 +10,45 @@ is.formula <- function (x) { inherits(x, "formula") }
 #' The `_percent` ones set precent format for axis text and `expand=c(0,0)` (you need to set limits).
 #'
 #' @md
-#' @inheritParams ggplot2::scale_x_continuous
+#' @param name The name of the scale. Used as axis or legend title. If
+#'   `waiver()`, the default, the name of the scale is taken from the first
+#'   mapping used for that aesthetic. If `NULL`, the legend title will be
+#'   omitted.
+#' @param breaks One of:
+#'   - `NULL` for no breaks
+#'   - `waiver()` for the default breaks computed by the
+#'     transformation object
+#'   - A numeric vector of positions
+#'   - A function that takes the limits as input and returns breaks
+#'     as output
+#' @param minor_breaks One of:
+#'   - `NULL` for no minor breaks
+#'   - `waiver()` for the default breaks (one minor break between
+#'     each major break)
+#'   - A numeric vector of positions
+#'   - A function that given the limits returns a vector of minor breaks.
+#' @param labels One of:
+#'   - `NULL` for no labels
+#'   - `waiver()` for the default labels computed by the
+#'     transformation object
+#'   - A character vector giving labels (must be same length as `breaks`)
+#'   - A function that takes the breaks as input and returns labels
+#'     as output
+#' @param limits A numeric vector of length two providing limits of the scale.
+#'   Use `NA` to refer to the existing minimum or maximum.
+#' @param oob Function that handles limits outside of the scale limits
+#'   (out of bounds). The default replaces out of bounds values with NA.
+#' @param na.value If `na.translate = TRUE`, what value aesthetic
+#'   value should missing be displayed as? Does not apply to position scales
+#'   where `NA` is always placed at the far right.
+#' @param expand same as in ggplot2
+#' @param trans Either the name of a transformation object, or the
+#'   object itself. Built-in transformations include "asn", "atanh",
+#'   "boxcox", "exp", "identity", "log", "log10", "log1p", "log2",
+#'   "logit", "probability", "probit", "reciprocal", "reverse" and "sqrt".
+#' @param position The position of the axis. "left" or "right" for vertical
+#' scales, "top" or "bottom" for horizontal scales
+#' @param sec.axis specify a secondary axis
 #' @export
 scale_x_percent <- function (name = waiver(), breaks = waiver(), minor_breaks = waiver(),
                              labels = scales::percent, limits = NULL, expand = c(0.01,0), oob = censor,

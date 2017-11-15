@@ -5,6 +5,7 @@ Version: 0.4.0
 Date: 2017-11-15
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")),
+      person("Patrick", "Kennedy", role="ctb"),
       person("Google", comment = "Roboto Condensed Font", role = c("cph")),
       person("IBM", comment = "Plex Sans Font", role = c("cph"))
     )
@@ -30,7 +31,7 @@ Suggests:
 Depends:
     R (>= 3.2.0)
 Imports:
-    ggplot2 (>= 2.2.1.9000),
+    ggplot2 (>= 2.2.1),
     grid,
     scales,
     extrafont,
@@ -41,4 +42,3 @@ Imports:
     magrittr
 RoxygenNote: 6.0.1
 VignetteBuilder: knitr
-Remotes: tidyverse/ggplot2
