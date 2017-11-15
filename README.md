@@ -220,20 +220,13 @@ gg_check(gg)
 library(hrbrthemes)
 
 date()
-## [1] "Wed Nov 15 16:36:52 2017"
+## [1] "Wed Nov 15 18:27:09 2017"
 
 devtools::test()
 ## basic functionality: ..........
 ## themes:
-## S
-## S
-## 
-## Skipped ----------------------------------------------------------------------------------------------------------------
-## 1. themes are correct (@test-themes.R#10) - Failed doppelganger but vdiffr can't check its FreeType version.
-## Please revalidate cases with a more recent vdiffr
-## 
-## 2. themes are correct (@test-themes.R#11) - Failed doppelganger but vdiffr can't check its FreeType version.
-## Please revalidate cases with a more recent vdiffr
+## .
+## .
 ## 
 ## DONE ===================================================================================================================
 ```
