@@ -27,9 +27,13 @@ Suggests:
     hunspell,
     stringi,
     gcookbook,
+    clipr,
     vdiffr,
     svglite
-Depends:
+SystemRequirements: xclip <http://sourceforge.net/projects/xclip/> or xsel
+  <http://www.vergenet.net/~conrad/software/xsel/> for accessing the X11 cliboard 
+  (only if clipboard functionality is desired)
+clipboardDepends:
     R (>= 3.2.0)
 Imports:
     ggplot2 (>= 2.2.1),

@@ -4,12 +4,14 @@
 \alias{flush_ticks}
 \title{Makes axis text labels flush on the ends}
 \usage{
-flush_ticks(gg, flush = "XY")
+flush_ticks(gg, flush = "XY", plot = TRUE, cat = TRUE)
 }
 \arguments{
 \item{gg}{ggplot2 plot object}
 
 \item{flush}{either "\code{X}" or "\code{Y}" or "\code{XY}" to flush individual or both axes. Default: both.}
+
+\item{cat}{if \code{TRUE} then display \code{theme()} statements and copy them to the clipboard}
 }
 \value{
 ggplot2 object with \code{theme()} elements added
@@ -23,6 +25,11 @@ of geoms, coords, scales, themes, etc. It also builds the plot (but does not dis
 it) so if the plt takes a while (i.e. has lots of data or transforms) this will also
 take a while.
 }
+\details{
+If \code{clipr} is installed and \code{cat} is \code{TRUE} then the \code{theme(...)} statements will
+be copied to the clipboard as well as displayed (via \code{cat()}) in the console.
+}
 \note{
 Intended for basic, fixed-scale plots only (i.e. does not handle free scales in facets).
+Also, the clipboard operations will only occur if \code{clipr} is installed.
 }

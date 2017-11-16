@@ -120,6 +120,8 @@ ggplot(mpg, aes(displ, hwy)) +
   theme(legend.position="none") -> gg
 
 flush_ticks(gg)
+## theme(axis.text.x=element_text(hjust=c(0, rep(0.5, 6), 1))) +
+## theme(axis.text.y=element_text(vjust=c(0, rep(0.5, 3), 1)))
 ```
 
 <img src="README_figs/README-unnamed-chunk-7-1.png" width="960" />
@@ -220,7 +222,7 @@ gg_check(gg)
 library(hrbrthemes)
 
 date()
-## [1] "Wed Nov 15 18:27:09 2017"
+## [1] "Thu Nov 16 10:13:21 2017"
 
 devtools::test()
 ## basic functionality: ..........
