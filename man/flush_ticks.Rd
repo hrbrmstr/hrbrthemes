@@ -11,6 +11,8 @@ flush_ticks(gg, flush = "XY", plot = TRUE, cat = TRUE)
 
 \item{flush}{either "\code{X}" or "\code{Y}" or "\code{XY}" to flush individual or both axes. Default: both.}
 
+\item{plot}{if \code{FALSE} then the ggplot object will be returned \emph{invisibly}}
+
 \item{cat}{if \code{TRUE} then display \code{theme()} statements and copy them to the clipboard}
 }
 \value{
