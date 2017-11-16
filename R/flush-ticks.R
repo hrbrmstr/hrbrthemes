@@ -8,13 +8,18 @@
 #' it) so if the plt takes a while (i.e. has lots of data or transforms) this will also
 #' take a while.
 #'
+#' If `clipr` is installed and `cat` is `TRUE` then the `theme(...)` statements will
+#' be copied to the clipboard as well as displayed (via `cat()`) in the console.
+#'
 #' @md
 #' @param gg ggplot2 plot object
 #' @param flush either "`X`" or "`Y`" or "`XY`" to flush individual or both axes. Default: both.
+#' @param cat if `TRUE` then display `theme()` statements and copy them to the clipboard
 #' @return ggplot2 object with `theme()` elements added
 #' @note Intended for basic, fixed-scale plots only (i.e. does not handle free scales in facets).
+#'       Also, the clipboard operations will only occur if `clipr` is installed.
 #' @export
-flush_ticks <- function(gg, flush="XY") {
+flush_ticks <- function(gg, flush="XY", plot=TRUE, cat=TRUE) {
 
   if (!inherits(gg, "ggplot")) return(gg)
 
@@ -35,8 +40,25 @@ flush_ticks <- function(gg, flush="XY") {
   mid_x <- if ((nx - 2) > 0) (nx - 2) else 0
   mid_y <- if ((ny - 2) > 0) (ny - 2) else 0
 
-  if (has_x & (nx>1)) gg <- gg + theme(axis.text.x=element_text(hjust=c(0, rep(0.5, mid_x), 1)))
-  if (has_y & (ny>1)) gg <- gg + theme(axis.text.y=element_text(vjust=c(0, rep(0.5, mid_y), 1)))
+  stmts <- NULL
+
+  if (has_x & (nx>1)) {
+    gg <- gg + theme(axis.text.x=element_text(hjust=c(0, rep(0.5, mid_x), 1)))
+    if (cat) {
+       stmts <- c(NULL, sprintf("theme(axis.text.x=element_text(hjust=c(0, rep(0.5, %s), 1)))", mid_x))
+    }
+  }
+
+  if (has_y & (ny>1)) {
+    gg <- gg + theme(axis.text.y=element_text(vjust=c(0, rep(0.5, mid_y), 1)))
+    stmts <- c(stmts, sprintf("theme(axis.text.y=element_text(vjust=c(0, rep(0.5, %s), 1)))", mid_y))
+  }
+
+  if (cat) {
+    stmts <- paste0(stmts, collapse=" +\n")
+    if (requireNamespace("clipr", quietly = TRUE)) clipr::write_clip(stmts)
+    cat(stmts, sep="\n")
+  }
 
   gg
 
