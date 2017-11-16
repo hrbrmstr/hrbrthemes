@@ -14,6 +14,7 @@
 #' @md
 #' @param gg ggplot2 plot object
 #' @param flush either "`X`" or "`Y`" or "`XY`" to flush individual or both axes. Default: both.
+#' @param plot if `FALSE` then the ggplot object will be returned _invisibly_
 #' @param cat if `TRUE` then display `theme()` statements and copy them to the clipboard
 #' @return ggplot2 object with `theme()` elements added
 #' @note Intended for basic, fixed-scale plots only (i.e. does not handle free scales in facets).
@@ -60,6 +61,6 @@ flush_ticks <- function(gg, flush="XY", plot=TRUE, cat=TRUE) {
     cat(stmts, sep="\n")
   }
 
-  gg
+  if (plot) gg else invisible(gg)
 
 }
