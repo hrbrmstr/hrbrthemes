@@ -7,6 +7,8 @@ Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")),
       person("Patrick", "Kennedy", role=c("ctb")),
       person("Philipp", "Reiner", role = c("ctb")),
+      person("Dan", "Wilson", email = "dan@thedatacollective.com.au", role = c("ctb"),
+             comment = c("Secondary axis support")), 
       person("Google", comment = "Roboto Condensed Font", role = c("cph")),
       person("IBM", comment = "Plex Sans Font", role = c("cph"))
     )

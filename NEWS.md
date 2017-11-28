@@ -1,9 +1,15 @@
 # hrbrthemes 0.3.2
 
+## New Stuff
+
+* IBM Plex Sans font + theme
+* New "dark" RC theme mostly for RStudio plotting
+
 ## Changed Stuff
 
 * Removed `purrr` dependency
 * Tweaked `scale_`s with `expand=c(0.01,0)`
+* Secondary axis support (by Dan Wilson)
 * Updated tests
 
 # hrbrthemes 0.2.0
