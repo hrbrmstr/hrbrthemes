@@ -145,6 +145,8 @@ theme_ipsum_ps <- function(
                                                family=axis_title_family, face=axis_title_face))
   ret <- ret + theme(axis.title.y=element_text(hjust=yj, size=axis_title_size,
                                                family=axis_title_family, face=axis_title_face))
+  ret <- ret + theme(axis.title.y.right=element_text(hjust=yj, size=axis_title_size, angle=90,
+                                                     family=axis_title_family, face=axis_title_face))
   ret <- ret + theme(strip.text=element_text(hjust=0, size=strip_text_size,
                                              face=strip_text_face, family=strip_text_family))
   ret <- ret + theme(panel.spacing=grid::unit(2, "lines"))
