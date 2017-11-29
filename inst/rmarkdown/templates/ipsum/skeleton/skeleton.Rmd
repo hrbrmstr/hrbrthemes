@@ -2,11 +2,11 @@
 title: "INSERT_TITLE_HERE"
 ipsum_meta:
   twitter_card: "Summary info for the Twitter Card"
-  twitter_site: "@sitehandle"
-  twitter_creator: "@creatorhandle"
-  og_url: "https://example.com/open/graph/finalURLfor/this"
+  twitter_site: "\\@sitehandle"
+  twitter_creator: "\\@creatorhandle"
+  og_url: "https\\://example.com/open/graph/finalURLfor/this"
   og_description: "A modest size description of the content"
-  og_image: "https://example.com/open/graph/imageURLfor/this"
+  og_image: "https\\://example.com/open/graph/imageURLfor/this"
 output: 
   hrbrthemes::ipsum:
     toc: true
