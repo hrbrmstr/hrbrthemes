@@ -12,7 +12,6 @@ body {
 	font-feature-settings:"onum" 1;
 }
 
-
 html>body {
 	font-size: 1.063em;
   font-weight: 300;
@@ -21,7 +20,12 @@ html>body {
 
 .container {
   margin: auto;
-	width: 61.6%;
+	width: 70%;
+}
+
+pre {
+  border:0.25px solid #b2b2b2;
+  padding:8pt;
 }
 
 abbr, acronym, .caps {
@@ -61,7 +65,6 @@ html>body a:active, html>body a:hover {
 	text-decoration: none;
 	border-bottom: 1px solid #f2ecda;
 }
-
 
 h1, h2, h3, h4 {
   font-family: 'Roboto Slab', serif;
@@ -124,4 +127,14 @@ font-style:normal;
 
 body blockquote q {
 	font-style:italic;
+}
+
+
+#toc {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+#toc ul, #toc ul li {
+  margin-left: 0.6875em;
 }
