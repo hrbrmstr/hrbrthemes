@@ -9,7 +9,8 @@ ipsum(number_sections = FALSE, fig_width = 7, fig_height = 5,
   smart = TRUE, self_contained = TRUE, highlight = "default",
   mathjax = "default", extra_dependencies = NULL, css = NULL,
   includes = NULL, keep_md = FALSE, lib_dir = NULL,
-  md_extensions = NULL, pandoc_args = NULL, ...)
+  md_extensions = NULL, pandoc_args = NULL, toc = FALSE, toc_depth = 2,
+  ...)
 }
 \arguments{
 \item{number_sections}{\code{TRUE} to number section headings}
@@ -66,6 +67,8 @@ default definition or R Markdown. See the \code{\link{rmarkdown_format}} for
 additional details.}
 
 \item{pandoc_args}{Additional command line options to pass to pandoc}
+
+\item{toc, toc_depth}{TOC params}
 }
 \description{
 Template for creating an R markdown document with an emphasis on typography
