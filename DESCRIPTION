@@ -4,7 +4,8 @@ Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
 Version: 0.4.0
 Date: 2017-11-15
 Authors@R: c(
-      person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")),
+    person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
+           comment = c(ORCID = "0000-0001-5670-2640")),
       person("Patrick", "Kennedy", role=c("ctb")),
       person("Philipp", "Reiner", role = c("ctb")),
       person("Dan", "Wilson", email = "dan@thedatacollective.com.au", role = c("ctb"),
