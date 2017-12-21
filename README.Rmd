@@ -35,11 +35,11 @@ Utilities:
 
 - `flush_ticks`: Makes axis text labels flush on the ends
 - `gg_check`: Spell check ggplot2 plot labels
-- `update_geom_font_defaults`:	Update matching font defaults for text geoms (the default is — unsurprisingly — Arial Narrow)
+- `update_geom_font_defaults`:	Update font defaults for text geoms (the default is — unsurprisingly — Arial Narrow)
 
-R Mardkdown:
+R Markdown:
 
-- `ipsum`: minimalism HTML template
+- `ipsum`: minimalistic HTML template
 - `ipsum_pdf`: everything you need to use hrbrthemes in PDFs
 
 The following global variables are now in your namespace:
