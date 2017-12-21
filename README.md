@@ -47,6 +47,11 @@ Utilities:
   - `update_geom_font_defaults`: Update matching font defaults for text
     geoms (the default is — unsurprisingly — Arial Narrow)
 
+R Mardkdown:
+
+  - `ipsum`: minimalism HTML template
+  - `ipsum_pdf`: everything you need to use hrbrthemes in PDFs
+
 The following global variables are now in your namespace:
 
   - `font_an`: a short global alias for “`Arial Narrow`”
@@ -222,15 +227,40 @@ gg_check(gg)
 library(hrbrthemes)
 
 date()
-## [1] "Thu Nov 16 10:13:21 2017"
+## [1] "Thu Dec 21 15:25:14 2017"
 
 devtools::test()
-## basic functionality: ..........
-## themes:
-## .
-## .
+## ✔ | OK F W S | Context
 ## 
-## DONE ===================================================================================================================
+⠏ |  0       | basic functionality
+⠋ |  1       | basic functionality
+⠙ |  2       | basic functionality
+⠹ |  3       | basic functionality
+⠸ |  4       | basic functionality
+⠼ |  5       | basic functionality
+⠴ |  6       | basic functionality
+⠦ |  7       | basic functionality
+⠧ |  8       | basic functionality
+⠇ |  9       | basic functionality
+⠏ | 10       | basic functionality
+✔ | 10       | basic functionality [2.0 s]
+## 
+⠏ |  0       | themes
+## 
+⠋ |  1       | themes
+## 
+⠙ |  2       | themes
+✔ |  2       | themes [0.9 s]
+## 
+## ══ Results ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+## Duration: 3.0 s
+## 
+## OK:       12
+## Failed:   0
+## Warnings: 0
+## Skipped:  0
+## 
+## Keep up the good work.
 ```
 
 ### Code of Conduct

@@ -1,0 +1,48 @@
+---
+title: "Using hrbrthemes in PDFs"
+output: hrbrthemes::ipsum_pdf
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,  dev = "cairo_pdf")
+```
+
+# Purpose
+
+The purpose of this template is to show what you need to do in order to use
+Arial Narrow or Roboto Condensed in PDF output documents. 
+
+The main consideration is the use of `Cairo` and --- specifically -- the `cairo_pdf` 
+output device. It is best to set that in the `knit` chunk defaults (as seen in 
+the `setup` block) but you can also do that in the individual chunks as has also been
+demonstrated in the "Roboto Condensed" chunk.
+
+Make sure to include the library calls as they are here.
+
+```{r message = FALSE}
+library(hrbrthemes)
+library(ggplot2)
+library(Cairo)
+library(extrafont)
+
+extrafont::loadfonts()
+```
+
+### Arial Narrow
+
+```{r}
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point() +
+  labs(title="Arial Narrow", subtitle="This is a subtitle") +
+  theme_ipsum()
+```
+
+
+### Roboto Condensed
+
+```{r dev = "cairo_pdf"}
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point() +
+  labs(title="Roboto Condensed", subtitle="This is a subtitle") +
+  theme_ipsum_rc()
+```
