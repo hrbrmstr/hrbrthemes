@@ -44,12 +44,12 @@ Utilities:
 
   - `flush_ticks`: Makes axis text labels flush on the ends
   - `gg_check`: Spell check ggplot2 plot labels
-  - `update_geom_font_defaults`: Update matching font defaults for text
-    geoms (the default is — unsurprisingly — Arial Narrow)
+  - `update_geom_font_defaults`: Update font defaults for text geoms
+    (the default is — unsurprisingly — Arial Narrow)
 
-R Mardkdown:
+R Markdown:
 
-  - `ipsum`: minimalism HTML template
+  - `ipsum`: minimalistic HTML template
   - `ipsum_pdf`: everything you need to use hrbrthemes in PDFs
 
 The following global variables are now in your namespace:
@@ -75,7 +75,7 @@ library(tidyverse)
 
 # current verison
 packageVersion("hrbrthemes")
-## [1] '0.4.0'
+## [1] '0.5.0'
 ```
 
 ### Base theme (Arial Narrow)
@@ -227,7 +227,7 @@ gg_check(gg)
 library(hrbrthemes)
 
 date()
-## [1] "Thu Dec 21 15:25:14 2017"
+## [1] "Thu Dec 21 15:56:49 2017"
 
 devtools::test()
 ## ✔ | OK F W S | Context
@@ -243,14 +243,14 @@ devtools::test()
 ⠧ |  8       | basic functionality
 ⠇ |  9       | basic functionality
 ⠏ | 10       | basic functionality
-✔ | 10       | basic functionality [2.0 s]
+✔ | 10       | basic functionality [2.1 s]
 ## 
 ⠏ |  0       | themes
 ## 
 ⠋ |  1       | themes
 ## 
 ⠙ |  2       | themes
-✔ |  2       | themes [0.9 s]
+✔ |  2       | themes [0.8 s]
 ## 
 ## ══ Results ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 ## Duration: 3.0 s
@@ -259,8 +259,6 @@ devtools::test()
 ## Failed:   0
 ## Warnings: 0
 ## Skipped:  0
-## 
-## Keep up the good work.
 ```
 
 ### Code of Conduct
