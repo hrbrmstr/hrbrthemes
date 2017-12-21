@@ -1,0 +1,4 @@
+name: ipsum PDF Template
+description: >
+  R Markdown template with an emphasis on typography, targeting PDF output
+create_dir: false

@@ -1,8 +1,8 @@
 Package: hrbrthemes
 Type: Package
 Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
-Version: 0.4.0
-Date: 2017-11-15
+Version: 0.5.0
+Date: 2017-12-20
 Authors@R: c(
     person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
            comment = c(ORCID = "0000-0001-5670-2640")),
@@ -23,6 +23,7 @@ URL: http://github.com/hrbrmstr/hrbrthemes
 BugReports: https://github.com/hrbrmstr/hrbrthemes/issues
 Copyright: file inst/COPYRIGHTS
 License: MIT + file LICENSE
+Encoding: UTF-8
 Suggests:
     testthat,
     dplyr,
@@ -48,5 +49,5 @@ Imports:
     htmltools,
     tools,
     magrittr
-RoxygenNote: 6.0.1
+RoxygenNote: 6.0.1.9000
 VignetteBuilder: knitr

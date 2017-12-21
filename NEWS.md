@@ -1,3 +1,10 @@
+# hrbrthemes 0.5.0
+
+## New Stuff
+
+* `flush_ticks()` for easier alignment of x/y axis labels
+* `ipsum_pdf` R Markdown format for using hrbrthemes in PDFs
+
 # hrbrthemes 0.3.2
 
 ## New Stuff
