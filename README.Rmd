@@ -25,8 +25,9 @@ The following functions are implemented/objects are exported:
 Core themes & scales:
 
 - `theme_ipsum`: Arial Narrow-based theme
-- `theme_ipsum_rc`: Roboto Condensed-based theme
 - `theme_ipsum_ps`: IBM Plex Sans-based theme
+- `theme_ipsum_rc`: Roboto Condensed-based theme
+- `theme_ipsum_tw`: Titillium Web-based theme
 - `scale_x_comma` / `scale_y_comma`: Comma format for axis text and better `expand` defaults (you need to set limits)
 - `scale_x_percent` / `scale_y_percent`: Percent format for axis text and `expand=c(0,0)` (you need to set limits)
 - `scale_color_ipsum` / `scale_fill_ipsum` / `ipsum_pal`: A muted discrete color palette with 9 colors
@@ -45,10 +46,14 @@ R Markdown:
 The following global variables are now in your namespace:
 
 - `font_an`: a short global alias for "`Arial Narrow`"
-- `font_rc`: a short global alias for "`Roboto Condensed`"
-- `font_rc_light`: a short global alias for "`Roboto Condensed Light`"
 - `font_ps`: a short global alias for "`IBMPlexSans`"
 - `font_ps_light`: a short global alias for "`IBMPlexSans-Light`"
+- `font_rc`: a short global alias for "`Roboto Condensed`"
+- `font_rc_light`: a short global alias for "`Roboto Condensed Light`"
+- `font_tw`: a short global alias for "`Titillium Web`"
+- `font_tw_bold`: a short global alias for "`Titillium WebBold`" (note the lack of a space after `Web`)
+- `font_tw_light`: a short global alias for "`Titillium WebLight`" (note the lack of a space after `Web`)
+
 
 ### Installation
 
@@ -111,6 +116,27 @@ ggplot(mpg, aes(displ, hwy)) +
     caption="Source: hrbrthemes & IBM"
   ) +
   theme_ipsum_ps(grid="XY", axis="xy") +
+  theme(legend.position="none") -> gg
+
+flush_ticks(gg)
+```
+
+### IBM Plex Sans
+
+```{r fig.width=10, fig.height=7, fig.retina=2}
+ggplot(mpg, aes(displ, hwy)) +
+  geom_jitter(aes(color=class, fill=class), size=3, shape=21, alpha=1/2) +
+  scale_x_continuous(expand=c(0,0), limits=c(1, 8), breaks=1:8) +
+  scale_y_continuous(expand=c(0,0), limits=c(10, 50)) +
+  scale_color_ipsum() +
+  scale_fill_ipsum() +
+  facet_wrap(~class, scales="free") +
+  labs(
+    title="Titillium Web",
+    subtitle="This is a subtitle to see the how it looks in Titillium Web",
+    caption="Source: hrbrthemes & Google"
+  ) +
+  theme_ipsum_tw(grid="XY", axis="xy") +
   theme(legend.position="none") -> gg
 
 flush_ticks(gg)
