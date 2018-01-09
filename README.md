@@ -31,8 +31,9 @@ The following functions are implemented/objects are exported:
 Core themes & scales:
 
   - `theme_ipsum`: Arial Narrow-based theme
-  - `theme_ipsum_rc`: Roboto Condensed-based theme
   - `theme_ipsum_ps`: IBM Plex Sans-based theme
+  - `theme_ipsum_rc`: Roboto Condensed-based theme
+  - `theme_ipsum_tw`: Titillium Web-based theme
   - `scale_x_comma` / `scale_y_comma`: Comma format for axis text and
     better `expand` defaults (you need to set limits)
   - `scale_x_percent` / `scale_y_percent`: Percent format for axis text
@@ -55,10 +56,15 @@ R Markdown:
 The following global variables are now in your namespace:
 
   - `font_an`: a short global alias for “`Arial Narrow`”
-  - `font_rc`: a short global alias for “`Roboto Condensed`”
-  - `font_rc_light`: a short global alias for “`Roboto Condensed Light`”
   - `font_ps`: a short global alias for “`IBMPlexSans`”
   - `font_ps_light`: a short global alias for “`IBMPlexSans-Light`”
+  - `font_rc`: a short global alias for “`Roboto Condensed`”
+  - `font_rc_light`: a short global alias for “`Roboto Condensed Light`”
+  - `font_tw`: a short global alias for “`Titillium Web`”
+  - `font_tw_bold`: a short global alias for “`Titillium WebBold`” (note
+    the lack of a space after `Web`)
+  - `font_tw_light`: a short global alias for “`Titillium WebLight`”
+    (note the lack of a space after `Web`)
 
 ### Installation
 
@@ -131,6 +137,31 @@ flush_ticks(gg)
 
 <img src="README_figs/README-unnamed-chunk-7-1.png" width="960" />
 
+### IBM Plex Sans
+
+``` r
+ggplot(mpg, aes(displ, hwy)) +
+  geom_jitter(aes(color=class, fill=class), size=3, shape=21, alpha=1/2) +
+  scale_x_continuous(expand=c(0,0), limits=c(1, 8), breaks=1:8) +
+  scale_y_continuous(expand=c(0,0), limits=c(10, 50)) +
+  scale_color_ipsum() +
+  scale_fill_ipsum() +
+  facet_wrap(~class, scales="free") +
+  labs(
+    title="Titillium Web",
+    subtitle="This is a subtitle to see the how it looks in Titillium Web",
+    caption="Source: hrbrthemes & Google"
+  ) +
+  theme_ipsum_tw(grid="XY", axis="xy") +
+  theme(legend.position="none") -> gg
+
+flush_ticks(gg)
+## theme(axis.text.x=element_text(hjust=c(0, rep(0.5, 6), 1))) +
+## theme(axis.text.y=element_text(vjust=c(0, rep(0.5, 3), 1)))
+```
+
+<img src="README_figs/README-unnamed-chunk-8-1.png" width="960" />
+
 ### Scales (Color/Fill)
 
 ``` r
@@ -144,7 +175,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum_rc()
 ```
 
-<img src="README_figs/README-unnamed-chunk-8-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-9-1.png" width="672" />
 
 ### Scales (Axis)
 
@@ -161,7 +192,7 @@ count(mpg, class) %>%
   theme_ipsum(grid="Y")
 ```
 
-<img src="README_figs/README-unnamed-chunk-9-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-10-1.png" width="672" />
 
 ``` r
 ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) + 
@@ -177,7 +208,7 @@ ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
   theme(legend.position="bottom")
 ```
 
-<img src="README_figs/README-unnamed-chunk-10-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-11-1.png" width="672" />
 
 ``` r
 update_geom_font_defaults(font_rc_light)
@@ -198,7 +229,7 @@ count(mpg, class) %>%
   theme_ipsum_rc(grid="X")
 ```
 
-<img src="README_figs/README-unnamed-chunk-11-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-12-1.png" width="672" />
 
 ### Spellcheck ggplot2 labels
 
@@ -219,7 +250,7 @@ gg_check(gg)
 ## Possible misspelled words in [caption]: (captien)
 ```
 
-<img src="README_figs/README-unnamed-chunk-12-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-13-1.png" width="672" />
 
 ### Test Results
 
@@ -227,7 +258,7 @@ gg_check(gg)
 library(hrbrthemes)
 
 date()
-## [1] "Thu Dec 21 15:56:49 2017"
+## [1] "Tue Jan  9 15:44:53 2018"
 
 devtools::test()
 ## ✔ | OK F W S | Context
@@ -243,17 +274,17 @@ devtools::test()
 ⠧ |  8       | basic functionality
 ⠇ |  9       | basic functionality
 ⠏ | 10       | basic functionality
-✔ | 10       | basic functionality [2.1 s]
+✔ | 10       | basic functionality [2.0 s]
 ## 
 ⠏ |  0       | themes
 ## 
 ⠋ |  1       | themes
 ## 
 ⠙ |  2       | themes
-✔ |  2       | themes [0.8 s]
+✔ |  2       | themes [0.7 s]
 ## 
-## ══ Results ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-## Duration: 3.0 s
+## ══ Results ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+## Duration: 2.8 s
 ## 
 ## OK:       12
 ## Failed:   0
