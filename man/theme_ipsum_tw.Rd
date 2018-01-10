@@ -4,15 +4,15 @@
 \alias{theme_ipsum_tw}
 \title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typoghraphy}
 \usage{
-theme_ipsum_tw(base_family = "Titillium Web", base_size = 11.5,
+theme_ipsum_tw(base_family = "Titillium Web", base_size = 10.5,
   plot_title_family = if (.Platform$OS.type == "windows") "Titillium Web" else
-  "Titillium WebBold", plot_title_size = 18, plot_title_face = "bold",
+  "Titillium Web Bold", plot_title_size = 18, plot_title_face = "bold",
   plot_title_margin = 10, subtitle_family = if (.Platform$OS.type ==
-  "windows") "Titillium Web" else "Titillium WebLight", subtitle_size = 13,
+  "windows") "Titillium Web" else "Titillium Web Light", subtitle_size = 13,
   subtitle_face = "plain", subtitle_margin = 15,
   strip_text_family = base_family, strip_text_size = 12,
   strip_text_face = "plain", caption_family = if (.Platform$OS.type ==
-  "windows") "Titillium Web" else "Titillium WebLight", caption_size = 9,
+  "windows") "Titillium Web" else "Titillium Web Light", caption_size = 9,
   caption_face = "plain", caption_margin = 10, axis_text_size = base_size,
   axis_title_family = base_family, axis_title_size = 9,
   axis_title_face = "plain", axis_title_just = "rt",
