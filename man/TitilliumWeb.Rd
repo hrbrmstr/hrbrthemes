@@ -3,29 +3,29 @@
 \docType{data}
 \name{font_tw}
 \alias{font_tw}
-\alias{font_tw_bols}
+\alias{font_tw_bold}
 \alias{font_tw_light}
 \title{Titillium Web font name R variable aliases}
 \format{length 1 character vector}
 \usage{
 font_tw
 
-font_tw_bols
+font_tw_bold
 
 font_tw_light
 }
 \description{
 \code{font_tw} == "\code{Titillium Web}"
 
-\code{font_tw_light} == "\code{Titillium WebBold}"
+\code{font_tw_light} == "\code{Titillium Web Bold}"
 
-\code{font_tw_light} == "\code{Titillium WebLight}"
+\code{font_tw_light} == "\code{Titillium Web Light}"
 }
 \note{
-\code{font_tw_light} (a.k.a. "\code{Titillium WebBold}") is not available on
+\code{font_tw_light} (a.k.a. "\code{Titillium Web Bold}") is not available on
 Windows and will throw a warning if used in plots.
 
-\code{font_tw_light} (a.k.a. "\code{Titillium WebLight}") is not available on
+\code{font_tw_light} (a.k.a. "\code{Titillium Web Light}") is not available on
 Windows and will throw a warning if used in plots.
 }
 \keyword{datasets}

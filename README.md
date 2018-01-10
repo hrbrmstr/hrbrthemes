@@ -61,10 +61,10 @@ The following global variables are now in your namespace:
   - `font_rc`: a short global alias for “`Roboto Condensed`”
   - `font_rc_light`: a short global alias for “`Roboto Condensed Light`”
   - `font_tw`: a short global alias for “`Titillium Web`”
-  - `font_tw_bold`: a short global alias for “`Titillium WebBold`” (note
-    the lack of a space after `Web`)
-  - `font_tw_light`: a short global alias for “`Titillium WebLight`”
-    (note the lack of a space after `Web`)
+  - `font_tw_bold`: a short global alias for "`Titillium Web Bold`" 
+      (NOTE: may be an issue with name on macOS 10.13)
+  - `font_tw_light`: a short global alias for "`Titillium Web Light`" 
+      (NOTE: may be an issue with name on macOS 10.13)
 
 ### Installation
 
