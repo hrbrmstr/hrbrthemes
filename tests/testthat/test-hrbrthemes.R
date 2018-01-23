@@ -57,7 +57,6 @@ test_that("we can do something", {
   invisible(theme_ipsum_rc(axis=""))
 
   invisible(update_geom_font_defaults())
-  invisible(import_roboto_condensed())
 
   invisible(theme_ipsum(ticks=TRUE))
   invisible(theme_ipsum_rc(ticks=TRUE))
@@ -70,6 +69,9 @@ test_that("we can do something", {
   expect_that(ipsum_pal()(1), equals("#d18975"))
   expect_that(col$palette(1), equals("#d18975"))
   expect_that(fil$palette(1), equals("#d18975"))
+
+  testthat::skip_on_cran()
+  invisible(import_roboto_condensed())
 
 })
 
