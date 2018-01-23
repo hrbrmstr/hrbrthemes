@@ -121,7 +121,7 @@ ggplot(mpg, aes(displ, hwy)) +
 flush_ticks(gg)
 ```
 
-### IBM Plex Sans
+### Titillium Web
 
 ```{r fig.width=10, fig.height=7, fig.retina=2}
 ggplot(mpg, aes(displ, hwy)) +
