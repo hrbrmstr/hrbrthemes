@@ -137,7 +137,7 @@ flush_ticks(gg)
 
 <img src="README_figs/README-unnamed-chunk-7-1.png" width="960" />
 
-### IBM Plex Sans
+### Titillium Web
 
 ``` r
 ggplot(mpg, aes(displ, hwy)) +

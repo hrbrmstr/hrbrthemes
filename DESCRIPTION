@@ -11,7 +11,8 @@ Authors@R: c(
       person("Dan", "Wilson", email = "dan@thedatacollective.com.au", role = c("ctb"),
              comment = c("Secondary axis support")), 
       person("Google", comment = "Roboto Condensed Font", role = c("cph")),
-      person("IBM", comment = "Plex Sans Font", role = c("cph"))
+      person("IBM", comment = "Plex Sans Font", role = c("cph")),
+      person("Jacob", "Barnett", email = "jacob.r.barnett@gmail.com", role = c("ctb"))
     )
 Maintainer: Bob Rudis <bob@rud.is>
 Description: A compilation of extra 'ggplot2' themes, scales and utilities, including a 
