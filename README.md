@@ -61,10 +61,10 @@ The following global variables are now in your namespace:
   - `font_rc`: a short global alias for “`Roboto Condensed`”
   - `font_rc_light`: a short global alias for “`Roboto Condensed Light`”
   - `font_tw`: a short global alias for “`Titillium Web`”
-  - `font_tw_bold`: a short global alias for "`Titillium Web Bold`" 
-      (NOTE: may be an issue with name on macOS 10.13)
-  - `font_tw_light`: a short global alias for "`Titillium Web Light`" 
-      (NOTE: may be an issue with name on macOS 10.13)
+  - `font_tw_bold`: a short global alias for “`Titillium Web Bold`”
+    (NOTE: may be an issue with name on macOS 10.13)
+  - `font_tw_light`: a short global alias for “`Titillium Web Light`”
+    (NOTE: may be an issue with name on macOS 10.13)
 
 ### Installation
 
@@ -258,7 +258,7 @@ gg_check(gg)
 library(hrbrthemes)
 
 date()
-## [1] "Tue Jan  9 15:44:53 2018"
+## [1] "Wed Mar  7 16:33:01 2018"
 
 devtools::test()
 ## ✔ | OK F W S | Context
@@ -274,17 +274,17 @@ devtools::test()
 ⠧ |  8       | basic functionality
 ⠇ |  9       | basic functionality
 ⠏ | 10       | basic functionality
-✔ | 10       | basic functionality [2.0 s]
+✔ | 10       | basic functionality [1.7 s]
 ## 
 ⠏ |  0       | themes
 ## 
 ⠋ |  1       | themes
 ## 
 ⠙ |  2       | themes
-✔ |  2       | themes [0.7 s]
+✔ |  2       | themes [0.6 s]
 ## 
-## ══ Results ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
-## Duration: 2.8 s
+## ══ Results ═══════════════════════════════════════════════════════════════
+## Duration: 2.3 s
 ## 
 ## OK:       12
 ## Failed:   0

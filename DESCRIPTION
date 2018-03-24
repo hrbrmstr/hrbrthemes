@@ -8,8 +8,8 @@ Authors@R: c(
            comment = c(ORCID = "0000-0001-5670-2640")),
       person("Patrick", "Kennedy", role=c("ctb")),
       person("Philipp", "Reiner", role = c("ctb")),
-      person("Dan", "Wilson", email = "dan@thedatacollective.com.au", role = c("ctb"),
-             comment = c("Secondary axis support")), 
+      person("Dan", "Wilson", email = "dan@thedatacollective.com.au", role = c("ctb"), comment = c("Secondary axis support")), 
+      person("Xavier", "Adam", role = c("ctb")),
       person("Google", comment = "Roboto Condensed Font", role = c("cph")),
       person("IBM", comment = "Plex Sans Font", role = c("cph")),
       person("Jacob", "Barnett", email = "jacob.r.barnett@gmail.com", role = c("ctb"))
