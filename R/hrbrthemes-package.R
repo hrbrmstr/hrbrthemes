@@ -24,6 +24,7 @@
 #' @importFrom magrittr %>%
 #' @import rmarkdown knitr htmltools
 #' @importFrom tools file_path_sans_ext
+#' @importFrom grDevices windowsFonts
 NULL
 
 #' hrbrthemes exported operators
