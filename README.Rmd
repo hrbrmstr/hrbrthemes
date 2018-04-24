@@ -81,7 +81,7 @@ packageVersion("hrbrthemes")
 ```{r fig.retina=2}
 ggplot(mtcars, aes(mpg, wt)) +
   geom_point() +
-  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") + 
@@ -93,7 +93,7 @@ ggplot(mtcars, aes(mpg, wt)) +
 ```{r fig.retina=2}
 ggplot(mtcars, aes(mpg, wt)) +
   geom_point() +
-  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") + 
@@ -121,7 +121,7 @@ ggplot(mpg, aes(displ, hwy)) +
 flush_ticks(gg)
 ```
 
-### IBM Plex Sans
+### Titillium Web
 
 ```{r fig.width=10, fig.height=7, fig.retina=2}
 ggplot(mpg, aes(displ, hwy)) +
@@ -147,7 +147,7 @@ flush_ticks(gg)
 ```{r fig.retina=2}
 ggplot(mtcars, aes(mpg, wt)) +
   geom_point(aes(color=factor(carb))) +
-  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") + 
@@ -163,7 +163,7 @@ count(mpg, class) %>%
   ggplot(aes(class, pct)) +
   geom_col() +
   scale_y_percent() +
-  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 column chart example with percents",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") + 
@@ -196,7 +196,7 @@ count(mpg, class) %>%
   geom_text(aes(label=scales::comma(n)), hjust=0, nudge_y=2000) +
   scale_y_comma(limits=c(0,150000)) +
   coord_flip() +
-  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 column chart example with commas",
        subtitle="A plot that is only useful for demonstration purposes, esp since you'd never\nreally want direct labels and axis labels",
        caption="Brought to you by the letter 'g'") + 

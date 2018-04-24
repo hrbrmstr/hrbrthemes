@@ -70,4 +70,7 @@ test_that("we can do something", {
   expect_that(col$palette(1), equals("#d18975"))
   expect_that(fil$palette(1), equals("#d18975"))
 
+  testthat::skip_on_cran()
+  invisible(import_roboto_condensed())
+
 })
