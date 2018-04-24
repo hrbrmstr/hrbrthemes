@@ -8,9 +8,6 @@
 #' it) so if the plt takes a while (i.e. has lots of data or transforms) this will also
 #' take a while.
 #'
-#' If `clipr` is installed and `cat` is `TRUE` then the `theme(...)` statements will
-#' be copied to the clipboard as well as displayed (via `cat()`) in the console.
-#'
 #' @md
 #' @param gg ggplot2 plot object
 #' @param flush either "`X`" or "`Y`" or "`XY`" to flush individual or both axes. Default: both.
@@ -18,7 +15,6 @@
 #' @param cat if `TRUE` then display `theme()` statements and copy them to the clipboard
 #' @return ggplot2 object with `theme()` elements added
 #' @note Intended for basic, fixed-scale plots only (i.e. does not handle free scales in facets).
-#'       Also, the clipboard operations will only occur if `clipr` is installed.
 #' @export
 flush_ticks <- function(gg, flush="XY", plot=TRUE, cat=TRUE) {
 
@@ -57,7 +53,6 @@ flush_ticks <- function(gg, flush="XY", plot=TRUE, cat=TRUE) {
 
   if (cat) {
     stmts <- paste0(stmts, collapse=" +\n")
-    if (requireNamespace("clipr", quietly = TRUE)) clipr::write_clip(stmts)
     cat(stmts, sep="\n")
   }
 
