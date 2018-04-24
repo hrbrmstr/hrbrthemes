@@ -1,10 +1,9 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.travis\.yml$
-^README*$
-^NOTES*$
-^NOTES*$
-^notes*$
+^README.*$
+^NOTES.*$
+^notes.*$
 ^CONDUCT\.md$
 ^cran-comments\.md$
 ^docs$

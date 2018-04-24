@@ -89,7 +89,7 @@ packageVersion("hrbrthemes")
 ``` r
 ggplot(mtcars, aes(mpg, wt)) +
   geom_point() +
-  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") + 
@@ -103,7 +103,7 @@ ggplot(mtcars, aes(mpg, wt)) +
 ``` r
 ggplot(mtcars, aes(mpg, wt)) +
   geom_point() +
-  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") + 
@@ -167,7 +167,7 @@ flush_ticks(gg)
 ``` r
 ggplot(mtcars, aes(mpg, wt)) +
   geom_point(aes(color=factor(carb))) +
-  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") + 
@@ -185,7 +185,7 @@ count(mpg, class) %>%
   ggplot(aes(class, pct)) +
   geom_col() +
   scale_y_percent() +
-  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 column chart example with percents",
        subtitle="A plot that is only useful for demonstration purposes",
        caption="Brought to you by the letter 'g'") + 
@@ -222,7 +222,7 @@ count(mpg, class) %>%
   geom_text(aes(label=scales::comma(n)), hjust=0, nudge_y=2000) +
   scale_y_comma(limits=c(0,150000)) +
   coord_flip() +
-  labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 column chart example with commas",
        subtitle="A plot that is only useful for demonstration purposes, esp since you'd never\nreally want direct labels and axis labels",
        caption="Brought to you by the letter 'g'") + 
@@ -258,33 +258,33 @@ gg_check(gg)
 library(hrbrthemes)
 
 date()
-## [1] "Wed Mar  7 16:33:01 2018"
+## [1] "Tue Apr 24 10:13:37 2018"
 
 devtools::test()
 ## ✔ | OK F W S | Context
 ## 
-⠏ |  0       | basic functionality
-⠋ |  1       | basic functionality
-⠙ |  2       | basic functionality
-⠹ |  3       | basic functionality
-⠸ |  4       | basic functionality
-⠼ |  5       | basic functionality
-⠴ |  6       | basic functionality
-⠦ |  7       | basic functionality
-⠧ |  8       | basic functionality
-⠇ |  9       | basic functionality
-⠏ | 10       | basic functionality
-✔ | 10       | basic functionality [1.7 s]
+⠏ |  0       | core theme components work
+⠋ |  1       | core theme components work
+⠙ |  2       | core theme components work
+⠹ |  3       | core theme components work
+⠸ |  4       | core theme components work
+⠼ |  5       | core theme components work
+⠴ |  6       | core theme components work
+⠦ |  7       | core theme components work
+⠧ |  8       | core theme components work
+⠇ |  9       | core theme components work
+⠏ | 10       | core theme components work
+✔ | 10       | core theme components work [2.3 s]
 ## 
 ⠏ |  0       | themes
 ## 
 ⠋ |  1       | themes
 ## 
 ⠙ |  2       | themes
-✔ |  2       | themes [0.6 s]
+✔ |  2       | themes [0.5 s]
 ## 
-## ══ Results ═══════════════════════════════════════════════════════════════
-## Duration: 2.3 s
+## ══ Results ══════════════════════════════════════════════════════════════════════════════════════════════
+## Duration: 2.8 s
 ## 
 ## OK:       12
 ## Failed:   0
