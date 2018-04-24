@@ -48,7 +48,7 @@
     <rect x='60.52' y='55.23' width='583.27' height='20.05' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpNjAuNTI0OXw2NDMuNzk5fDc1LjI3MjR8NTUuMjI1Ng==)'><text x='60.52' y='69.54' style='font-size: 12.00px; fill: #1A1A1A; font-family: Arial Narrow;' textLength='5.47px' lengthAdjust='spacingAndGlyphs'>1</text></g>
+<g clip-path='url(#cpNjAuNTI0OXw2NDMuNzk5fDc1LjI3MjR8NTUuMjI1Ng==)'><text x='66.25' y='69.54' style='font-size: 12.00px; fill: #1A1A1A; font-family: Arial Narrow;' textLength='5.47px' lengthAdjust='spacingAndGlyphs'>1</text></g>
 <defs>
   <clipPath id='cpMHw3MjB8NTc2fDA='>
     <rect x='0.00' y='0.00' width='720.00' height='576.00' />
@@ -66,10 +66,10 @@
 <g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='44.55' y='99.73' style='font-size: 11.50px; fill: #4D4D4D; font-family: Arial Narrow;' textLength='13.11px' lengthAdjust='spacingAndGlyphs'>3.0</text></g>
 <g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='640.11' y='546.11' style='font-size: 9.00px; font-family: Arial Narrow;' textLength='3.69px' lengthAdjust='spacingAndGlyphs'>x</text></g>
 <g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text transform='translate(36.33,78.96) rotate(-90)' style='font-size: 9.00px; font-family: Arial Narrow;' textLength='3.69px' lengthAdjust='spacingAndGlyphs'>y</text></g>
-<g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='660.81' y='283.73' style='font-size: 11.50px; font-family: Arial Narrow;' textLength='4.72px' lengthAdjust='spacingAndGlyphs'>z</text></g>
-<circle cx='669.45' cy='296.69' r='1.95pt' style='stroke-width: 0.71; stroke: #F8766D; fill: #F8766D;' clip-path='url(#cpMHw3MjB8NTc2fDA=)' />
-<circle cx='669.45' cy='313.97' r='1.95pt' style='stroke-width: 0.71; stroke: #00BFC4; fill: #00BFC4;' clip-path='url(#cpMHw3MjB8NTc2fDA=)' />
-<g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='680.25' y='299.99' style='font-size: 9.20px; font-family: Arial Narrow;' textLength='4.20px' lengthAdjust='spacingAndGlyphs'>a</text></g>
-<g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='680.25' y='317.27' style='font-size: 9.20px; font-family: Arial Narrow;' textLength='4.20px' lengthAdjust='spacingAndGlyphs'>b</text></g>
+<g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='660.81' y='283.84' style='font-size: 11.50px; font-family: Arial Narrow;' textLength='4.72px' lengthAdjust='spacingAndGlyphs'>z</text></g>
+<circle cx='669.45' cy='296.59' r='1.95pt' style='stroke-width: 0.71; stroke: #F8766D; fill: #F8766D;' clip-path='url(#cpMHw3MjB8NTc2fDA=)' />
+<circle cx='669.45' cy='313.87' r='1.95pt' style='stroke-width: 0.71; stroke: #00BFC4; fill: #00BFC4;' clip-path='url(#cpMHw3MjB8NTc2fDA=)' />
+<g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='680.25' y='299.89' style='font-size: 9.20px; font-family: Arial Narrow;' textLength='4.20px' lengthAdjust='spacingAndGlyphs'>a</text></g>
+<g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='680.25' y='317.17' style='font-size: 9.20px; font-family: Arial Narrow;' textLength='4.20px' lengthAdjust='spacingAndGlyphs'>b</text></g>
 <g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='60.52' y='42.77' style='font-size: 18.00px; font-weight: bold; font-family: Arial Narrow;' textLength='95.15px' lengthAdjust='spacingAndGlyphs'>theme_ipsum</text></g>
 </svg>

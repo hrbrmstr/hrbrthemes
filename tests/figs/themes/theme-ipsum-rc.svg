@@ -48,7 +48,7 @@
     <rect x='61.75' y='55.14' width='581.71' height='19.99' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpNjEuNzV8NjQzLjQ1OHw3NS4xMjZ8NTUuMTM3Nw==)'><text x='61.75' y='69.40' style='font-size: 12.00px; fill: #1A1A1A; font-family: Roboto Condensed;' textLength='5.92px' lengthAdjust='spacingAndGlyphs'>1</text></g>
+<g clip-path='url(#cpNjEuNzV8NjQzLjQ1OHw3NS4xMjZ8NTUuMTM3Nw==)'><text x='67.48' y='69.40' style='font-size: 12.00px; fill: #1A1A1A; font-family: Roboto Condensed;' textLength='5.92px' lengthAdjust='spacingAndGlyphs'>1</text></g>
 <defs>
   <clipPath id='cpMHw3MjB8NTc2fDA='>
     <rect x='0.00' y='0.00' width='720.00' height='576.00' />
@@ -66,10 +66,10 @@
 <g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='44.51' y='99.57' style='font-size: 11.50px; fill: #4D4D4D; font-family: Roboto Condensed;' textLength='14.38px' lengthAdjust='spacingAndGlyphs'>3.0</text></g>
 <g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='639.51' y='546.11' style='font-size: 9.00px; font-family: Roboto Condensed;' textLength='3.95px' lengthAdjust='spacingAndGlyphs'>x</text></g>
 <g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text transform='translate(36.29,78.87) rotate(-90)' style='font-size: 9.00px; font-family: Roboto Condensed;' textLength='3.75px' lengthAdjust='spacingAndGlyphs'>y</text></g>
-<g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='660.47' y='283.68' style='font-size: 11.50px; font-family: Roboto Condensed;' textLength='5.05px' lengthAdjust='spacingAndGlyphs'>z</text></g>
-<circle cx='669.11' cy='296.64' r='1.95pt' style='stroke-width: 0.71; stroke: #F8766D; fill: #F8766D;' clip-path='url(#cpMHw3MjB8NTc2fDA=)' />
-<circle cx='669.11' cy='313.92' r='1.95pt' style='stroke-width: 0.71; stroke: #00BFC4; fill: #00BFC4;' clip-path='url(#cpMHw3MjB8NTc2fDA=)' />
-<g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='679.91' y='299.91' style='font-size: 9.20px; font-family: Roboto Condensed;' textLength='4.41px' lengthAdjust='spacingAndGlyphs'>a</text></g>
-<g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='679.91' y='317.19' style='font-size: 9.20px; font-family: Roboto Condensed;' textLength='4.54px' lengthAdjust='spacingAndGlyphs'>b</text></g>
+<g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='660.47' y='283.80' style='font-size: 11.50px; font-family: Roboto Condensed;' textLength='5.05px' lengthAdjust='spacingAndGlyphs'>z</text></g>
+<circle cx='669.11' cy='296.53' r='1.95pt' style='stroke-width: 0.71; stroke: #F8766D; fill: #F8766D;' clip-path='url(#cpMHw3MjB8NTc2fDA=)' />
+<circle cx='669.11' cy='313.81' r='1.95pt' style='stroke-width: 0.71; stroke: #00BFC4; fill: #00BFC4;' clip-path='url(#cpMHw3MjB8NTc2fDA=)' />
+<g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='679.91' y='299.80' style='font-size: 9.20px; font-family: Roboto Condensed;' textLength='4.41px' lengthAdjust='spacingAndGlyphs'>a</text></g>
+<g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='679.91' y='317.08' style='font-size: 9.20px; font-family: Roboto Condensed;' textLength='4.54px' lengthAdjust='spacingAndGlyphs'>b</text></g>
 <g clip-path='url(#cpMHw3MjB8NTc2fDA=)'><text x='61.75' y='42.68' style='font-size: 18.00px; font-weight: bold; font-family: Roboto Condensed;' textLength='117.44px' lengthAdjust='spacingAndGlyphs'>theme_ipsum_rc</text></g>
 </svg>
