@@ -2,7 +2,7 @@ Package: hrbrthemes
 Type: Package
 Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
 Version: 0.5.0
-Date: 2017-12-20
+Date: 2018-04-24
 Authors@R: c(
     person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
            comment = c(ORCID = "0000-0001-5670-2640")),
@@ -34,13 +34,11 @@ Suggests:
     clipr,
     vdiffr,
     svglite
-SystemRequirements: xclip <http://sourceforge.net/projects/xclip/> or xsel
-  <http://www.vergenet.net/~conrad/software/xsel/> for accessing the X11 cliboard 
-  (only if clipboard functionality is desired)
-clipboardDepends:
+Depends:
     R (>= 3.2.0)
 Imports:
     ggplot2 (>= 2.2.1),
+    grDevices,
     grid,
     scales,
     extrafont,
