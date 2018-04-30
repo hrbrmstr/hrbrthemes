@@ -16,7 +16,8 @@ Authors@R: c(
       person("IBM", comment = "Plex Sans Font", role = c("cph")),
       person("Jacob", "Barnett", email = "jacob.r.barnett@gmail.com", role = c("ctb")),
       person("Thomas J.", "Leeper", role = c("ctb"), email = "thosjleeper@gmail.com",
-             comment = c(ORCID = "0000-0003-4097-6326"))
+             comment = c(ORCID = "0000-0003-4097-6326")),
+      person("Joris", "Meys", email = "Joris.Meys@UGent.be", role = c("ctb"))
     )
 Maintainer: Bob Rudis <bob@rud.is>
 Description: A compilation of extra 'ggplot2' themes, scales and utilities, including a 
