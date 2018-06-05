@@ -15,14 +15,16 @@ theme_modern_rc <- function (base_family = "Roboto Condensed", base_size = 11.5,
 
   grid_col <- axis_col <- "#333333"
 
-  ggplot2::update_geom_defaults("point", list(colour = "white"))
-  ggplot2::update_geom_defaults("line", list(colour = "white"))
-  ggplot2::update_geom_defaults("area", list(colour = "white", fill="white"))
-  ggplot2::update_geom_defaults("rect", list(colour = "white", fill="white"))
-  ggplot2::update_geom_defaults("density", list(colour = "white", fill="white"))
-  ggplot2::update_geom_defaults("bar", list(colour = "white", fill="white"))
-  ggplot2::update_geom_defaults("col", list(colour = "white", fill="white"))
-  ggplot2::update_geom_defaults("text", list(colour = "white"))
+  def_fore <- "#57c1f1"
+
+  ggplot2::update_geom_defaults("point", list(colour = def_fore))
+  ggplot2::update_geom_defaults("line", list(colour = def_fore))
+  ggplot2::update_geom_defaults("area", list(colour = def_fore, fill=def_fore))
+  ggplot2::update_geom_defaults("rect", list(colour = def_fore, fill=def_fore))
+  ggplot2::update_geom_defaults("density", list(colour = def_fore, fill=def_fore))
+  ggplot2::update_geom_defaults("bar", list(colour = def_fore, fill=def_fore))
+  ggplot2::update_geom_defaults("col", list(colour = def_fore, fill=def_fore))
+  ggplot2::update_geom_defaults("text", list(colour = def_fore))
 
   ret <- ggplot2::theme_minimal(base_family=base_family, base_size=base_size)
 
@@ -103,11 +105,13 @@ theme_modern_rc <- function (base_family = "Roboto Condensed", base_size = 11.5,
                                                family=caption_family, face=caption_face))
   ret <- ret + theme(plot.margin=plot_margin)
 
+  bkgrnd <- "#1e1e1e"
+
   ret <- ret +
-    theme(rect =  element_rect(fill = "#1c1c1c", color = "#1c1c1c")) +
-    theme(plot.background = element_rect(fill = "#1c1c1c", color = "#1c1c1c")) +
-    theme(panel.background = element_rect(fill = "#1c1c1c", color = "#1c1c1c")) +
-    theme(rect =  element_rect(fill = "#1c1c1c", color = "#1c1c1c")) +
+    theme(rect =  element_rect(fill = bkgrnd, color = bkgrnd)) +
+    theme(plot.background = element_rect(fill = bkgrnd, color = bkgrnd)) +
+    theme(panel.background = element_rect(fill = bkgrnd, color = bkgrnd)) +
+    theme(rect =  element_rect(fill = bkgrnd, color = bkgrnd)) +
     theme(text =  element_text(color = "white")) +
     theme(axis.text =  element_text(color = "white")) +
     theme(title =  element_text(color = "white")) +
