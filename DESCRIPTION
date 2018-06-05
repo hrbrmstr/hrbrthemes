@@ -11,7 +11,7 @@ Authors@R: c(
       person("Dan", "Wilson", email = "dan@thedatacollective.com.au", 
              role = c("ctb"), comment = c("Secondary axis support")), 
       person("Xavier", "Adam", role = c("ctb")),
-      person("Google", comment = "Roboto Condensed & Titillium Web Fonts0", 
+      person("Google", comment = "Roboto Condensed & Titillium Web Fonts", 
              role = c("cph")),
       person("IBM", comment = "Plex Sans Font", role = c("cph")),
       person("Jacob", "Barnett", email = "jacob.r.barnett@gmail.com", role = c("ctb")),
