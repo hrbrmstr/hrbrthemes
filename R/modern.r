@@ -106,19 +106,20 @@ theme_modern_rc <- function (base_family = "Roboto Condensed", base_size = 11.5,
   ret <- ret + theme(plot.margin=plot_margin)
 
   bkgrnd <- "#1e1e1e"
+  fgrnd <- "#e0e0e0"
 
   ret <- ret +
     theme(rect =  element_rect(fill = bkgrnd, color = bkgrnd)) +
     theme(plot.background = element_rect(fill = bkgrnd, color = bkgrnd)) +
     theme(panel.background = element_rect(fill = bkgrnd, color = bkgrnd)) +
     theme(rect =  element_rect(fill = bkgrnd, color = bkgrnd)) +
-    theme(text =  element_text(color = "white")) +
-    theme(axis.text =  element_text(color = "white")) +
+    theme(text =  element_text(color = fgrnd)) +
+    theme(axis.text =  element_text(color = fgrnd)) +
     theme(title =  element_text(color = "white")) +
     theme(plot.title =  element_text(color = "white")) +
-    theme(plot.subtitle =  element_text(color = "white")) +
-    theme(line = element_line(color = "white")) +
-    theme(axis.ticks = element_line(color = "white"))
+    theme(plot.subtitle =  element_text(color = "#8e8e93")) +
+    theme(line = element_line(color = fgrnd)) +
+    theme(axis.ticks = element_line(color = fgrnd))
 
   ret
 
