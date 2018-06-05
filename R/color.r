@@ -13,7 +13,7 @@ ipsum_pal <- function() { manual_pal(ipsum_palette) }
 #' See [ipsum_pal]().
 #'
 #' @md
-#' @inheritParams ggplot2::scale_colour_hue
+#' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_ipsum
 #' @export
 scale_colour_ipsum <- function(...) { discrete_scale("colour", "ipsum", ipsum_pal(), ...) }
