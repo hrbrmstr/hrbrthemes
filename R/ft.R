@@ -1,6 +1,7 @@
 #' FT color palette
 #'
 #' @md
+#' @note don't forget you can use [scales::alpha()] with these colors
 #' @docType data
 #' @export
 list(
@@ -11,7 +12,8 @@ green = "#b3e93e",
 gray = "#909495",
 yellow = "#ffec1b",
 peach = "#fba29d",
-light_blue = "#23d0fc"
+light_blue = "#23d0fc",
+white = "#ffffff"
 ) -> ft_cols
 
 #' @rdname ft_cols
@@ -187,7 +189,7 @@ ft_geom_defaults <- function() {
 
 }
 
-ft_palette <- c("#617a89", "#0b53c1", "#ff0055", "#b3e93e", "#909495", "#ffec1b", "#fba29d", "#23d0fc")
+ft_palette <- c("#617a89", "#0b53c1", "#ff0055", "#b3e93e", "#909495", "#ffec1b", "#fba29d", "#23d0fc", "#ffffff")
 
 #' A bright qualitative color palette
 #'

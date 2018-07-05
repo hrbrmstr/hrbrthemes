@@ -5,7 +5,7 @@
 \alias{ft_cols}
 \alias{ft_text_col}
 \title{FT color palette}
-\format{An object of class \code{list} of length 8.}
+\format{An object of class \code{list} of length 9.}
 \usage{
 ft_cols
 
@@ -13,5 +13,8 @@ ft_text_col
 }
 \description{
 FT color palette
+}
+\note{
+don't forget you can use \code{\link[scales:alpha]{scales::alpha()}} with these colors
 }
 \keyword{datasets}
