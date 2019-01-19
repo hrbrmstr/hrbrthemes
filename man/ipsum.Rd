@@ -9,8 +9,8 @@ ipsum(number_sections = FALSE, fig_width = 7, fig_height = 5,
   smart = TRUE, self_contained = TRUE, highlight = "default",
   mathjax = "default", extra_dependencies = NULL, css = NULL,
   includes = NULL, keep_md = FALSE, lib_dir = NULL,
-  md_extensions = NULL, pandoc_args = NULL, toc = FALSE, toc_depth = 2,
-  ...)
+  md_extensions = NULL, pandoc_args = NULL, toc = FALSE,
+  toc_depth = 2, ...)
 }
 \arguments{
 \item{number_sections}{\code{TRUE} to number section headings}
@@ -37,7 +37,7 @@ ellipses.}
 dependencies, using data: URIs to incorporate the contents of linked
 scripts, stylesheets, images, and videos. Note that even for self contained
 documents MathJax is still loaded externally (this is necessary because of
-it's size).}
+its size).}
 
 \item{highlight}{Syntax highlighting style. Supported styles include
 "default", "tango", "pygments", "kate", "monochrome", "espresso", "zenburn",

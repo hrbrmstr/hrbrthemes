@@ -176,14 +176,12 @@ ft_geom_defaults <- function() {
              "step", "tile", "violin", "vline")
 
   for (g in geoms) {
-    message(g)
     update_geom_defaults(g, list(colour = "#617a89", fill = "#617a89"))
   }
 
   geoms <- c("text", "label")
 
   for (g in geoms) {
-    message(g)
     update_geom_defaults(g, list(colour = ft_text_col, fill = "#252a32"))
   }
 
@@ -196,8 +194,12 @@ ft_palette <- c("#617a89", "#0b53c1", "#ff0055", "#b3e93e", "#909495", "#ffec1b"
 #' @export
 #' @examples
 #' library(scales)
-#' scales::show_col(ft_palette()(8))
-ft_pal <- function() { manual_pal(ft_palette) }
+#' scales::show_col(ft_pal()(8))
+ft_pal <- function() {
+  ft_palette <- c("#617a89", "#0b53c1", "#ff0055", "#b3e93e", "#909495",
+                  "#ffec1b", "#fba29d", "#23d0fc", "#ffffff")
+  scales::manual_pal(ft_palette)
+}
 
 #' Discrete color & fill scales based on the FT palette
 #'
@@ -207,7 +209,7 @@ ft_pal <- function() { manual_pal(ft_palette) }
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_ft
 #' @export
-scale_colour_ft <- function(...) { discrete_scale("colour", "ft", ft_pal(), ...) }
+scale_colour_ft <- function(...) { ggplot2::discrete_scale("colour", "ft", ft_pal(), ...) }
 
 #' @export
 #' @rdname scale_ft
@@ -215,4 +217,4 @@ scale_color_ft <- scale_colour_ft
 
 #' @export
 #' @rdname scale_ft
-scale_fill_ft <- function(...) { discrete_scale("fill", "ft", ft_pal(), ...) }
+scale_fill_ft <- function(...) { ggplot2::discrete_scale("fill", "ft", ft_pal(), ...) }

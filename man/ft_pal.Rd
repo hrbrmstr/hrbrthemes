@@ -11,5 +11,5 @@ A bright qualitative color palette
 }
 \examples{
 library(scales)
-scales::show_col(ft_palette()(8))
+scales::show_col(ft_pal()(8))
 }

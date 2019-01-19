@@ -8,48 +8,49 @@
 \usage{
 theme_ft_rc(base_family = "Roboto Condensed", base_size = 11.5,
   plot_title_family = base_family, plot_title_size = 18,
-  plot_title_face = "bold", plot_title_margin = 10, subtitle_family = if
-  (.Platform$OS.type == "windows") "Roboto Condensed" else
-  "Roboto Condensed Light", subtitle_size = 13, subtitle_face = "plain",
-  subtitle_margin = 15, strip_text_family = base_family,
-  strip_text_size = 12, strip_text_face = "plain", caption_family = if
-  (.Platform$OS.type == "windows") "Roboto Condensed" else
-  "Roboto Condensed Light", caption_size = 9, caption_face = "plain",
-  caption_margin = 10, axis_text_size = base_size,
-  axis_title_family = base_family, axis_title_size = 9,
-  axis_title_face = "plain", axis_title_just = "rt",
-  plot_margin = margin(30, 30, 30, 30), grid = TRUE, axis = FALSE,
-  ticks = FALSE)
+  plot_title_face = "bold", plot_title_margin = 10,
+  subtitle_family = if (.Platform$OS.type == "windows")
+  "Roboto Condensed" else "Roboto Condensed Light", subtitle_size = 13,
+  subtitle_face = "plain", subtitle_margin = 15,
+  strip_text_family = base_family, strip_text_size = 12,
+  strip_text_face = "plain", caption_family = if (.Platform$OS.type ==
+  "windows") "Roboto Condensed" else "Roboto Condensed Light",
+  caption_size = 9, caption_face = "plain", caption_margin = 10,
+  axis_text_size = base_size, axis_title_family = base_family,
+  axis_title_size = 9, axis_title_face = "plain",
+  axis_title_just = "rt", plot_margin = margin(30, 30, 30, 30),
+  grid = TRUE, axis = FALSE, ticks = FALSE)
 
 theme_modern_rc(base_family = "Roboto Condensed", base_size = 11.5,
   plot_title_family = base_family, plot_title_size = 18,
-  plot_title_face = "bold", plot_title_margin = 10, subtitle_family = if
-  (.Platform$OS.type == "windows") "Roboto Condensed" else
-  "Roboto Condensed Light", subtitle_size = 13, subtitle_face = "plain",
-  subtitle_margin = 15, strip_text_family = base_family,
-  strip_text_size = 12, strip_text_face = "plain", caption_family = if
-  (.Platform$OS.type == "windows") "Roboto Condensed" else
-  "Roboto Condensed Light", caption_size = 9, caption_face = "plain",
-  caption_margin = 10, axis_text_size = base_size,
-  axis_title_family = base_family, axis_title_size = 9,
-  axis_title_face = "plain", axis_title_just = "rt",
-  plot_margin = margin(30, 30, 30, 30), grid = TRUE, axis = FALSE,
-  ticks = FALSE)
+  plot_title_face = "bold", plot_title_margin = 10,
+  subtitle_family = if (.Platform$OS.type == "windows")
+  "Roboto Condensed" else "Roboto Condensed Light", subtitle_size = 13,
+  subtitle_face = "plain", subtitle_margin = 15,
+  strip_text_family = base_family, strip_text_size = 12,
+  strip_text_face = "plain", caption_family = if (.Platform$OS.type ==
+  "windows") "Roboto Condensed" else "Roboto Condensed Light",
+  caption_size = 9, caption_face = "plain", caption_margin = 10,
+  axis_text_size = base_size, axis_title_family = base_family,
+  axis_title_size = 9, axis_title_face = "plain",
+  axis_title_just = "rt", plot_margin = margin(30, 30, 30, 30),
+  grid = TRUE, axis = FALSE, ticks = FALSE)
 
 theme_ipsum_rc(base_family = "Roboto Condensed", base_size = 11.5,
   plot_title_family = base_family, plot_title_size = 18,
-  plot_title_face = "bold", plot_title_margin = 10, subtitle_family = if
-  (.Platform$OS.type == "windows") "Roboto Condensed" else
-  "Roboto Condensed Light", subtitle_size = 13, subtitle_face = "plain",
-  subtitle_margin = 15, strip_text_family = base_family,
-  strip_text_size = 12, strip_text_face = "plain", caption_family = if
-  (.Platform$OS.type == "windows") "Roboto Condensed" else
-  "Roboto Condensed Light", caption_size = 9, caption_face = "plain",
-  caption_margin = 10, axis_text_size = base_size,
-  axis_title_family = base_family, axis_title_size = 9,
-  axis_title_face = "plain", axis_title_just = "rt",
-  plot_margin = margin(30, 30, 30, 30), grid_col = "#cccccc", grid = TRUE,
-  axis_col = "#cccccc", axis = FALSE, ticks = FALSE)
+  plot_title_face = "bold", plot_title_margin = 10,
+  subtitle_family = if (.Platform$OS.type == "windows")
+  "Roboto Condensed" else "Roboto Condensed Light", subtitle_size = 13,
+  subtitle_face = "plain", subtitle_margin = 15,
+  strip_text_family = base_family, strip_text_size = 12,
+  strip_text_face = "plain", caption_family = if (.Platform$OS.type ==
+  "windows") "Roboto Condensed" else "Roboto Condensed Light",
+  caption_size = 9, caption_face = "plain", caption_margin = 10,
+  axis_text_size = base_size, axis_title_family = base_family,
+  axis_title_size = 9, axis_title_face = "plain",
+  axis_title_just = "rt", plot_margin = margin(30, 30, 30, 30),
+  grid_col = "#cccccc", grid = TRUE, axis_col = "#cccccc",
+  axis = FALSE, ticks = FALSE)
 }
 \arguments{
 \item{base_family, base_size}{base font family and size}
