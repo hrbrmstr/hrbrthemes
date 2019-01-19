@@ -54,5 +54,5 @@ Imports:
     htmltools,
     tools,
     magrittr
-RoxygenNote: 6.0.1.9000
+RoxygenNote: 6.1.1
 VignetteBuilder: knitr
