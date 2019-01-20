@@ -20,3 +20,4 @@
 - new fonts, a new white theme and a new dark theme
 - fixed typos in documentation
 - resubmitted after errors noted on https://win-builder.r-project.org/incoming_pretest/hrbrthemes_0.6.0_20190120_223916/Windows/00check.log
+- re-re-submitted (gdtools in the right place now)
