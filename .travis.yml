@@ -11,7 +11,6 @@ matrix:
     - os: linux
       dist: precise
       sudo: false
-      r: devel
       before_install:
         - mkdir -p  ~/.R
         - echo 'CXX1X=g++ -std=c++0x -g -O2 -fPIC' > ~/.R/Makevars
