@@ -40,8 +40,7 @@ Suggests:
     gcookbook,
     clipr,
     vdiffr,
-    svglite,
-    gdtools
+    svglite
 Depends:
     R (>= 3.2.0)
 Imports:
@@ -54,6 +53,7 @@ Imports:
     rmarkdown,
     htmltools,
     tools,
-    magrittr
+    magrittr,
+    gdtools
 RoxygenNote: 6.1.1
 VignetteBuilder: knitr
