@@ -1,6 +1,7 @@
-# hrbrthemes 0.7.0
+# hrbrthemes 0.6.0
 
-- 
+- new themes & fonts
+- doc fixes
 
 # hrbrthemes 0.5.0
 
