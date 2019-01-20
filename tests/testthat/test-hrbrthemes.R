@@ -1,8 +1,6 @@
 context("core theme components work")
 test_that("we can do something", {
 
-  library(purrr)
-
   tmp_x1 <- scale_x_comma()
   tmp_x2 <- scale_x_percent()
 

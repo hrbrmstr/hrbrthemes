@@ -2,7 +2,7 @@ Package: hrbrthemes
 Type: Package
 Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
 Version: 0.6.0
-Date: 2018-04-24
+Date: 2019-01-20
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
              comment = c(ORCID = "0000-0001-5670-2640")),
@@ -40,7 +40,8 @@ Suggests:
     gcookbook,
     clipr,
     vdiffr,
-    svglite
+    svglite,
+    gdtools
 Depends:
     R (>= 3.2.0)
 Imports:
