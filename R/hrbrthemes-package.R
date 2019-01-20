@@ -20,6 +20,7 @@
 #' @name hrbrthemes
 #' @docType package
 #' @author Bob Rudis (bob@@rud.is)
+#' @keywords internal
 #' @import ggplot2 grid scales extrafont grDevices
 #' @importFrom magrittr %>%
 #' @import rmarkdown knitr htmltools

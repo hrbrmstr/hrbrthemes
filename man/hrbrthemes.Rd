@@ -26,3 +26,4 @@ to register non-core fonts with the Windows graphics device.
 \author{
 Bob Rudis (bob@rud.is)
 }
+\keyword{internal}
