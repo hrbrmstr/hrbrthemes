@@ -9,23 +9,13 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 notes
-
-r-hub CRAN check notes "Author field differs from that derived from Authors@R"
-due to the ORCID id auto-expansion to a URL.
-
-* This is an update and CRAN-fix release.
+0 errors | 0 warnings | 0 notes%>%	hrbrthemes exported operators
 
 ## Reverse dependencies
 
-- BAwiR - ok
-- fontHind - ok
-- fontMPlus - ok
+- [BAwiR, fontHind, fontMPlus, ggstatsplot, mlr] all OK
 
 ---
 
-- new fonts and R markdown theme added
-- some new utilities for ggplot2 themes
-- fixed CRAN check errors on ubuntu (at least that's what all the 
-  third-party testing sites tell me since it does not toss that
-  error on them)
+- new fonts, a new white theme and a new dark theme
+- fixed typos in documentation

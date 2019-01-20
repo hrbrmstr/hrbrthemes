@@ -28,43 +28,81 @@ anyway) does not have said diversity but this quality is not (IMO) a
 
 The following functions are implemented/objects are exported:
 
-Core themes & scales:
+Themes:
 
-  - `theme_ipsum`: Arial Narrow-based theme
-  - `theme_ipsum_ps`: IBM Plex Sans-based theme
-  - `theme_ipsum_rc`: Roboto Condensed-based theme
-  - `theme_ipsum_tw`: Titillium Web-based theme
-  - `scale_x_comma` / `scale_y_comma`: Comma format for axis text and
-    better `expand` defaults (you need to set limits)
-  - `scale_x_percent` / `scale_y_percent`: Percent format for axis text
-    and `expand=c(0,0)` (you need to set limits)
-  - `scale_color_ipsum` / `scale_fill_ipsum` / `ipsum_pal`: A muted
-    discrete color palette with 9 colors
+  - `theme_ft_rc`: A precise & pristine ggplot2 theme with opinionated
+    defaults and an emphasis on typoghraphy
+  - `theme_ipsum`: A precise & pristine ggplot2 theme with opinionated
+    defaults and an emphasis on typography
+  - `theme_ipsum_ps`: A precise & pristine ggplot2 theme with
+    opinionated defaults and an emphasis on typoghraphy
+  - `theme_ipsum_rc`: A precise & pristine ggplot2 theme with
+    opinionated defaults and an emphasis on typoghraphy
+  - `theme_ipsum_tw`: A precise & pristine ggplot2 theme with
+    opinionated defaults and an emphasis on typoghraphy
+  - `theme_modern_rc`: A precise & pristine ggplot2 theme with
+    opinionated defaults and an emphasis on typoghraphy
+
+Scales (that align with various themes):
+
+  - `scale_color_ft`: Discrete color & fill scales based on the FT
+    palette
+  - `scale_color_ipsum`: Discrete color & fill scales based on the ipsum
+    palette
+  - `scale_colour_ft`: Discrete color & fill scales based on the FT
+    palette
+  - `scale_colour_ipsum`: Discrete color & fill scales based on the
+    ipsum palette
+  - `scale_fill_ft`: Discrete color & fill scales based on the FT
+    palette
+  - `scale_fill_ipsum`: Discrete color & fill scales based on the ipsum
+    palette
+  - `scale_x_comma`: X & Y scales with opinionated pre-sets for percent
+    & comma label formats
+  - `scale_x_percent`: X & Y scales with opinionated pre-sets for
+    percent & comma label formats
+  - `scale_y_comma`: X & Y scales with opinionated pre-sets for percent
+    & comma label formats
+  - `scale_y_percent`: X & Y scales with opinionated pre-sets for
+    percent & comma label formats
+
+Palettes/Named Colors:
+
+  - `ipsum_pal`: A muted, qualitative color palette
+  - `ft_cols`: FT color palette
+  - `ft_pal`: A bright qualitative color palette
+  - `ft_text_col`: FT color palette
+
+Fonts:
+
+  - `font_an`: Arial Narrow font name R variable aliases
+  - `font_ps`: PlexSans font name R variable aliases
+  - `font_ps_light`: PlexSans font name R variable aliases
+  - `font_rc`: Roboto Condensed font name R variable aliases
+  - `font_rc_light`: Roboto Condensed font name R variable aliases
+  - `font_tw`: Titillium Web font name R variable aliases
+  - `font_tw_bold`: Titillium Web font name R variable aliases
+  - `font_tw_light`: Titillium Web font name R variable aliases
+
+R Markdown:
+
+  - `ipsum`: ipsum R markdown template
+  - `ipsum_pdf`: ipsum R markdown template for PDF output
 
 Utilities:
 
   - `flush_ticks`: Makes axis text labels flush on the ends
+  - `ft_geom_defaults`: Change geom defaults from black to custom lights
+    for the FT theme
   - `gg_check`: Spell check ggplot2 plot labels
-  - `update_geom_font_defaults`: Update font defaults for text geoms
-    (the default is — unsurprisingly — Arial Narrow)
-
-R Markdown:
-
-  - `ipsum`: minimalistic HTML template
-  - `ipsum_pdf`: everything you need to use hrbrthemes in PDFs
-
-The following global variables are now in your namespace:
-
-  - `font_an`: a short global alias for “`Arial Narrow`”
-  - `font_ps`: a short global alias for “`IBMPlexSans`”
-  - `font_ps_light`: a short global alias for “`IBMPlexSans-Light`”
-  - `font_rc`: a short global alias for “`Roboto Condensed`”
-  - `font_rc_light`: a short global alias for “`Roboto Condensed Light`”
-  - `font_tw`: a short global alias for “`Titillium Web`”
-  - `font_tw_bold`: a short global alias for “`Titillium Web Bold`”
-    (NOTE: may be an issue with name on macOS 10.13)
-  - `font_tw_light`: a short global alias for “`Titillium Web Light`”
-    (NOTE: may be an issue with name on macOS 10.13)
+  - `import_plex_sans`: Import IBM Plex Sans font for use in charts
+  - `import_roboto_condensed`: Import Roboto Condensed font for use in
+    charts
+  - `import_titillium_web`: Import Titillium Web font for use in charts
+  - `modern_geom_defaults`: Change geom defaults from black to white for
+    the modern theme
+  - `update_geom_font_defaults`: Update matching font defaults for text
+    geoms
 
 ### Installation
 
@@ -111,6 +149,20 @@ ggplot(mtcars, aes(mpg, wt)) +
 ```
 
 <img src="README_figs/README-unnamed-chunk-6-1.png" width="672" />
+
+### New FT Theme\!
+
+``` r
+ggplot(mtcars, aes(mpg, wt)) +
+  geom_point(color = ft_cols$yellow) +
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
+       title="Seminal ggplot2 scatterplot example",
+       subtitle="A plot that is only useful for demonstration purposes",
+       caption="Brought to you by the letter 'g'") + 
+  theme_ft_rc()
+```
+
+<img src="README_figs/README-ft-1.png" width="672" />
 
 ### IBM Plex Sans
 
@@ -252,45 +304,12 @@ gg_check(gg)
 
 <img src="README_figs/README-unnamed-chunk-13-1.png" width="672" />
 
-### Test Results
+### hrbrthemes Metrics
 
-``` r
-library(hrbrthemes)
-
-date()
-## [1] "Tue Apr 24 10:13:37 2018"
-
-devtools::test()
-## ✔ | OK F W S | Context
-## 
-⠏ |  0       | core theme components work
-⠋ |  1       | core theme components work
-⠙ |  2       | core theme components work
-⠹ |  3       | core theme components work
-⠸ |  4       | core theme components work
-⠼ |  5       | core theme components work
-⠴ |  6       | core theme components work
-⠦ |  7       | core theme components work
-⠧ |  8       | core theme components work
-⠇ |  9       | core theme components work
-⠏ | 10       | core theme components work
-✔ | 10       | core theme components work [2.3 s]
-## 
-⠏ |  0       | themes
-## 
-⠋ |  1       | themes
-## 
-⠙ |  2       | themes
-✔ |  2       | themes [0.5 s]
-## 
-## ══ Results ══════════════════════════════════════════════════════════════════════════════════════════════
-## Duration: 2.8 s
-## 
-## OK:       12
-## Failed:   0
-## Warnings: 0
-## Skipped:  0
-```
+| Lang | \# Files |  (%) |  LoC | (%) | Blank lines |  (%) | \# Lines |  (%) |
+| :--- | -------: | ---: | ---: | --: | ----------: | ---: | -------: | ---: |
+| R    |       20 | 0.91 | 1083 | 0.9 |         212 | 0.68 |      582 | 0.78 |
+| Rmd  |        2 | 0.09 |  124 | 0.1 |          99 | 0.32 |      162 | 0.22 |
 
 ### Code of Conduct
 
