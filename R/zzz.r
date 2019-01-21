@@ -22,7 +22,7 @@
   if (!any(grepl("Arial[ ]Narrow|Roboto[ ]Condensed", fnt$FamilyName))) {
     packageStartupMessage("NOTE: Either Arial Narrow or Roboto Condensed fonts are required to use these themes.")
     packageStartupMessage("      Please use hrbrthemes::import_roboto_condensed() to install Roboto Condensed and")
-    packageStartupMessage("      if Arial Narrow is not on your system, please see http://bit.ly/arialnarrow")
+    packageStartupMessage("      if Arial Narrow is not on your system, please see https://bit.ly/arialnarrow")
   } # nocov end
 
 }
