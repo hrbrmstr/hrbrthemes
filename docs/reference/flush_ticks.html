@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Roboto Condensed font name R variable aliases — font_rc • hrbrthemes</title>
+<title>Makes axis text labels flush on the ends — flush_ticks • hrbrthemes</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,10 +30,15 @@
 
 
 
-<meta property="og:title" content="Roboto Condensed font name R variable aliases — font_rc" />
+<meta property="og:title" content="Makes axis text labels flush on the ends — flush_ticks" />
 
-<meta property="og:description" content="font_rc == &quot;Roboto Condensed&quot;
-font_fc_light == &quot;Roboto Condensed Light&quot;" />
+<meta property="og:description" content="A covenience function intended for basic, fixed-scale plots only (i.e. does not handle
+free scales in facets).
+
+You need to pass in a ggplot2 object to this function. It can't be +'d in a chain
+of geoms, coords, scales, themes, etc. It also builds the plot (but does not display
+it) so if the plt takes a while (i.e. has lots of data or transforms) this will also
+take a while." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -115,38 +120,62 @@ font_fc_light == &quot;Roboto Condensed Light&quot;" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Roboto Condensed font name R variable aliases</h1>
-    <small class="dont-index">Source: <a href='https://github.com/hrbrmstr/hrbrthemes/blob/master/R/roboto-condensed.r'><code>R/roboto-condensed.r</code></a></small>
-    <div class="hidden name"><code>RobotoCondensed.Rd</code></div>
+    <h1>Makes axis text labels flush on the ends</h1>
+    <small class="dont-index">Source: <a href='https://github.com/hrbrmstr/hrbrthemes/blob/master/R/flush-ticks.R'><code>R/flush-ticks.R</code></a></small>
+    <div class="hidden name"><code>flush_ticks.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p><code>font_rc</code> == "<code>Roboto Condensed</code>"</p>
-<p><code>font_fc_light</code> == "<code>Roboto Condensed Light</code>"</p>
+    <p>A covenience function intended for basic, fixed-scale plots only (i.e. does not handle
+free scales in facets).<br />
+<br />
+You need to pass in a ggplot2 object to this function. It can't be <code>+</code>'d in a chain
+of geoms, coords, scales, themes, etc. It also builds the plot (but does not display
+it) so if the plt takes a while (i.e. has lots of data or transforms) this will also
+take a while.</p>
     
     </div>
 
-    <pre class="usage"><span class='no'>font_rc</span>
+    <pre class="usage"><span class='fu'>flush_ticks</span>(<span class='no'>gg</span>, <span class='kw'>flush</span> <span class='kw'>=</span> <span class='st'>"XY"</span>, <span class='kw'>plot</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>cat</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>gg</th>
+      <td><p>ggplot2 plot object</p></td>
+    </tr>
+    <tr>
+      <th>flush</th>
+      <td><p>either "<code>X</code>" or "<code>Y</code>" or "<code>XY</code>" to flush individual or both axes. Default: both.</p></td>
+    </tr>
+    <tr>
+      <th>plot</th>
+      <td><p>if <code>FALSE</code> then the ggplot object will be returned <em>invisibly</em></p></td>
+    </tr>
+    <tr>
+      <th>cat</th>
+      <td><p>if <code>TRUE</code> then display <code>theme()</code> statements and copy them to the clipboard</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-<span class='no'>font_rc_light</span></pre>
-        
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
-
-    <p>length 1 character vector</p>
+    <p>ggplot2 object with <code>theme()</code> elements added</p>
     
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p><code>font_rc_light</code> (a.k.a. "<code>Roboto Condensed Light</code>") is not available on
-Windows and will throw a warning if used in plots.</p>
+    <p>Intended for basic, fixed-scale plots only (i.e. does not handle free scales in facets).</p>
     
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#format">Format</a></li>
+      <li><a href="#value">Value</a></li>
 
       <li><a href="#note">Note</a></li>
           </ul>

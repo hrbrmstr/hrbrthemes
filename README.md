@@ -8,7 +8,7 @@ developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repos
 [![Travis-CI Build
 Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/hrbrthemes)](https://cran.r-project.org/package=hrbrthemes)
-![downloads](http://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes)
+![downloads](http://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2545422.svg)](https://doi.org/10.5281/zenodo.2545422)
 -----
 
