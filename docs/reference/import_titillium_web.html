@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Roboto Condensed font name R variable aliases — font_rc • hrbrthemes</title>
+<title>Import Titillium Web font for use in charts — import_titillium_web • hrbrthemes</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,10 +30,9 @@
 
 
 
-<meta property="og:title" content="Roboto Condensed font name R variable aliases — font_rc" />
+<meta property="og:title" content="Import Titillium Web font for use in charts — import_titillium_web" />
 
-<meta property="og:description" content="font_rc == &quot;Roboto Condensed&quot;
-font_fc_light == &quot;Roboto Condensed Light&quot;" />
+<meta property="og:description" content="Titillium Web  is a trademark of Google." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -115,30 +114,32 @@ font_fc_light == &quot;Roboto Condensed Light&quot;" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Roboto Condensed font name R variable aliases</h1>
-    <small class="dont-index">Source: <a href='https://github.com/hrbrmstr/hrbrthemes/blob/master/R/roboto-condensed.r'><code>R/roboto-condensed.r</code></a></small>
-    <div class="hidden name"><code>RobotoCondensed.Rd</code></div>
+    <h1>Import Titillium Web font for use in charts</h1>
+    <small class="dont-index">Source: <a href='https://github.com/hrbrmstr/hrbrthemes/blob/master/R/titillium-web.R'><code>R/titillium-web.R</code></a></small>
+    <div class="hidden name"><code>import_titillium_web.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p><code>font_rc</code> == "<code>Roboto Condensed</code>"</p>
-<p><code>font_fc_light</code> == "<code>Roboto Condensed Light</code>"</p>
+    <p>Titillium Web  is a trademark of Google.</p>
     
     </div>
 
-    <pre class="usage"><span class='no'>font_rc</span>
-
-<span class='no'>font_rc_light</span></pre>
+    <pre class="usage"><span class='fu'>import_titillium_web</span>()</pre>
         
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>length 1 character vector</p>
+    <p>There is an option <code>hrbrthemes.loadfonts</code> which -- if set to <code>TRUE</code> -- will
+call <code><a href='https://www.rdocumentation.org/packages/extrafont/topics/loadfonts'>extrafont::loadfonts()</a></code> to register non-core fonts with R PDF &amp; PostScript
+devices. If you are running under Windows, the package calls the same function
+to register non-core fonts with the Windows graphics device.</p>
     
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p><code>font_rc_light</code> (a.k.a. "<code>Roboto Condensed Light</code>") is not available on
-Windows and will throw a warning if used in plots.</p>
+    <p>This will take care of ensuring PDF/PostScript usage. The location of the
+font directory is displayed after the base import is complete. It is highly
+recommended that you install them on your system the same way you would any
+other font you wish to use in other programs.</p>
     
 
   </div>
@@ -146,7 +147,7 @@ Windows and will throw a warning if used in plots.</p>
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
-      <li><a href="#format">Format</a></li>
+      <li><a href="#details">Details</a></li>
 
       <li><a href="#note">Note</a></li>
           </ul>
