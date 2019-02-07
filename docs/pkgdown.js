@@ -25,10 +25,6 @@
     for (var i = 0; i < links.length; i++) {
       if (links[i].getAttribute("href") === "#")
         continue;
-      // Ignore external links
-      if (links[i].host !== location.host)
-        continue;
-
       var nav_path = paths(links[i].pathname);
 
       var length = prefix_length(nav_path, cur_path);
@@ -56,14 +52,13 @@
     return(pieces);
   }
 
-  // Returns -1 if not found
   function prefix_length(needle, haystack) {
     if (needle.length > haystack.length)
-      return(-1);
+      return(0);
 
     // Special case for length-0 haystack, since for loop won't run
     if (haystack.length === 0) {
-      return(needle.length === 0 ? 0 : -1);
+      return(needle.length === 0 ? 1 : 0);
     }
 
     for (var i = 0; i < haystack.length; i++) {
