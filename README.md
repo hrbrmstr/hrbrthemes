@@ -30,17 +30,17 @@ The following functions are implemented/objects are exported:
 Themes:
 
   - `theme_ft_rc`: A precise & pristine ggplot2 theme with opinionated
-    defaults and an emphasis on typoghraphy
+    defaults and an emphasis on typography
   - `theme_ipsum`: A precise & pristine ggplot2 theme with opinionated
     defaults and an emphasis on typography
   - `theme_ipsum_ps`: A precise & pristine ggplot2 theme with
-    opinionated defaults and an emphasis on typoghraphy
+    opinionated defaults and an emphasis on typography
   - `theme_ipsum_rc`: A precise & pristine ggplot2 theme with
-    opinionated defaults and an emphasis on typoghraphy
+    opinionated defaults and an emphasis on typography
   - `theme_ipsum_tw`: A precise & pristine ggplot2 theme with
-    opinionated defaults and an emphasis on typoghraphy
+    opinionated defaults and an emphasis on typography
   - `theme_modern_rc`: A precise & pristine ggplot2 theme with
-    opinionated defaults and an emphasis on typoghraphy
+    opinionated defaults and an emphasis on typography
 
 Scales (that align with various themes):
 
