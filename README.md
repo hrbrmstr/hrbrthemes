@@ -35,6 +35,8 @@ Themes:
     defaults and an emphasis on typography
   - `theme_ipsum_ps`: A precise & pristine ggplot2 theme with
     opinionated defaults and an emphasis on typoghraphy
+  - `theme_ipsum_pub`: A precise & pristine ggplot2 theme with
+    opinionated defaults and an emphasis on typoghraphy
   - `theme_ipsum_rc`: A precise & pristine ggplot2 theme with
     opinionated defaults and an emphasis on typoghraphy
   - `theme_ipsum_tw`: A precise & pristine ggplot2 theme with
@@ -77,6 +79,10 @@ Fonts:
   - `font_an`: Arial Narrow font name R variable aliases
   - `font_ps`: PlexSans font name R variable aliases
   - `font_ps_light`: PlexSans font name R variable aliases
+  - `font_pub`:	Public Sans font name R variable aliases
+  - `font_pub_bold`:	Public Sans font name R variable aliases
+  - `font_pub_light`:	Public Sans font name R variable aliases
+  - `font_pub_thin`:	Public Sans font name R variable aliases
   - `font_rc`: Roboto Condensed font name R variable aliases
   - `font_rc_light`: Roboto Condensed font name R variable aliases
   - `font_tw`: Titillium Web font name R variable aliases
