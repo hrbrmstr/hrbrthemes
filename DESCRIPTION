@@ -1,8 +1,8 @@
 Package: hrbrthemes
 Type: Package
 Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
-Version: 0.7.0
-Date: 2019-04-09
+Version: 0.7.1
+Date: 2019-07-03
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
              comment = c(ORCID = "0000-0001-5670-2640")),

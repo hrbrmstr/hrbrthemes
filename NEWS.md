@@ -1,3 +1,13 @@
+# hrbrthemes 0.7.1
+
+- Small modification to percent scales to account for 
+  changes in {ggplot2}
+- Additional precision in setting various theme elements
+
+# hrbrthemes 0.7.0
+
+- fix CRAN check errors
+
 # hrbrthemes 0.6.0
 
 - new themes & fonts

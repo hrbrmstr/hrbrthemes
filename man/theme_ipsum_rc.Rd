@@ -49,8 +49,8 @@ theme_ipsum_rc(base_family = "Roboto Condensed", base_size = 11.5,
   axis_text_size = base_size, axis_title_family = base_family,
   axis_title_size = 9, axis_title_face = "plain",
   axis_title_just = "rt", plot_margin = margin(30, 30, 30, 30),
-  grid_col = "#cccccc", grid = TRUE, axis_col = "#cccccc",
-  axis = FALSE, ticks = FALSE)
+  panel_spacing = grid::unit(2, "lines"), grid_col = "#cccccc",
+  grid = TRUE, axis_col = "#cccccc", axis = FALSE, ticks = FALSE)
 }
 \arguments{
 \item{base_family, base_size}{base font family and size}
@@ -78,6 +78,8 @@ theme_ipsum_rc(base_family = "Roboto Condensed", base_size = 11.5,
 \item{axis}{add x or y axes? \code{TRUE}, \code{FALSE}, "\code{xy}"}
 
 \item{ticks}{ticks if \code{TRUE} add ticks}
+
+\item{panel_spacing}{panel spacing (use \code{unit()})}
 
 \item{grid_col}{grid color}
 

@@ -51,7 +51,7 @@ is.formula <- function (x) { inherits(x, "formula") }
 #' @param sec.axis specify a secondary axis
 #' @export
 scale_x_percent <- function (name = waiver(), breaks = waiver(), minor_breaks = waiver(),
-                             labels = scales::percent, limits = NULL, expand = c(0.01,0), oob = censor,
+                             labels = scales::percent_format(accuracy = 1), limits = NULL, expand = c(0.01,0), oob = censor,
                              na.value = NA_real_, trans = "identity", position = "bottom",
                              sec.axis = waiver()) {
   sc <- ggplot2::continuous_scale(c("x", "xmin", "xmax", "xend", "xintercept",
@@ -73,7 +73,7 @@ scale_x_percent <- function (name = waiver(), breaks = waiver(), minor_breaks = 
 #' @rdname scale_x_percent
 #' @export
 scale_y_percent <- function (name = waiver(), breaks = waiver(), minor_breaks = waiver(),
-                             labels = scales::percent, limits = NULL, expand = c(0.01,0), oob = censor,
+                             labels = scales::percent_format(accuracy = 1), limits = NULL, expand = c(0.01,0), oob = censor,
                              na.value = NA_real_, trans = "identity", position = "left",
                              sec.axis = waiver()) {
     sc <- ggplot2::continuous_scale(c("y", "ymin", "ymax", "yend", "yintercept",
@@ -95,7 +95,7 @@ scale_y_percent <- function (name = waiver(), breaks = waiver(), minor_breaks = 
 #' @rdname scale_x_percent
 #' @export
 scale_x_comma <- function (name = waiver(), breaks = waiver(), minor_breaks = waiver(),
-                             labels = scales::comma, limits = NULL, expand = c(0.01,0), oob = censor,
+                             labels = scales::comma_format(), limits = NULL, expand = c(0.01,0), oob = censor,
                              na.value = NA_real_, trans = "identity", position = "bottom",
                              sec.axis = waiver()) {
   sc <- ggplot2::continuous_scale(c("x", "xmin", "xmax", "xend", "xintercept",
@@ -118,7 +118,7 @@ scale_x_comma <- function (name = waiver(), breaks = waiver(), minor_breaks = wa
 #' @rdname scale_x_percent
 #' @export
 scale_y_comma <- function (name = waiver(), breaks = waiver(), minor_breaks = waiver(),
-                             labels = scales::comma, limits = NULL, expand = c(0.01,0), oob = censor,
+                             labels = scales::comma_format(), limits = NULL, expand = c(0.01,0), oob = censor,
                              na.value = NA_real_, trans = "identity", position = "left",
                              sec.axis = waiver()) {
     sc <- ggplot2::continuous_scale(c("y", "ymin", "ymax", "yend", "yintercept",
