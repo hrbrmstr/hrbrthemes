@@ -8,8 +8,9 @@ developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repos
 [![Travis-CI Build
 Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/hrbrthemes)](https://cran.r-project.org/package=hrbrthemes)
-![downloads](http://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes) 
+![downloads](http://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2545422.svg)](https://doi.org/10.5281/zenodo.2545422)
+
 -----
 
 This is a very focused package that provides typography-centric themes
@@ -29,43 +30,37 @@ The following functions are implemented/objects are exported:
 
 Themes:
 
-  - `theme_ft_rc`: A precise & pristine ggplot2 theme with opinionated
-    defaults and an emphasis on typoghraphy
-  - `theme_ipsum`: A precise & pristine ggplot2 theme with opinionated
-    defaults and an emphasis on typography
-  - `theme_ipsum_ps`: A precise & pristine ggplot2 theme with
-    opinionated defaults and an emphasis on typoghraphy
-  - `theme_ipsum_pub`: A precise & pristine ggplot2 theme with
-    opinionated defaults and an emphasis on typoghraphy
-  - `theme_ipsum_rc`: A precise & pristine ggplot2 theme with
-    opinionated defaults and an emphasis on typoghraphy
-  - `theme_ipsum_tw`: A precise & pristine ggplot2 theme with
-    opinionated defaults and an emphasis on typoghraphy
-  - `theme_modern_rc`: A precise & pristine ggplot2 theme with
-    opinionated defaults and an emphasis on typoghraphy
+  - `theme_ipsum`: Arial Narrow
+  - `theme_ipsum_rc`: Roboto Condensed
+  - `theme_ipsum_ps`: IBM Plex Sans font
+  - `theme_ipsum_pub`: Public Sans
+  - `theme_ipsum_tw`: Titilium Web
+  - `theme_modern_rc`: Roboto Condensed dark theme
+  - `theme_ft_rc`: Dark theme based on FT’s dark theme (Roboto
+    Condensed)
 
 Scales (that align with various themes):
 
-  - `scale_color_ft`: Discrete color & fill scales based on the FT
-    palette
   - `scale_color_ipsum`: Discrete color & fill scales based on the ipsum
-    palette
-  - `scale_colour_ft`: Discrete color & fill scales based on the FT
     palette
   - `scale_colour_ipsum`: Discrete color & fill scales based on the
     ipsum palette
-  - `scale_fill_ft`: Discrete color & fill scales based on the FT
-    palette
   - `scale_fill_ipsum`: Discrete color & fill scales based on the ipsum
     palette
-  - `scale_x_comma`: X & Y scales with opinionated pre-sets for percent
+  - `scale_color_ft`: Discrete color & fill scales based on the FT
+    palette
+  - `scale_colour_ft`: Discrete color & fill scales based on the FT
+    palette
+  - `scale_fill_ft`: Discrete color & fill scales based on the FT
+    palette
+  - `scale_x_comma`: X & Y scales with opinionated presets for percent &
+    comma label formats
+  - `scale_x_percent`: X & Y scales with opinionated presets for percent
     & comma label formats
-  - `scale_x_percent`: X & Y scales with opinionated pre-sets for
-    percent & comma label formats
-  - `scale_y_comma`: X & Y scales with opinionated pre-sets for percent
+  - `scale_y_comma`: X & Y scales with opinionated presets for percent &
+    comma label formats
+  - `scale_y_percent`: X & Y scales with opinionated presets for percent
     & comma label formats
-  - `scale_y_percent`: X & Y scales with opinionated pre-sets for
-    percent & comma label formats
 
 Palettes/Named Colors:
 
@@ -77,14 +72,14 @@ Palettes/Named Colors:
 Fonts:
 
   - `font_an`: Arial Narrow font name R variable aliases
-  - `font_ps`: PlexSans font name R variable aliases
-  - `font_ps_light`: PlexSans font name R variable aliases
-  - `font_pub`:	Public Sans font name R variable aliases
-  - `font_pub_bold`:	Public Sans font name R variable aliases
-  - `font_pub_light`:	Public Sans font name R variable aliases
-  - `font_pub_thin`:	Public Sans font name R variable aliases
   - `font_rc`: Roboto Condensed font name R variable aliases
   - `font_rc_light`: Roboto Condensed font name R variable aliases
+  - `font_pub`: Public Sans font name R variable aliases
+  - `font_pub_bold`: Public Sans font name R variable aliases
+  - `font_pub_light`: Public Sans font name R variable aliases
+  - `font_pub_thin`: Public Sans font name R variable aliases
+  - `font_ps`: PlexSans font name R variable aliases
+  - `font_ps_light`: PlexSans font name R variable aliases
   - `font_tw`: Titillium Web font name R variable aliases
   - `font_tw_bold`: Titillium Web font name R variable aliases
   - `font_tw_light`: Titillium Web font name R variable aliases
@@ -124,7 +119,7 @@ library(tidyverse)
 
 # current verison
 packageVersion("hrbrthemes")
-## [1] '0.5.0'
+## [1] '0.7.1'
 ```
 
 ### Base theme (Arial Narrow)
@@ -311,10 +306,10 @@ gg_check(gg)
 
 ### hrbrthemes Metrics
 
-| Lang | \# Files |  (%) |  LoC | (%) | Blank lines |  (%) | \# Lines |  (%) |
-| :--- | -------: | ---: | ---: | --: | ----------: | ---: | -------: | ---: |
-| R    |       20 | 0.91 | 1083 | 0.9 |         212 | 0.68 |      582 | 0.78 |
-| Rmd  |        2 | 0.09 |  124 | 0.1 |          99 | 0.32 |      162 | 0.22 |
+| Lang | \# Files |  (%) |  LoC |  (%) | Blank lines | (%) | \# Lines | (%) |
+| :--- | -------: | ---: | ---: | ---: | ----------: | --: | -------: | --: |
+| R    |       21 | 0.91 | 1214 | 0.91 |         235 | 0.7 |      680 | 0.8 |
+| Rmd  |        2 | 0.09 |  124 | 0.09 |          99 | 0.3 |      167 | 0.2 |
 
 ### Code of Conduct
 
