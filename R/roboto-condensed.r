@@ -99,7 +99,7 @@ theme_ipsum_rc <- function(
       if (regexpr("X", grid)[1] < 0) ret <- ret + theme(panel.grid.major.x = element_blank())
       if (regexpr("Y", grid)[1] < 0) ret <- ret + theme(panel.grid.major.y = element_blank())
       if (regexpr("x", grid)[1] < 0) ret <- ret + theme(panel.grid.minor.x = element_blank())
-      if (regexpr("y", grid)[1] < 0) ret <- ret + theme(panel.grid.minor.x = element_blank())
+      if (regexpr("y", grid)[1] < 0) ret <- ret + theme(panel.grid.minor.y = element_blank())
     }
   } else {
     ret <- ret + theme(panel.grid = element_blank())
@@ -108,7 +108,7 @@ theme_ipsum_rc <- function(
     ret <- ret + theme(panel.grid.major.y  = element_blank())
     ret <- ret + theme(panel.grid.minor  = element_blank())
     ret <- ret + theme(panel.grid.minor.x  = element_blank())
-    ret <- ret + theme(panel.grid.minor.x  = element_blank())
+    ret <- ret + theme(panel.grid.minor.y  = element_blank())
   }
 
   if (inherits(axis, "character") | axis == TRUE) {
