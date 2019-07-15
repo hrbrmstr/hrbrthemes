@@ -60,7 +60,7 @@
 #'   theme_ipsum_es(grid="Y") +
 #'   theme(axis.text.y=element_blank())
 #' }
-theme_ipsum_rc <- function(
+theme_ipsum_es <- function(
   base_family="EconSansCndReg", base_size = 11.5,
   plot_title_family="EconSansCndBol", plot_title_size = 18,
   plot_title_face="bold", plot_title_margin = 10,
