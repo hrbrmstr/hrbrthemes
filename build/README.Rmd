@@ -90,8 +90,8 @@ Utilities:
 
 ### Installation
 
-```{r eval=FALSE}
-devtools::install_github("hrbrmstr/hrbrthemes")
+```{r nstall-ex, results='asis', echo = FALSE, cache=FALSE}
+hrbrpkghelpr::install_block()
 ```
 
 ```{r message=FALSE, warning=FALSE, error=FALSE, include=FALSE}

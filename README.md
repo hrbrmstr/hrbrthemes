@@ -3,19 +3,19 @@
 
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
-developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
+developed.](https://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 [![codecov](https://codecov.io/gh/hrbrmstr/hrbrthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/hrbrthemes)
 [![Travis-CI Build
 Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes)
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/hrbrthemes)](https://cran.r-project.org/package=hrbrthemes)
-![downloads](http://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/hrbrthemes)](https://cran.r-project.org/package=hrbrthemes)
+![downloads](https://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2545422.svg)](https://doi.org/10.5281/zenodo.2545422)
 
 -----
 
 This is a very focused package that provides typography-centric themes
 and theme components for ggplot2. It’s a an extract/riff of
-[`hrbrmisc`](http://github.com/hrbrmstr/hrbrmisc) created by request.
+[`hrbrmisc`](https://github.com/hrbrmstr/hrbrmisc) created by request.
 
 The core theme: `theme_ipsum` (“ipsum” is Latin for “precise”) uses
 Arial Narrow which should be installed on practically any modern system,
@@ -31,6 +31,7 @@ The following functions are implemented/objects are exported:
 Themes:
 
   - `theme_ipsum`: Arial Narrow
+  - `theme_ipsum_es`: Ccon Sans Condensed
   - `theme_ipsum_rc`: Roboto Condensed
   - `theme_ipsum_ps`: IBM Plex Sans font
   - `theme_ipsum_pub`: Public Sans
@@ -72,6 +73,9 @@ Palettes/Named Colors:
 Fonts:
 
   - `font_an`: Arial Narrow font name R variable aliases
+  - `font_es`: Econ Sans font name R variable aliases
+  - `font_es_bold`: Econ Sans font name R variable aliases
+  - `font_es_light`: Econ Sans font name R variable aliases
   - `font_rc`: Roboto Condensed font name R variable aliases
   - `font_rc_light`: Roboto Condensed font name R variable aliases
   - `font_pub`: Public Sans font name R variable aliases
@@ -95,6 +99,8 @@ Utilities:
   - `ft_geom_defaults`: Change geom defaults from black to custom lights
     for the FT theme
   - `gg_check`: Spell check ggplot2 plot labels
+  - `import_econ_sans`: Import Econ Sans Condensed font for use in
+    charts
   - `import_plex_sans`: Import IBM Plex Sans font for use in charts
   - `import_roboto_condensed`: Import Roboto Condensed font for use in
     charts
@@ -107,6 +113,16 @@ Utilities:
 ### Installation
 
 ``` r
+install.packages("hrbrthemes", repos = "https://cinc.rud.is")
+# or
+devtools::install_git("https://git.rud.is/hrbrmstr/hrbrthemes.git")
+# or
+devtools::install_git("https://git.sr.ht/~hrbrmstr/hrbrthemes")
+# or
+devtools::install_gitlab("hrbrmstr/hrbrthemes")
+# or
+devtools::install_bitbucket("hrbrmstr/hrbrthemes")
+# or
 devtools::install_github("hrbrmstr/hrbrthemes")
 ```
 
@@ -134,7 +150,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum()
 ```
 
-<img src="README_figs/README-unnamed-chunk-5-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-4-1.png" width="672" />
 
 ### Roboto Condensed
 
@@ -148,7 +164,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum_rc()
 ```
 
-<img src="README_figs/README-unnamed-chunk-6-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-5-1.png" width="672" />
 
 ### New FT Theme\!
 
@@ -187,7 +203,7 @@ flush_ticks(gg)
 ## theme(axis.text.y=element_text(vjust=c(0, rep(0.5, 3), 1)))
 ```
 
-<img src="README_figs/README-unnamed-chunk-7-1.png" width="960" />
+<img src="README_figs/README-unnamed-chunk-6-1.png" width="960" />
 
 ### Titillium Web
 
@@ -212,7 +228,7 @@ flush_ticks(gg)
 ## theme(axis.text.y=element_text(vjust=c(0, rep(0.5, 3), 1)))
 ```
 
-<img src="README_figs/README-unnamed-chunk-8-1.png" width="960" />
+<img src="README_figs/README-unnamed-chunk-7-1.png" width="960" />
 
 ### Scales (Color/Fill)
 
@@ -227,7 +243,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum_rc()
 ```
 
-<img src="README_figs/README-unnamed-chunk-9-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-8-1.png" width="672" />
 
 ### Scales (Axis)
 
@@ -244,7 +260,7 @@ count(mpg, class) %>%
   theme_ipsum(grid="Y")
 ```
 
-<img src="README_figs/README-unnamed-chunk-10-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-9-1.png" width="672" />
 
 ``` r
 ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) + 
@@ -260,7 +276,7 @@ ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
   theme(legend.position="bottom")
 ```
 
-<img src="README_figs/README-unnamed-chunk-11-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-10-1.png" width="672" />
 
 ``` r
 update_geom_font_defaults(font_rc_light)
@@ -281,7 +297,7 @@ count(mpg, class) %>%
   theme_ipsum_rc(grid="X")
 ```
 
-<img src="README_figs/README-unnamed-chunk-12-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-11-1.png" width="672" />
 
 ### Spellcheck ggplot2 labels
 
@@ -302,14 +318,14 @@ gg_check(gg)
 ## Possible misspelled words in [caption]: (captien)
 ```
 
-<img src="README_figs/README-unnamed-chunk-13-1.png" width="672" />
+<img src="README_figs/README-unnamed-chunk-12-1.png" width="672" />
 
 ### hrbrthemes Metrics
 
-| Lang | \# Files |  (%) |  LoC |  (%) | Blank lines | (%) | \# Lines | (%) |
-| :--- | -------: | ---: | ---: | ---: | ----------: | --: | -------: | --: |
-| R    |       21 | 0.91 | 1214 | 0.91 |         235 | 0.7 |      680 | 0.8 |
-| Rmd  |        2 | 0.09 |  124 | 0.09 |          99 | 0.3 |      167 | 0.2 |
+| Lang | \# Files |  (%) |  LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
+| :--- | -------: | ---: | ---: | ---: | ----------: | ---: | -------: | ---: |
+| R    |       22 | 0.92 | 1340 | 0.92 |         259 | 0.72 |      775 | 0.82 |
+| Rmd  |        2 | 0.08 |  124 | 0.08 |          99 | 0.28 |      172 | 0.18 |
 
 ### Code of Conduct
 
