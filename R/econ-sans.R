@@ -233,7 +233,7 @@ font_es <- "EconSansCndReg"
 #'     Windows and will throw a warning if used in plots.
 #' @description `font_es_bold` == "`EconSansCndBol`"
 #' @export
-font_es_bold <- "EconSansCndLig"
+font_es_bold <- "EconSansCndBol"
 
 #' @rdname EconSansCondensed
 #' @md
