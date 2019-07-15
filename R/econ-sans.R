@@ -64,7 +64,7 @@ theme_ipsum_es <- function(
   base_family="EconSansCndReg", base_size = 11.5,
   plot_title_family="EconSansCndBol", plot_title_size = 18,
   plot_title_face="bold", plot_title_margin = 10,
-  subtitle_family=if (.Platform$OS.type == "windows") "EconSansCndLig" else "EconSansCndLigt",
+  subtitle_family=if (.Platform$OS.type == "windows") "EconSansCndLig" else "EconSansCndLig",
   subtitle_size = 13,
   subtitle_face = "plain", subtitle_margin = 15,
   strip_text_family = base_family, strip_text_size = 12,
@@ -207,7 +207,7 @@ theme_ipsum_es <- function(
 #' @export
 import_econ_sans <- function() {
 
-  rc_font_dir <- system.file("fonts", "econ-sans", package="hrbrthemes")
+  es_font_dir <- system.file("fonts", "econ-sans", package="hrbrthemes")
 
   suppressWarnings(suppressMessages(extrafont::font_import(es_font_dir, prompt=FALSE)))
 
