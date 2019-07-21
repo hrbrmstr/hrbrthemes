@@ -2,7 +2,9 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.travis\.yml$
-^README.*$
+^README\.Rmd$
+^README\.md$
+^README\.html$
 ^NOTES.*$
 ^notes.*$
 ^CONDUCT\.md$
