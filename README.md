@@ -150,7 +150,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum()
 ```
 
-<img src="README_figs/README-unnamed-chunk-4-1.png" width="672" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="672" />
 
 ### Roboto Condensed
 
@@ -164,7 +164,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum_rc()
 ```
 
-<img src="README_figs/README-unnamed-chunk-5-1.png" width="672" />
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="672" />
 
 ### New FT Theme\!
 
@@ -178,7 +178,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ft_rc()
 ```
 
-<img src="README_figs/README-ft-1.png" width="672" />
+<img src="man/figures/README-ft-1.png" width="672" />
 
 ### IBM Plex Sans
 
@@ -203,7 +203,7 @@ flush_ticks(gg)
 ## theme(axis.text.y=element_text(vjust=c(0, rep(0.5, 3), 1)))
 ```
 
-<img src="README_figs/README-unnamed-chunk-6-1.png" width="960" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="960" />
 
 ### Titillium Web
 
@@ -228,7 +228,7 @@ flush_ticks(gg)
 ## theme(axis.text.y=element_text(vjust=c(0, rep(0.5, 3), 1)))
 ```
 
-<img src="README_figs/README-unnamed-chunk-7-1.png" width="960" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="960" />
 
 ### Scales (Color/Fill)
 
@@ -243,7 +243,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum_rc()
 ```
 
-<img src="README_figs/README-unnamed-chunk-8-1.png" width="672" />
+<img src="man/figures/README-unnamed-chunk-8-1.png" width="672" />
 
 ### Scales (Axis)
 
@@ -260,7 +260,7 @@ count(mpg, class) %>%
   theme_ipsum(grid="Y")
 ```
 
-<img src="README_figs/README-unnamed-chunk-9-1.png" width="672" />
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="672" />
 
 ``` r
 ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) + 
@@ -276,7 +276,7 @@ ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
   theme(legend.position="bottom")
 ```
 
-<img src="README_figs/README-unnamed-chunk-10-1.png" width="672" />
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="672" />
 
 ``` r
 update_geom_font_defaults(font_rc_light)
@@ -297,7 +297,7 @@ count(mpg, class) %>%
   theme_ipsum_rc(grid="X")
 ```
 
-<img src="README_figs/README-unnamed-chunk-11-1.png" width="672" />
+<img src="man/figures/README-unnamed-chunk-11-1.png" width="672" />
 
 ### Spellcheck ggplot2 labels
 
@@ -318,7 +318,7 @@ gg_check(gg)
 ## Possible misspelled words in [caption]: (captien)
 ```
 
-<img src="README_figs/README-unnamed-chunk-12-1.png" width="672" />
+<img src="man/figures/README-unnamed-chunk-12-1.png" width="672" />
 
 ### hrbrthemes Metrics
 
