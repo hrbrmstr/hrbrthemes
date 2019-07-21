@@ -2,7 +2,7 @@
 output: rmarkdown::github_document
 ---
 ```{r, echo = FALSE}
-knitr::opts_chunk$set(collapse=TRUE, comment="##", fig.retina=2, fig.path = "README_figs/README-")
+knitr::opts_chunk$set(collapse=TRUE, comment="##", fig.retina=2, fig.path = "man/figures/README-")
 ```
 
 ## `hrbrthemes` : Additional Themes and Theme Components for 'ggplot2'
