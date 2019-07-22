@@ -5,6 +5,8 @@
 \alias{scale_y_percent}
 \alias{scale_x_comma}
 \alias{scale_y_comma}
+\alias{scale_x_dollar}
+\alias{scale_y_dollar}
 \title{X & Y scales with opinionated pre-sets for percent & comma label formats}
 \usage{
 scale_x_percent(name = waiver(), breaks = waiver(),
@@ -27,6 +29,18 @@ scale_x_comma(name = waiver(), breaks = waiver(),
 
 scale_y_comma(name = waiver(), breaks = waiver(),
   minor_breaks = waiver(), labels = scales::comma_format(),
+  limits = NULL, expand = c(0.01, 0), oob = censor,
+  na.value = NA_real_, trans = "identity", position = "left",
+  sec.axis = waiver())
+
+scale_x_dollar(name = waiver(), breaks = waiver(),
+  minor_breaks = waiver(), labels = scales::dollar_format(),
+  limits = NULL, expand = c(0.01, 0), oob = censor,
+  na.value = NA_real_, trans = "identity", position = "bottom",
+  sec.axis = waiver())
+
+scale_y_dollar(name = waiver(), breaks = waiver(),
+  minor_breaks = waiver(), labels = scales::dollar_format(),
   limits = NULL, expand = c(0.01, 0), oob = censor,
   na.value = NA_real_, trans = "identity", position = "left",
   sec.axis = waiver())
@@ -92,5 +106,7 @@ scales, "top" or "bottom" for horizontal scales}
 The \code{_comma} ones set comma format for axis text and \code{expand=c(0,0)} (you need to set limits).
 }
 \details{
+The \code{_dollar} ones set dollar format for axis text and \code{expand=c(0,0)} (you need to set limits).
+
 The \code{_percent} ones set precent format for axis text and \code{expand=c(0,0)} (you need to set limits).
 }
