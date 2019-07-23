@@ -1,15 +1,28 @@
 
-## `hrbrthemes` : Additional Themes and Theme Components for ‘ggplot2’
-
-[![Project Status: Active - The project has reached a stable, usable
+[![Project Status: Active – The project has reached a stable, usable
 state and is being actively
-developed.](https://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
-[![codecov](https://codecov.io/gh/hrbrmstr/hrbrthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/hrbrthemes)
-[![Travis-CI Build
+developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Signed
+by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
+![Signed commit
+%](https://img.shields.io/badge/Signed_Commits-28.8%25-lightgrey.svg)
+[![Linux build
 Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes)
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/hrbrthemes)](https://cran.r-project.org/package=hrbrthemes)
+[![Coverage
+Status](https://codecov.io/gh/hrbrmstr/hrbrthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/hrbrthemes)
+[![cran
+checks](https://cranchecks.info/badges/worst/hrbrthemes)](https://cranchecks.info/pkgs/hrbrthemes)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/hrbrthemes)](https://www.r-pkg.org/pkg/hrbrthemes)
+![Minimal R
+Version](https://img.shields.io/badge/R%3E%3D-3.2.0-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![downloads](https://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2545422.svg)](https://doi.org/10.5281/zenodo.2545422)
+
+## hrbrthemes
+
+Additional Themes and Theme Components for ‘ggplot2’
 
 -----
 
@@ -115,16 +128,19 @@ Utilities:
 ``` r
 install.packages("hrbrthemes", repos = "https://cinc.rud.is")
 # or
-devtools::install_git("https://git.rud.is/hrbrmstr/hrbrthemes.git")
+remotes::install_git("https://git.rud.is/hrbrmstr/hrbrthemes.git")
 # or
-devtools::install_git("https://git.sr.ht/~hrbrmstr/hrbrthemes")
+remotes::install_git("https://git.sr.ht/~hrbrmstr/hrbrthemes")
 # or
-devtools::install_gitlab("hrbrmstr/hrbrthemes")
+remotes::install_gitlab("hrbrmstr/hrbrthemes")
 # or
-devtools::install_bitbucket("hrbrmstr/hrbrthemes")
+remotes::install_bitbucket("hrbrmstr/hrbrthemes")
 # or
-devtools::install_github("hrbrmstr/hrbrthemes")
+remotes::install_github("hrbrmstr/hrbrthemes")
 ```
+
+NOTE: To use the ‘remotes’ install options you will need to have the
+[{remotes} package](https://github.com/r-lib/remotes) installed.
 
 ### Usage
 
@@ -150,7 +166,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum()
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="672" />
+<img src="man/figures/README-an-1.png" width="672" />
 
 ### Roboto Condensed
 
@@ -164,7 +180,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum_rc()
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="672" />
+<img src="man/figures/README-rc-1.png" width="672" />
 
 ### New FT Theme\!
 
@@ -203,7 +219,7 @@ flush_ticks(gg)
 ## theme(axis.text.y=element_text(vjust=c(0, rep(0.5, 3), 1)))
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="960" />
+<img src="man/figures/README-ps-1.png" width="960" />
 
 ### Titillium Web
 
@@ -228,7 +244,7 @@ flush_ticks(gg)
 ## theme(axis.text.y=element_text(vjust=c(0, rep(0.5, 3), 1)))
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="960" />
+<img src="man/figures/README-tw-1.png" width="960" />
 
 ### Scales (Color/Fill)
 
@@ -243,7 +259,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum_rc()
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="672" />
+<img src="man/figures/README-sc-1.png" width="672" />
 
 ### Scales (Axis)
 
@@ -260,7 +276,7 @@ count(mpg, class) %>%
   theme_ipsum(grid="Y")
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="672" />
+<img src="man/figures/README-ax1-1.png" width="672" />
 
 ``` r
 ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) + 
@@ -276,7 +292,7 @@ ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
   theme(legend.position="bottom")
 ```
 
-<img src="man/figures/README-unnamed-chunk-10-1.png" width="672" />
+<img src="man/figures/README-ax2-1.png" width="672" />
 
 ``` r
 update_geom_font_defaults(font_rc_light)
@@ -297,7 +313,7 @@ count(mpg, class) %>%
   theme_ipsum_rc(grid="X")
 ```
 
-<img src="man/figures/README-unnamed-chunk-11-1.png" width="672" />
+<img src="man/figures/README-ax3-1.png" width="672" />
 
 ### Spellcheck ggplot2 labels
 
@@ -318,17 +334,17 @@ gg_check(gg)
 ## Possible misspelled words in [caption]: (captien)
 ```
 
-<img src="man/figures/README-unnamed-chunk-12-1.png" width="672" />
+<img src="man/figures/README-sp-1.png" width="672" />
 
 ### hrbrthemes Metrics
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 | :--- | -------: | ---: | ---: | ---: | ----------: | ---: | -------: | ---: |
-| R    |       22 | 0.92 | 1340 | 0.92 |         259 | 0.72 |      775 | 0.82 |
-| Rmd  |        2 | 0.08 |  124 | 0.08 |          99 | 0.28 |      172 | 0.18 |
+| R    |       22 | 0.92 | 1340 | 0.91 |         259 | 0.73 |      775 | 0.82 |
+| Rmd  |        2 | 0.08 |  129 | 0.09 |          98 | 0.27 |      167 | 0.18 |
 
 ### Code of Conduct
 
-Please note that this project is released with a [Contributor Code of
-Conduct](CONDUCT.md). By participating in this project you agree to
-abide by its terms.
+Please note that this project is released with a Contributor Code of
+Conduct. By participating in this project you agree to abide by its
+terms.
