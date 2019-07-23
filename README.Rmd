@@ -1,18 +1,22 @@
 ---
 output: rmarkdown::github_document
 ---
-```{r, echo = FALSE}
-knitr::opts_chunk$set(collapse=TRUE, comment="##", fig.retina=2, fig.path = "man/figures/README-")
+```{r pkg-knitr-opts, include=FALSE}
+hrbrpkghelpr::global_opts()
 ```
 
-## `hrbrthemes` : Additional Themes and Theme Components for 'ggplot2'
+```{r badges, results='asis', echo=FALSE, cache=FALSE}
+hrbrpkghelpr::stinking_badges(
+  extra_lines = c(
+    "![downloads](https://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes)",
+    "[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2545422.svg)](https://doi.org/10.5281/zenodo.2545422)"
+  )
+)
+```
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
-[![codecov](https://codecov.io/gh/hrbrmstr/hrbrthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/hrbrthemes)
-[![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes)
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/hrbrthemes)](https://cran.r-project.org/package=hrbrthemes)
-![downloads](https://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes) 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2545422.svg)](https://doi.org/10.5281/zenodo.2545422)
+## hrbrthemes
+
+Additional Themes and Theme Components for 'ggplot2'
 
 ----
 
@@ -90,12 +94,8 @@ Utilities:
 
 ### Installation
 
-```{r nstall-ex, results='asis', echo = FALSE, cache=FALSE}
+```{r install-ex, results='asis', echo = FALSE, cache=FALSE}
 hrbrpkghelpr::install_block()
-```
-
-```{r message=FALSE, warning=FALSE, error=FALSE, include=FALSE}
-options(width=120)
 ```
 
 ### Usage
@@ -111,7 +111,7 @@ packageVersion("hrbrthemes")
 
 ### Base theme (Arial Narrow)
 
-```{r fig.retina=2}
+```{r an}
 ggplot(mtcars, aes(mpg, wt)) +
   geom_point() +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
@@ -123,7 +123,7 @@ ggplot(mtcars, aes(mpg, wt)) +
 
 ### Roboto Condensed
 
-```{r fig.retina=2}
+```{r rc}
 ggplot(mtcars, aes(mpg, wt)) +
   geom_point() +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
@@ -135,7 +135,7 @@ ggplot(mtcars, aes(mpg, wt)) +
 
 ### New FT Theme!
 
-```{r ft, fig.retina=2}
+```{r ft}
 ggplot(mtcars, aes(mpg, wt)) +
   geom_point(color = ft_cols$yellow) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
@@ -147,7 +147,7 @@ ggplot(mtcars, aes(mpg, wt)) +
 
 ### IBM Plex Sans
 
-```{r fig.width=10, fig.height=7, fig.retina=2}
+```{r ps, fig.width=10, fig.height=7}
 ggplot(mpg, aes(displ, hwy)) +
   geom_jitter(aes(color=class, fill=class), size=3, shape=21, alpha=1/2) +
   scale_x_continuous(expand=c(0,0), limits=c(1, 8), breaks=1:8) +
@@ -168,7 +168,7 @@ flush_ticks(gg)
 
 ### Titillium Web
 
-```{r fig.width=10, fig.height=7, fig.retina=2}
+```{r tw, fig.width=10, fig.height=7}
 ggplot(mpg, aes(displ, hwy)) +
   geom_jitter(aes(color=class, fill=class), size=3, shape=21, alpha=1/2) +
   scale_x_continuous(expand=c(0,0), limits=c(1, 8), breaks=1:8) +
@@ -189,7 +189,7 @@ flush_ticks(gg)
 
 ### Scales (Color/Fill)
 
-```{r fig.retina=2}
+```{r sc}
 ggplot(mtcars, aes(mpg, wt)) +
   geom_point(aes(color=factor(carb))) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
@@ -202,7 +202,7 @@ ggplot(mtcars, aes(mpg, wt)) +
 
 ### Scales (Axis)
 
-```{r fig.retina=2}
+```{r ax1}
 count(mpg, class) %>% 
   mutate(pct=n/sum(n)) %>% 
   ggplot(aes(class, pct)) +
@@ -215,7 +215,7 @@ count(mpg, class) %>%
   theme_ipsum(grid="Y")
 ```
 
-```{r fig.retina=2, fig.height=6}
+```{r ax2, fig.height=6}
 ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) + 
   geom_area() +
   scale_fill_ipsum() +
@@ -229,7 +229,7 @@ ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
   theme(legend.position="bottom")
 ```
 
-```{r fig.retina=2}
+```{r ax3}
 update_geom_font_defaults(font_rc_light)
 
 count(mpg, class) %>% 
@@ -250,7 +250,7 @@ count(mpg, class) %>%
 
 ### Spellcheck ggplot2 labels
 
-```{r fig.retina=2, message=TRUE}
+```{r sp, message=TRUE}
 df <- data.frame(x=c(20, 25, 30), y=c(4, 4, 4), txt=c("One", "Two", "Three"))
 
 ggplot(mtcars, aes(mpg, wt)) +
@@ -272,5 +272,4 @@ cloc::cloc_pkg_md()
 
 ### Code of Conduct
 
-Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
-
+Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
