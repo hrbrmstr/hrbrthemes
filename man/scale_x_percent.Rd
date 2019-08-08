@@ -8,28 +8,32 @@
 \title{X & Y scales with opinionated pre-sets for percent & comma label formats}
 \usage{
 scale_x_percent(name = waiver(), breaks = waiver(),
-  minor_breaks = waiver(), labels = scales::percent_format(accuracy =
-  1), limits = NULL, expand = c(0.01, 0), oob = censor,
-  na.value = NA_real_, trans = "identity", position = "bottom",
-  sec.axis = waiver())
+  minor_breaks = waiver(), limits = NULL, expand = c(0.01, 0),
+  oob = censor, na.value = NA_real_, trans = "identity",
+  position = "bottom", sec.axis = waiver(), labels, accuracy = 1,
+  scale = 100, prefix = "", suffix = "\%", big.mark = " ",
+  decimal.mark = ".", trim = TRUE, ...)
 
 scale_y_percent(name = waiver(), breaks = waiver(),
-  minor_breaks = waiver(), labels = scales::percent_format(accuracy =
-  1), limits = NULL, expand = c(0.01, 0), oob = censor,
-  na.value = NA_real_, trans = "identity", position = "left",
-  sec.axis = waiver())
+  minor_breaks = waiver(), limits = NULL, expand = c(0.01, 0),
+  oob = censor, na.value = NA_real_, trans = "identity",
+  position = "left", sec.axis = waiver(), labels, accuracy = 1,
+  scale = 100, prefix = "", suffix = "\%", big.mark = " ",
+  decimal.mark = ".", trim = TRUE, ...)
 
 scale_x_comma(name = waiver(), breaks = waiver(),
-  minor_breaks = waiver(), labels = scales::comma_format(),
-  limits = NULL, expand = c(0.01, 0), oob = censor,
-  na.value = NA_real_, trans = "identity", position = "bottom",
-  sec.axis = waiver())
+  minor_breaks = waiver(), limits = NULL, expand = c(0.01, 0),
+  oob = censor, na.value = NA_real_, trans = "identity",
+  position = "bottom", sec.axis = waiver(), labels, accuracy = 1,
+  scale = 1, prefix = "", suffix = "", big.mark = ",",
+  decimal.mark = ".", trim = TRUE, ...)
 
 scale_y_comma(name = waiver(), breaks = waiver(),
-  minor_breaks = waiver(), labels = scales::comma_format(),
-  limits = NULL, expand = c(0.01, 0), oob = censor,
-  na.value = NA_real_, trans = "identity", position = "left",
-  sec.axis = waiver())
+  minor_breaks = waiver(), limits = NULL, expand = c(0.01, 0),
+  oob = censor, na.value = NA_real_, trans = "identity",
+  position = "left", sec.axis = waiver(), labels, accuracy = 1,
+  scale = 1, prefix = "", suffix = "", big.mark = ",",
+  decimal.mark = ".", trim = TRUE, ...)
 }
 \arguments{
 \item{name}{The name of the scale. Used as axis or legend title. If
@@ -56,16 +60,6 @@ each major break)
 \item A function that given the limits returns a vector of minor breaks.
 }}
 
-\item{labels}{One of:
-\itemize{
-\item \code{NULL} for no labels
-\item \code{waiver()} for the default labels computed by the
-transformation object
-\item A character vector giving labels (must be same length as \code{breaks})
-\item A function that takes the breaks as input and returns labels
-as output
-}}
-
 \item{limits}{A numeric vector of length two providing limits of the scale.
 Use \code{NA} to refer to the existing minimum or maximum.}
 
@@ -87,6 +81,14 @@ object itself. Built-in transformations include "asn", "atanh",
 scales, "top" or "bottom" for horizontal scales}
 
 \item{sec.axis}{specify a secondary axis}
+
+\item{labels}{Specifying overrides the default format (i.e. you really don't
+want to do that). \code{NULL} means no labels.}
+
+\item{accuracy, scale, prefix, suffix, big.mark, decimal.mark, trim}{See
+[scales::comma_format()] or [scales::percent_format()]}
+
+\item{...}{passed on to [scales::comma_format()] or [scales::percent_format()]}
 }
 \description{
 The \code{_comma} ones set comma format for axis text and \code{expand=c(0,0)} (you need to set limits).

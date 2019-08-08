@@ -27,13 +27,8 @@ is.formula <- function (x) { inherits(x, "formula") }
 #'     each major break)
 #'   - A numeric vector of positions
 #'   - A function that given the limits returns a vector of minor breaks.
-#' @param labels One of:
-#'   - `NULL` for no labels
-#'   - `waiver()` for the default labels computed by the
-#'     transformation object
-#'   - A character vector giving labels (must be same length as `breaks`)
-#'   - A function that takes the breaks as input and returns labels
-#'     as output
+#' @param labels Specifying overrides the default format (i.e. you really don't
+#'   want to do that). `NULL` means no labels.
 #' @param limits A numeric vector of length two providing limits of the scale.
 #'   Use `NA` to refer to the existing minimum or maximum.
 #' @param oob Function that handles limits outside of the scale limits
@@ -50,89 +45,237 @@ is.formula <- function (x) { inherits(x, "formula") }
 #' scales, "top" or "bottom" for horizontal scales
 #' @param sec.axis specify a secondary axis
 #' @export
-scale_x_percent <- function (name = waiver(), breaks = waiver(), minor_breaks = waiver(),
-                             labels = scales::percent_format(accuracy = 1), limits = NULL, expand = c(0.01,0), oob = censor,
-                             na.value = NA_real_, trans = "identity", position = "bottom",
-                             sec.axis = waiver()) {
-  sc <- ggplot2::continuous_scale(c("x", "xmin", "xmax", "xend", "xintercept",
-                           "xmin_final", "xmax_final", "xlower", "xmiddle", "xupper"),
-                         "position_c", identity, name = name, breaks = breaks,
-                         minor_breaks = minor_breaks, labels = labels, limits = limits,
-                         expand = expand, oob = oob, na.value = na.value, trans = trans,
-                         guide = "none", position = position, super = ScaleContinuousPosition)
-  if (!is.waive(sec.axis)) {
-    if (is.formula(sec.axis))
-      sec.axis <- sec_axis(sec.axis)
-    if (!is.sec_axis(sec.axis))
-      stop("Secondary axes must be specified using 'sec_axis()'")
-    sc$secondary.axis <- sec.axis
+scale_x_percent <- function(name = waiver(), breaks = waiver(),
+                            minor_breaks = waiver(),
+                            limits = NULL, expand = c(0.01,0), oob = censor,
+                            na.value = NA_real_, trans = "identity",
+                            position = "bottom", sec.axis = waiver(), labels,
+                            accuracy = 1, scale = 100, prefix = "", suffix = "%",
+                            big.mark = " ", decimal.mark = ".", trim = TRUE, ...) {
+
+  if (missing(labels)) {
+    scales::percent_format(
+      accuracy = accuracy,
+      scale = scale,
+      prefix = prefix,
+      suffix = suffix,
+      big.mark = big.mark,
+      decimal.mark = decimal.mark,
+      trim = trim,
+      ...
+    ) -> labels
   }
-  sc
-}
 
-#' @rdname scale_x_percent
-#' @export
-scale_y_percent <- function (name = waiver(), breaks = waiver(), minor_breaks = waiver(),
-                             labels = scales::percent_format(accuracy = 1), limits = NULL, expand = c(0.01,0), oob = censor,
-                             na.value = NA_real_, trans = "identity", position = "left",
-                             sec.axis = waiver()) {
-    sc <- ggplot2::continuous_scale(c("y", "ymin", "ymax", "yend", "yintercept",
-        "ymin_final", "ymax_final", "lower", "middle", "upper"),
-        "position_c", identity, name = name, breaks = breaks,
-        minor_breaks = minor_breaks, labels = labels, limits = limits,
-        expand = expand, oob = oob, na.value = na.value, trans = trans,
-        guide = "none", position = position, super = ScaleContinuousPosition)
-    if (!is.waive(sec.axis)) {
-        if (is.formula(sec.axis))
-            sec.axis <- ggplot2::sec_axis(sec.axis)
-        if (!is.sec_axis(sec.axis))
-            stop("Secondary axes must be specified using 'sec_axis()'")
-        sc$secondary.axis <- sec.axis
-    }
-    sc
-}
+  ggplot2::continuous_scale(
+    aesthetics = c(
+      "x", "xmin", "xmax", "xend", "xintercept", "xmin_final",
+      "xmax_final", "xlower", "xmiddle", "xupper"
+    ),
+    scale_name = "position_c",
+    palette = identity,
+    name = name,
+    breaks = breaks,
+    minor_breaks = minor_breaks,
+    labels = labels,
+    limits = limits,
+    expand = expand,
+    oob = oob,
+    na.value = na.value,
+    trans = trans,
+    guide = "none",
+    position = position,
+    super = ScaleContinuousPosition
+  ) -> sc
 
-#' @rdname scale_x_percent
-#' @export
-scale_x_comma <- function (name = waiver(), breaks = waiver(), minor_breaks = waiver(),
-                             labels = scales::comma_format(), limits = NULL, expand = c(0.01,0), oob = censor,
-                             na.value = NA_real_, trans = "identity", position = "bottom",
-                             sec.axis = waiver()) {
-  sc <- ggplot2::continuous_scale(c("x", "xmin", "xmax", "xend", "xintercept",
-                           "xmin_final", "xmax_final", "xlower", "xmiddle", "xupper"),
-                         "position_c", identity, name = name, breaks = breaks,
-                         minor_breaks = minor_breaks, labels = labels, limits = limits,
-                         expand = expand, oob = oob, na.value = na.value, trans = trans,
-                         guide = "none", position = position, super = ScaleContinuousPosition)
   if (!is.waive(sec.axis)) {
-    if (is.formula(sec.axis))
-      sec.axis <- ggplot2::sec_axis(sec.axis)
-    if (!is.sec_axis(sec.axis))
-      stop("Secondary axes must be specified using 'sec_axis()'")
-    sc$secondary.axis <- sec.axis
-  }
-  sc
-}
 
+    if (is.formula(sec.axis)) sec.axis <- sec_axis(sec.axis)
+    if (!is.sec_axis(sec.axis)) stop("Secondary axes must be specified using 'sec_axis()'")
+
+    sc$secondary.axis <- sec.axis
+
+  }
+
+  sc
+
+}
 
 #' @rdname scale_x_percent
 #' @export
-scale_y_comma <- function (name = waiver(), breaks = waiver(), minor_breaks = waiver(),
-                             labels = scales::comma_format(), limits = NULL, expand = c(0.01,0), oob = censor,
-                             na.value = NA_real_, trans = "identity", position = "left",
-                             sec.axis = waiver()) {
-    sc <- ggplot2::continuous_scale(c("y", "ymin", "ymax", "yend", "yintercept",
-        "ymin_final", "ymax_final", "lower", "middle", "upper"),
-        "position_c", identity, name = name, breaks = breaks,
-        minor_breaks = minor_breaks, labels = labels, limits = limits,
-        expand = expand, oob = oob, na.value = na.value, trans = trans,
-        guide = "none", position = position, super = ScaleContinuousPosition)
-    if (!is.waive(sec.axis)) {
-        if (is.formula(sec.axis))
-            sec.axis <- ggplot2::sec_axis(sec.axis)
-        if (!is.sec_axis(sec.axis))
-            stop("Secondary axes must be specified using 'sec_axis()'")
-        sc$secondary.axis <- sec.axis
-    }
-    sc
+scale_y_percent <- function(name = waiver(), breaks = waiver(),
+                            minor_breaks = waiver(),
+                            limits = NULL, expand = c(0.01,0), oob = censor,
+                            na.value = NA_real_, trans = "identity",
+                            position = "left", sec.axis = waiver(), labels,
+                            accuracy = 1, scale = 100, prefix = "", suffix = "%",
+                            big.mark = " ", decimal.mark = ".", trim = TRUE, ...) {
+
+  if (missing(labels)) {
+    scales::percent_format(
+      accuracy = accuracy,
+      scale = scale,
+      prefix = prefix,
+      suffix = suffix,
+      big.mark = big.mark,
+      decimal.mark = decimal.mark,
+      trim = trim,
+      ...
+    ) -> labels
+  }
+
+  ggplot2::continuous_scale(
+    aesthetics = c(
+      "y", "ymin", "ymax", "yend", "yintercept",
+      "ymin_final", "ymax_final", "lower", "middle", "upper"
+    ),
+    scale_name = "position_c",
+    palette = identity,
+    name = name,
+    breaks = breaks,
+    minor_breaks = minor_breaks,
+    labels = labels,
+    limits = limits,
+    expand = expand,
+    oob = oob,
+    na.value = na.value,
+    trans = trans,
+    guide = "none",
+    position = position,
+    super = ScaleContinuousPosition
+  ) -> sc
+
+  if (!is.waive(sec.axis)) {
+
+    if (is.formula(sec.axis)) sec.axis <- ggplot2::sec_axis(sec.axis)
+    if (!is.sec_axis(sec.axis)) stop("Secondary axes must be specified using 'sec_axis()'")
+
+    sc$secondary.axis <- sec.axis
+
+  }
+
+  sc
+
+}
+
+#' @rdname scale_x_percent
+#' @param accuracy,scale,prefix,suffix,big.mark,decimal.mark,trim See
+#'        [scales::comma_format()] or [scales::percent_format()]
+#' @param ... passed on to [scales::comma_format()] or [scales::percent_format()]
+#' @export
+scale_x_comma <- function(name = waiver(), breaks = waiver(),
+                          minor_breaks = waiver(),
+                          limits = NULL,
+                          expand = c(0.01,0), oob = censor,
+                          na.value = NA_real_, trans = "identity",
+                          position = "bottom", sec.axis = waiver(), labels,
+                          accuracy = 1, scale = 1, prefix = "", suffix = "",
+                          big.mark = ",", decimal.mark = ".", trim = TRUE,
+                          ...) {
+
+  if (missing(labels)) {
+    scales::comma_format(
+      accuracy = accuracy,
+      scale = scale,
+      prefix = prefix,
+      suffix = suffix,
+      big.mark = big.mark,
+      decimal.mark = decimal.mark,
+      trim = trim,
+      ...
+    ) -> labels
+  }
+
+  ggplot2::continuous_scale(
+    aesthetics = c(
+      "x", "xmin", "xmax", "xend", "xintercept",
+      "xmin_final", "xmax_final",
+      "xlower", "xmiddle", "xupper"
+    ),
+    scale_name = "position_c",
+    palette = identity,
+    name = name,
+    breaks = breaks,
+    minor_breaks = minor_breaks,
+    labels = labels,
+    limits = limits,
+    expand = expand,
+    oob = oob,
+    na.value = na.value,
+    trans = trans,
+    guide = "none",
+    position = position,
+    super = ScaleContinuousPosition
+  ) -> sc
+
+  if (!is.waive(sec.axis)) {
+
+    if (is.formula(sec.axis)) sec.axis <- ggplot2::sec_axis(sec.axis)
+    if (!is.sec_axis(sec.axis)) stop("Secondary axes must be specified using 'sec_axis()'")
+
+    sc$secondary.axis <- sec.axis
+
+  }
+
+  sc
+
+}
+
+#' @rdname scale_x_percent
+#' @export
+scale_y_comma <- function(name = waiver(),
+                          breaks = waiver(),
+                          minor_breaks = waiver(),
+                          limits = NULL, expand = c(0.01,0), oob = censor,
+                          na.value = NA_real_, trans = "identity",
+                          position = "left", sec.axis = waiver(), labels,
+                          accuracy = 1, scale = 1, prefix = "", suffix = "",
+                          big.mark = ",", decimal.mark = ".", trim = TRUE,
+                          ...) {
+
+  if (missing(labels)) {
+    scales::comma_format(
+      accuracy = accuracy,
+      scale = scale,
+      prefix = prefix,
+      suffix = suffix,
+      big.mark = big.mark,
+      decimal.mark = decimal.mark,
+      trim = trim,
+      ...
+    ) -> labels
+  }
+
+  ggplot2::continuous_scale(
+    aesthetics = c(
+      "y", "ymin", "ymax", "yend", "yintercept",
+      "ymin_final", "ymax_final",
+      "lower", "middle", "upper"
+    ),
+    scale_name = "position_c",
+    palette = identity,
+    name = name,
+    breaks = breaks,
+    minor_breaks = minor_breaks,
+    labels = labels,
+    limits = limits,
+    expand = expand,
+    oob = oob,
+    na.value = na.value,
+    trans = trans,
+    guide = "none",
+    position = position,
+    super = ScaleContinuousPosition
+  ) -> sc
+
+  if (!is.waive(sec.axis)) {
+
+    if (is.formula(sec.axis)) sec.axis <- ggplot2::sec_axis(sec.axis)
+    if (!is.sec_axis(sec.axis)) stop("Secondary axes must be specified using 'sec_axis()'")
+
+    sc$secondary.axis <- sec.axis
+
+  }
+
+  sc
+
 }

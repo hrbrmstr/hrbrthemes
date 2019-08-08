@@ -1,3 +1,8 @@
+# hrbrthemes 0.7.2
+
+- Further enhancements to the `scale_[xy]_… functions` to support passing in
+  of all the `…_format()` params to make them more flexible
+
 # hrbrthemes 0.7.1
 
 - Small modification to percent scales to account for 
