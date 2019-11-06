@@ -20,7 +20,7 @@ Additional Themes and Theme Components for 'ggplot2'
 
 ----
 
-This is a very focused package that provides typography-centric themes and theme components for ggplot2. It's a an extract/riff of [`hrbrmisc`](https://github.com/hrbrmstr/hrbrmisc) created by request. 
+This is a very focused package that provides typography-centric themes and theme components for ggplot2. It's a an extract/riff of [`hrbrmisc`](https://github.com/hrbrmstr/hrbrmisc) created by request.
 
 The core theme: `theme_ipsum` ("ipsum" is Latin for "precise") uses Arial Narrow which should be installed on practically any modern system, so it's "free"-ish. This font is condensed, has solid default kerning pairs and geometric numbers. That's what I consider the "font trifecta" must-have for charts. An additional quality for fonts for charts is that they have a diversity of weights. Arial Narrow (the one on most systems, anyway) does not have said diversity but this quality is not (IMO) a "must have".
 
@@ -79,6 +79,7 @@ R Markdown:
 
 - `ipsum`: ipsum R markdown template
 - `ipsum_pdf`: ipsum R markdown template for PDF output
+- `FT`: FT R markdown template
 
 Utilities:
 
@@ -117,7 +118,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ipsum()
 ```
 
@@ -129,7 +130,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ipsum_rc()
 ```
 
@@ -141,7 +142,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ft_rc()
 ```
 
@@ -195,7 +196,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   scale_color_ipsum() +
   theme_ipsum_rc()
 ```
@@ -203,20 +204,20 @@ ggplot(mtcars, aes(mpg, wt)) +
 ### Scales (Axis)
 
 ```{r ax1}
-count(mpg, class) %>% 
-  mutate(pct=n/sum(n)) %>% 
+count(mpg, class) %>%
+  mutate(pct=n/sum(n)) %>%
   ggplot(aes(class, pct)) +
   geom_col() +
   scale_y_percent() +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 column chart example with percents",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ipsum(grid="Y")
 ```
 
 ```{r ax2, fig.height=6}
-ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) + 
+ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
   geom_area() +
   scale_fill_ipsum() +
   scale_x_continuous(expand=c(0,0)) +
@@ -232,10 +233,10 @@ ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
 ```{r ax3}
 update_geom_font_defaults(font_rc_light)
 
-count(mpg, class) %>% 
-  mutate(n=n*2000) %>% 
-  arrange(n) %>% 
-  mutate(class=factor(class, levels=class)) %>% 
+count(mpg, class) %>%
+  mutate(n=n*2000) %>%
+  arrange(n) %>%
+  mutate(class=factor(class, levels=class)) %>%
   ggplot(aes(class, n)) +
   geom_col() +
   geom_text(aes(label=scales::comma(n)), hjust=0, nudge_y=2000) +
@@ -244,7 +245,7 @@ count(mpg, class) %>%
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 column chart example with commas",
        subtitle="A plot that is only useful for demonstration purposes, esp since you'd never\nreally want direct labels and axis labels",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ipsum_rc(grid="X")
 ```
 

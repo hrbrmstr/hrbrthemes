@@ -105,6 +105,7 @@ R Markdown:
 
   - `ipsum`: ipsum R markdown template
   - `ipsum_pdf`: ipsum R markdown template for PDF output
+  - `FT`: FT R markdown template
 
 Utilities:
 
@@ -162,7 +163,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ipsum()
 ```
 
@@ -176,7 +177,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ipsum_rc()
 ```
 
@@ -190,7 +191,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ft_rc()
 ```
 
@@ -254,7 +255,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   scale_color_ipsum() +
   theme_ipsum_rc()
 ```
@@ -264,22 +265,22 @@ ggplot(mtcars, aes(mpg, wt)) +
 ### Scales (Axis)
 
 ``` r
-count(mpg, class) %>% 
-  mutate(pct=n/sum(n)) %>% 
+count(mpg, class) %>%
+  mutate(pct=n/sum(n)) %>%
   ggplot(aes(class, pct)) +
   geom_col() +
   scale_y_percent() +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 column chart example with percents",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ipsum(grid="Y")
 ```
 
 <img src="man/figures/README-ax1-1.png" width="672" />
 
 ``` r
-ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) + 
+ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
   geom_area() +
   scale_fill_ipsum() +
   scale_x_continuous(expand=c(0,0)) +
@@ -297,10 +298,10 @@ ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
 ``` r
 update_geom_font_defaults(font_rc_light)
 
-count(mpg, class) %>% 
-  mutate(n=n*2000) %>% 
-  arrange(n) %>% 
-  mutate(class=factor(class, levels=class)) %>% 
+count(mpg, class) %>%
+  mutate(n=n*2000) %>%
+  arrange(n) %>%
+  mutate(class=factor(class, levels=class)) %>%
   ggplot(aes(class, n)) +
   geom_col() +
   geom_text(aes(label=scales::comma(n)), hjust=0, nudge_y=2000) +
@@ -309,7 +310,7 @@ count(mpg, class) %>%
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 column chart example with commas",
        subtitle="A plot that is only useful for demonstration purposes, esp since you'd never\nreally want direct labels and axis labels",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ipsum_rc(grid="X")
 ```
 
