@@ -1,17 +1,17 @@
 Package: hrbrthemes
 Type: Package
 Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
-Version: 0.7.2
+Version: 0.7.3
 Date: 2019-08-08
 Authors@R: c(
-      person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
+      person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"),
              comment = c(ORCID = "0000-0001-5670-2640")),
       person("Patrick", "Kennedy", role=c("ctb")),
       person("Philipp", "Reiner", role = c("ctb")),
-      person("Dan", "Wilson", email = "dan@thedatacollective.com.au", 
-             role = c("ctb"), comment = c("Secondary axis support")), 
+      person("Dan", "Wilson", email = "dan@thedatacollective.com.au",
+             role = c("ctb"), comment = c("Secondary axis support")),
       person("Xavier", "Adam", role = c("ctb")),
-      person("Google", comment = "Roboto Condensed & Titillium Web Fonts", 
+      person("Google", comment = "Roboto Condensed & Titillium Web Fonts",
              role = c("cph")),
       person("IBM", comment = "Plex Sans Font", role = c("cph")),
       person("Impallari Type", comment = "Public Sans Font", role = c("cph")),
@@ -21,9 +21,9 @@ Authors@R: c(
       person("Joris", "Meys", email = "Joris.Meys@UGent.be", role = c("ctb"))
     )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: A compilation of extra 'ggplot2' themes, scales and utilities, including a 
-    spell check function for plot label fields and an overall emphasis on typography. 
-    A copy of the 'Google' font 'Roboto Condensed' <https://github.com/google/roboto/> 
+Description: A compilation of extra 'ggplot2' themes, scales and utilities, including a
+    spell check function for plot label fields and an overall emphasis on typography.
+    A copy of the 'Google' font 'Roboto Condensed' <https://github.com/google/roboto/>
     is also included along with a copy of the 'IBM' 'Plex Sans' <https://github.com/IBM/type>,
     'Titillium Web' <https://fonts.google.com/specimen/Titillium+Web>, and
     'Public Sans' <https://github.com/uswds/public-sans/> fonts

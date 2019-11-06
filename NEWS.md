@@ -1,3 +1,7 @@
+# hrbrthemes 0.7.3
+
+- New FT Roboto RMarkdown theme (by @mevers)
+
 # hrbrthemes 0.7.2
 
 - Further enhancements to the `scale_[xy]_… functions` to support passing in
@@ -5,7 +9,7 @@
 
 # hrbrthemes 0.7.1
 
-- Small modification to percent scales to account for 
+- Small modification to percent scales to account for
   changes in {ggplot2}
 - Additional precision in setting various theme elements
 
