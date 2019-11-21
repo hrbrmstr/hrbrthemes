@@ -13,18 +13,19 @@ scale_color_ft(...)
 scale_fill_ft(...)
 }
 \arguments{
-\item{...}{Arguments passed on to \code{ggplot2::discrete_scale}
-\describe{
-  \item{aesthetics}{The names of the aesthetics that this scale works with}
-  \item{scale_name}{The name of the scale}
-  \item{palette}{A palette function that when called with a single integer
+\item{...}{
+  Arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale}}
+  \describe{
+    \item{\code{aesthetics}}{The names of the aesthetics that this scale works with}
+    \item{\code{scale_name}}{The name of the scale}
+    \item{\code{palette}}{A palette function that when called with a single integer
 argument (the number of levels in the scale) returns the values that
 they should take.}
-  \item{name}{The name of the scale. Used as the axis or legend title. If
+    \item{\code{name}}{The name of the scale. Used as the axis or legend title. If
 \code{waiver()}, the default, the name of the scale is taken from the first
 mapping used for that aesthetic. If \code{NULL}, the legend title will be
 omitted.}
-  \item{breaks}{One of:
+    \item{\code{breaks}}{One of:
 \itemize{
 \item \code{NULL} for no breaks
 \item \code{waiver()} for the default breaks computed by the
@@ -33,7 +34,7 @@ transformation object
 \item A function that takes the limits as input and returns breaks
 as output
 }}
-  \item{labels}{One of:
+    \item{\code{labels}}{One of:
 \itemize{
 \item \code{NULL} for no labels
 \item \code{waiver()} for the default labels computed by the
@@ -42,21 +43,21 @@ transformation object
 \item A function that takes the breaks as input and returns labels
 as output
 }}
-  \item{limits}{A character vector that defines possible values of the scale
+    \item{\code{limits}}{A character vector that defines possible values of the scale
 and their order.}
-  \item{na.translate}{Unlike continuous scales, discrete scales can easily show
+    \item{\code{na.translate}}{Unlike continuous scales, discrete scales can easily show
 missing values, and do so by default. If you want to remove missing values
 from a discrete scale, specify \code{na.translate = FALSE}.}
-  \item{na.value}{If \code{na.translate = TRUE}, what value aesthetic
+    \item{\code{na.value}}{If \code{na.translate = TRUE}, what value aesthetic
 value should missing be displayed as? Does not apply to position scales
 where \code{NA} is always placed at the far right.}
-  \item{drop}{Should unused factor levels be omitted from the scale?
+    \item{\code{drop}}{Should unused factor levels be omitted from the scale?
 The default, \code{TRUE}, uses the levels that appear in the data;
 \code{FALSE} uses all the levels in the factor.}
-  \item{guide}{A function used to create a guide or its name. See
+    \item{\code{guide}}{A function used to create a guide or its name. See
 \code{\link[=guides]{guides()}} for more info.}
-  \item{super}{The super class to use for the constructed scale}
-}}
+    \item{\code{super}}{The super class to use for the constructed scale}
+  }}
 }
 \description{
 See \url{ft_pal}.

@@ -22,7 +22,7 @@ ggplot2 object with \code{theme()} elements added
 A covenience function intended for basic, fixed-scale plots only (i.e. does not handle
 free scales in facets).\cr
 \cr
-You need to pass in a ggplot2 object to this function. It can't be \code{+}'d in a chain
+You need to pass in a ggplot2 object to this function. It can't be \verb{+}'d in a chain
 of geoms, coords, scales, themes, etc. It also builds the plot (but does not display
 it) so if the plt takes a while (i.e. has lots of data or transforms) this will also
 take a while.

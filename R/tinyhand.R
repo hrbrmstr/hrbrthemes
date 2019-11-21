@@ -1,6 +1,15 @@
-#' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typoghraphy
+
+#' @rdname TinyHand
+#' @md
+#' @title TinyHand Web font name R variable aliases
+#' @description `font_th` == "`BF Tiny Hand`"
+#' @format length 1 character vector
+#' @export
+font_th <- "BFTinyHand-Regular"
+
+#' Something you should never use.
 #'
-#' You should [import_titillium_web]() first and also install the fonts on your
+#' You should [import_tinyhand]() first and also install the fonts on your
 #' system before trying to use this theme.
 #'
 #' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
@@ -30,49 +39,20 @@
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
 #' @export
-#' @examples \dontrun{
-#' library(ggplot2)
-#' library(dplyr)
-#'
-#' # seminal scatterplot
-#' ggplot(mtcars, aes(mpg, wt)) +
-#'   geom_point() +
-#'   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
-#'        title="Seminal ggplot2 scatterplot example",
-#'        subtitle="A plot that is only useful for demonstration purposes",
-#'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum_rc()
-#'
-#' # seminal bar chart
-#'
-#' # note: make this font_rc on Windows
-#' update_geom_font_defaults(family=font_rc_light)
-#'
-#' count(mpg, class) %>%
-#'   ggplot(aes(class, n)) +
-#'   geom_col() +
-#'   geom_text(aes(label=n), nudge_y=3) +
-#'   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
-#'        title="Seminal ggplot2 bar chart example",
-#'        subtitle="A plot that is only useful for demonstration purposes",
-#'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum_tw(grid="Y") +
-#'   theme(axis.text.y=element_blank())
-#' }
-theme_ipsum_tw <- function(
-  base_family="Titillium Web", base_size = 10.5,
-  plot_title_family=if (.Platform$OS.type == "windows") "Titillium Web" else "Titillium Web Bold",
+theme_tinyhand <- function(
+  base_family=font_th, base_size = 10.5,
+  plot_title_family=font_th,
   plot_title_size = 18,
   plot_title_face="bold",
   plot_title_margin = 10,
-  subtitle_family=if (.Platform$OS.type == "windows") "Titillium Web" else "Titillium Web Light",
+  subtitle_family=font_th,
   subtitle_size = 13,
   subtitle_face = "plain",
   subtitle_margin = 15,
   strip_text_family = base_family,
   strip_text_size = 12,
   strip_text_face = "plain",
-  caption_family=if (.Platform$OS.type == "windows") "Titillium Web" else "Titillium Web Light",
+  caption_family=font_th,
   caption_size = 9,
   caption_face = "plain", caption_margin = 10,
   axis_text_size = base_size,
@@ -184,40 +164,16 @@ theme_ipsum_tw <- function(
 #'   recommended that you install them on your system the same way you would any
 #'   other font you wish to use in other programs.
 #' @export
-import_titillium_web <- function() {
+import_tinyhand <- function() {
 
-  tw_font_dir <- system.file("fonts", "titillium-web", package="hrbrthemes")
+  th_font_dir <- system.file("fonts", "tinyhand", package="hrbrthemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(tw_font_dir, prompt=FALSE)))
+  suppressWarnings(suppressMessages(extrafont::font_import(th_font_dir, prompt=FALSE)))
 
   message(
     sprintf(
       "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      tw_font_dir)
+      th_font_dir)
   )
 
 }
-
-#' @rdname TitilliumWeb
-#' @md
-#' @title Titillium Web font name R variable aliases
-#' @description `font_tw` == "`Titillium Web`"
-#' @format length 1 character vector
-#' @export
-font_tw <- "Titillium Web"
-
-#' @rdname TitilliumWeb
-#' @md
-#' @note `font_tw_light` (a.k.a. "`Titillium Web Bold`") is not available on
-#'     Windows and will throw a warning if used in plots.
-#' @description `font_tw_light` == "`Titillium Web Bold`"
-#' @export
-font_tw_bold <- "Titillium Web Bold"
-
-#' @rdname TitilliumWeb
-#' @md
-#' @note `font_tw_light` (a.k.a. "`Titillium Web Light`") is not available on
-#'     Windows and will throw a warning if used in plots.
-#' @description `font_tw_light` == "`Titillium Web Light`"
-#' @export
-font_tw_light <- "Titillium Web Light"

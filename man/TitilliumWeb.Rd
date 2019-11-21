@@ -15,17 +15,17 @@ font_tw_bold
 font_tw_light
 }
 \description{
-\code{font_tw} == "\code{Titillium Web}"
+\code{font_tw} == "\verb{Titillium Web}"
 
-\code{font_tw_light} == "\code{Titillium Web Bold}"
+\code{font_tw_light} == "\verb{Titillium Web Bold}"
 
-\code{font_tw_light} == "\code{Titillium Web Light}"
+\code{font_tw_light} == "\verb{Titillium Web Light}"
 }
 \note{
-\code{font_tw_light} (a.k.a. "\code{Titillium Web Bold}") is not available on
+\code{font_tw_light} (a.k.a. "\verb{Titillium Web Bold}") is not available on
 Windows and will throw a warning if used in plots.
 
-\code{font_tw_light} (a.k.a. "\code{Titillium Web Light}") is not available on
+\code{font_tw_light} (a.k.a. "\verb{Titillium Web Light}") is not available on
 Windows and will throw a warning if used in plots.
 }
 \keyword{datasets}

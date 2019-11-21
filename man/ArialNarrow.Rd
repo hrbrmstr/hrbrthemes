@@ -9,6 +9,6 @@
 font_an
 }
 \description{
-\code{font_an} == "\code{Arial Narrow}"
+\code{font_an} == "\verb{Arial Narrow}"
 }
 \keyword{datasets}

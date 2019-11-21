@@ -18,16 +18,16 @@ font_pub_light
 font_pub_thin
 }
 \description{
-\code{font_pub} == "\code{Public Sans}"
+\code{font_pub} == "\verb{Public Sans}"
 
-\code{font_pub_bold} == "\code{Public Sans Bold}"
+\code{font_pub_bold} == "\verb{Public Sans Bold}"
 
-\code{font_pub_light} == "\code{Public Sans Light}"
+\code{font_pub_light} == "\verb{Public Sans Light}"
 
-\code{font_pub_thin} == "\code{Public Sans Thin}"
+\code{font_pub_thin} == "\verb{Public Sans Thin}"
 }
 \note{
-\code{font_pub_bold} (a.k.a. "\code{Public Sans Bold}") is not available on
+\code{font_pub_bold} (a.k.a. "\verb{Public Sans Bold}") is not available on
 Windows and will throw a warning if used in plots.
 }
 \keyword{datasets}

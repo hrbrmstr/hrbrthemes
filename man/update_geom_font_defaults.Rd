@@ -4,8 +4,12 @@
 \alias{update_geom_font_defaults}
 \title{Update matching font defaults for text geoms}
 \usage{
-update_geom_font_defaults(family = "Arial Narrow", face = "plain",
-  size = 3.5, color = "#2b2b2b")
+update_geom_font_defaults(
+  family = "Arial Narrow",
+  face = "plain",
+  size = 3.5,
+  color = "#2b2b2b"
+)
 }
 \arguments{
 \item{family, face, size, color}{font family name, face, size and color}
