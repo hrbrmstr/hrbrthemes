@@ -1,3 +1,7 @@
+# hrbrthemes 0.8.0
+
+- Changes to conform to forthcoming {ggplot2} release
+
 # hrbrthemes 0.7.2
 
 - Further enhancements to the `scale_[xy]_… functions` to support passing in

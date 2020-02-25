@@ -16,11 +16,12 @@ scale_fill_ipsum(...)
 \item{...}{
   Arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale}}
   \describe{
-    \item{\code{aesthetics}}{The names of the aesthetics that this scale works with}
-    \item{\code{scale_name}}{The name of the scale}
+    \item{\code{aesthetics}}{The names of the aesthetics that this scale works with.}
+    \item{\code{scale_name}}{The name of the scale that should be used for error messages
+associated with this scale.}
     \item{\code{palette}}{A palette function that when called with a single integer
 argument (the number of levels in the scale) returns the values that
-they should take.}
+they should take (e.g., \code{\link[scales:hue_pal]{scales::hue_pal()}}).}
     \item{\code{name}}{The name of the scale. Used as the axis or legend title. If
 \code{waiver()}, the default, the name of the scale is taken from the first
 mapping used for that aesthetic. If \code{NULL}, the legend title will be
@@ -28,8 +29,7 @@ omitted.}
     \item{\code{breaks}}{One of:
 \itemize{
 \item \code{NULL} for no breaks
-\item \code{waiver()} for the default breaks computed by the
-transformation object
+\item \code{waiver()} for the default breaks (the scale limits)
 \item A character vector of breaks
 \item A function that takes the limits as input and returns breaks
 as output
@@ -55,7 +55,7 @@ where \code{NA} is always placed at the far right.}
 The default, \code{TRUE}, uses the levels that appear in the data;
 \code{FALSE} uses all the levels in the factor.}
     \item{\code{guide}}{A function used to create a guide or its name. See
-\code{\link[=guides]{guides()}} for more info.}
+\code{\link[ggplot2:guides]{guides()}} for more information.}
     \item{\code{super}}{The super class to use for the constructed scale}
   }}
 }

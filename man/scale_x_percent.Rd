@@ -11,6 +11,9 @@ scale_x_percent(
   name = waiver(),
   breaks = waiver(),
   minor_breaks = waiver(),
+  guide = waiver(),
+  n.breaks = NULL,
+  labels,
   limits = NULL,
   expand = c(0.01, 0),
   oob = censor,
@@ -18,7 +21,6 @@ scale_x_percent(
   trans = "identity",
   position = "bottom",
   sec.axis = waiver(),
-  labels,
   accuracy = 1,
   scale = 100,
   prefix = "",
@@ -33,6 +35,9 @@ scale_y_percent(
   name = waiver(),
   breaks = waiver(),
   minor_breaks = waiver(),
+  guide = waiver(),
+  n.breaks = NULL,
+  labels,
   limits = NULL,
   expand = c(0.01, 0),
   oob = censor,
@@ -40,7 +45,6 @@ scale_y_percent(
   trans = "identity",
   position = "left",
   sec.axis = waiver(),
-  labels,
   accuracy = 1,
   scale = 100,
   prefix = "",
@@ -55,6 +59,9 @@ scale_x_comma(
   name = waiver(),
   breaks = waiver(),
   minor_breaks = waiver(),
+  guide = waiver(),
+  n.breaks = NULL,
+  labels,
   limits = NULL,
   expand = c(0.01, 0),
   oob = censor,
@@ -62,7 +69,6 @@ scale_x_comma(
   trans = "identity",
   position = "bottom",
   sec.axis = waiver(),
-  labels,
   accuracy = 1,
   scale = 1,
   prefix = "",
@@ -77,6 +83,9 @@ scale_y_comma(
   name = waiver(),
   breaks = waiver(),
   minor_breaks = waiver(),
+  guide = waiver(),
+  n.breaks = NULL,
+  labels,
   limits = NULL,
   expand = c(0.01, 0),
   oob = censor,
@@ -84,7 +93,6 @@ scale_y_comma(
   trans = "identity",
   position = "left",
   sec.axis = waiver(),
-  labels,
   accuracy = 1,
   scale = 1,
   prefix = "",
@@ -120,6 +128,9 @@ each major break)
 \item A function that given the limits returns a vector of minor breaks.
 }}
 
+\item{labels}{Specifying overrides the default format (i.e. you really don't
+want to do that). \code{NULL} means no labels.}
+
 \item{limits}{A numeric vector of length two providing limits of the scale.
 Use \code{NA} to refer to the existing minimum or maximum.}
 
@@ -141,9 +152,6 @@ object itself. Built-in transformations include "asn", "atanh",
 scales, "top" or "bottom" for horizontal scales}
 
 \item{sec.axis}{specify a secondary axis}
-
-\item{labels}{Specifying overrides the default format (i.e. you really don't
-want to do that). \code{NULL} means no labels.}
 
 \item{accuracy, scale, prefix, suffix, big.mark, decimal.mark, trim}{See
 [scales::comma_format()] or [scales::percent_format()]}

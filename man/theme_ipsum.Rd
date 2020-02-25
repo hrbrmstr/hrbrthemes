@@ -113,7 +113,7 @@ ggplot(mtcars, aes(mpg, wt)) +
 
 update_geom_font_defaults()
 
-count(mpg, class) %>%
+count(mpg, class) \%>\%
   ggplot(aes(class, n)) +
   geom_col() +
   geom_text(aes(label=n), nudge_y=3) +

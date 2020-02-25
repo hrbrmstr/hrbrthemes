@@ -170,7 +170,7 @@ ggplot(mtcars, aes(mpg, wt)) +
 # note: make this font_rc on Windows
 update_geom_font_defaults(family=font_rc_light)
 
-count(mpg, class) %>%
+count(mpg, class) \%>\%
   ggplot(aes(class, n)) +
   geom_col() +
   geom_text(aes(label=n), nudge_y=3) +
