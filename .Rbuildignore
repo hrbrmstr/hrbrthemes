@@ -1,3 +1,4 @@
+^\.github
 ^CRAN-RELEASE$
 ^.*\.Rproj$
 ^\.Rproj\.user$

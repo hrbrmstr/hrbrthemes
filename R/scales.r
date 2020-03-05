@@ -27,6 +27,10 @@ is.formula <- function (x) { inherits(x, "formula") }
 #'     each major break)
 #'   - A numeric vector of positions
 #'   - A function that given the limits returns a vector of minor breaks.
+#' @param guide	guide	A function used to create a guide or its name. See [guides()] for more information.
+#' @param n.breaks	An integer guiding the number of major breaks. The algorithm may choose a
+#'        slightly different number to ensure nice break labels. Will only have an effect if
+#'        `breaks = waiver()`. Use NULL to use the default number of breaks given by the transformation.
 #' @param labels Specifying overrides the default format (i.e. you really don't
 #'   want to do that). `NULL` means no labels.
 #' @param limits A numeric vector of length two providing limits of the scale.

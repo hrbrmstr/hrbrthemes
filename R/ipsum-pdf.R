@@ -2,7 +2,6 @@
 #'
 #' Template for creating an R markdown documents with an emphasis on typography
 #'
-#' @inheritParams rmarkdown::pdf_document
 #' @param ... Arguments to \code{rmarkdown::pdf_document}
 #'
 #' @return R Markdown output format to pass to \code{\link[rmarkdown:render]{render}}

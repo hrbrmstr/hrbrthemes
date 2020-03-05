@@ -1,4 +1,3 @@
-#' @inheritParams hrbrthemes::theme_ipsum_rc
 #' @rdname theme_ipsum_rc
 #' @export
 theme_modern_rc <- function (base_family = "Roboto Condensed", base_size = 11.5,

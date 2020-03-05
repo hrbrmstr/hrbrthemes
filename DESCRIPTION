@@ -2,7 +2,7 @@ Package: hrbrthemes
 Type: Package
 Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
 Version: 0.8.0
-Date: 2020-02-25
+Date: 2020-03-05
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
              comment = c(ORCID = "0000-0001-5670-2640")),
@@ -44,7 +44,7 @@ Suggests:
     vdiffr,
     svglite
 Depends:
-    R (>= 3.2.0)
+    R (>= 3.4.0)
 Imports:
     ggplot2 (>= 3.3.0),
     grDevices,
