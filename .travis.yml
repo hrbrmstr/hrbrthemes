@@ -1,39 +1,17 @@
 language: r
-
-warnings_are_errors: true
-
 cache: packages
-
-sudo: required
-
-matrix:
-  include:
-    - os: linux
-      dist: precise
-      sudo: false
-      before_install:
-        - mkdir -p  ~/.R
-        - echo 'CXX1X=g++ -std=c++0x -g -O2 -fPIC' > ~/.R/Makevars
-    - os: linux
-      dist: precise
-      sudo: false
-    - os: linux
-      dist: trusty
-      sudo: required
-      env: R_CODECOV=true
+latex: false
+fortran: false
 
 env:
  global:
-   - CRAN: http://cran.rstudio.com
+   - CRAN: https://cran.rstudio.com
 
 addons:
   apt:
     packages:
       - libhunspell-dev
       - libpoppler-cpp-dev
-
-r_github_packages:
-  - jimhester/covr
 
 after_success:
   - if [[ "${R_CODECOV}" ]]; then R -e 'covr::codecov()'; fi
