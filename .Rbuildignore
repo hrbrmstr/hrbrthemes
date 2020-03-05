@@ -13,3 +13,5 @@
 ^cran-comments\.md$
 ^docs$
 ^build$
+^doc$
+^Meta$

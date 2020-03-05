@@ -34,7 +34,7 @@
 #' @param caption_family,caption_face,caption_size,caption_margin plot caption family, face, size and margin
 #' @param axis_title_family,axis_title_face,axis_title_size axis title font family, face and size
 #' @param axis_title_just axis title font justification, one of `[blmcrt]`
-#' @param plot_margin plot margin (specify with [ggplot2::margin()])
+#' @param plot_margin plot margin (specify with `ggplot2::margin()`)
 #' @param grid_col,axis_col grid & axis colors; both default to `#cccccc`
 #' @param grid panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)
 #' @param axis_text_size font size of axis text

@@ -202,7 +202,7 @@ ft_pal <- function() {
 
 #' Discrete color & fill scales based on the FT palette
 #'
-#' See [ft_pal]().
+#' See [ft_pal()].
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position

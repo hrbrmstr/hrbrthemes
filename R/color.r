@@ -10,7 +10,7 @@ ipsum_pal <- function() { manual_pal(ipsum_palette) }
 
 #' Discrete color & fill scales based on the ipsum palette
 #'
-#' See [ipsum_pal]().
+#' See [ipsum_pal()].
 #'
 #' @md
 #' @inheritDotParams ggplot2::discrete_scale -expand -position

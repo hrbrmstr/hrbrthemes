@@ -60,5 +60,5 @@ The default, \code{TRUE}, uses the levels that appear in the data;
   }}
 }
 \description{
-See \url{ipsum_pal}.
+See \code{\link[=ipsum_pal]{ipsum_pal()}}.
 }

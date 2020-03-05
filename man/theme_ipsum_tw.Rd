@@ -70,7 +70,7 @@ theme_ipsum_tw(
 \item{ticks}{ticks if \code{TRUE} add ticks}
 }
 \description{
-You should \url{import_titillium_web} first and also install the fonts on your
+You should \code{\link[=import_titillium_web]{import_titillium_web()}} first and also install the fonts on your
 system before trying to use this theme.
 }
 \details{

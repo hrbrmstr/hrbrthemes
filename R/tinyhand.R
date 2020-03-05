@@ -9,7 +9,7 @@ font_th <- "BFTinyHand-Regular"
 
 #' Something you should never use.
 #'
-#' You should [import_tinyhand]() first and also install the fonts on your
+#' You should [import_tinyhand()] first and also install the fonts on your
 #' system before trying to use this theme.
 #'
 #' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will

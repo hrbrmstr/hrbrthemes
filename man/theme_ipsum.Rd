@@ -54,7 +54,7 @@ theme_ipsum(
 
 \item{axis_title_just}{axis title font justification, one of \verb{[blmcrt]}}
 
-\item{plot_margin}{plot margin (specify with \code{\link[ggplot2:margin]{ggplot2::margin()}})}
+\item{plot_margin}{plot margin (specify with \code{ggplot2::margin()})}
 
 \item{grid_col, axis_col}{grid & axis colors; both default to \verb{#cccccc}}
 

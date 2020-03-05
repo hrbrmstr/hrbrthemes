@@ -72,7 +72,7 @@ theme_ipsum_es(
 \item{ticks}{ticks if \code{TRUE} add ticks}
 }
 \description{
-You should \url{import_econ_sans} first and also install the fonts on your
+You should \code{\link[=import_econ_sans]{import_econ_sans()}} first and also install the fonts on your
 system before trying to use this theme.
 }
 \details{

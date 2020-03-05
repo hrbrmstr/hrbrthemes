@@ -136,7 +136,7 @@ theme_ipsum_rc(
 \item{axis_col}{axis color}
 }
 \description{
-You should \url{import_roboto_condensed} first and also install the fonts on your
+You should \code{\link[=import_roboto_condensed]{import_roboto_condensed()}} first and also install the fonts on your
 system before trying to use this theme.
 }
 \details{

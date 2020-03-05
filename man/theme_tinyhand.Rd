@@ -67,7 +67,7 @@ theme_tinyhand(
 \item{ticks}{ticks if \code{TRUE} add ticks}
 }
 \description{
-You should \url{import_tinyhand} first and also install the fonts on your
+You should \code{\link[=import_tinyhand]{import_tinyhand()}} first and also install the fonts on your
 system before trying to use this theme.
 }
 \details{

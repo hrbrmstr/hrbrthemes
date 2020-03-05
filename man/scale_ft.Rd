@@ -60,5 +60,5 @@ The default, \code{TRUE}, uses the levels that appear in the data;
   }}
 }
 \description{
-See \url{ft_pal}.
+See \code{\link[=ft_pal]{ft_pal()}}.
 }

@@ -59,5 +59,3 @@ Imports:
     gdtools
 RoxygenNote: 7.0.2
 VignetteBuilder: knitr
-Remotes:
-    tidyverse/ggplot2
