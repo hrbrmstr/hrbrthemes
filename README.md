@@ -5,7 +5,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![Signed
 by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
 ![Signed commit
-%](https://img.shields.io/badge/Signed_Commits-28.8%25-lightgrey.svg)
+%](https://img.shields.io/badge/Signed_Commits-100%25-lightgrey.svg)
 [![Linux build
 Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes)
 [![Coverage
@@ -15,7 +15,7 @@ checks](https://cranchecks.info/badges/worst/hrbrthemes)](https://cranchecks.inf
 [![CRAN
 status](https://www.r-pkg.org/badges/version/hrbrthemes)](https://www.r-pkg.org/pkg/hrbrthemes)
 ![Minimal R
-Version](https://img.shields.io/badge/R%3E%3D-3.2.0-blue.svg)
+Version](https://img.shields.io/badge/R%3E%3D-3.4.0-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![downloads](https://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2545422.svg)](https://doi.org/10.5281/zenodo.2545422)
@@ -44,7 +44,7 @@ The following functions are implemented/objects are exported:
 Themes:
 
   - `theme_ipsum`: Arial Narrow
-  - `theme_ipsum_es`: Ccon Sans Condensed
+  - `theme_ipsum_es`: Econ Sans Condensed
   - `theme_ipsum_rc`: Roboto Condensed
   - `theme_ipsum_ps`: IBM Plex Sans font
   - `theme_ipsum_pub`: Public Sans
@@ -151,7 +151,7 @@ library(tidyverse)
 
 # current verison
 packageVersion("hrbrthemes")
-## [1] '0.7.1'
+## [1] '0.8.0'
 ```
 
 ### Base theme (Arial Narrow)
@@ -340,8 +340,9 @@ gg_check(gg)
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 | :--- | -------: | ---: | ---: | ---: | ----------: | ---: | -------: | ---: |
-| R    |       22 | 0.92 | 1340 | 0.91 |         259 | 0.73 |      775 | 0.82 |
-| Rmd  |        2 | 0.08 |  129 | 0.09 |          98 | 0.27 |      167 | 0.18 |
+| R    |       23 | 0.88 | 1615 | 0.79 |         308 | 0.70 |      827 | 0.83 |
+| HTML |        1 | 0.04 |  297 | 0.15 |          32 | 0.07 |        2 | 0.00 |
+| Rmd  |        2 | 0.08 |  129 | 0.06 |          98 | 0.22 |      167 | 0.17 |
 
 ### Code of Conduct
 

@@ -29,7 +29,7 @@ The following functions are implemented/objects are exported:
 Themes:
 
 - `theme_ipsum`: Arial Narrow
-- `theme_ipsum_es`:  Ccon Sans Condensed
+- `theme_ipsum_es`:  Econ Sans Condensed
 - `theme_ipsum_rc`:  Roboto Condensed
 - `theme_ipsum_ps`:  IBM Plex Sans font
 - `theme_ipsum_pub`:  Public Sans
