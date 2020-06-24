@@ -5,7 +5,11 @@
 \alias{font_ps}
 \alias{font_ps_light}
 \title{PlexSans font name R variable aliases}
-\format{length 1 character vector}
+\format{
+length 1 character vector
+
+An object of class \code{character} of length 1.
+}
 \usage{
 font_ps
 

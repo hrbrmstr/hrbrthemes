@@ -5,7 +5,11 @@
 \alias{ft_cols}
 \alias{ft_text_col}
 \title{FT color palette}
-\format{An object of class \code{list} of length 9.}
+\format{
+An object of class \code{list} of length 9.
+
+An object of class \code{character} of length 1.
+}
 \usage{
 ft_cols
 

@@ -6,7 +6,13 @@
 \alias{font_es_bold}
 \alias{font_es_light}
 \title{Econ Sans Condensed font name R variable aliases}
-\format{length 1 character vector}
+\format{
+length 1 character vector
+
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+}
 \usage{
 font_es
 

@@ -3,6 +3,7 @@
 \docType{package}
 \name{hrbrthemes}
 \alias{hrbrthemes}
+\alias{hrbrthemes-package}
 \title{Additional Themes and Theme Components for 'ggplot2'}
 \description{
 A compilation of extra themes and theme components for 'ggplot2' with an
@@ -21,6 +22,14 @@ There is an option \code{hrbrthemes.loadfonts} which -- if set to \code{TRUE} --
 call \code{extrafont::loadfonts()} to register non-core fonts with R PDF & PostScript
 devices. If you are running under Windows, the package calls the same function
 to register non-core fonts with the Windows graphics device.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{http://github.com/hrbrmstr/hrbrthemes}
+  \item Report bugs at \url{https://github.com/hrbrmstr/hrbrthemes/issues}
+}
+
 }
 \author{
 Bob Rudis (bob@rud.is)

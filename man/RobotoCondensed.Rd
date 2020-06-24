@@ -5,7 +5,11 @@
 \alias{font_rc}
 \alias{font_rc_light}
 \title{Roboto Condensed font name R variable aliases}
-\format{length 1 character vector}
+\format{
+length 1 character vector
+
+An object of class \code{character} of length 1.
+}
 \usage{
 font_rc
 

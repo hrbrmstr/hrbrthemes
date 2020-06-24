@@ -7,7 +7,15 @@
 \alias{font_pub_light}
 \alias{font_pub_thin}
 \title{Public Sans font name R variable aliases}
-\format{length 1 character vector}
+\format{
+length 1 character vector
+
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+
+An object of class \code{character} of length 1.
+}
 \usage{
 font_pub
 
