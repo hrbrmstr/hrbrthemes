@@ -4,7 +4,9 @@
 \name{font_th}
 \alias{font_th}
 \title{TinyHand Web font name R variable aliases}
-\format{length 1 character vector}
+\format{
+length 1 character vector
+}
 \usage{
 font_th
 }
