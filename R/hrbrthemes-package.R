@@ -26,7 +26,7 @@
 #' @importFrom gdtools set_dummy_conf
 #' @import rmarkdown knitr htmltools
 #' @importFrom tools file_path_sans_ext
-NULL
+"_PACKAGE"
 
 #' hrbrthemes exported operators
 #'
