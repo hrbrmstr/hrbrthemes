@@ -44,7 +44,7 @@ The following functions are implemented/objects are exported:
 Themes:
 
   - `theme_ipsum`: Arial Narrow
-  - `theme_ipsum_gs`:  Goldman Sans Condensed
+  - `theme_ipsum_gs`: Goldman Sans Condensed
   - `theme_ipsum_es`: Econ Sans Condensed
   - `theme_ipsum_rc`: Roboto Condensed
   - `theme_ipsum_ps`: IBM Plex Sans font
@@ -127,7 +127,9 @@ Utilities:
 ### Installation
 
 ``` r
-install.packages("hrbrthemes", repos = "https://cinc.rud.is")
+install.packages("hrbrthemes) # NOTE: CRAN version is 0.8.0
+# or
+install.packages("hrbrthemes", repos = c("https://cinc.rud.is", "https://cloud.r-project.org/"))
 # or
 remotes::install_git("https://git.rud.is/hrbrmstr/hrbrthemes.git")
 # or
@@ -152,7 +154,7 @@ library(tidyverse)
 
 # current verison
 packageVersion("hrbrthemes")
-## [1] '0.8.0'
+## [1] '0.8.6'
 ```
 
 ### Base theme (Arial Narrow)
@@ -341,9 +343,9 @@ gg_check(gg)
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 | :--- | -------: | ---: | ---: | ---: | ----------: | ---: | -------: | ---: |
-| R    |       23 | 0.88 | 1615 | 0.79 |         308 | 0.70 |      827 | 0.83 |
-| HTML |        1 | 0.04 |  297 | 0.15 |          32 | 0.07 |        2 | 0.00 |
-| Rmd  |        2 | 0.08 |  129 | 0.06 |          98 | 0.22 |      167 | 0.17 |
+| R    |       24 | 0.89 | 1724 | 0.80 |         327 | 0.72 |      908 | 0.84 |
+| HTML |        1 | 0.04 |  297 | 0.14 |          32 | 0.07 |        2 | 0.00 |
+| Rmd  |        2 | 0.07 |  129 | 0.06 |          98 | 0.21 |      168 | 0.16 |
 
 ### Code of Conduct
 
