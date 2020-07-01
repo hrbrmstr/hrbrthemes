@@ -1,8 +1,8 @@
 Package: hrbrthemes
 Type: Package
 Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
-Version: 0.8.5
-Date: 2020-06-24
+Version: 0.8.6
+Date: 2020-07-01
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
              comment = c(ORCID = "0000-0001-5670-2640")),
@@ -14,6 +14,7 @@ Authors@R: c(
       person("Google", comment = "Roboto Condensed & Titillium Web Fonts", 
              role = c("cph")),
       person("IBM", comment = "Plex Sans Font", role = c("cph")),
+      person("Goldman Sachs", comment = "Goldman Sans Font", role = c("cph")),
       person("Impallari Type", comment = "Public Sans Font", role = c("cph")),
       person("Jacob", "Barnett", email = "jacob.r.barnett@gmail.com", role = c("ctb")),
       person("Thomas J.", "Leeper", role = c("ctb"), email = "thosjleeper@gmail.com",

@@ -16,7 +16,7 @@ theme_ipsum_gs(
   subtitle_size = 13,
   subtitle_face = "plain",
   subtitle_margin = 15,
-  strip_text_family = "Goldman Sans",
+  strip_text_family = "Goldman Sans Condensed",
   strip_text_size = 12,
   strip_text_face = "bold",
   caption_family = if (.Platform$OS.type == "windows") "Goldman Sans Condensed" else
