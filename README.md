@@ -127,7 +127,7 @@ Utilities:
 ### Installation
 
 ``` r
-install.packages("hrbrthemes) # NOTE: CRAN version is 0.8.0
+install.packages("hrbrthemes") # NOTE: CRAN version is 0.8.0
 # or
 install.packages("hrbrthemes", repos = c("https://cinc.rud.is", "https://cloud.r-project.org/"))
 # or
