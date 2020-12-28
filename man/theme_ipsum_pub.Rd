@@ -2,7 +2,7 @@
 % Please edit documentation in R/public-sans.R
 \name{theme_ipsum_pub}
 \alias{theme_ipsum_pub}
-\title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typoghraphy}
+\title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typography}
 \usage{
 theme_ipsum_pub(
   base_family = "Public Sans",
@@ -41,7 +41,7 @@ theme_ipsum_pub(
 \arguments{
 \item{base_family, base_size}{base font family and size}
 
-\item{plot_title_family, plot_title_face, plot_title_size, plot_title_margin}{plot tilte family, face, size and margin}
+\item{plot_title_family, plot_title_face, plot_title_size, plot_title_margin}{plot title family, face, size and margin}
 
 \item{subtitle_family, subtitle_face, subtitle_size}{plot subtitle family, face and size}
 
@@ -55,9 +55,9 @@ theme_ipsum_pub(
 
 \item{axis_title_family, axis_title_face, axis_title_size}{axis title font family, face and size}
 
-\item{axis_title_just}{axis title font justificationk one of \verb{[blmcrt]}}
+\item{axis_title_just}{axis title font justification one of \verb{[blmcrt]}}
 
-\item{plot_margin}{plot margin (specify with \link[ggplot2:margin]{ggplot2::margin})}
+\item{plot_margin}{plot margin (specify with \link[ggplot2:element]{ggplot2::margin})}
 
 \item{grid_col}{grid color}
 
