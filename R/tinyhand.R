@@ -168,12 +168,12 @@ import_tinyhand <- function() {
 
   th_font_dir <- system.file("fonts", "tinyhand", package="hrbrthemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(th_font_dir, prompt=FALSE)))
-
-  message(
-    sprintf(
-      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      th_font_dir)
-  )
+  # suppressWarnings(suppressMessages(extrafont::font_import(th_font_dir, prompt=FALSE)))
+  #
+  # message(
+  #   sprintf(
+  #     "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
+  #     th_font_dir)
+  # )
 
 }

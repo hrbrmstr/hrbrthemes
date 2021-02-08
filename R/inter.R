@@ -1,6 +1,6 @@
 #' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typoghraphy
 #'
-#' You should [import_goldman_sans()] first and also install the fonts on your
+#' You should [import_inter()] first and also install the fonts on your
 #' system before trying to use this theme.
 #'
 #' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
@@ -9,7 +9,7 @@
 #' to register non-core fonts with the Windows graphics device.
 #'
 #' @md
-#' @section Why Goldman Sans?:
+#' @section Why Inter?:
 #' See <https://design.gs.com/d/story/goldman-sans/>.
 #'
 #' @md
@@ -40,11 +40,11 @@
 #'        title="Seminal ggplot2 scatterplot example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum_gs()
+#'   theme_ipsum_inter()
 #'
 #' # seminal bar chart
 #'
-#' update_geom_font_defaults(family=font_gs_light)
+#' update_geom_font_defaults(family=font_inter_medium)
 #'
 #' count(mpg, class) %>%
 #'   ggplot(aes(class, n)) +
@@ -54,27 +54,29 @@
 #'        title="Seminal ggplot2 bar chart example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ipsum_gs(grid="Y") +
+#'   theme_ipsum_inter(grid="Y") +
 #'   theme(axis.text.y=element_blank())
 #' }
-theme_ipsum_gs <- function(
-  base_family="Goldman Sans Condensed",
-  base_size = 11.5,
-  plot_title_family="Goldman Sans Condensed",
-  plot_title_size = 18,
+theme_ipsum_inter <- function(
+  base_family="Inter-Medium",
+  base_size = 10,
+  plot_title_family="Inter-SemiBold",
+  plot_title_size = 16,
   plot_title_face="bold",
-  plot_title_margin = 10,
-  subtitle_family=if (.Platform$OS.type == "windows") "Goldman Sans Condensed" else "Goldman Sans Condensed",
-  subtitle_size = 13,
+  plot_title_margin = 8,
+  subtitle_family="Inter-Medium",
+  subtitle_size = 12,
   subtitle_face = "plain",
-  subtitle_margin = 15,
-  strip_text_family = "Goldman Sans Condensed",
+  subtitle_margin = 13,
+  strip_text_family = "Inter",
   strip_text_size = 12,
   strip_text_face = "bold",
-  caption_family=if (.Platform$OS.type == "windows") "Goldman Sans Condensed" else "Goldman Sans Condensed",
+  caption_family="Inter-Light",
   caption_size = 9,
   caption_face = "plain",
   caption_margin = 10,
+  axis_text_family = "Inter-Thin",
+  axis_text_face = "plain",
   axis_text_size = 9,
   axis_title_family = base_family,
   axis_title_size = 9,
@@ -169,10 +171,10 @@ theme_ipsum_gs <- function(
 
 }
 
-#' Import Goldman Sans font for use in charts
+#' Import Inter font for use in charts
 #'
-#' Goldman Sans is a trademark of Goldman Sachs and distributed under the
-#' [Goldman Sachs Restricted Font License](https://design.gs.com/d/legal/goldman-sans-license/).
+#' Inter is Copyright (c) 2016-2020 The Inter Project Authors
+#' (<https://rsms.me/inter/>).
 #'
 #' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
 #' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
@@ -185,25 +187,73 @@ theme_ipsum_gs <- function(
 #'   recommended that you install them on your system the same way you would any
 #'   other font you wish to use in other programs.
 #' @export
-import_goldman_sans <- function() {
+import_inter <- function() {
 
-  gs_font_dir <- system.file("fonts", "goldman-sans", package="hrbrthemes")
+  inter_font_dir <- system.file("fonts", "inter", package="hrbrthemes")
 
-  # suppressWarnings(suppressMessages(extrafont::font_import(gs_font_dir, prompt=FALSE)))
-  #
-  # message(
-  #   sprintf(
-  #     "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-  #     gs_font_dir)
-  # )
+  suppressWarnings(suppressMessages(extrafont::font_import(inter_font_dir, prompt=FALSE)))
+
+  message(
+    sprintf(
+      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
+      inter_font_dir)
+  )
 
 }
 
-#' @rdname GoldmanSans
+
+#' @rdname Inter
 #' @md
-#' @title Goldman Sans font name R variable aliases
-#' @description `font_gs` == "`Goldman Sans Condensed`"
+#' @title Inter font name R variable aliases
+#' @description `font_inter_thin` == "`Inter-Thin`"
 #' @format length 1 character vector
 #' @export
-font_gs <- "Goldman Sans Condensed"
+font_inter_thin <- "Inter-Thin"
 
+#' @rdname Inter
+#' @md
+#' @title Inter font name R variable aliases
+#' @description `font_inter_thin_italic` == "`Inter-ThinItalic`"
+#' @format length 1 character vector
+#' @export
+font_inter_thin_italic <- "Inter-ThinItalic"
+
+#' @rdname Inter
+#' @md
+#' @title Inter font name R variable aliases
+#' @description `font_inter_medium` == "`Inter-Medium`"
+#' @format length 1 character vector
+#' @export
+font_inter_medium <- "Inter-Medium"
+
+#' @rdname Inter
+#' @md
+#' @title Inter font name R variable aliases
+#' @description `font_inter_medium_italic` == "`Inter-MediumItalic`"
+#' @format length 1 character vector
+#' @export
+font_inter_medium_italic <- "Inter-MediumItalic"
+
+#' @rdname Inter
+#' @md
+#' @title Inter font name R variable aliases
+#' @description `font_inter_semibold` == "`Inter-SemiBold`"
+#' @format length 1 character vector
+#' @export
+font_inter_semibold <- "Inter-SemiBold"
+
+#' @rdname Inter
+#' @md
+#' @title Inter font name R variable aliases
+#' @description `font_inter_bold` == "`Inter-Bold`"
+#' @format length 1 character vector
+#' @export
+font_inter_bold <- "Inter-Bold"
+
+#' @rdname Inter
+#' @md
+#' @title Inter font name R variable aliases
+#' @description `font_inter_italic` == "`Inter-Italic`"
+#' @format length 1 character vector
+#' @export
+font_inter_italic <- "Inter-Italic"

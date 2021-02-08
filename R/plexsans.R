@@ -184,13 +184,13 @@ import_plex_sans <- function() {
 
   ps_font_dir <- system.file("fonts", "plex-sans", package="hrbrthemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(ps_font_dir, prompt=FALSE)))
-
-  message(
-    sprintf(
-      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      ps_font_dir)
-  )
+  # suppressWarnings(suppressMessages(extrafont::font_import(ps_font_dir, prompt=FALSE)))
+  #
+  # message(
+  #   sprintf(
+  #     "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
+  #     ps_font_dir)
+  # )
 
 }
 

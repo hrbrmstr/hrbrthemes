@@ -188,13 +188,13 @@ import_public_sans <- function() {
 
   pub_font_dir <- system.file("fonts", "public-sans", package="hrbrthemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(pub_font_dir, prompt=FALSE)))
-
-  message(
-    sprintf(
-      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      pub_font_dir)
-  )
+  # suppressWarnings(suppressMessages(extrafont::font_import(pub_font_dir, prompt=FALSE)))
+  #
+  # message(
+  #   sprintf(
+  #     "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
+  #     pub_font_dir)
+  # )
 
 }
 

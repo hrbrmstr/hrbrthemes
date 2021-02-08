@@ -188,13 +188,13 @@ import_titillium_web <- function() {
 
   tw_font_dir <- system.file("fonts", "titillium-web", package="hrbrthemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(tw_font_dir, prompt=FALSE)))
-
-  message(
-    sprintf(
-      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      tw_font_dir)
-  )
+  # suppressWarnings(suppressMessages(extrafont::font_import(tw_font_dir, prompt=FALSE)))
+  #
+  # message(
+  #   sprintf(
+  #     "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
+  #     tw_font_dir)
+  # )
 
 }
 

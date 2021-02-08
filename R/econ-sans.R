@@ -208,13 +208,13 @@ theme_ipsum_es <- function(
 import_econ_sans <- function() {
 
   es_font_dir <- system.file("fonts", "econ-sans", package="hrbrthemes")
-
-  suppressWarnings(suppressMessages(extrafont::font_import(es_font_dir, prompt=FALSE)))
-
-  message(
-    "You will likely need to install these fonts on your system as well.\n\n",
-    "You can find them in [", es_font_dir, "]"
-  )
+  #
+  # suppressWarnings(suppressMessages(extrafont::font_import(es_font_dir, prompt=FALSE)))
+  #
+  # message(
+  #   "You will likely need to install these fonts on your system as well.\n\n",
+  #   "You can find them in [", es_font_dir, "]"
+  # )
 
 }
 

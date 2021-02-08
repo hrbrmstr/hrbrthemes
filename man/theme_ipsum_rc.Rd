@@ -121,7 +121,7 @@ theme_ipsum_rc(
 
 \item{axis_title_just}{axis title font justificationk one of \verb{[blmcrt]}}
 
-\item{plot_margin}{plot margin (specify with \link[ggplot2:margin]{ggplot2::margin})}
+\item{plot_margin}{plot margin (specify with \link[ggplot2:element]{ggplot2::margin})}
 
 \item{grid}{panel grid (\code{TRUE}, \code{FALSE}, or a combination of \code{X}, \code{x}, \code{Y}, \code{y})}
 
