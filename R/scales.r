@@ -7,7 +7,7 @@ is.formula <- function (x) { inherits(x, "formula") }
 #'
 #' The `_comma` ones set comma format for axis text and `expand=c(0,0)` (you need to set limits).
 #'
-#' The `_percent` ones set precent format for axis text and `expand=c(0,0)` (you need to set limits).
+#' The `_percent` ones set percent format for axis text and `expand=c(0,0)` (you need to set limits).
 #'
 #' @md
 #' @param name The name of the scale. Used as axis or legend title. If

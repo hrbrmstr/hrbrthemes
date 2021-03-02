@@ -1,11 +1,11 @@
 #' Makes axis text labels flush on the ends
 #'
-#' A covenience function intended for basic, fixed-scale plots only (i.e. does not handle
+#' A convenience function intended for basic, fixed-scale plots only (i.e. does not handle
 #' free scales in facets).\cr
 #' \cr
 #' You need to pass in a ggplot2 object to this function. It can't be `+`'d in a chain
 #' of geoms, coords, scales, themes, etc. It also builds the plot (but does not display
-#' it) so if the plt takes a while (i.e. has lots of data or transforms) this will also
+#' it) so if the plot takes a while (i.e. has lots of data or transforms) this will also
 #' take a while.
 #'
 #' @md

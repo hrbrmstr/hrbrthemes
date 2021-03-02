@@ -49,7 +49,7 @@ Themes:
   - `theme_ipsum_rc`: Roboto Condensed
   - `theme_ipsum_ps`: IBM Plex Sans font
   - `theme_ipsum_pub`: Public Sans
-  - `theme_ipsum_tw`: Titilium Web
+  - `theme_ipsum_tw`: Titillium Web
   - `theme_modern_rc`: Roboto Condensed dark theme
   - `theme_ft_rc`: Dark theme based on FT’s dark theme (Roboto
     Condensed)
