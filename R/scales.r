@@ -3,11 +3,11 @@ is.waive <- function (x) { inherits(x, "waiver") }
 is.sec_axis <- function (x) { inherits(x, "AxisSecondary") }
 is.formula <- function (x) { inherits(x, "formula") }
 
-#' X & Y scales with opinionated pre-sets for percent & comma label formats
+#' X & Y scales with opinionated presets for percent & comma label formats
 #'
 #' The `_comma` ones set comma format for axis text and `expand=c(0,0)` (you need to set limits).
 #'
-#' The `_percent` ones set precent format for axis text and `expand=c(0,0)` (you need to set limits).
+#' The `_percent` ones set percent format for axis text and `expand=c(0,0)` (you need to set limits).
 #'
 #' @md
 #' @param name The name of the scale. Used as axis or legend title. If

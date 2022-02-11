@@ -6,6 +6,7 @@
 #' @param toc,toc_depth TOC params
 #' @param extra_dependencies,... Additional function arguments to pass to the
 #'        base R Markdown HTML output formatter
+#' @param smart Deprecated
 #' @export
 ipsum <- function(number_sections = FALSE,
                   fig_width = 7,
@@ -90,7 +91,6 @@ ipsum <- function(number_sections = FALSE,
     clean_supporting = self_contained,
     pre_processor = pre_processor,
     base_format = rmarkdown::html_document_base(
-      smart = smart,
       theme = theme,
       self_contained = self_contained,
       lib_dir = lib_dir,

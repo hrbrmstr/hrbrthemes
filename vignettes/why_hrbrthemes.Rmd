@@ -81,7 +81,7 @@ Proportional digits stand out (in a "yes, I just spilled sriracha on my white sh
 
 ### Clean and compact
 
-The figure used in the previous section provided an example of condensed/narrow fonts and regular. Chart space is at a premium and it's important to label and annotate your creations (sparingly but sufficiently). Choosing a font that is too wide will reduce your available space and also make it harder to read the text. Choosing a font that is too narrow/compressed/condensed will create different legiibility problems. 
+The figure used in the previous section provided an example of condensed/narrow fonts and regular. Chart space is at a premium and it's important to label and annotate your creations (sparingly but sufficiently). Choosing a font that is too wide will reduce your available space and also make it harder to read the text. Choosing a font that is too narrow/compressed/condensed will create different legibility problems. 
 
 NOTE: It's _really_ hard to find a **free** condensed/narrow font with great kerning pairs and tabular digits. Such is the way of things.
 
@@ -106,7 +106,7 @@ There is plenty of room to work with in Open Sans. You can embolden the title, b
 
 ### TTF. Meh.
 
-I'll use another over-simplification and state that there two main font types: OTF and TTF (it's another lie of convenience). OTF (OpenType) is more modern and flexible. TTF (TrueType) has been around longer and was a precursor to OTF. If you make PDFs or PostScript files from R you pretty much _need_ to use TTF fonts due to the underlying tooling that it relies on. If you are making PNGs or SVGs you can likely use OTF but most communciations teams and publications want PDFs.
+I'll use another over-simplification and state that there two main font types: OTF and TTF (it's another lie of convenience). OTF (OpenType) is more modern and flexible. TTF (TrueType) has been around longer and was a precursor to OTF. If you make PDFs or PostScript files from R you pretty much _need_ to use TTF fonts due to the underlying tooling that it relies on. If you are making PNGs or SVGs you can likely use OTF but most communications teams and publications want PDFs.
 
 
 ## Spacing Out

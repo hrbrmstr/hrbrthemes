@@ -44,6 +44,8 @@ outputting HTML directly into the markdown document).}
 
 \item{dev}{Graphics device to use for figure output (defaults to png)}
 
+\item{smart}{Deprecated}
+
 \item{self_contained}{Produce a standalone HTML file with no external
 dependencies, using data: URIs to incorporate the contents of linked
 scripts, stylesheets, images, and videos. Note that even for self contained
@@ -62,7 +64,10 @@ copied into the output directory). You can pass an alternate URL or pass
 \item{extra_dependencies, ...}{Additional function arguments to pass to the
 base R Markdown HTML output formatter}
 
-\item{css}{One or more css files to include}
+\item{css}{CSS and/or Sass files to include. Files with an extension of .sass
+or .scss are compiled to CSS via \code{sass::sass()}. Also, if \code{theme} is a
+\code{\link[bslib:bs_theme]{bslib::bs_theme()}} object, Sass code may reference the relevant Bootstrap
+Sass variables, functions, mixins, etc.}
 
 \item{includes}{Named list of additional content to include within the
 document (typically created using the \code{\link[rmarkdown]{includes}} function).}

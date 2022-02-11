@@ -58,5 +58,5 @@ Imports:
     tools,
     magrittr,
     gdtools
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 VignetteBuilder: knitr

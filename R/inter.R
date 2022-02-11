@@ -1,4 +1,4 @@
-#' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typoghraphy
+#' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typography
 #'
 #' You should [import_inter()] first and also install the fonts on your
 #' system before trying to use this theme.
@@ -14,14 +14,14 @@
 #'
 #' @md
 #' @param base_family,base_size base font family and size
-#' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin plot tilte family, face, size and margin
+#' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin plot title family, face, size and margin
 #' @param subtitle_family,subtitle_face,subtitle_size plot subtitle family, face and size
 #' @param subtitle_margin plot subtitle margin bottom (single numeric value)
 #' @param strip_text_family,strip_text_face,strip_text_size facet label font family, face and size
 #' @param caption_family,caption_face,caption_size,caption_margin plot caption family, face, size and margin
+#' @param axis_text_family,axis_text_face,axis_text_size axis text font family, face, and size
 #' @param axis_title_family,axis_title_face,axis_title_size axis title font family, face and size
-#' @param axis_title_just axis title font justificationk one of `[blmcrt]`
-#' @param axis_text_size font size of axis text
+#' @param axis_title_just axis title font justification; one of `[blmcrt]`
 #' @param plot_margin plot margin (specify with [ggplot2::margin])
 #' @param grid_col grid color
 #' @param grid panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)
