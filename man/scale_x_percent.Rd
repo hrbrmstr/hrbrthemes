@@ -5,7 +5,7 @@
 \alias{scale_y_percent}
 \alias{scale_x_comma}
 \alias{scale_y_comma}
-\title{X & Y scales with opinionated pre-sets for percent & comma label formats}
+\title{X & Y scales with opinionated presets for percent & comma label formats}
 \usage{
 scale_x_percent(
   name = waiver(),
@@ -168,5 +168,5 @@ scales, "top" or "bottom" for horizontal scales}
 The \verb{_comma} ones set comma format for axis text and \code{expand=c(0,0)} (you need to set limits).
 }
 \details{
-The \verb{_percent} ones set precent format for axis text and \code{expand=c(0,0)} (you need to set limits).
+The \verb{_percent} ones set percent format for axis text and \code{expand=c(0,0)} (you need to set limits).
 }
