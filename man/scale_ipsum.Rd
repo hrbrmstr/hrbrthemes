@@ -17,11 +17,11 @@ scale_fill_ipsum(...)
   Arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale}}
   \describe{
     \item{\code{aesthetics}}{The names of the aesthetics that this scale works with.}
-    \item{\code{scale_name}}{The name of the scale that should be used for error messages
-associated with this scale.}
+    \item{\code{scale_name}}{\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}} The name of the scale
+that should be used for error messages associated with this scale.}
     \item{\code{palette}}{A palette function that when called with a single integer
 argument (the number of levels in the scale) returns the values that
-they should take (e.g., \code{\link[scales:hue_pal]{scales::hue_pal()}}).}
+they should take (e.g., \code{\link[scales:pal_hue]{scales::pal_hue()}}).}
     \item{\code{name}}{The name of the scale. Used as the axis or legend title. If
 \code{waiver()}, the default, the name of the scale is taken from the first
 mapping used for that aesthetic. If \code{NULL}, the legend title will be
@@ -32,7 +32,8 @@ omitted.}
 \item \code{waiver()} for the default breaks (the scale limits)
 \item A character vector of breaks
 \item A function that takes the limits as input and returns breaks
-as output
+as output. Also accepts rlang \link[rlang:as_function]{lambda} function
+notation.
 }}
     \item{\code{labels}}{One of:
 \itemize{
@@ -40,8 +41,10 @@ as output
 \item \code{waiver()} for the default labels computed by the
 transformation object
 \item A character vector giving labels (must be same length as \code{breaks})
+\item An expression vector (must be the same length as breaks). See ?plotmath for details.
 \item A function that takes the breaks as input and returns labels
-as output
+as output. Also accepts rlang \link[rlang:as_function]{lambda} function
+notation.
 }}
     \item{\code{limits}}{One of:
 \itemize{
@@ -49,7 +52,8 @@ as output
 \item A character vector that defines possible values of the scale and their
 order
 \item A function that accepts the existing (automatic) values and returns
-new ones
+new ones. Also accepts rlang \link[rlang:as_function]{lambda} function
+notation.
 }}
     \item{\code{na.translate}}{Unlike continuous scales, discrete scales can easily show
 missing values, and do so by default. If you want to remove missing values
@@ -62,6 +66,7 @@ The default, \code{TRUE}, uses the levels that appear in the data;
 \code{FALSE} uses all the levels in the factor.}
     \item{\code{guide}}{A function used to create a guide or its name. See
 \code{\link[ggplot2:guides]{guides()}} for more information.}
+    \item{\code{call}}{The \code{call} used to construct the scale for reporting messages.}
     \item{\code{super}}{The super class to use for the constructed scale}
   }}
 }

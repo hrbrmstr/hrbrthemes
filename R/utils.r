@@ -1,3 +1,7 @@
+is_3.5 <- function() {
+  compareVersion(as.character(packageVersion("ggplot2")), "3.5.0") >= 0
+}
+
 # Most (if not all) from github.com/rstudio/rmarkdown
 
 from_rmarkdown <- function (implicit_figures = TRUE, extensions = NULL) {

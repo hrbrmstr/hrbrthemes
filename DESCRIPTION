@@ -1,8 +1,8 @@
 Package: hrbrthemes
 Type: Package
 Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
-Version: 0.8.6
-Date: 2020-07-01
+Version: 0.8.7
+Date: 2024-03-03
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
              comment = c(ORCID = "0000-0001-5670-2640")),
@@ -45,9 +45,9 @@ Suggests:
     vdiffr,
     svglite
 Depends:
-    R (>= 3.4.0)
+    R (>= 4.0.0)
 Imports:
-    ggplot2 (>= 3.3.0),
+    ggplot2 (>= 3.4.0),
     grDevices,
     grid,
     scales,
@@ -57,6 +57,7 @@ Imports:
     htmltools,
     tools,
     magrittr,
-    gdtools
-RoxygenNote: 7.1.1
+    gdtools,
+    utils
+RoxygenNote: 7.2.3
 VignetteBuilder: knitr

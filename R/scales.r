@@ -7,7 +7,7 @@ is.formula <- function (x) { inherits(x, "formula") }
 #'
 #' The `_comma` ones set comma format for axis text and `expand=c(0,0)` (you need to set limits).
 #'
-#' The `_percent` ones set precent format for axis text and `expand=c(0,0)` (you need to set limits).
+#' The `_percent` ones set percent format for axis text and `expand=c(0,0)` (you need to set limits).
 #'
 #' @md
 #' @param name The name of the scale. Used as axis or legend title. If
@@ -41,7 +41,11 @@ is.formula <- function (x) { inherits(x, "formula") }
 #'   value should missing be displayed as? Does not apply to position scales
 #'   where `NA` is always placed at the far right.
 #' @param expand same as in ggplot2
-#' @param trans Either the name of a transformation object, or the
+#' @param trans (DEPRECATED) Either the name of a transformation object, or the
+#'   object itself. Built-in transformations include "asn", "atanh",
+#'   "boxcox", "exp", "identity", "log", "log10", "log1p", "log2",
+#'   "logit", "probability", "probit", "reciprocal", "reverse" and "sqrt".
+#' @param transform Either the name of a transformation object, or the
 #'   object itself. Built-in transformations include "asn", "atanh",
 #'   "boxcox", "exp", "identity", "log", "log10", "log1p", "log2",
 #'   "logit", "probability", "probit", "reciprocal", "reverse" and "sqrt".
@@ -60,6 +64,7 @@ scale_x_percent <- function(name = waiver(),
                             oob = censor,
                             na.value = NA_real_,
                             trans = "identity",
+                            transform = "identity",
                             position = "bottom",
                             sec.axis = waiver(),
                             accuracy = 1,
@@ -83,27 +88,51 @@ scale_x_percent <- function(name = waiver(),
     ) -> labels
   }
 
-  ggplot2::continuous_scale(
-    aesthetics = c(
-      "x", "xmin", "xmax", "xend", "xintercept", "xmin_final",
-      "xmax_final", "xlower", "xmiddle", "xupper", "x0"
-    ),
-    scale_name = "position_c",
-    palette = identity,
-    name = name,
-    breaks = breaks,
-    n.breaks = n.breaks,
-    minor_breaks = minor_breaks,
-    labels = labels,
-    limits = limits,
-    expand = expand,
-    oob = oob,
-    na.value = na.value,
-    trans = trans,
-    guide = guide,
-    position = position,
-    super = ScaleContinuousPosition
-  ) -> sc
+  if (is_3.5()) {
+    ggplot2::continuous_scale(
+      aesthetics = c(
+        "x", "xmin", "xmax", "xend", "xintercept", "xmin_final",
+        "xmax_final", "xlower", "xmiddle", "xupper", "x0"
+      ),
+      palette = identity,
+      name = name,
+      breaks = breaks,
+      n.breaks = n.breaks,
+      minor_breaks = minor_breaks,
+      labels = labels,
+      limits = limits,
+      expand = expand,
+      oob = oob,
+      na.value = na.value,
+      transform = transform,
+      guide = guide,
+      position = position,
+      super = ScaleContinuousPosition
+    ) -> sc
+
+  } else {
+    ggplot2::continuous_scale(
+      aesthetics = c(
+        "x", "xmin", "xmax", "xend", "xintercept", "xmin_final",
+        "xmax_final", "xlower", "xmiddle", "xupper", "x0"
+      ),
+      scale_name = "position_c",
+      palette = identity,
+      name = name,
+      breaks = breaks,
+      n.breaks = n.breaks,
+      minor_breaks = minor_breaks,
+      labels = labels,
+      limits = limits,
+      expand = expand,
+      oob = oob,
+      na.value = na.value,
+      trans = trans,
+      guide = guide,
+      position = position,
+      super = ScaleContinuousPosition
+    ) -> sc
+  }
 
   if (!is.waive(sec.axis)) {
 
@@ -131,6 +160,7 @@ scale_y_percent <- function(name = waiver(),
                             oob = censor,
                             na.value = NA_real_,
                             trans = "identity",
+                            transform = "identity",
                             position = "left",
                             sec.axis = waiver(),
                             accuracy = 1,
@@ -154,6 +184,28 @@ scale_y_percent <- function(name = waiver(),
     ) -> labels
   }
 
+  if (is_3.5()) {
+    ggplot2::continuous_scale(
+      aesthetics = c(
+        "y", "ymin", "ymax", "yend", "yintercept",
+        "ymin_final", "ymax_final", "lower", "middle", "upper"
+      ),
+      palette = identity,
+      name = name,
+      breaks = breaks,
+      n.breaks = n.breaks,
+      minor_breaks = minor_breaks,
+      labels = labels,
+      limits = limits,
+      expand = expand,
+      oob = oob,
+      na.value = na.value,
+      transform = transform,
+      guide = guide,
+      position = position,
+      super = ScaleContinuousPosition
+    ) -> sc
+  } else {
   ggplot2::continuous_scale(
     aesthetics = c(
       "y", "ymin", "ymax", "yend", "yintercept",
@@ -175,6 +227,7 @@ scale_y_percent <- function(name = waiver(),
     position = position,
     super = ScaleContinuousPosition
   ) -> sc
+  }
 
   if (!is.waive(sec.axis)) {
 
@@ -205,6 +258,7 @@ scale_x_comma <- function(name = waiver(),
                           oob = censor,
                           na.value = NA_real_,
                           trans = "identity",
+                          transform = "identity",
                           position = "bottom",
                           sec.axis = waiver(),
                           accuracy = 1,
@@ -229,6 +283,29 @@ scale_x_comma <- function(name = waiver(),
     ) -> labels
   }
 
+  if (is_3.5()) {
+    ggplot2::continuous_scale(
+      aesthetics = c(
+        "x", "xmin", "xmax", "xend", "xintercept",
+        "xmin_final", "xmax_final",
+        "xlower", "xmiddle", "xupper"
+      ),
+      palette = identity,
+      name = name,
+      breaks = breaks,
+      n.breaks = n.breaks,
+      minor_breaks = minor_breaks,
+      labels = labels,
+      limits = limits,
+      expand = expand,
+      oob = oob,
+      na.value = na.value,
+      transform = transform,
+      guide = guide,
+      position = position,
+      super = ScaleContinuousPosition
+    ) -> sc
+  } else {
   ggplot2::continuous_scale(
     aesthetics = c(
       "x", "xmin", "xmax", "xend", "xintercept",
@@ -251,6 +328,7 @@ scale_x_comma <- function(name = waiver(),
     position = position,
     super = ScaleContinuousPosition
   ) -> sc
+  }
 
   if (!is.waive(sec.axis)) {
 
@@ -278,6 +356,7 @@ scale_y_comma <- function(name = waiver(),
                           oob = censor,
                           na.value = NA_real_,
                           trans = "identity",
+                          transform = "identity",
                           position = "left",
                           sec.axis = waiver(),
                           accuracy = 1,
@@ -302,6 +381,30 @@ scale_y_comma <- function(name = waiver(),
     ) -> labels
   }
 
+  if (is_3.5()) {
+    ggplot2::continuous_scale(
+      aesthetics = c(
+        "y", "ymin", "ymax", "yend", "yintercept",
+        "ymin_final", "ymax_final",
+        "lower", "middle", "upper"
+      ),
+      palette = identity,
+      name = name,
+      breaks = breaks,
+      n.breaks = n.breaks,
+      minor_breaks = minor_breaks,
+      labels = labels,
+      limits = limits,
+      expand = expand,
+      oob = oob,
+      na.value = na.value,
+      transform = transform,
+      guide = guide,
+      position = position,
+      super = ScaleContinuousPosition
+    ) -> sc
+
+  } else {
   ggplot2::continuous_scale(
     aesthetics = c(
       "y", "ymin", "ymax", "yend", "yintercept",
@@ -324,6 +427,7 @@ scale_y_comma <- function(name = waiver(),
     position = position,
     super = ScaleContinuousPosition
   ) -> sc
+  }
 
   if (!is.waive(sec.axis)) {
 

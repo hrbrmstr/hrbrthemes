@@ -19,6 +19,7 @@ scale_x_percent(
   oob = censor,
   na.value = NA_real_,
   trans = "identity",
+  transform = "identity",
   position = "bottom",
   sec.axis = waiver(),
   accuracy = 1,
@@ -43,6 +44,7 @@ scale_y_percent(
   oob = censor,
   na.value = NA_real_,
   trans = "identity",
+  transform = "identity",
   position = "left",
   sec.axis = waiver(),
   accuracy = 1,
@@ -67,6 +69,7 @@ scale_x_comma(
   oob = censor,
   na.value = NA_real_,
   trans = "identity",
+  transform = "identity",
   position = "bottom",
   sec.axis = waiver(),
   accuracy = 1,
@@ -91,6 +94,7 @@ scale_y_comma(
   oob = censor,
   na.value = NA_real_,
   trans = "identity",
+  transform = "identity",
   position = "left",
   sec.axis = waiver(),
   accuracy = 1,
@@ -149,7 +153,12 @@ Use \code{NA} to refer to the existing minimum or maximum.}
 value should missing be displayed as? Does not apply to position scales
 where \code{NA} is always placed at the far right.}
 
-\item{trans}{Either the name of a transformation object, or the
+\item{trans}{(DEPRECATED) Either the name of a transformation object, or the
+object itself. Built-in transformations include "asn", "atanh",
+"boxcox", "exp", "identity", "log", "log10", "log1p", "log2",
+"logit", "probability", "probit", "reciprocal", "reverse" and "sqrt".}
+
+\item{transform}{Either the name of a transformation object, or the
 object itself. Built-in transformations include "asn", "atanh",
 "boxcox", "exp", "identity", "log", "log10", "log1p", "log2",
 "logit", "probability", "probit", "reciprocal", "reverse" and "sqrt".}
@@ -168,5 +177,5 @@ scales, "top" or "bottom" for horizontal scales}
 The \verb{_comma} ones set comma format for axis text and \code{expand=c(0,0)} (you need to set limits).
 }
 \details{
-The \verb{_percent} ones set precent format for axis text and \code{expand=c(0,0)} (you need to set limits).
+The \verb{_percent} ones set percent format for axis text and \code{expand=c(0,0)} (you need to set limits).
 }

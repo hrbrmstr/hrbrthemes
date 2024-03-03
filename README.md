@@ -1,30 +1,28 @@
 
+
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Signed
 by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
 ![Signed commit
-%](https://img.shields.io/badge/Signed_Commits-100%25-lightgrey.svg)
-[![Linux build
-Status](https://travis-ci.org/hrbrmstr/hrbrthemes.svg?branch=master)](https://travis-ci.org/hrbrmstr/hrbrthemes)
-[![Coverage
-Status](https://codecov.io/gh/hrbrmstr/hrbrthemes/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/hrbrthemes)
+%](https://img.shields.io/badge/Signed_Commits-0%25-lightgrey.svg)
+
 [![cran
-checks](https://cranchecks.info/badges/worst/hrbrthemes)](https://cranchecks.info/pkgs/hrbrthemes)
+checks](https://cranchecks.info/badges/worst/hrbrthemes.png)](https://cranchecks.info/pkgs/hrbrthemes)
 [![CRAN
-status](https://www.r-pkg.org/badges/version/hrbrthemes)](https://www.r-pkg.org/pkg/hrbrthemes)
+status](https://www.r-pkg.org/badges/version/hrbrthemes.png)](https://www.r-pkg.org/pkg/hrbrthemes)
 ![Minimal R
-Version](https://img.shields.io/badge/R%3E%3D-3.4.0-blue.svg)
+Version](https://img.shields.io/badge/R%3E%3D-4.0.0-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![downloads](https://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes)
+![downloads](https://cranlogs.r-pkg.org/badges/grand-total/hrbrthemes.png)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2545422.svg)](https://doi.org/10.5281/zenodo.2545422)
 
 ## hrbrthemes
 
 Additional Themes and Theme Components for ‘ggplot2’
 
------
+------------------------------------------------------------------------
 
 This is a very focused package that provides typography-centric themes
 and theme components for ggplot2. It’s a an extract/riff of
@@ -43,103 +41,89 @@ The following functions are implemented/objects are exported:
 
 Themes:
 
-  - `theme_ipsum`: Arial Narrow
-  - `theme_ipsum_gs`: Goldman Sans Condensed
-  - `theme_ipsum_es`: Econ Sans Condensed
-  - `theme_ipsum_rc`: Roboto Condensed
-  - `theme_ipsum_ps`: IBM Plex Sans font
-  - `theme_ipsum_pub`: Public Sans
-  - `theme_ipsum_tw`: Titilium Web
-  - `theme_modern_rc`: Roboto Condensed dark theme
-  - `theme_ft_rc`: Dark theme based on FT’s dark theme (Roboto
-    Condensed)
+- `theme_ipsum`: Arial Narrow
+- `theme_ipsum_gs`: Goldman Sans Condensed
+- `theme_ipsum_es`: Econ Sans Condensed
+- `theme_ipsum_rc`: Roboto Condensed
+- `theme_ipsum_ps`: IBM Plex Sans font
+- `theme_ipsum_pub`: Public Sans
+- `theme_ipsum_tw`: Titilium Web
+- `theme_modern_rc`: Roboto Condensed dark theme
+- `theme_ft_rc`: Dark theme based on FT’s dark theme (Roboto Condensed)
 
 Scales (that align with various themes):
 
-  - `scale_color_ipsum`: Discrete color & fill scales based on the ipsum
-    palette
-  - `scale_colour_ipsum`: Discrete color & fill scales based on the
-    ipsum palette
-  - `scale_fill_ipsum`: Discrete color & fill scales based on the ipsum
-    palette
-  - `scale_color_ft`: Discrete color & fill scales based on the FT
-    palette
-  - `scale_colour_ft`: Discrete color & fill scales based on the FT
-    palette
-  - `scale_fill_ft`: Discrete color & fill scales based on the FT
-    palette
-  - `scale_x_comma`: X & Y scales with opinionated presets for percent &
-    comma label formats
-  - `scale_x_percent`: X & Y scales with opinionated presets for percent
-    & comma label formats
-  - `scale_y_comma`: X & Y scales with opinionated presets for percent &
-    comma label formats
-  - `scale_y_percent`: X & Y scales with opinionated presets for percent
-    & comma label formats
+- `scale_color_ipsum`: Discrete color & fill scales based on the ipsum
+  palette
+- `scale_colour_ipsum`: Discrete color & fill scales based on the ipsum
+  palette
+- `scale_fill_ipsum`: Discrete color & fill scales based on the ipsum
+  palette
+- `scale_color_ft`: Discrete color & fill scales based on the FT palette
+- `scale_colour_ft`: Discrete color & fill scales based on the FT
+  palette
+- `scale_fill_ft`: Discrete color & fill scales based on the FT palette
+- `scale_x_comma`: X & Y scales with opinionated presets for percent &
+  comma label formats
+- `scale_x_percent`: X & Y scales with opinionated presets for percent &
+  comma label formats
+- `scale_y_comma`: X & Y scales with opinionated presets for percent &
+  comma label formats
+- `scale_y_percent`: X & Y scales with opinionated presets for percent &
+  comma label formats
 
 Palettes/Named Colors:
 
-  - `ipsum_pal`: A muted, qualitative color palette
-  - `ft_cols`: FT color palette
-  - `ft_pal`: A bright qualitative color palette
-  - `ft_text_col`: FT color palette
+- `ipsum_pal`: A muted, qualitative color palette
+- `ft_cols`: FT color palette
+- `ft_pal`: A bright qualitative color palette
+- `ft_text_col`: FT color palette
 
 Fonts:
 
-  - `font_an`: Arial Narrow font name R variable aliases
-  - `font_es`: Econ Sans font name R variable aliases
-  - `font_es_bold`: Econ Sans font name R variable aliases
-  - `font_es_light`: Econ Sans font name R variable aliases
-  - `font_rc`: Roboto Condensed font name R variable aliases
-  - `font_rc_light`: Roboto Condensed font name R variable aliases
-  - `font_pub`: Public Sans font name R variable aliases
-  - `font_pub_bold`: Public Sans font name R variable aliases
-  - `font_pub_light`: Public Sans font name R variable aliases
-  - `font_pub_thin`: Public Sans font name R variable aliases
-  - `font_ps`: PlexSans font name R variable aliases
-  - `font_ps_light`: PlexSans font name R variable aliases
-  - `font_tw`: Titillium Web font name R variable aliases
-  - `font_tw_bold`: Titillium Web font name R variable aliases
-  - `font_tw_light`: Titillium Web font name R variable aliases
+- `font_an`: Arial Narrow font name R variable aliases
+- `font_es`: Econ Sans font name R variable aliases
+- `font_es_bold`: Econ Sans font name R variable aliases
+- `font_es_light`: Econ Sans font name R variable aliases
+- `font_rc`: Roboto Condensed font name R variable aliases
+- `font_rc_light`: Roboto Condensed font name R variable aliases
+- `font_pub`: Public Sans font name R variable aliases
+- `font_pub_bold`: Public Sans font name R variable aliases
+- `font_pub_light`: Public Sans font name R variable aliases
+- `font_pub_thin`: Public Sans font name R variable aliases
+- `font_ps`: PlexSans font name R variable aliases
+- `font_ps_light`: PlexSans font name R variable aliases
+- `font_tw`: Titillium Web font name R variable aliases
+- `font_tw_bold`: Titillium Web font name R variable aliases
+- `font_tw_light`: Titillium Web font name R variable aliases
 
 R Markdown:
 
-  - `ipsum`: ipsum R markdown template
-  - `ipsum_pdf`: ipsum R markdown template for PDF output
+- `ipsum`: ipsum R markdown template
+- `ipsum_pdf`: ipsum R markdown template for PDF output
 
 Utilities:
 
-  - `flush_ticks`: Makes axis text labels flush on the ends
-  - `ft_geom_defaults`: Change geom defaults from black to custom lights
-    for the FT theme
-  - `gg_check`: Spell check ggplot2 plot labels
-  - `import_econ_sans`: Import Econ Sans Condensed font for use in
-    charts
-  - `import_plex_sans`: Import IBM Plex Sans font for use in charts
-  - `import_roboto_condensed`: Import Roboto Condensed font for use in
-    charts
-  - `import_titillium_web`: Import Titillium Web font for use in charts
-  - `modern_geom_defaults`: Change geom defaults from black to white for
-    the modern theme
-  - `update_geom_font_defaults`: Update matching font defaults for text
-    geoms
+- `flush_ticks`: Makes axis text labels flush on the ends
+- `ft_geom_defaults`: Change geom defaults from black to custom lights
+  for the FT theme
+- `gg_check`: Spell check ggplot2 plot labels
+- `import_econ_sans`: Import Econ Sans Condensed font for use in charts
+- `import_plex_sans`: Import IBM Plex Sans font for use in charts
+- `import_roboto_condensed`: Import Roboto Condensed font for use in
+  charts
+- `import_titillium_web`: Import Titillium Web font for use in charts
+- `modern_geom_defaults`: Change geom defaults from black to white for
+  the modern theme
+- `update_geom_font_defaults`: Update matching font defaults for text
+  geoms
 
 ### Installation
 
 ``` r
 install.packages("hrbrthemes") # NOTE: CRAN version is 0.8.0
 # or
-install.packages("hrbrthemes", repos = c("https://cinc.rud.is", "https://cloud.r-project.org/"))
-# or
-remotes::install_git("https://git.rud.is/hrbrmstr/hrbrthemes.git")
-# or
-remotes::install_git("https://git.sr.ht/~hrbrmstr/hrbrthemes")
-# or
 remotes::install_gitlab("hrbrmstr/hrbrthemes")
-# or
-remotes::install_bitbucket("hrbrmstr/hrbrthemes")
-# or
-remotes::install_github("hrbrmstr/hrbrthemes")
 ```
 
 NOTE: To use the ‘remotes’ install options you will need to have the
@@ -154,7 +138,7 @@ library(tidyverse)
 
 # current verison
 packageVersion("hrbrthemes")
-## [1] '0.8.6'
+## [1] '0.8.7'
 ```
 
 ### Base theme (Arial Narrow)
@@ -185,7 +169,7 @@ ggplot(mtcars, aes(mpg, wt)) +
 
 <img src="man/figures/README-rc-1.png" width="672" />
 
-### New FT Theme\!
+### New FT Theme!
 
 ``` r
 ggplot(mtcars, aes(mpg, wt)) +
@@ -341,11 +325,13 @@ gg_check(gg)
 
 ### hrbrthemes Metrics
 
-| Lang | \# Files |  (%) |  LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
-| :--- | -------: | ---: | ---: | ---: | ----------: | ---: | -------: | ---: |
-| R    |       24 | 0.89 | 1724 | 0.80 |         327 | 0.72 |      908 | 0.84 |
-| HTML |        1 | 0.04 |  297 | 0.14 |          32 | 0.07 |        2 | 0.00 |
-| Rmd  |        2 | 0.07 |  129 | 0.06 |          98 | 0.21 |      168 | 0.16 |
+| Lang | \# Files |  (%) |  LoC |  (%) | Blank lines | (%) | \# Lines | (%) |
+|:-----|---------:|-----:|-----:|-----:|------------:|----:|---------:|----:|
+| R    |       25 | 0.43 | 1905 | 0.43 |         347 | 0.5 |     1096 | 0.5 |
+| SVG  |        4 | 0.07 |  310 | 0.07 |           0 | 0.0 |        0 | 0.0 |
+| SUM  |       29 | 0.50 | 2215 | 0.50 |         347 | 0.5 |     1096 | 0.5 |
+
+{cloc} 📦 metrics for hrbrthemes
 
 ### Code of Conduct
 

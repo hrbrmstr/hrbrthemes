@@ -16,7 +16,13 @@ ipsum_pal <- function() { manual_pal(ipsum_palette) }
 #' @inheritDotParams ggplot2::discrete_scale -expand -position
 #' @rdname scale_ipsum
 #' @export
-scale_colour_ipsum <- function(...) { discrete_scale("colour", "ipsum", ipsum_pal(), ...) }
+scale_colour_ipsum <- function(...) {
+  if (is_3.5()) {
+    discrete_scale(aesthetics = "colour", palette = ipsum_pal(), ...)
+  } else {
+    discrete_scale("colour", "ipsum", ipsum_pal(), ...)
+  }
+}
 
 #' @export
 #' @rdname scale_ipsum
@@ -24,4 +30,10 @@ scale_color_ipsum <- scale_colour_ipsum
 
 #' @export
 #' @rdname scale_ipsum
-scale_fill_ipsum <- function(...) { discrete_scale("fill", "ipsum", ipsum_pal(), ...) }
+scale_fill_ipsum <- function(...) {
+  if (is_3.5()) {
+    discrete_scale(aesthetics = "fill", palette = ipsum_pal(), ...)
+  } else {
+    discrete_scale("fill", "ipsum", ipsum_pal(), ...)
+  }
+}
