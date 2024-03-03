@@ -43,7 +43,7 @@ Suggests:
 Depends:
     R (>= 4.0.0)
 Imports:
-    ggplot2 (>= 3.3.5),
+    ggplot2 (>= 3.4.0),
     grDevices,
     grid,
     scales,
