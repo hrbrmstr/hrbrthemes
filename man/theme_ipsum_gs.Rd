@@ -69,7 +69,7 @@ theme_ipsum_gs(
 \item{ticks}{ticks if \code{TRUE} add ticks}
 }
 \description{
-You should \code{\link[=import_goldman_sans]{import_goldman_sans()}} first and also install the fonts on your
+You should \code{\link[=import_goldman_sans]{import_goldman_sans()}} first and install the fonts on your
 system before trying to use this theme.
 }
 \details{

@@ -70,7 +70,7 @@ theme_ipsum_pub(
 \item{ticks}{ticks if \code{TRUE} add ticks}
 }
 \description{
-You should \code{\link[=import_public_sans]{import_public_sans()}} first and also install the fonts on your
+You should \code{\link[=import_public_sans]{import_public_sans()}} first and install the fonts on your
 system before trying to use this theme.
 }
 \details{

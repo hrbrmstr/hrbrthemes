@@ -1,6 +1,6 @@
 #' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typoghraphy
 #'
-#' You should [import_inter()] first and also install the fonts on your
+#' You should [import_inter()] first and install the fonts on your
 #' system before trying to use this theme.
 #'
 #' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
@@ -174,8 +174,7 @@ theme_ipsum_inter <- function(
 
 #' Import Inter font for use in charts
 #'
-#' Inter is Copyright (c) 2016-2020 The Inter Project Authors
-#' (<https://rsms.me/inter/>).
+#' Inter is Copyright (c) 2016-2024 The Inter Project Authors
 #'
 #' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
 #' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
@@ -183,21 +182,12 @@ theme_ipsum_inter <- function(
 #' to register non-core fonts with the Windows graphics device.
 #'
 #' @md
-#' @note This will take care of ensuring PDF/PostScript usage. The location of the
-#'   font directory is displayed after the base import is complete. It is highly
-#'   recommended that you install them on your system the same way you would any
-#'   other font you wish to use in other programs.
 #' @export
 import_inter <- function() {
 
-  inter_font_dir <- system.file("fonts", "inter", package="hrbrthemes")
-
-  suppressWarnings(suppressMessages(extrafont::font_import(inter_font_dir, prompt=FALSE)))
-
   message(
-    sprintf(
-      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      inter_font_dir)
+    "You can find Inter at https://github.com/rsms/inter. Please install them ",
+    "and run extrafont::font_import()"
   )
 
 }

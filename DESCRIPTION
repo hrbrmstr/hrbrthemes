@@ -11,8 +11,7 @@ Authors@R: c(
       person("Dan", "Wilson", email = "dan@thedatacollective.com.au", 
              role = c("ctb"), comment = c("Secondary axis support")), 
       person("Xavier", "Adam", role = c("ctb")),
-      person("Google", comment = "Roboto Condensed & Titillium Web Fonts", 
-             role = c("cph")),
+      person("Google", comment = "Roboto Condensed", role = c("cph")),
       person("IBM", comment = "Plex Sans Font", role = c("cph")),
       person("Goldman Sachs", comment = "Goldman Sans Font", role = c("cph")),
       person("Impallari Type", comment = "Public Sans Font", role = c("cph")),
@@ -24,9 +23,7 @@ Authors@R: c(
 Maintainer: Bob Rudis <bob@rud.is>
 Description: A compilation of extra 'ggplot2' themes, scales and utilities, including a 
     spell check function for plot label fields and an overall emphasis on typography. 
-    A copy of the 'Google' font 'Roboto Condensed' is also included along with a copy 
-    of the 'IBM' 'Plex Sans', and 'Public Sans' fonts
-    are also included to support their respective typography-oriented themes.
+    A copy of the 'Google' font 'Roboto Condensed' is also included.
 Copyright: file inst/COPYRIGHTS
 License: MIT + file LICENSE
 Encoding: UTF-8

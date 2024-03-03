@@ -1,6 +1,6 @@
 #' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typoghraphy
 #'
-#' You should [import_econ_sans()] first and also install the fonts on your
+#' You should [import_econ_sans()] first and install the fonts on your
 #' system before trying to use this theme.
 #'
 #' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
@@ -200,21 +200,15 @@ theme_ipsum_es <- function(
 #' to register non-core fonts with the Windows graphics device.
 #'
 #' @md
-#' @note This will take care of ensuring PDF/PostScript usage. The location of the
-#'   font directory is displayed after the base import is complete. It is highly
-#'   recommended that you install them on your system the same way you would any
-#'   other font you wish to use in other programs.
 #' @export
 import_econ_sans <- function() {
 
   es_font_dir <- system.file("fonts", "econ-sans", package="hrbrthemes")
-  #
-  # suppressWarnings(suppressMessages(extrafont::font_import(es_font_dir, prompt=FALSE)))
-  #
-  # message(
-  #   "You will likely need to install these fonts on your system as well.\n\n",
-  #   "You can find them in [", es_font_dir, "]"
-  # )
+
+  message(
+    "You will need to install these fonts on your system as well.\n\n",
+    "You can find them in [", es_font_dir, "]"
+  )
 
 }
 
