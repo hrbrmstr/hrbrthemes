@@ -80,7 +80,7 @@ to register non-core fonts with the Windows graphics device.
 }
 \section{Why Goldman Sans?}{
 
-See \url{https://design.gs.com/d/story/goldman-sans/}.
+Google "goldman sans design system"
 }
 
 \examples{

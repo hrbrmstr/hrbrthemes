@@ -20,7 +20,7 @@ Additional Themes and Theme Components for 'ggplot2'
 
 ----
 
-This is a very focused package that provides typography-centric themes and theme components for ggplot2. It's a an extract/riff of [`hrbrmisc`](https://github.com/hrbrmstr/hrbrmisc) created by request. 
+This is a very focused package that provides typography-centric themes and theme components for ggplot2.
 
 The core theme: `theme_ipsum` ("ipsum" is Latin for "precise") uses Arial Narrow which should be installed on practically any modern system, so it's "free"-ish. This font is condensed, has solid default kerning pairs and geometric numbers. That's what I consider the "font trifecta" must-have for charts. An additional quality for fonts for charts is that they have a diversity of weights. Arial Narrow (the one on most systems, anyway) does not have said diversity but this quality is not (IMO) a "must have".
 
@@ -72,14 +72,6 @@ Fonts:
 - `font_pub_thin`:	Public Sans font name R variable aliases
 - `font_ps`: PlexSans font name R variable aliases
 - `font_ps_light`: PlexSans font name R variable aliases
-- `font_tw`: Titillium Web font name R variable aliases
-- `font_tw_bold`:  Titillium Web font name R variable aliases
-- `font_tw_light`: Titillium Web font name R variable aliases
-
-R Markdown:
-
-- `ipsum`: ipsum R markdown template
-- `ipsum_pdf`: ipsum R markdown template for PDF output
 
 Utilities:
 
@@ -89,7 +81,6 @@ Utilities:
 - `import_econ_sans`:  Import Econ Sans Condensed font for use in charts
 - `import_plex_sans`:  Import IBM Plex Sans font for use in charts
 - `import_roboto_condensed`: Import Roboto Condensed font for use in charts
-- `import_titillium_web`:  Import Titillium Web font for use in charts
 - `modern_geom_defaults`:  Change geom defaults from black to white for the modern theme
 - `update_geom_font_defaults`: Update matching font defaults for text geoms
 
@@ -106,7 +97,7 @@ library(hrbrthemes)
 library(gcookbook)
 library(tidyverse)
 
-# current verison
+# current version
 packageVersion("hrbrthemes")
 ```
 
@@ -162,27 +153,6 @@ ggplot(mpg, aes(displ, hwy)) +
     caption="Source: hrbrthemes & IBM"
   ) +
   theme_ipsum_ps(grid="XY", axis="xy") +
-  theme(legend.position="none") -> gg
-
-flush_ticks(gg)
-```
-
-### Titillium Web
-
-```{r tw, fig.width=10, fig.height=7}
-ggplot(mpg, aes(displ, hwy)) +
-  geom_jitter(aes(color=class, fill=class), size=3, shape=21, alpha=1/2) +
-  scale_x_continuous(expand=c(0,0), limits=c(1, 8), breaks=1:8) +
-  scale_y_continuous(expand=c(0,0), limits=c(10, 50)) +
-  scale_color_ipsum() +
-  scale_fill_ipsum() +
-  facet_wrap(~class, scales="free") +
-  labs(
-    title="Titillium Web",
-    subtitle="This is a subtitle to see the how it looks in Titillium Web",
-    caption="Source: hrbrthemes & Google"
-  ) +
-  theme_ipsum_tw(grid="XY", axis="xy") +
   theme(legend.position="none") -> gg
 
 flush_ticks(gg)

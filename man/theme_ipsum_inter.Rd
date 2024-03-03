@@ -50,11 +50,13 @@ theme_ipsum_inter(
 
 \item{caption_family, caption_face, caption_size, caption_margin}{plot caption family, face, size and margin}
 
+\item{axis_text_family, axis_text_face, }{axis text font family and face}
+
 \item{axis_text_size}{font size of axis text}
 
 \item{axis_title_family, axis_title_face, axis_title_size}{axis title font family, face and size}
 
-\item{axis_title_just}{axis title font justificationk one of \verb{[blmcrt]}}
+\item{axis_title_just}{axis title font justification one of \verb{[blmcrt]}}
 
 \item{plot_margin}{plot margin (specify with \link[ggplot2:element]{ggplot2::margin})}
 
@@ -80,7 +82,7 @@ to register non-core fonts with the Windows graphics device.
 }
 \section{Why Inter?}{
 
-See \url{https://design.gs.com/d/story/goldman-sans/}.
+Google "inter font".
 }
 
 \examples{

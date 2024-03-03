@@ -23,14 +23,6 @@ call \code{extrafont::loadfonts()} to register non-core fonts with R PDF & PostS
 devices. If you are running under Windows, the package calls the same function
 to register non-core fonts with the Windows graphics device.
 }
-\seealso{
-Useful links:
-\itemize{
-  \item \url{http://github.com/hrbrmstr/hrbrthemes}
-  \item Report bugs at \url{https://github.com/hrbrmstr/hrbrthemes/issues}
-}
-
-}
 \author{
 Bob Rudis (bob@rud.is)
 }

@@ -10,7 +10,7 @@
 #'
 #' @md
 #' @section Why Goldman Sans?:
-#' See <https://design.gs.com/d/story/goldman-sans/>.
+#' Google "goldman sans design system"
 #'
 #' @md
 #' @param base_family,base_size base font family and size

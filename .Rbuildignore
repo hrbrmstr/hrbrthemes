@@ -1,4 +1,5 @@
 ^\.github
+^\.quarto
 ^CRAN-RELEASE$
 ^.*\.Rproj$
 ^\.Rproj\.user$

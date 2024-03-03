@@ -6,7 +6,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![Signed
 by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
 ![Signed commit
-%](https://img.shields.io/badge/Signed_Commits-0%25-lightgrey.svg)
+%](https://img.shields.io/badge/Signed_Commits-1%25-lightgrey.svg)
 
 [![cran
 checks](https://cranchecks.info/badges/worst/hrbrthemes.png)](https://cranchecks.info/pkgs/hrbrthemes)
@@ -25,8 +25,7 @@ Additional Themes and Theme Components for ‘ggplot2’
 ------------------------------------------------------------------------
 
 This is a very focused package that provides typography-centric themes
-and theme components for ggplot2. It’s a an extract/riff of
-[`hrbrmisc`](https://github.com/hrbrmstr/hrbrmisc) created by request.
+and theme components for ggplot2.
 
 The core theme: `theme_ipsum` (“ipsum” is Latin for “precise”) uses
 Arial Narrow which should be installed on practically any modern system,
@@ -93,14 +92,6 @@ Fonts:
 - `font_pub_thin`: Public Sans font name R variable aliases
 - `font_ps`: PlexSans font name R variable aliases
 - `font_ps_light`: PlexSans font name R variable aliases
-- `font_tw`: Titillium Web font name R variable aliases
-- `font_tw_bold`: Titillium Web font name R variable aliases
-- `font_tw_light`: Titillium Web font name R variable aliases
-
-R Markdown:
-
-- `ipsum`: ipsum R markdown template
-- `ipsum_pdf`: ipsum R markdown template for PDF output
 
 Utilities:
 
@@ -112,7 +103,6 @@ Utilities:
 - `import_plex_sans`: Import IBM Plex Sans font for use in charts
 - `import_roboto_condensed`: Import Roboto Condensed font for use in
   charts
-- `import_titillium_web`: Import Titillium Web font for use in charts
 - `modern_geom_defaults`: Change geom defaults from black to white for
   the modern theme
 - `update_geom_font_defaults`: Update matching font defaults for text
@@ -136,7 +126,7 @@ library(hrbrthemes)
 library(gcookbook)
 library(tidyverse)
 
-# current verison
+# current version
 packageVersion("hrbrthemes")
 ## [1] '0.8.7'
 ```
@@ -207,31 +197,6 @@ flush_ticks(gg)
 ```
 
 <img src="man/figures/README-ps-1.png" width="960" />
-
-### Titillium Web
-
-``` r
-ggplot(mpg, aes(displ, hwy)) +
-  geom_jitter(aes(color=class, fill=class), size=3, shape=21, alpha=1/2) +
-  scale_x_continuous(expand=c(0,0), limits=c(1, 8), breaks=1:8) +
-  scale_y_continuous(expand=c(0,0), limits=c(10, 50)) +
-  scale_color_ipsum() +
-  scale_fill_ipsum() +
-  facet_wrap(~class, scales="free") +
-  labs(
-    title="Titillium Web",
-    subtitle="This is a subtitle to see the how it looks in Titillium Web",
-    caption="Source: hrbrthemes & Google"
-  ) +
-  theme_ipsum_tw(grid="XY", axis="xy") +
-  theme(legend.position="none") -> gg
-
-flush_ticks(gg)
-## theme(axis.text.x=element_text(hjust=c(0, rep(0.5, 6), 1))) +
-## theme(axis.text.y=element_text(vjust=c(0, rep(0.5, 3), 1)))
-```
-
-<img src="man/figures/README-tw-1.png" width="960" />
 
 ### Scales (Color/Fill)
 
@@ -327,9 +292,10 @@ gg_check(gg)
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines | (%) | \# Lines | (%) |
 |:-----|---------:|-----:|-----:|-----:|------------:|----:|---------:|----:|
-| R    |       25 | 0.43 | 1905 | 0.43 |         347 | 0.5 |     1096 | 0.5 |
-| SVG  |        4 | 0.07 |  310 | 0.07 |           0 | 0.0 |        0 | 0.0 |
-| SUM  |       29 | 0.50 | 2215 | 0.50 |         347 | 0.5 |     1096 | 0.5 |
+| R    |       21 | 0.40 | 1548 | 0.41 |         290 | 0.5 |      915 | 0.5 |
+| SVG  |        4 | 0.08 |  310 | 0.08 |           0 | 0.0 |        0 | 0.0 |
+| JSON |        1 | 0.02 |   15 | 0.00 |           0 | 0.0 |        0 | 0.0 |
+| SUM  |       26 | 0.50 | 1873 | 0.50 |         290 | 0.5 |      915 | 0.5 |
 
 {cloc} 📦 metrics for hrbrthemes
 
