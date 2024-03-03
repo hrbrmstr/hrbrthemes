@@ -55,7 +55,7 @@ theme_ipsum_es(
 
 \item{axis_title_family, axis_title_face, axis_title_size}{axis title font family, face and size}
 
-\item{axis_title_just}{axis title font justificationk one of \verb{[blmcrt]}}
+\item{axis_title_just}{axis title font justification one of \verb{[blmcrt]}}
 
 \item{plot_margin}{plot margin (specify with \link[ggplot2:element]{ggplot2::margin})}
 

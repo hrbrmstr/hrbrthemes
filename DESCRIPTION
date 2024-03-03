@@ -25,7 +25,7 @@ Maintainer: Bob Rudis <bob@rud.is>
 Description: A compilation of extra 'ggplot2' themes, scales and utilities, including a 
     spell check function for plot label fields and an overall emphasis on typography. 
     A copy of the 'Google' font 'Roboto Condensed' is also included along with a copy 
-    of the 'IBM' 'Plex Sans', 'Titillium Web', and 'Public Sans' fonts
+    of the 'IBM' 'Plex Sans', and 'Public Sans' fonts
     are also included to support their respective typography-oriented themes.
 Copyright: file inst/COPYRIGHTS
 License: MIT + file LICENSE
@@ -53,4 +53,3 @@ Imports:
     gdtools,
     utils
 RoxygenNote: 7.2.3
-VignetteBuilder: knitr

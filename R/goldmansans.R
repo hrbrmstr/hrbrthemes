@@ -20,7 +20,7 @@
 #' @param strip_text_family,strip_text_face,strip_text_size facet label font family, face and size
 #' @param caption_family,caption_face,caption_size,caption_margin plot caption family, face, size and margin
 #' @param axis_title_family,axis_title_face,axis_title_size axis title font family, face and size
-#' @param axis_title_just axis title font justificationk one of `[blmcrt]`
+#' @param axis_title_just axis title font justification one of `[blmcrt]`
 #' @param axis_text_size font size of axis text
 #' @param plot_margin plot margin (specify with [ggplot2::margin])
 #' @param grid_col grid color
@@ -172,7 +172,7 @@ theme_ipsum_gs <- function(
 #' Import Goldman Sans font for use in charts
 #'
 #' Goldman Sans is a trademark of Goldman Sachs and distributed under the
-#' [Goldman Sachs Restricted Font License](https://design.gs.com/d/legal/goldman-sans-license/).
+#' Goldman Sachs Restricted Font License
 #'
 #' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
 #' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript

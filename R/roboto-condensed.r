@@ -21,7 +21,7 @@
 #' @param strip_text_family,strip_text_face,strip_text_size facet label font family, face and size
 #' @param caption_family,caption_face,caption_size,caption_margin plot caption family, face, size and margin
 #' @param axis_title_family,axis_title_face,axis_title_size axis title font family, face and size
-#' @param axis_title_just axis title font justificationk one of `[blmcrt]`
+#' @param axis_title_just axis title font justification one of `[blmcrt]`
 #' @param axis_text_size font size of axis text
 #' @param plot_margin plot margin (specify with [ggplot2::margin])
 #' @param panel_spacing panel spacing (use `unit()`)

@@ -8,7 +8,7 @@ import_goldman_sans()
 }
 \description{
 Goldman Sans is a trademark of Goldman Sachs and distributed under the
-\href{https://design.gs.com/d/legal/goldman-sans-license/}{Goldman Sachs Restricted Font License}.
+Goldman Sachs Restricted Font License
 }
 \details{
 There is an option \code{hrbrthemes.loadfonts} which -- if set to \code{TRUE} -- will
