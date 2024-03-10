@@ -10,8 +10,7 @@
 #'
 #' @md
 #' @section Why Econ Sans Condensed?:
-#' It's free, has tolerable kerning pairs and multiple weights. It's also different
-#' than Arial Narrow and the fonts most folks use in ggplot2 charts.
+#' <Insert opinionated review of Econ Sans Condensed, current one is for Roboto>
 #'
 #' @md
 #' @param base_family,base_size base font family and size
@@ -190,9 +189,10 @@ theme_ipsum_es <- function(
 
 }
 
-#' Import Roboto Condensed font for use in charts
+#' Import Econ Sans Condensed font for use in charts
 #'
-#' Roboto Condensed is a trademark of Google.
+#' Econ Sans Condensed is a trademark of The Economist and distributed under the
+#' [Non commercial license](https://en.m.fontke.com/font/17459412/detail/)..
 #'
 #' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
 #' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
