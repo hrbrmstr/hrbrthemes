@@ -2,8 +2,8 @@
 % Please edit documentation in R/hrbrthemes-package.R
 \docType{package}
 \name{hrbrthemes}
-\alias{hrbrthemes}
 \alias{hrbrthemes-package}
+\alias{hrbrthemes}
 \title{Additional Themes and Theme Components for 'ggplot2'}
 \description{
 A compilation of extra themes and theme components for 'ggplot2' with an

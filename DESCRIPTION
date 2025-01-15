@@ -1,8 +1,8 @@
 Package: hrbrthemes
 Type: Package
 Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
-Version: 0.8.7
-Date: 2024-03-03
+Version: 0.90
+Date: 2025-01-05
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
              comment = c(ORCID = "0000-0001-5670-2640")),
@@ -18,7 +18,8 @@ Authors@R: c(
       person("Jacob", "Barnett", email = "jacob.r.barnett@gmail.com", role = c("ctb")),
       person("Thomas J.", "Leeper", role = c("ctb"), email = "thosjleeper@gmail.com",
              comment = c(ORCID = "0000-0003-4097-6326")),
-      person("Joris", "Meys", email = "Joris.Meys@UGent.be", role = c("ctb"))
+      person("Joris", "Meys", email = "Joris.Meys@UGent.be", role = c("ctb")),
+      person("Steph", "Ango", role = c("ctb"), comment = "Flexoki creator")
     )
 Maintainer: Bob Rudis <bob@rud.is>
 Description: A compilation of extra 'ggplot2' themes, scales and utilities, including a 
@@ -49,4 +50,4 @@ Imports:
     magrittr,
     gdtools,
     utils
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2

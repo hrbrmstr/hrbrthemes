@@ -6,7 +6,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![Signed
 by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
 ![Signed commit
-%](https://img.shields.io/badge/Signed_Commits-1%25-lightgrey.svg)
+%](https://img.shields.io/badge/Signed_Commits-3%25-lightgrey.svg)
 
 [![cran
 checks](https://cranchecks.info/badges/worst/hrbrthemes.png)](https://cranchecks.info/pkgs/hrbrthemes)
@@ -93,6 +93,28 @@ Fonts:
 - `font_ps`: PlexSans font name R variable aliases
 - `font_ps_light`: PlexSans font name R variable aliases
 
+Flexoki Color Scales:
+
+- `scale_color_flexoki_light`: Discrete color scale using Flexoki light
+  colors
+- `scale_fill_flexoki_light`: Discrete fill scale using Flexoki light
+  colors
+- `scale_color_flexoki_dark`: Discrete color scale using Flexoki dark
+  colors
+- `scale_fill_flexoki_dark`: Discrete fill scale using Flexoki dark
+  colors
+- `scale_color_flexoki_continuous`: Continuous color scale with 8
+  palette options
+- `scale_fill_flexoki_continuous`: Continuous fill scale with 8 palette
+  options
+
+Flexoki Palettes:
+
+- `flexoki_light`: Vector of 8 colors in the light variant
+- `flexoki_dark`: Vector of 8 colors in the dark variant
+- `flexoki_extended`: List of 8 color palettes with 13 shades each for
+  continuous interpolation
+
 Utilities:
 
 - `flush_ticks`: Makes axis text labels flush on the ends
@@ -111,9 +133,7 @@ Utilities:
 ### Installation
 
 ``` r
-install.packages("hrbrthemes") # NOTE: CRAN version is 0.8.0
-# or
-remotes::install_gitlab("hrbrmstr/hrbrthemes")
+install.packages("hrbrthemes") # NOTE: CRAN version is 0.8.7
 ```
 
 NOTE: To use the ‘remotes’ install options you will need to have the
@@ -128,7 +148,7 @@ library(tidyverse)
 
 # current version
 packageVersion("hrbrthemes")
-## [1] '0.8.7'
+## [1] '0.90'
 ```
 
 ### Base theme (Arial Narrow)
@@ -139,7 +159,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ipsum()
 ```
 
@@ -153,7 +173,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ipsum_rc()
 ```
 
@@ -167,7 +187,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ft_rc()
 ```
 
@@ -206,7 +226,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 scatterplot example",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   scale_color_ipsum() +
   theme_ipsum_rc()
 ```
@@ -216,22 +236,22 @@ ggplot(mtcars, aes(mpg, wt)) +
 ### Scales (Axis)
 
 ``` r
-count(mpg, class) %>% 
-  mutate(pct=n/sum(n)) %>% 
+count(mpg, class) %>%
+  mutate(pct=n/sum(n)) %>%
   ggplot(aes(class, pct)) +
   geom_col() +
   scale_y_percent() +
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 column chart example with percents",
        subtitle="A plot that is only useful for demonstration purposes",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ipsum(grid="Y")
 ```
 
 <img src="man/figures/README-ax1-1.png" width="672" />
 
 ``` r
-ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) + 
+ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
   geom_area() +
   scale_fill_ipsum() +
   scale_x_continuous(expand=c(0,0)) +
@@ -249,10 +269,10 @@ ggplot(uspopage, aes(x=Year, y=Thousands, fill=AgeGroup)) +
 ``` r
 update_geom_font_defaults(font_rc_light)
 
-count(mpg, class) %>% 
-  mutate(n=n*2000) %>% 
-  arrange(n) %>% 
-  mutate(class=factor(class, levels=class)) %>% 
+count(mpg, class) %>%
+  mutate(n=n*2000) %>%
+  arrange(n) %>%
+  mutate(class=factor(class, levels=class)) %>%
   ggplot(aes(class, n)) +
   geom_col() +
   geom_text(aes(label=scales::comma(n)), hjust=0, nudge_y=2000) +
@@ -261,7 +281,7 @@ count(mpg, class) %>%
   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
        title="Seminal ggplot2 column chart example with commas",
        subtitle="A plot that is only useful for demonstration purposes, esp since you'd never\nreally want direct labels and axis labels",
-       caption="Brought to you by the letter 'g'") + 
+       caption="Brought to you by the letter 'g'") +
   theme_ipsum_rc(grid="X")
 ```
 
@@ -288,14 +308,73 @@ gg_check(gg)
 
 <img src="man/figures/README-sp-1.png" width="672" />
 
+### Flexoki Color Scales
+
+The Flexoki color system provides both discrete and continuous color
+scales in light and dark variants.
+
+``` r
+# Discrete colors example with light variant
+ggplot(mpg, aes(class, fill=class)) +
+  geom_bar() +
+  labs(title="Flexoki Light Colors",
+       subtitle="Discrete color scale example",
+       caption="Using scale_fill_flexoki_light()") +
+  theme_ipsum() +
+  scale_fill_flexoki_light() +
+  theme(legend.position="none")
+```
+
+<img src="man/figures/README-flexoki1-1.png" width="672" />
+
+``` r
+# Dark variant with points
+ggplot(mpg, aes(displ, hwy, color=class)) +
+  geom_point(size=3) +
+  labs(title="Flexoki Dark Colors",
+       subtitle="Another discrete color example",
+       caption="Using scale_color_flexoki_dark()") +
+  theme_ipsum_rc() +
+  scale_color_flexoki_dark()
+```
+
+<img src="man/figures/README-flexoki2-1.png" width="672" />
+
+``` r
+# Continuous color scales
+library(tidyr)
+
+expand.grid(x=1:50, y=1:50) %>%
+  mutate(z = sqrt((x-25)^2 + (y-25)^2)) %>%
+  ggplot(aes(x, y, fill=z)) +
+  geom_tile() +
+  facet_wrap(~palette, ncol=4) +
+  scale_fill_flexoki_continuous() +
+  labs(title="Flexoki Continuous Color Scales",
+       subtitle="All 8 continuous color palettes",
+       caption="Using scale_fill_flexoki_continuous()") +
+  theme_ipsum(grid="") +
+  theme(legend.position="none") -> p
+
+p %+% data.frame(
+  x = rep(1:50, 50),
+  y = rep(1:50, each=50),
+  z = sqrt((rep(1:50, 50)-25)^2 + (rep(1:50, each=50)-25)^2),
+  palette = factor(rep(c("red", "orange", "yellow", "green",
+                        "cyan", "blue", "purple", "magenta"), each=2500))
+)
+```
+
+<img src="man/figures/README-flexoki3-1.png" width="960" />
+
 ### hrbrthemes Metrics
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines | (%) | \# Lines | (%) |
 |:-----|---------:|-----:|-----:|-----:|------------:|----:|---------:|----:|
-| R    |       21 | 0.40 | 1548 | 0.41 |         290 | 0.5 |      915 | 0.5 |
-| SVG  |        4 | 0.08 |  310 | 0.08 |           0 | 0.0 |        0 | 0.0 |
+| R    |       22 | 0.41 | 1626 | 0.42 |         297 | 0.5 |     1003 | 0.5 |
+| SVG  |        4 | 0.07 |  310 | 0.08 |           0 | 0.0 |        0 | 0.0 |
 | JSON |        1 | 0.02 |   15 | 0.00 |           0 | 0.0 |        0 | 0.0 |
-| SUM  |       26 | 0.50 | 1873 | 0.50 |         290 | 0.5 |      915 | 0.5 |
+| SUM  |       27 | 0.50 | 1951 | 0.50 |         297 | 0.5 |     1003 | 0.5 |
 
 {cloc} 📦 metrics for hrbrthemes
 
