@@ -370,7 +370,7 @@ names(flexoki_dark) |>
   )
 ```
 
-<img src="man/figures/README-flexoki3-1.png" width="960" />
+<img src="man/figures/README-flexoki-03-1.png" width="960" />
 
 ### hrbrthemes Metrics
 

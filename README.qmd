@@ -279,7 +279,7 @@ ggplot(mpg, aes(displ, hwy, color=class)) +
   scale_color_flexoki_dark()
 ```
 
-```{r flexoki3, fig.width=10, fig.height=6}
+```{r flexoki-03, fig.width=10, fig.height=6}
 library(patchwork)
 
 data.frame(
