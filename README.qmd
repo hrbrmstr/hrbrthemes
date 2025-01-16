@@ -1,5 +1,7 @@
 ---
 format: gfm
+editor_options: 
+  chunk_output_type: console
 ---
 ```{r pkg-knitr-opts, include=FALSE}
 hrbrpkghelpr::global_opts()
@@ -277,29 +279,33 @@ ggplot(mpg, aes(displ, hwy, color=class)) +
   scale_color_flexoki_dark()
 ```
 
-```{r flexoki3, fig.width=10, fig.height=6}
-# Continuous color scales
-library(tidyr)
+```{r flexoki3, fig.width=10, fig.height=11}
+library(patchwork)
 
-expand.grid(x=1:50, y=1:50) %>%
-  mutate(z = sqrt((x-25)^2 + (y-25)^2)) %>%
-  ggplot(aes(x, y, fill=z)) +
-  geom_tile() +
-  facet_wrap(~palette, ncol=4) +
-  scale_fill_flexoki_continuous() +
-  labs(title="Flexoki Continuous Color Scales",
-       subtitle="All 8 continuous color palettes",
-       caption="Using scale_fill_flexoki_continuous()") +
-  theme_ipsum(grid="") +
-  theme(legend.position="none") -> p
-
-p %+% data.frame(
+data.frame(
   x = rep(1:50, 50),
   y = rep(1:50, each=50),
-  z = sqrt((rep(1:50, 50)-25)^2 + (rep(1:50, each=50)-25)^2),
-  palette = factor(rep(c("red", "orange", "yellow", "green",
-                        "cyan", "blue", "purple", "magenta"), each=2500))
-)
+  z = sqrt((rep(1:50, 50)-25)^2 + (rep(1:50, each=50)-25)^2)
+) -> grad_df
+
+names(flexoki_dark) |> 
+  map(\(.p) {
+    ggplot(grad_df, aes(x, y, fill=z)) +
+      geom_tile() +
+      scale_fill_flexoki_continuous(palette = .p) +
+      labs(
+        x = NULL, y = NULL
+      ) +
+      theme_ipsum(grid="") +
+      theme(legend.position = "none")
+  }) |> 
+  do.call(what = "wrap_plots") +
+  plot_annotation(
+    title="Flexoki Continuous Color Scales",
+    subtitle="All 8 continuous color palettes",
+    caption="Using scale_fill_flexoki_continuous()",
+    theme = theme_ipsum(grid="")
+  )
 ```
 
 ### hrbrthemes Metrics

@@ -194,7 +194,10 @@ create_continuous_scale <- function(colors) {
 #'   geom_tile() +
 #'   scale_color_flexoki_continuous(palette = "blue")
 scale_color_flexoki_continuous <- function(palette = "red", ...) {
-  scale_color_gradientn(colors = create_continuous_scale(flexoki_extended[[palette]])(100), ...)
+  scale_color_gradientn(
+    colors = create_continuous_scale(flexoki_extended[[palette]])(100),
+    ...
+  )
 }
 
 #' Continuous Fill Scale Using Flexoki Colors
@@ -209,5 +212,9 @@ scale_color_flexoki_continuous <- function(palette = "red", ...) {
 #'   geom_tile() +
 #'   scale_fill_flexoki_continuous(palette = "blue")
 scale_fill_flexoki_continuous <- function(palette = "red", ...) {
-  scale_fill_gradientn(colors = create_continuous_scale(flexoki_extended[[palette]])(100), ...)
+  scale_fill_gradientn(
+    colors = create_continuous_scale(
+      flexoki_extended[[palette]])(100),
+    ...
+  )
 }

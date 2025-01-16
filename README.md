@@ -6,7 +6,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![Signed
 by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
 ![Signed commit
-%](https://img.shields.io/badge/Signed_Commits-3%25-lightgrey.svg)
+%](https://img.shields.io/badge/Signed_Commits-4%25-lightgrey.svg)
 
 [![cran
 checks](https://cranchecks.info/badges/worst/hrbrthemes.png)](https://cranchecks.info/pkgs/hrbrthemes)
@@ -341,28 +341,32 @@ ggplot(mpg, aes(displ, hwy, color=class)) +
 <img src="man/figures/README-flexoki2-1.png" width="672" />
 
 ``` r
-# Continuous color scales
-library(tidyr)
+library(patchwork)
 
-expand.grid(x=1:50, y=1:50) %>%
-  mutate(z = sqrt((x-25)^2 + (y-25)^2)) %>%
-  ggplot(aes(x, y, fill=z)) +
-  geom_tile() +
-  facet_wrap(~palette, ncol=4) +
-  scale_fill_flexoki_continuous() +
-  labs(title="Flexoki Continuous Color Scales",
-       subtitle="All 8 continuous color palettes",
-       caption="Using scale_fill_flexoki_continuous()") +
-  theme_ipsum(grid="") +
-  theme(legend.position="none") -> p
-
-p %+% data.frame(
+data.frame(
   x = rep(1:50, 50),
   y = rep(1:50, each=50),
-  z = sqrt((rep(1:50, 50)-25)^2 + (rep(1:50, each=50)-25)^2),
-  palette = factor(rep(c("red", "orange", "yellow", "green",
-                        "cyan", "blue", "purple", "magenta"), each=2500))
-)
+  z = sqrt((rep(1:50, 50)-25)^2 + (rep(1:50, each=50)-25)^2)
+) -> grad_df
+
+names(flexoki_dark) |> 
+  map(\(.p) {
+    ggplot(grad_df, aes(x, y, fill=z)) +
+      geom_tile() +
+      scale_fill_flexoki_continuous(palette = .p) +
+      labs(
+        x = NULL, y = NULL
+      ) +
+      theme_ipsum(grid="") +
+      theme(legend.position = "none")
+  }) |> 
+  do.call(what = "wrap_plots") +
+  plot_annotation(
+    title="Flexoki Continuous Color Scales",
+    subtitle="All 8 continuous color palettes",
+    caption="Using scale_fill_flexoki_continuous()",
+    theme = theme_ipsum(grid="")
+  )
 ```
 
 <img src="man/figures/README-flexoki3-1.png" width="960" />
@@ -371,10 +375,10 @@ p %+% data.frame(
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines | (%) | \# Lines | (%) |
 |:-----|---------:|-----:|-----:|-----:|------------:|----:|---------:|----:|
-| R    |       22 | 0.41 | 1626 | 0.42 |         297 | 0.5 |     1003 | 0.5 |
+| R    |       22 | 0.41 | 1633 | 0.42 |         297 | 0.5 |     1003 | 0.5 |
 | SVG  |        4 | 0.07 |  310 | 0.08 |           0 | 0.0 |        0 | 0.0 |
 | JSON |        1 | 0.02 |   15 | 0.00 |           0 | 0.0 |        0 | 0.0 |
-| SUM  |       27 | 0.50 | 1951 | 0.50 |         297 | 0.5 |     1003 | 0.5 |
+| SUM  |       27 | 0.50 | 1958 | 0.50 |         297 | 0.5 |     1003 | 0.5 |
 
 {cloc} 📦 metrics for hrbrthemes
 
