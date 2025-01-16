@@ -279,7 +279,7 @@ ggplot(mpg, aes(displ, hwy, color=class)) +
   scale_color_flexoki_dark()
 ```
 
-```{r flexoki3, fig.width=10, fig.height=11}
+```{r flexoki3, fig.width=10, fig.height=6}
 library(patchwork)
 
 data.frame(
@@ -300,6 +300,7 @@ names(flexoki_dark) |>
       theme(legend.position = "none")
   }) |> 
   do.call(what = "wrap_plots") +
+  plot_layout(ncol = 4) +
   plot_annotation(
     title="Flexoki Continuous Color Scales",
     subtitle="All 8 continuous color palettes",

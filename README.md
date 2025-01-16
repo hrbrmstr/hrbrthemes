@@ -6,7 +6,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![Signed
 by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
 ![Signed commit
-%](https://img.shields.io/badge/Signed_Commits-4%25-lightgrey.svg)
+%](https://img.shields.io/badge/Signed_Commits-5%25-lightgrey.svg)
 
 [![cran
 checks](https://cranchecks.info/badges/worst/hrbrthemes.png)](https://cranchecks.info/pkgs/hrbrthemes)
@@ -361,6 +361,7 @@ names(flexoki_dark) |>
       theme(legend.position = "none")
   }) |> 
   do.call(what = "wrap_plots") +
+  plot_layout(ncol = 4) +
   plot_annotation(
     title="Flexoki Continuous Color Scales",
     subtitle="All 8 continuous color palettes",
