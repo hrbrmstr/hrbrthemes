@@ -77,12 +77,13 @@ Fonts:
 
 Flexoki Color Scales:
 
-- `scale_color_flexoki_light`: Discrete color scale using Flexoki light colors
-- `scale_fill_flexoki_light`: Discrete fill scale using Flexoki light colors
-- `scale_color_flexoki_dark`: Discrete color scale using Flexoki dark colors
-- `scale_fill_flexoki_dark`: Discrete fill scale using Flexoki dark colors
-- `scale_color_flexoki_continuous`: Continuous color scale with 8 palette options
-- `scale_fill_flexoki_continuous`: Continuous fill scale with 8 palette options
+- `scale_fill_flexoki_continuous`: Continuous Fill Scale Using Flexoki Colors
+- `scale_fill_flexoki_dark`: Discrete Fill Scale Using Flexoki Dark Colors
+- `scale_fill_flexoki_dark_distiller`: Distiller Fill Scale Using Flexoki Dark Colors
+- `scale_fill_flexoki_dark_spectrum`: Distiller Fill Scale Across All Flexoki Dark Colors
+- `scale_fill_flexoki_light`: Discrete Fill Scale Using Flexoki Light Colors
+- `scale_fill_flexoki_light_distiller`: Distiller Fill Scale Using Flexoki Light Colors
+- `scale_fill_flexoki_light_spectrum`: Distiller Fill Scale Across All Flexoki Light Colors
 
 Flexoki Palettes:
 

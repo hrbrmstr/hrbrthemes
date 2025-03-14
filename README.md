@@ -6,7 +6,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![Signed
 by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
 ![Signed commit
-%](https://img.shields.io/badge/Signed_Commits-5%25-lightgrey.svg)
+%](https://img.shields.io/badge/Signed_Commits-6%25-lightgrey.svg)
 
 [![cran
 checks](https://cranchecks.info/badges/worst/hrbrthemes.png)](https://cranchecks.info/pkgs/hrbrthemes)
@@ -95,18 +95,20 @@ Fonts:
 
 Flexoki Color Scales:
 
-- `scale_color_flexoki_light`: Discrete color scale using Flexoki light
-  colors
-- `scale_fill_flexoki_light`: Discrete fill scale using Flexoki light
-  colors
-- `scale_color_flexoki_dark`: Discrete color scale using Flexoki dark
-  colors
-- `scale_fill_flexoki_dark`: Discrete fill scale using Flexoki dark
-  colors
-- `scale_color_flexoki_continuous`: Continuous color scale with 8
-  palette options
-- `scale_fill_flexoki_continuous`: Continuous fill scale with 8 palette
-  options
+- `scale_fill_flexoki_continuous`: Continuous Fill Scale Using Flexoki
+  Colors
+- `scale_fill_flexoki_dark`: Discrete Fill Scale Using Flexoki Dark
+  Colors
+- `scale_fill_flexoki_dark_distiller`: Distiller Fill Scale Using
+  Flexoki Dark Colors
+- `scale_fill_flexoki_dark_spectrum`: Distiller Fill Scale Across All
+  Flexoki Dark Colors
+- `scale_fill_flexoki_light`: Discrete Fill Scale Using Flexoki Light
+  Colors
+- `scale_fill_flexoki_light_distiller`: Distiller Fill Scale Using
+  Flexoki Light Colors
+- `scale_fill_flexoki_light_spectrum`: Distiller Fill Scale Across All
+  Flexoki Light Colors
 
 Flexoki Palettes:
 
@@ -148,7 +150,7 @@ library(tidyverse)
 
 # current version
 packageVersion("hrbrthemes")
-## [1] '0.90'
+## [1] '0.9.2'
 ```
 
 ### Base theme (Arial Narrow)
@@ -376,10 +378,10 @@ names(flexoki_dark) |>
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines | (%) | \# Lines | (%) |
 |:-----|---------:|-----:|-----:|-----:|------------:|----:|---------:|----:|
-| R    |       22 | 0.41 | 1633 | 0.42 |         297 | 0.5 |     1003 | 0.5 |
+| R    |       22 | 0.41 | 1722 | 0.42 |         322 | 0.5 |     1123 | 0.5 |
 | SVG  |        4 | 0.07 |  310 | 0.08 |           0 | 0.0 |        0 | 0.0 |
 | JSON |        1 | 0.02 |   15 | 0.00 |           0 | 0.0 |        0 | 0.0 |
-| SUM  |       27 | 0.50 | 1958 | 0.50 |         297 | 0.5 |     1003 | 0.5 |
+| SUM  |       27 | 0.50 | 2047 | 0.50 |         322 | 0.5 |     1123 | 0.5 |
 
 {cloc} 📦 metrics for hrbrthemes
 

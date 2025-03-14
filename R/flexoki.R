@@ -214,7 +214,241 @@ scale_color_flexoki_continuous <- function(palette = "red", ...) {
 scale_fill_flexoki_continuous <- function(palette = "red", ...) {
   scale_fill_gradientn(
     colors = create_continuous_scale(
-      flexoki_extended[[palette]])(100),
+      flexoki_extended[[palette]]
+    )(100),
+    ...
+  )
+}
+
+
+#' Distiller Color Scale Using Flexoki Light Colors
+#'
+#' Creates a sequential color gradient based on the Flexoki light color palette
+#'
+#' @param palette Name of the color palette to use ("red", "orange", "yellow", "green", "cyan", "blue", "purple", "magenta")
+#' @param direction Sets the direction of the color scale (1 = default, -1 = reversed)
+#' @param ... Additional arguments passed to scale_color_gradientn()
+#' @return A sequential ggplot2 color scale
+#' @export
+#' @examples
+#' library(ggplot2)
+#' ggplot(faithfuld, aes(waiting, eruptions, color = density)) +
+#'   geom_point() +
+#'   scale_color_flexoki_light_distiller(palette = "blue")
+scale_color_flexoki_light_distiller <- function(palette = "blue", direction = 1, ...) {
+  pal <- flexoki_extended[[palette]]
+
+  # Select colors from the palette for a light-to-dark gradient
+  # Using the light variant as the base color
+  if (direction == 1) {
+    colors <- c("#FFFFFF", flexoki_light[palette], "#000000")
+  } else {
+    colors <- c("#000000", flexoki_light[palette], "#FFFFFF")
+  }
+
+  scale_color_gradientn(
+    colors = colors,
+    ...
+  )
+}
+
+#' Distiller Fill Scale Using Flexoki Light Colors
+#'
+#' Creates a sequential fill gradient based on the Flexoki light color palette
+#'
+#' @param palette Name of the color palette to use ("red", "orange", "yellow", "green", "cyan", "blue", "purple", "magenta")
+#' @param direction Sets the direction of the color scale (1 = default, -1 = reversed)
+#' @param ... Additional arguments passed to scale_fill_gradientn()
+#' @return A sequential ggplot2 fill scale
+#' @export
+#' @examples
+#' library(ggplot2)
+#' ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
+#'   geom_tile() +
+#'   scale_fill_flexoki_light_distiller(palette = "blue")
+scale_fill_flexoki_light_distiller <- function(palette = "blue", direction = 1, ...) {
+  pal <- flexoki_extended[[palette]]
+
+  # Select colors from the palette for a light-to-dark gradient
+  # Using the light variant as the base color
+  if (direction == 1) {
+    colors <- c("#FFFFFF", flexoki_light[palette], "#000000")
+  } else {
+    colors <- c("#000000", flexoki_light[palette], "#FFFFFF")
+  }
+
+  scale_fill_gradientn(
+    colors = colors,
+    ...
+  )
+}
+
+#' Distiller Color Scale Using Flexoki Dark Colors
+#'
+#' Creates a sequential color gradient based on the Flexoki dark color palette
+#'
+#' @param palette Name of the color palette to use ("red", "orange", "yellow", "green", "cyan", "blue", "purple", "magenta")
+#' @param direction Sets the direction of the color scale (1 = default, -1 = reversed)
+#' @param ... Additional arguments passed to scale_color_gradientn()
+#' @return A sequential ggplot2 color scale
+#' @export
+#' @examples
+#' library(ggplot2)
+#' ggplot(faithfuld, aes(waiting, eruptions, color = density)) +
+#'   geom_point() +
+#'   scale_color_flexoki_dark_distiller(palette = "blue")
+scale_color_flexoki_dark_distiller <- function(palette = "blue", direction = 1, ...) {
+  pal <- flexoki_extended[[palette]]
+
+  # Select colors from the palette for a light-to-dark gradient
+  # Using the dark variant as the base color
+  if (direction == 1) {
+    colors <- c("#FFFFFF", flexoki_dark[palette], "#000000")
+  } else {
+    colors <- c("#000000", flexoki_dark[palette], "#FFFFFF")
+  }
+
+  scale_color_gradientn(
+    colors = colors,
+    ...
+  )
+}
+
+#' Distiller Fill Scale Using Flexoki Dark Colors
+#'
+#' Creates a sequential fill gradient based on the Flexoki dark color palette
+#'
+#' @param palette Name of the color palette to use ("red", "orange", "yellow", "green", "cyan", "blue", "purple", "magenta")
+#' @param direction Sets the direction of the color scale (1 = default, -1 = reversed)
+#' @param ... Additional arguments passed to scale_fill_gradientn()
+#' @return A sequential ggplot2 fill scale
+#' @export
+#' @examples
+#' library(ggplot2)
+#' ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
+#'   geom_tile() +
+#'   scale_fill_flexoki_dark_distiller(palette = "blue")
+scale_fill_flexoki_dark_distiller <- function(palette = "blue", direction = 1, ...) {
+  pal <- flexoki_extended[[palette]]
+
+  # Select colors from the palette for a light-to-dark gradient
+  # Using the dark variant as the base color
+  if (direction == 1) {
+    colors <- c("#FFFFFF", flexoki_dark[palette], "#000000")
+  } else {
+    colors <- c("#000000", flexoki_dark[palette], "#FFFFFF")
+  }
+
+  scale_fill_gradientn(
+    colors = colors,
+    ...
+  )
+}
+
+#' Distiller Color Scale Across All Flexoki Light Colors
+#'
+#' Creates a sequential color gradient using all colors from the Flexoki light palette
+#'
+#' @param direction Sets the direction of the color scale (1 = default, -1 = reversed)
+#' @param ... Additional arguments passed to scale_color_gradientn()
+#' @return A sequential ggplot2 color scale
+#' @export
+#' @examples
+#' library(ggplot2)
+#' ggplot(faithfuld, aes(waiting, eruptions, color = density)) +
+#'   geom_point() +
+#'   scale_color_flexoki_light_spectrum()
+scale_color_flexoki_light_spectrum <- function(direction = 1, ...) {
+  # Use all colors from the light palette
+  colors <- unname(flexoki_light)
+
+  if (direction == -1) {
+    colors <- rev(colors)
+  }
+
+  scale_color_gradientn(
+    colors = colors,
+    ...
+  )
+}
+
+#' Distiller Fill Scale Across All Flexoki Light Colors
+#'
+#' Creates a sequential fill gradient using all colors from the Flexoki light palette
+#'
+#' @param direction Sets the direction of the color scale (1 = default, -1 = reversed)
+#' @param ... Additional arguments passed to scale_fill_gradientn()
+#' @return A sequential ggplot2 fill scale
+#' @export
+#' @examples
+#' library(ggplot2)
+#' ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
+#'   geom_tile() +
+#'   scale_fill_flexoki_light_spectrum()
+scale_fill_flexoki_light_spectrum <- function(direction = 1, ...) {
+  # Use all colors from the light palette
+  colors <- unname(flexoki_light)
+
+  if (direction == -1) {
+    colors <- rev(colors)
+  }
+
+  scale_fill_gradientn(
+    colors = colors,
+    ...
+  )
+}
+
+#' Distiller Color Scale Across All Flexoki Dark Colors
+#'
+#' Creates a sequential color gradient using all colors from the Flexoki dark palette
+#'
+#' @param direction Sets the direction of the color scale (1 = default, -1 = reversed)
+#' @param ... Additional arguments passed to scale_color_gradientn()
+#' @return A sequential ggplot2 color scale
+#' @export
+#' @examples
+#' library(ggplot2)
+#' ggplot(faithfuld, aes(waiting, eruptions, color = density)) +
+#'   geom_point() +
+#'   scale_color_flexoki_dark_spectrum()
+scale_color_flexoki_dark_spectrum <- function(direction = 1, ...) {
+  # Use all colors from the dark palette
+  colors <- unname(flexoki_dark)
+
+  if (direction == -1) {
+    colors <- rev(colors)
+  }
+
+  scale_color_gradientn(
+    colors = colors,
+    ...
+  )
+}
+
+#' Distiller Fill Scale Across All Flexoki Dark Colors
+#'
+#' Creates a sequential fill gradient using all colors from the Flexoki dark palette
+#'
+#' @param direction Sets the direction of the color scale (1 = default, -1 = reversed)
+#' @param ... Additional arguments passed to scale_fill_gradientn()
+#' @return A sequential ggplot2 fill scale
+#' @export
+#' @examples
+#' library(ggplot2)
+#' ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
+#'   geom_tile() +
+#'   scale_fill_flexoki_dark_spectrum()
+scale_fill_flexoki_dark_spectrum <- function(direction = 1, ...) {
+  # Use all colors from the dark palette
+  colors <- unname(flexoki_dark)
+
+  if (direction == -1) {
+    colors <- rev(colors)
+  }
+
+  scale_fill_gradientn(
+    colors = colors,
     ...
   )
 }
