@@ -38,8 +38,12 @@ gg_check <- function(gg, dict, ignore) {
   if (missing(dict)) dict <- hunspell::dictionary("en_US")
   if (missing(ignore)) ignore <- hunspell::en_stats
 
+  get_labs <- get0("get_labs", envir = asNamespace("ggplot2"))
+
   if (inherits(gg, "labels")) {
     lbl <- gg
+  } else if (ggplot2::is_ggplot(gg) && is.function(get_labs)) {
+    lbl <- get_labs(gg)
   } else if ("labels" %in% names(gg)) {
     lbl <- gg$labels
   } else {
