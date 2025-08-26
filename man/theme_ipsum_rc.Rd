@@ -4,7 +4,7 @@
 \alias{theme_ft_rc}
 \alias{theme_modern_rc}
 \alias{theme_ipsum_rc}
-\title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typoghraphy}
+\title{A precise & pristine [ggplot2][ggplot2][ggplot2::ggplot2] theme with opinionated defaults and an emphasis on typoghraphy}
 \usage{
 theme_ft_rc(
   base_family = "Roboto Condensed",

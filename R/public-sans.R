@@ -1,4 +1,4 @@
-#' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typoghraphy
+#' A precise & pristine [ggplot2][ggplot2][ggplot2::ggplot2] theme with opinionated defaults and an emphasis on typoghraphy
 #'
 #' You should [import_public_sans()] first and install the fonts on your
 #' system before trying to use this theme.

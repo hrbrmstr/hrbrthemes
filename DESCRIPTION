@@ -41,13 +41,12 @@ Suggests:
 Depends:
     R (>= 4.0.0)
 Imports:
-    ggplot2 (>= 3.4.0),
+    ggplot2 (>= 3.5.2),
     grDevices,
     grid,
     scales,
-    extrafont,
     tools,
     magrittr,
-    gdtools,
     utils
 RoxygenNote: 7.3.2
+Roxygen: list(markdown = TRUE)

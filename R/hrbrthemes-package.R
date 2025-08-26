@@ -21,9 +21,8 @@
 #' @docType package
 #' @author Bob Rudis (bob@@rud.is)
 #' @keywords internal
-#' @import ggplot2 grid scales extrafont grDevices
+#' @import ggplot2 grid scales grDevices
 #' @importFrom magrittr %>%
-#' @importFrom gdtools set_dummy_conf
 #' @importFrom tools file_path_sans_ext
 #' @importFrom utils packageVersion compareVersion
 "_PACKAGE"

@@ -2,7 +2,7 @@
 % Please edit documentation in R/goldmansans.R
 \name{theme_ipsum_gs}
 \alias{theme_ipsum_gs}
-\title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typoghraphy}
+\title{A precise & pristine [ggplot2][ggplot2][ggplot2::ggplot2] theme with opinionated defaults and an emphasis on typoghraphy}
 \usage{
 theme_ipsum_gs(
   base_family = "Goldman Sans Condensed",

@@ -2,7 +2,7 @@
 % Please edit documentation in R/plexsans.R
 \name{theme_ipsum_ps}
 \alias{theme_ipsum_ps}
-\title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typoghraphy}
+\title{A precise & pristine [ggplot2][ggplot2][ggplot2::ggplot2] theme with opinionated defaults and an emphasis on typoghraphy}
 \usage{
 theme_ipsum_ps(
   base_family = "IBMPlexSans",

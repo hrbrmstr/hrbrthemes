@@ -2,7 +2,7 @@
 % Please edit documentation in R/public-sans.R
 \name{theme_ipsum_pub}
 \alias{theme_ipsum_pub}
-\title{A precise & pristine \link{ggplot2} theme with opinionated defaults and an emphasis on typoghraphy}
+\title{A precise & pristine [ggplot2][ggplot2][ggplot2::ggplot2] theme with opinionated defaults and an emphasis on typoghraphy}
 \usage{
 theme_ipsum_pub(
   base_family = "Public Sans",
