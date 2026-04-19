@@ -1,4 +1,4 @@
-#' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typography
+#' A precise & pristine [ggplot2][ggplot2::ggplot2] theme with opinionated defaults and an emphasis on typography
 #'
 #' Also has a "dark" / "modern" version for the new RStudio theme
 #'

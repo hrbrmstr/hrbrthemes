@@ -23,18 +23,22 @@ and harmonious color relationships.
 }
 \details{
 The package provides several types of scales:
-* Discrete scales for both light and dark variants
-* Continuous scales with extended color ramps
+\itemize{
+\item Discrete scales for both light and dark variants
+\item Continuous scales with extended color ramps
+}
 
 The color palette includes:
-* Red: For emphasis and warnings
-* Orange: For secondary emphasis
-* Yellow: For highlighting
-* Green: For success states and nature-related data
-* Cyan: For information and water-related data
-* Blue: For primary elements and cool tones
-* Purple: For luxury and depth
-* Magenta: For creative and feminine contexts
+\itemize{
+\item Red: For emphasis and warnings
+\item Orange: For secondary emphasis
+\item Yellow: For highlighting
+\item Green: For success states and nature-related data
+\item Cyan: For information and water-related data
+\item Blue: For primary elements and cool tones
+\item Purple: For luxury and depth
+\item Magenta: For creative and feminine contexts
+}
 }
 \examples{
 library(ggplot2)

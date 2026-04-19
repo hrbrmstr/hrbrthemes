@@ -3,61 +3,14 @@
 \docType{data}
 \name{bit12}
 \alias{bit12}
-\title{Bit12 Color Palettes and Scales}
+\title{Bit12 Color Palette}
 \format{
 A named character vector of hex color codes
 }
 \usage{
 bit12
 }
-\arguments{
-\item{...}{Additional arguments passed to scale_color_manual() or scale_fill_manual()}
-
-\item{palette}{For continuous scales, the name of the color palette to use
-(one of "plum", "rose", "coral", "apricot", "lemon", "lime", "mint", "teal", "sky", "azure", "cobalt", "violet")}
-}
-\value{
-A ggplot2 scale object
-}
 \description{
-Color palettes and scales based on the Bit12 color scheme, a vibrant 12-color system
-designed for clear data visualization. The palette offers a complete spectrum of
-distinct colors that work well for categorical data while maintaining good contrast
-and accessibility.
-
 A vector of 12 colors in the Bit12 color scheme
-}
-\details{
-The package provides several types of scales:
-* Discrete scales for categorical data
-* Continuous scales with extended color ramps
-
-The color palette includes:
-* Plum: Deep purple for emphasis
-* Rose: Rich pink-red for highlighting important elements
-* Coral: Soft reddish-orange for warm secondary elements
-* Apricot: Muted orange for highlighting
-* Lemon: Bright yellow for high visibility elements
-* Lime: Fresh green for positive values and growth
-* Mint: Cool green-blue for calm elements
-* Teal: Balanced blue-green for neutral data
-* Sky: Light blue for information elements
-* Azure: Clear blue for primary interactions
-* Cobalt: Deep blue for stability and reliability
-* Violet: Purple for creative and distinctive elements
-}
-\examples{
-library(ggplot2)
-
-# Discrete color scale
-ggplot(mpg, aes(class, fill = class)) +
-  geom_bar() +
-  scale_fill_bit12()
-
-# Continuous color scale
-ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
-  geom_tile() +
-  scale_fill_bit12_continuous(palette = "azure")
-
 }
 \keyword{datasets}

@@ -6,7 +6,7 @@
 #' distinct colors that work well for categorical data while maintaining good contrast
 #' and accessibility.
 #'
-#' @name bit12
+#' @name bit12_scale
 #' @details
 #' The package provides several types of scales:
 #' * Discrete scales for categorical data
@@ -26,9 +26,10 @@
 #' * Cobalt: Deep blue for stability and reliability
 #' * Violet: Purple for creative and distinctive elements
 #'
-#' @param ... Additional arguments passed to scale_color_manual() or scale_fill_manual()
+#' @param ... Additional arguments passed to scale_color_manual(), scale_fill_manual(), scale_color_gradientn(), or scale_fill_gradientn()
 #' @param palette For continuous scales, the name of the color palette to use
 #'        (one of "plum", "rose", "coral", "apricot", "lemon", "lime", "mint", "teal", "sky", "azure", "cobalt", "violet")
+#' @param direction Sets the direction of the color scale (1 = default, -1 = reversed)
 #'
 #' @return A ggplot2 scale object
 #'
@@ -69,30 +70,14 @@ bit12 <- c(
   violet = "#639"
 )
 
-#' Discrete Color Scale Using Bit12 Colors
-#'
-#' @param ... Additional arguments passed to scale_color_manual()
-#' @return A discrete ggplot2 color scale
+#' @name bit12_scale
 #' @export
-#' @examples
-#' library(ggplot2)
-#' ggplot(mtcars, aes(wt, mpg, color = factor(cyl))) +
-#'   geom_point() +
-#'   scale_color_bit12()
 scale_color_bit12 <- function(...) {
   scale_color_manual(values = unname(bit12), ...)
 }
 
-#' Discrete Fill Scale Using Bit12 Colors
-#'
-#' @param ... Additional arguments passed to scale_fill_manual()
-#' @return A discrete ggplot2 fill scale
+#' @name bit12_scale
 #' @export
-#' @examples
-#' library(ggplot2)
-#' ggplot(mtcars, aes(factor(cyl), fill = factor(cyl))) +
-#'   geom_bar() +
-#'   scale_fill_bit12()
 scale_fill_bit12 <- function(...) {
   scale_fill_manual(values = unname(bit12), ...)
 }
@@ -153,17 +138,8 @@ create_continuous_scale <- function(colors) {
   colorRampPalette(colors)
 }
 
-#' Continuous Color Scale Using Bit12 Colors
-#'
-#' @param palette Name of the color palette to use ("plum", "rose", "coral", "apricot", "lemon", "lime", "mint", "teal", "sky", "azure", "cobalt", "violet")
-#' @param ... Additional arguments passed to scale_color_gradientn()
-#' @return A continuous ggplot2 color scale
+#' @name bit12_scale
 #' @export
-#' @examples
-#' library(ggplot2)
-#' ggplot(faithfuld, aes(waiting, eruptions, color = density)) +
-#'   geom_point() +
-#'   scale_color_bit12_continuous(palette = "azure")
 scale_color_bit12_continuous <- function(palette = "azure", ...) {
   scale_color_gradientn(
     colors = create_continuous_scale(bit12_extended[[palette]])(100),
@@ -171,17 +147,8 @@ scale_color_bit12_continuous <- function(palette = "azure", ...) {
   )
 }
 
-#' Continuous Fill Scale Using Bit12 Colors
-#'
-#' @param palette Name of the color palette to use ("plum", "rose", "coral", "apricot", "lemon", "lime", "mint", "teal", "sky", "azure", "cobalt", "violet")
-#' @param ... Additional arguments passed to scale_fill_gradientn()
-#' @return A continuous ggplot2 fill scale
+#' @name bit12_scale
 #' @export
-#' @examples
-#' library(ggplot2)
-#' ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
-#'   geom_tile() +
-#'   scale_fill_bit12_continuous(palette = "azure")
 scale_fill_bit12_continuous <- function(palette = "azure", ...) {
   scale_fill_gradientn(
     colors = create_continuous_scale(
@@ -191,20 +158,8 @@ scale_fill_bit12_continuous <- function(palette = "azure", ...) {
   )
 }
 
-#' Distiller Color Scale Using Bit12 Colors
-#'
-#' Creates a sequential color gradient based on a selected Bit12 color
-#'
-#' @param palette Name of the color palette to use ("plum", "rose", "coral", "apricot", "lemon", "lime", "mint", "teal", "sky", "azure", "cobalt", "violet")
-#' @param direction Sets the direction of the color scale (1 = default, -1 = reversed)
-#' @param ... Additional arguments passed to scale_color_gradientn()
-#' @return A sequential ggplot2 color scale
+#' @name bit12_scale
 #' @export
-#' @examples
-#' library(ggplot2)
-#' ggplot(faithfuld, aes(waiting, eruptions, color = density)) +
-#'   geom_point() +
-#'   scale_color_bit12_distiller(palette = "azure")
 scale_color_bit12_distiller <- function(palette = "azure", direction = 1, ...) {
   # Select colors from the palette for a light-to-dark gradient
   if (direction == 1) {
@@ -219,20 +174,8 @@ scale_color_bit12_distiller <- function(palette = "azure", direction = 1, ...) {
   )
 }
 
-#' Distiller Fill Scale Using Bit12 Colors
-#'
-#' Creates a sequential fill gradient based on a selected Bit12 color
-#'
-#' @param palette Name of the color palette to use ("plum", "rose", "coral", "apricot", "lemon", "lime", "mint", "teal", "sky", "azure", "cobalt", "violet")
-#' @param direction Sets the direction of the color scale (1 = default, -1 = reversed)
-#' @param ... Additional arguments passed to scale_fill_gradientn()
-#' @return A sequential ggplot2 fill scale
+#' @name bit12_scale
 #' @export
-#' @examples
-#' library(ggplot2)
-#' ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
-#'   geom_tile() +
-#'   scale_fill_bit12_distiller(palette = "azure")
 scale_fill_bit12_distiller <- function(palette = "azure", direction = 1, ...) {
   # Select colors from the palette for a light-to-dark gradient
   if (direction == 1) {
@@ -247,19 +190,8 @@ scale_fill_bit12_distiller <- function(palette = "azure", direction = 1, ...) {
   )
 }
 
-#' Distiller Color Scale Across All Bit12 Colors
-#'
-#' Creates a sequential color gradient using all colors from the Bit12 palette
-#'
-#' @param direction Sets the direction of the color scale (1 = default, -1 = reversed)
-#' @param ... Additional arguments passed to scale_color_gradientn()
-#' @return A sequential ggplot2 color scale
+#' @name bit12_scale
 #' @export
-#' @examples
-#' library(ggplot2)
-#' ggplot(faithfuld, aes(waiting, eruptions, color = density)) +
-#'   geom_point() +
-#'   scale_color_bit12_spectrum()
 scale_color_bit12_spectrum <- function(direction = 1, ...) {
   # Use all colors from the palette
   colors <- unname(bit12)
@@ -274,19 +206,8 @@ scale_color_bit12_spectrum <- function(direction = 1, ...) {
   )
 }
 
-#' Distiller Fill Scale Across All Bit12 Colors
-#'
-#' Creates a sequential fill gradient using all colors from the Bit12 palette
-#'
-#' @param direction Sets the direction of the color scale (1 = default, -1 = reversed)
-#' @param ... Additional arguments passed to scale_fill_gradientn()
-#' @return A sequential ggplot2 fill scale
+#' @name bit12_scale
 #' @export
-#' @examples
-#' library(ggplot2)
-#' ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
-#'   geom_tile() +
-#'   scale_fill_bit12_spectrum()
 scale_fill_bit12_spectrum <- function(direction = 1, ...) {
   # Use all colors from the palette
   colors <- unname(bit12)

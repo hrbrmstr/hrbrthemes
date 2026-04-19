@@ -132,7 +132,7 @@ each major break)
 \item A function that given the limits returns a vector of minor breaks.
 }}
 
-\item{guide}{guide    A function used to create a guide or its name. See \code{\link[=guides]{guides()}} for more information.}
+\item{guide}{guide    A function used to create a guide or its name. See \code{\link[ggplot2:guides]{ggplot2::guides()}} for more information.}
 
 \item{n.breaks}{An integer guiding the number of major breaks. The algorithm may choose a
 slightly different number to ensure nice break labels. Will only have an effect if
@@ -169,9 +169,9 @@ scales, "top" or "bottom" for horizontal scales}
 \item{sec.axis}{specify a secondary axis}
 
 \item{accuracy, scale, prefix, suffix, big.mark, decimal.mark, trim}{See
-[scales::comma_format()] or [scales::percent_format()]}
+\code{\link[scales:comma]{scales::comma_format()}} or \code{\link[scales:percent_format]{scales::percent_format()}}}
 
-\item{...}{passed on to [scales::comma_format()] or [scales::percent_format()]}
+\item{...}{passed on to \code{\link[scales:comma]{scales::comma_format()}} or \code{\link[scales:percent_format]{scales::percent_format()}}}
 }
 \description{
 The \verb{_comma} ones set comma format for axis text and \code{expand=c(0,0)} (you need to set limits).

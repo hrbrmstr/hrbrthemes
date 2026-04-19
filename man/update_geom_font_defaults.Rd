@@ -15,5 +15,5 @@ update_geom_font_defaults(
 \item{family, face, size, color}{font family name, face, size and color}
 }
 \description{
-Updates [ggplot2::geom_label] and [ggplot2::geom_text] font defaults
+Updates \link[ggplot2:geom_text]{ggplot2::geom_label} and \link[ggplot2:geom_text]{ggplot2::geom_text} font defaults
 }
