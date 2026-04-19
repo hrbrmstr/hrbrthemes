@@ -27,6 +27,7 @@ Description: A compilation of extra 'ggplot2' themes, scales and utilities, incl
     A copy of the 'Google' font 'Roboto Condensed' is also included.
 Copyright: file inst/COPYRIGHTS
 License: MIT + file LICENSE
+Author: @Author@
 Encoding: UTF-8
 Suggests:
     testthat,

@@ -74,6 +74,8 @@ flexoki_dark <- c(
   purple = "#5E409D", magenta = "#A02F6F"
 )
 
+.valid_flexoki_palettes <- c("red", "orange", "yellow", "green", "cyan", "blue", "purple", "magenta")
+
 #' Discrete Color Scale Using Flexoki Light Colors
 #'
 #' @param ... Additional arguments passed to scale_color_manual()
@@ -171,17 +173,6 @@ flexoki_extended <- list(
   )
 )
 
-#' Create Continuous Color Scale
-#'
-#' Internal function to generate continuous color scales from a vector of colors
-#'
-#' @param colors Vector of hex color codes
-#' @return A color ramp palette function
-#' @keywords internal
-create_continuous_scale <- function(colors) {
-  colorRampPalette(colors)
-}
-
 #' Continuous Color Scale Using Flexoki Colors
 #'
 #' @param palette Name of the color palette to use ("red", "orange", "yellow", "green", "cyan", "blue", "purple", "magenta")
@@ -194,6 +185,7 @@ create_continuous_scale <- function(colors) {
 #'   geom_tile() +
 #'   scale_color_flexoki_continuous(palette = "blue")
 scale_color_flexoki_continuous <- function(palette = "red", ...) {
+  validate_palette(palette, .valid_flexoki_palettes)
   scale_color_gradientn(
     colors = create_continuous_scale(flexoki_extended[[palette]])(100),
     ...
@@ -212,6 +204,7 @@ scale_color_flexoki_continuous <- function(palette = "red", ...) {
 #'   geom_tile() +
 #'   scale_fill_flexoki_continuous(palette = "blue")
 scale_fill_flexoki_continuous <- function(palette = "red", ...) {
+  validate_palette(palette, .valid_flexoki_palettes)
   scale_fill_gradientn(
     colors = create_continuous_scale(
       flexoki_extended[[palette]]
@@ -236,6 +229,8 @@ scale_fill_flexoki_continuous <- function(palette = "red", ...) {
 #'   geom_point() +
 #'   scale_color_flexoki_light_distiller(palette = "blue")
 scale_color_flexoki_light_distiller <- function(palette = "blue", direction = 1, ...) {
+  validate_palette(palette, .valid_flexoki_palettes)
+  validate_direction(direction)
   pal <- flexoki_extended[[palette]]
 
   # Select colors from the palette for a light-to-dark gradient
@@ -267,6 +262,8 @@ scale_color_flexoki_light_distiller <- function(palette = "blue", direction = 1,
 #'   geom_tile() +
 #'   scale_fill_flexoki_light_distiller(palette = "blue")
 scale_fill_flexoki_light_distiller <- function(palette = "blue", direction = 1, ...) {
+  validate_palette(palette, .valid_flexoki_palettes)
+  validate_direction(direction)
   pal <- flexoki_extended[[palette]]
 
   # Select colors from the palette for a light-to-dark gradient
@@ -298,6 +295,8 @@ scale_fill_flexoki_light_distiller <- function(palette = "blue", direction = 1, 
 #'   geom_point() +
 #'   scale_color_flexoki_dark_distiller(palette = "blue")
 scale_color_flexoki_dark_distiller <- function(palette = "blue", direction = 1, ...) {
+  validate_palette(palette, .valid_flexoki_palettes)
+  validate_direction(direction)
   pal <- flexoki_extended[[palette]]
 
   # Select colors from the palette for a light-to-dark gradient
@@ -329,6 +328,8 @@ scale_color_flexoki_dark_distiller <- function(palette = "blue", direction = 1, 
 #'   geom_tile() +
 #'   scale_fill_flexoki_dark_distiller(palette = "blue")
 scale_fill_flexoki_dark_distiller <- function(palette = "blue", direction = 1, ...) {
+  validate_palette(palette, .valid_flexoki_palettes)
+  validate_direction(direction)
   pal <- flexoki_extended[[palette]]
 
   # Select colors from the palette for a light-to-dark gradient
@@ -359,6 +360,7 @@ scale_fill_flexoki_dark_distiller <- function(palette = "blue", direction = 1, .
 #'   geom_point() +
 #'   scale_color_flexoki_light_spectrum()
 scale_color_flexoki_light_spectrum <- function(direction = 1, ...) {
+  validate_direction(direction)
   # Use all colors from the light palette
   colors <- unname(flexoki_light)
 
@@ -386,6 +388,7 @@ scale_color_flexoki_light_spectrum <- function(direction = 1, ...) {
 #'   geom_tile() +
 #'   scale_fill_flexoki_light_spectrum()
 scale_fill_flexoki_light_spectrum <- function(direction = 1, ...) {
+  validate_direction(direction)
   # Use all colors from the light palette
   colors <- unname(flexoki_light)
 
@@ -413,6 +416,7 @@ scale_fill_flexoki_light_spectrum <- function(direction = 1, ...) {
 #'   geom_point() +
 #'   scale_color_flexoki_dark_spectrum()
 scale_color_flexoki_dark_spectrum <- function(direction = 1, ...) {
+  validate_direction(direction)
   # Use all colors from the dark palette
   colors <- unname(flexoki_dark)
 
@@ -440,6 +444,7 @@ scale_color_flexoki_dark_spectrum <- function(direction = 1, ...) {
 #'   geom_tile() +
 #'   scale_fill_flexoki_dark_spectrum()
 scale_fill_flexoki_dark_spectrum <- function(direction = 1, ...) {
+  validate_direction(direction)
   # Use all colors from the dark palette
   colors <- unname(flexoki_dark)
 

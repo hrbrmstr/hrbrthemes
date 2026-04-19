@@ -80,6 +80,8 @@ The default, \code{TRUE}, uses the levels that appear in the data;
 every level in a legend, the layer should use \code{show.legend = TRUE}.}
     \item{\code{guide}}{A function used to create a guide or its name. See
 \code{\link[ggplot2:guides]{guides()}} for more information.}
+    \item{\code{fallback.palette}}{Function to use when \code{palette = NULL} and the
+palette is not represented in the theme.}
     \item{\code{call}}{The \code{call} used to construct the scale for reporting messages.}
     \item{\code{super}}{The super class to use for the constructed scale}
   }}

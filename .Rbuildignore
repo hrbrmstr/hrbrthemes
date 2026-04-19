@@ -17,3 +17,7 @@
 ^doc$
 ^Meta$
 ^CRAN-SUBMISSION$
+^\.\.Rcheck$
+^\.DS_Store$
+^\.Rhistory$
+^\.claude$

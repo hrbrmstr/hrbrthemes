@@ -70,6 +70,8 @@ bit12 <- c(
   violet = "#639"
 )
 
+.valid_bit12_palettes <- c("plum", "rose", "coral", "apricot", "lemon", "lime", "mint", "teal", "sky", "azure", "cobalt", "violet")
+
 #' @name bit12_scale
 #' @export
 scale_color_bit12 <- function(...) {
@@ -127,20 +129,10 @@ bit12_extended <- list(
   )
 )
 
-#' Create Continuous Color Scale
-#'
-#' Internal function to generate continuous color scales from a vector of colors
-#'
-#' @param colors Vector of hex color codes
-#' @return A color ramp palette function
-#' @keywords internal
-create_continuous_scale <- function(colors) {
-  colorRampPalette(colors)
-}
-
 #' @name bit12_scale
 #' @export
 scale_color_bit12_continuous <- function(palette = "azure", ...) {
+  validate_palette(palette, .valid_bit12_palettes)
   scale_color_gradientn(
     colors = create_continuous_scale(bit12_extended[[palette]])(100),
     ...
@@ -150,6 +142,7 @@ scale_color_bit12_continuous <- function(palette = "azure", ...) {
 #' @name bit12_scale
 #' @export
 scale_fill_bit12_continuous <- function(palette = "azure", ...) {
+  validate_palette(palette, .valid_bit12_palettes)
   scale_fill_gradientn(
     colors = create_continuous_scale(
       bit12_extended[[palette]]
@@ -161,6 +154,8 @@ scale_fill_bit12_continuous <- function(palette = "azure", ...) {
 #' @name bit12_scale
 #' @export
 scale_color_bit12_distiller <- function(palette = "azure", direction = 1, ...) {
+  validate_palette(palette, .valid_bit12_palettes)
+  validate_direction(direction)
   # Select colors from the palette for a light-to-dark gradient
   if (direction == 1) {
     colors <- c("#FFFFFF", bit12[palette], "#000000")
@@ -177,6 +172,8 @@ scale_color_bit12_distiller <- function(palette = "azure", direction = 1, ...) {
 #' @name bit12_scale
 #' @export
 scale_fill_bit12_distiller <- function(palette = "azure", direction = 1, ...) {
+  validate_palette(palette, .valid_bit12_palettes)
+  validate_direction(direction)
   # Select colors from the palette for a light-to-dark gradient
   if (direction == 1) {
     colors <- c("#FFFFFF", bit12[palette], "#000000")
@@ -193,6 +190,7 @@ scale_fill_bit12_distiller <- function(palette = "azure", direction = 1, ...) {
 #' @name bit12_scale
 #' @export
 scale_color_bit12_spectrum <- function(direction = 1, ...) {
+  validate_direction(direction)
   # Use all colors from the palette
   colors <- unname(bit12)
 
@@ -209,6 +207,7 @@ scale_color_bit12_spectrum <- function(direction = 1, ...) {
 #' @name bit12_scale
 #' @export
 scale_fill_bit12_spectrum <- function(direction = 1, ...) {
+  validate_direction(direction)
   # Use all colors from the palette
   colors <- unname(bit12)
 

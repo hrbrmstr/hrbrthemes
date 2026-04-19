@@ -21,6 +21,15 @@ white = "#ffffff"
 #' @export
 ft_text_col <- "#929299"
 
+# FT theme color map
+.ft_theme_colors <- list(
+  background = "#252a32",
+  foreground = "#617a89",
+  text = "#929299",
+  grid = "#464950",
+  title = "#ffffff"
+)
+
 #' @rdname theme_ipsum_rc
 #' @export
 theme_ft_rc <- function (base_family = "Roboto Condensed", base_size = 11.5,
@@ -47,11 +56,11 @@ theme_ft_rc <- function (base_family = "Roboto Condensed", base_size = 11.5,
           plot_margin = margin(30, 30, 30, 30),
           grid = TRUE, axis = FALSE, ticks = FALSE)  {
 
-  grid_col <- axis_col <- "#464950"
+  grid_col <- axis_col <- .ft_theme_colors$grid
 
-  subtitle_col <- ft_text_col
+  subtitle_col <- .ft_theme_colors$text
 
-  def_fore <- "#617a89"
+  def_fore <- .ft_theme_colors$foreground
 
   ggplot2::update_geom_defaults("point", list(colour = def_fore))
   ggplot2::update_geom_defaults("line", list(colour = def_fore))
@@ -143,20 +152,20 @@ theme_ft_rc <- function (base_family = "Roboto Condensed", base_size = 11.5,
                                                family=caption_family, face=caption_face))
   ret <- ret + theme(plot.margin=plot_margin)
 
-  bkgrnd <- "#252a32"
-  fgrnd <- "#617a89"
+  bkgrnd <- .ft_theme_colors$background
+  fgrnd <- .ft_theme_colors$foreground
 
   ret <- ret +
     theme(rect =  element_rect(fill = bkgrnd, color = bkgrnd)) +
     theme(plot.background = element_rect(fill = bkgrnd, color = bkgrnd)) +
     theme(panel.background = element_rect(fill = bkgrnd, color = bkgrnd)) +
     theme(rect =  element_rect(fill = bkgrnd, color = bkgrnd)) +
-    theme(text =  element_text(color = ft_text_col)) +
-    theme(axis.text =  element_text(color = ft_text_col)) +
-    theme(title =  element_text(color = ft_text_col)) +
-    theme(plot.title =  element_text(color = "white")) +
-    theme(plot.subtitle =  element_text(color = ft_text_col)) +
-    theme(plot.caption =  element_text(color = ft_text_col)) +
+    theme(text =  element_text(color = .ft_theme_colors$text)) +
+    theme(axis.text =  element_text(color = .ft_theme_colors$text)) +
+    theme(title =  element_text(color = .ft_theme_colors$text)) +
+    theme(plot.title =  element_text(color = .ft_theme_colors$title)) +
+    theme(plot.subtitle =  element_text(color = .ft_theme_colors$text)) +
+    theme(plot.caption =  element_text(color = .ft_theme_colors$text)) +
     theme(line = element_line(color = grid_col)) +
     theme(axis.ticks = element_line(color = grid_col))
 
@@ -169,20 +178,18 @@ theme_ft_rc <- function (base_family = "Roboto Condensed", base_size = 11.5,
 ft_geom_defaults <- function() {
 
   geoms <- c("abline", "area", "bar", "boxplot", "col", "crossbar",
-             "density", "dotplot", "errorbar", "errorbar",
+             "density", "dotplot", "errorbar",
              "hline", "line", "linerange",
              "map", "path", "point", "polygon", "rect", "ribbon", "rug", "segment",
              "step", "tile", "violin", "vline")
 
-  for (g in geoms) {
-    update_geom_defaults(g, list(colour = "#617a89", fill = "#617a89"))
-  }
+  invisible(lapply(geoms, function(g) {
+    update_geom_defaults(g, list(colour = .ft_theme_colors$foreground, fill = .ft_theme_colors$foreground))
+  }))
 
-  geoms <- c("text", "label")
-
-  for (g in geoms) {
-    update_geom_defaults(g, list(colour = ft_text_col, fill = "#252a32"))
-  }
+  invisible(lapply(c("text", "label"), function(g) {
+    update_geom_defaults(g, list(colour = .ft_theme_colors$text, fill = .ft_theme_colors$background))
+  }))
 
 }
 
