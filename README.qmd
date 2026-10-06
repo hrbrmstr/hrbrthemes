@@ -125,6 +125,12 @@ Utilities:
 
 ### Installation
 
+```{r, eval=FALSE}
+remotes::install_git("https://rud.is/git/hrbrthemes", git = "external")
+```
+
+or
+
 ```{r install-ex, results='asis', echo = FALSE, cache=FALSE}
 hrbrpkghelpr::install_block()
 ```

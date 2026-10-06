@@ -6,7 +6,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![Signed
 by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
 ![Signed commit
-%](https://img.shields.io/badge/Signed_Commits-9%25-lightgrey.svg)
+%](https://img.shields.io/badge/Signed_Commits-10%25-lightgrey.svg)
 
 [![cran
 checks](https://cranchecks.info/badges/worst/hrbrthemes.png)](https://cranchecks.info/pkgs/hrbrthemes)
@@ -161,6 +161,12 @@ Utilities:
   geoms
 
 ### Installation
+
+``` r
+remotes::install_git("https://rud.is/git/hrbrthemes", git = "external")
+```
+
+or
 
 ``` r
 install.packages("hrbrthemes") # NOTE: CRAN version is 0.9.3
