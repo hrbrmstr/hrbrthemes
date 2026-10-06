@@ -6,7 +6,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![Signed
 by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
 ![Signed commit
-%](https://img.shields.io/badge/Signed_Commits-8%25-lightgrey.svg)
+%](https://img.shields.io/badge/Signed_Commits-9%25-lightgrey.svg)
 
 [![cran
 checks](https://cranchecks.info/badges/worst/hrbrthemes.png)](https://cranchecks.info/pkgs/hrbrthemes)
@@ -41,11 +41,12 @@ The following functions are implemented/objects are exported:
 Themes:
 
 - `theme_ipsum`: Arial Narrow
-- `theme_ipsum_gs`: Goldman Sans Condensed
+- `theme_ipsum_archivo`: Archivo SemiCondensed
 - `theme_ipsum_es`: Econ Sans Condensed
-- `theme_ipsum_rc`: Roboto Condensed
+- `theme_ipsum_gs`: Goldman Sans Condensed
 - `theme_ipsum_ps`: IBM Plex Sans font
 - `theme_ipsum_pub`: Public Sans
+- `theme_ipsum_rc`: Roboto Condensed
 - `theme_ipsum_tw`: Titilium Web
 - `theme_modern_rc`: Roboto Condensed dark theme
 - `theme_ft_rc`: Dark theme based on FT’s dark theme (Roboto Condensed)
@@ -83,6 +84,12 @@ Palettes/Named Colors:
 
 Fonts:
 
+- `font_ar`: Archivo SemiCondensed font name R variable aliases
+- `font_ar_bold`: Archivo SemiCondensed font name R variable aliases
+- `font_ar_italic`: Archivo SemiCondensed font name R variable aliases
+- `font_ar_sb`: Archivo SemiCondensed font name R variable aliases
+- `font_ar_sb_italic`: Archivo SemiCondensed font name R variable
+  aliases
 - `font_an`: Arial Narrow font name R variable aliases
 - `font_es`: Econ Sans font name R variable aliases
 - `font_es_bold`: Econ Sans font name R variable aliases
@@ -138,10 +145,12 @@ Flexoki Palettes:
 
 Utilities:
 
+- `humanize_duration`: Convert duration to human-readable text
 - `flush_ticks`: Makes axis text labels flush on the ends
 - `ft_geom_defaults`: Change geom defaults from black to custom lights
   for the FT theme
 - `gg_check`: Spell check ggplot2 plot labels
+- `import_archivo`: Import Archivo SemiCondensed font for use in charts
 - `import_econ_sans`: Import Econ Sans Condensed font for use in charts
 - `import_plex_sans`: Import IBM Plex Sans font for use in charts
 - `import_roboto_condensed`: Import Roboto Condensed font for use in
@@ -154,7 +163,7 @@ Utilities:
 ### Installation
 
 ``` r
-install.packages("hrbrthemes") # NOTE: CRAN version is 0.8.7
+install.packages("hrbrthemes") # NOTE: CRAN version is 0.9.3
 # or
 remotes::install_git("https://codeberg.org/hrbrmstr/hrbrthemes.git")
 ```
@@ -171,7 +180,7 @@ library(tidyverse)
 
 # current version
 packageVersion("hrbrthemes")
-## [1] '0.9.2'
+## [1] '0.9.4'
 ```
 
 ### Base theme (Arial Narrow)
@@ -202,7 +211,7 @@ ggplot(mtcars, aes(mpg, wt)) +
 
 <img src="man/figures/README-rc-1.png" width="672" />
 
-### New FT Theme!
+### FT Theme
 
 ``` r
 ggplot(mtcars, aes(mpg, wt)) +
@@ -240,6 +249,21 @@ flush_ticks(gg)
 ```
 
 <img src="man/figures/README-ps-1.png" width="960" />
+
+### NEW! Archivo
+
+``` r
+ggplot(mtcars, aes(mpg, wt)) +
+  geom_point(aes(color=factor(carb))) +
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
+       title="Seminal ggplot2 scatterplot example",
+       subtitle="A plot that is only useful for demonstration purposes",
+       caption="Brought to you by the letter 'g'") +
+  scale_color_ipsum() +
+  theme_ipsum_archivo()
+```
+
+<img src="man/figures/README-archivo-1.png" width="672" />
 
 ### Scales (Color/Fill)
 
@@ -445,10 +469,10 @@ names(bit12)[c(1,3,5,7,9,11)] |>
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines | (%) | \# Lines | (%) |
 |:-----|---------:|-----:|-----:|-----:|------------:|----:|---------:|----:|
-| R    |       23 | 0.44 | 1840 | 0.46 |         339 | 0.5 |     1290 | 0.5 |
-| SVG  |        2 | 0.04 |  150 | 0.04 |           0 | 0.0 |        0 | 0.0 |
-| JSON |        1 | 0.02 |   15 | 0.00 |           0 | 0.0 |        0 | 0.0 |
-| SUM  |       26 | 0.50 | 2005 | 0.50 |         339 | 0.5 |     1290 | 0.5 |
+| R    |       26 | 0.43 | 2011 | 0.45 |         364 | 0.5 |     1324 | 0.5 |
+| SVG  |        2 | 0.03 |  150 | 0.03 |           0 | 0.0 |        0 | 0.0 |
+| JSON |        2 | 0.03 |   50 | 0.01 |           0 | 0.0 |        0 | 0.0 |
+| SUM  |       30 | 0.50 | 2211 | 0.50 |         364 | 0.5 |     1324 | 0.5 |
 
 {cloc} 📦 metrics for hrbrthemes
 

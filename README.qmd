@@ -31,11 +31,12 @@ The following functions are implemented/objects are exported:
 Themes:
 
 - `theme_ipsum`: Arial Narrow
-- `theme_ipsum_gs`:  Goldman Sans Condensed
+- `theme_ipsum_archivo`: Archivo SemiCondensed
 - `theme_ipsum_es`:  Econ Sans Condensed
-- `theme_ipsum_rc`:  Roboto Condensed
+- `theme_ipsum_gs`:  Goldman Sans Condensed
 - `theme_ipsum_ps`:  IBM Plex Sans font
 - `theme_ipsum_pub`:  Public Sans
+- `theme_ipsum_rc`:  Roboto Condensed
 - `theme_ipsum_tw`:  Titilium Web
 - `theme_modern_rc`: Roboto Condensed dark theme
 - `theme_ft_rc`: Dark theme based on FT's dark theme (Roboto Condensed)
@@ -64,16 +65,21 @@ Palettes/Named Colors:
 
 Fonts:
 
+- `font_ar`: Archivo SemiCondensed font name R variable aliases
+- `font_ar_bold`: Archivo SemiCondensed font name R variable aliases
+- `font_ar_italic`: Archivo SemiCondensed font name R variable aliases
+- `font_ar_sb`: Archivo SemiCondensed font name R variable aliases
+- `font_ar_sb_italic`: Archivo SemiCondensed font name R variable aliases
 - `font_an`: Arial Narrow font name R variable aliases
-- `font_es`:	Econ Sans font name R variable aliases
-- `font_es_bold`:	Econ Sans font name R variable aliases
-- `font_es_light`:	Econ Sans font name R variable aliases
+- `font_es`: Econ Sans font name R variable aliases
+- `font_es_bold`: Econ Sans font name R variable aliases
+- `font_es_light`: Econ Sans font name R variable aliases
 - `font_rc`: Roboto Condensed font name R variable aliases
 - `font_rc_light`: Roboto Condensed font name R variable aliases
-- `font_pub`:	Public Sans font name R variable aliases
-- `font_pub_bold`:	Public Sans font name R variable aliases
-- `font_pub_light`:	Public Sans font name R variable aliases
-- `font_pub_thin`:	Public Sans font name R variable aliases
+- `font_pub`: Public Sans font name R variable aliases
+- `font_pub_bold`: Public Sans font name R variable aliases
+- `font_pub_light`: Public Sans font name R variable aliases
+- `font_pub_thin`: Public Sans font name R variable aliases
 - `font_ps`: PlexSans font name R variable aliases
 - `font_ps_light`: PlexSans font name R variable aliases
 
@@ -106,9 +112,11 @@ Flexoki Palettes:
 
 Utilities:
 
+- `humanize_duration`: Convert duration to human-readable text
 - `flush_ticks`: Makes axis text labels flush on the ends
 - `ft_geom_defaults`:  Change geom defaults from black to custom lights for the FT theme
 - `gg_check`:  Spell check ggplot2 plot labels
+- `import_archivo`:  Import Archivo SemiCondensed font for use in charts
 - `import_econ_sans`:  Import Econ Sans Condensed font for use in charts
 - `import_plex_sans`:  Import IBM Plex Sans font for use in charts
 - `import_roboto_condensed`: Import Roboto Condensed font for use in charts
@@ -156,7 +164,7 @@ ggplot(mtcars, aes(mpg, wt)) +
   theme_ipsum_rc()
 ```
 
-### New FT Theme!
+### FT Theme
 
 ```{r ft}
 ggplot(mtcars, aes(mpg, wt)) +
@@ -188,6 +196,20 @@ ggplot(mpg, aes(displ, hwy)) +
 
 flush_ticks(gg)
 ```
+
+### NEW! Archivo
+
+```{r archivo}
+ggplot(mtcars, aes(mpg, wt)) +
+  geom_point(aes(color=factor(carb))) +
+  labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
+       title="Seminal ggplot2 scatterplot example",
+       subtitle="A plot that is only useful for demonstration purposes",
+       caption="Brought to you by the letter 'g'") +
+  scale_color_ipsum() +
+  theme_ipsum_archivo()
+```
+
 
 ### Scales (Color/Fill)
 
