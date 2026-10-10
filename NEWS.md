@@ -1,3 +1,21 @@
+# hrbrthemes 0.9.4
+
+- New `theme_ipsum_archivo()`: a precise theme built on the semi-condensed cut of
+  [Archivo](https://www.omnibus-type.com/fonts/archivo/). It ships with
+  `import_archivo()` for locating the bundled font files and the family aliases
+  `font_ar`, `font_ar_bold`, `font_ar_italic`, `font_ar_sb`, and
+  `font_ar_sb_italic`. The Archivo fonts are copyright Omnibus-Type and licensed
+  under the SIL Open Font License, 1.1.
+- New `humanize_duration()`: converts numeric seconds or a `difftime` into natural
+  language ("2 years and 39 days"), with `units_max` controlling how many time units
+  are shown.
+- `gg_check()` works with current {ggplot2} releases again.
+- Documentation and `R CMD check` warnings cleaned up, including parameter docs for
+  `scale_ft()`/`scale_ipsum()` and documentation pages for the shared color-scale
+  helpers.
+- `humanize_duration()` examples run during `R CMD check` instead of being wrapped
+  in `\dontrun{}`, and its documented default output was corrected.
+
 # hrbrthemes 0.8.0
 
 - Changes to conform to forthcoming {ggplot2} release

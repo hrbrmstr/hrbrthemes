@@ -16,10 +16,9 @@
 #' @return A character vector of the same length as \code{x}.
 #'
 #' @examples
-#' \dontrun{
-#' # Basic usage with numeric seconds
-#' humanize_duration(3661) # "1 hour, 1 minute, and 1 second"
-#' humanize_duration(3661, units_max = 2) # "1 hour and 1 minute"
+#' # Basic usage with numeric seconds; units_max defaults to 2
+#' humanize_duration(3661) # "1 hour and 1 minute"
+#' humanize_duration(3661, units_max = 3) # "1 hour, 1 minute, and 1 second"
 #'
 #' # Usage with difftime
 #' time_diff <- as.difftime(86400 * 2 + 3600, units = "secs")
@@ -27,7 +26,6 @@
 #'
 #' # Handling edge cases
 #' humanize_duration(c(0, NA)) # "0 seconds" NA
-#' }
 #' @export
 humanize_duration <- function(x, units_max = 2L) {
   secs <- if (inherits(x, "difftime")) as.numeric(x, units = "secs") else as.numeric(x)

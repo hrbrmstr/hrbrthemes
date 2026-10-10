@@ -27,10 +27,9 @@ and seconds, pluralizing units where necessary and applying English
 grammar rules (including the Oxford comma) for joining multiple units.
 }
 \examples{
-\dontrun{
-# Basic usage with numeric seconds
-humanize_duration(3661) # "1 hour, 1 minute, and 1 second"
-humanize_duration(3661, units_max = 2) # "1 hour and 1 minute"
+# Basic usage with numeric seconds; units_max defaults to 2
+humanize_duration(3661) # "1 hour and 1 minute"
+humanize_duration(3661, units_max = 3) # "1 hour, 1 minute, and 1 second"
 
 # Usage with difftime
 time_diff <- as.difftime(86400 * 2 + 3600, units = "secs")
@@ -38,5 +37,4 @@ humanize_duration(time_diff) # "2 days and 1 hour"
 
 # Handling edge cases
 humanize_duration(c(0, NA)) # "0 seconds" NA
-}
 }
