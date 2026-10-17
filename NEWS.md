@@ -1,3 +1,24 @@
+# hrbrthemes 0.9.5
+
+- New `theme_tern()`, `scale_color_tern()`, `scale_fill_tern()`,
+  `scale_color_tern_continuous()` and `scale_fill_tern_continuous()` for charts
+  that sit inside [Tern](https://tern.stencil.so) and beside omp charts. The
+  theme follows Tern's `dark-cosmos` chrome: page/panel `#07070d`, muted
+  `#8c88a3`, dim `#66627b`, `#101019` grid, no axis lines or ticks, and a
+  legend on top.
+- `omp_chart_palette()` reproduces the `--c1`..`--c6` series palette omp
+  derives for chart SVGs: accent in OKLCH, remaining hues at least 30 degrees
+  apart, lightness clamped to `[0.68, 0.82]` for dark themes (`[0.52, 0.66]`
+  for light), chroma to 0.19. With the `titanium` accent it returns
+  `#00b4ff`, `#ff8500`, `#68e371`, `#b474f4`, `#f05b93`, `#00dfe8`.
+- `tern_dark` and `omp_titanium` expose the two themes' colors as named
+  vectors.
+- `theme_tern()` defaults to Geist, the first family in omp's chart font
+  stack. The package ships Geist 1.8.1 TTFs (copyright Vercel, Inc., SIL Open
+  Font License 1.1) in `inst/fonts/geist`, with `import_geist()` to locate them
+  and the aliases `font_geist`, `font_geist_medium`, `font_geist_semibold`,
+  `font_geist_bold`, `font_geist_italic`, and `font_geist_medium_italic`.
+
 # hrbrthemes 0.9.4
 
 - New `theme_ipsum_archivo()`: a precise theme built on the semi-condensed cut of

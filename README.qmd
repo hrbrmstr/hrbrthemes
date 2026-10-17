@@ -65,6 +65,12 @@ Palettes/Named Colors:
 
 Fonts:
 
+- `font_geist`: Geist font name R variable aliases
+- `font_geist_bold`: Geist font name R variable aliases
+- `font_geist_italic`: Geist font name R variable aliases
+- `font_geist_medium`: Geist font name R variable aliases
+- `font_geist_medium_italic`: Geist font name R variable aliases
+- `font_geist_semibold`: Geist font name R variable aliases
 - `font_ar`: Archivo SemiCondensed font name R variable aliases
 - `font_ar_bold`: Archivo SemiCondensed font name R variable aliases
 - `font_ar_italic`: Archivo SemiCondensed font name R variable aliases
@@ -104,6 +110,20 @@ Bit12 Color Scales:
 - `scale_color_bit12_spectrum`: Distiller Color Scale Across All Bit12 Colors
 - `scale_fill_bit12_spectrum`: Distiller Fill Scale Across All Bit12 Colors
 
+Tern & omp Color Scales:
+
+- `theme_tern`: ggplot2 theme matching Tern's `dark-cosmos` chrome and omp chart styling
+- `scale_color_tern`: Discrete color scale using the omp chart series palette
+- `scale_fill_tern`: Discrete fill scale using the omp chart series palette
+- `scale_color_tern_continuous`: Continuous color scale through the omp chart palette
+- `scale_fill_tern_continuous`: Continuous fill scale through the omp chart palette
+- `omp_chart_palette`: Reproduce omp's `--c1`..`--c6` series palette from a theme accent
+
+Tern Palettes:
+
+- `tern_dark`: Named colors from Tern's `dark-cosmos` terminal theme
+- `omp_titanium`: Named colors from omp's `titanium` theme
+
 Flexoki Palettes:
 
 - `flexoki_light`: Vector of 8 colors in the light variant
@@ -117,6 +137,7 @@ Utilities:
 - `ft_geom_defaults`:  Change geom defaults from black to custom lights for the FT theme
 - `gg_check`:  Spell check ggplot2 plot labels
 - `import_archivo`:  Import Archivo SemiCondensed font for use in charts
+- `import_geist`:  Import Geist font for use in charts
 - `import_econ_sans`:  Import Econ Sans Condensed font for use in charts
 - `import_plex_sans`:  Import IBM Plex Sans font for use in charts
 - `import_roboto_condensed`: Import Roboto Condensed font for use in charts
@@ -390,6 +411,43 @@ names(bit12)[c(1,3,5,7,9,11)] |>
     caption="Using scale_fill_bit12_continuous()",
     theme = theme_ipsum(grid="")
   )
+```
+
+### Tern & omp Color Scales
+
+[Tern](https://tern.stencil.so) is a terminal, and [omp](https://github.com/can1357/oh-my-pi) draws charts inside it. The `tern_*` functions match that pairing: `theme_tern()` follows Tern's `dark-cosmos` chrome (page and panel `#07070d`, muted `#8c88a3`, dim `#66627b`, `#101019` grid, no axis lines or ticks), while the scales use the series palette omp derives for its chart SVGs. omp starts from the theme accent in OKLCH, picks six hues at least 30 degrees apart, clamps lightness to `[0.68, 0.82]` in dark themes (`[0.52, 0.66]` in light ones) and chroma to 0.19. `omp_chart_palette()` reproduces that derivation, so a different accent yields the palette omp would draw. With the `titanium` accent the six colors are `#00b4ff`, `#ff8500`, `#68e371`, `#b474f4`, `#f05b93`, and `#00dfe8`.
+
+```{r tern-01, fig.bg="#07070d"}
+ggplot(mpg, aes(class, fill=class)) +
+  geom_bar() +
+  scale_fill_tern() +
+  theme_tern() +
+  labs(
+    title="Tern / omp color palette",
+    subtitle="dark-cosmos chrome with the omp chart series colors",
+    caption="Using scale_fill_tern() + theme_tern()"
+  ) +
+  theme(legend.position="none")
+```
+
+```{r tern-02, fig.width=10, fig.height=5, fig.bg="#07070d"}
+ggplot(faithfuld, aes(waiting, eruptions, fill=density)) +
+  geom_tile() +
+  scale_fill_tern_continuous() +
+  theme_tern() +
+  labs(
+    title="Tern / omp continuous scale",
+    subtitle="A Lab ramp through the omp chart palette",
+    caption="Using scale_fill_tern_continuous()"
+  )
+```
+
+`theme_tern()` defaults to Geist, the first family in omp's chart font stack. The package ships Geist TTFs in `inst/fonts/geist`; run `import_geist()` to find them and install them on your system before rendering, or pass a different `base_family`.
+
+```{r tern-03, echo=TRUE, eval=FALSE}
+omp_chart_palette()
+omp_chart_palette("#5b4bb7")  # Tern dark-cosmos accent
+omp_chart_palette(light=TRUE)
 ```
 
 ### hrbrthemes Metrics

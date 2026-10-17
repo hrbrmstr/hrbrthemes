@@ -2,6 +2,14 @@ All R source code files are released under the MIT license.
 
 -----------------------------
 
+Geist has the following license/copyright:
+
+Copyright (c) 2023 Vercel, Inc.
+https://github.com/vercel/geist-font
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+A copy is bundled at inst/fonts/geist/OFL.txt.
+
 Inter has the following license/copyright:
 
 Copyright (c) 2016-2020 The Inter Project Authors.

@@ -6,7 +6,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![Signed
 by](https://img.shields.io/badge/Keybase-Verified-brightgreen.svg)](https://keybase.io/hrbrmstr)
 ![Signed commit
-%](https://img.shields.io/badge/Signed_Commits-10%25-lightgrey.svg)
+%](https://img.shields.io/badge/Signed_Commits-11%25-lightgrey.svg)
 
 [![cran
 checks](https://cranchecks.info/badges/worst/hrbrthemes.png)](https://cranchecks.info/pkgs/hrbrthemes)
@@ -84,6 +84,12 @@ Palettes/Named Colors:
 
 Fonts:
 
+- `font_geist`: Geist font name R variable aliases
+- `font_geist_bold`: Geist font name R variable aliases
+- `font_geist_italic`: Geist font name R variable aliases
+- `font_geist_medium`: Geist font name R variable aliases
+- `font_geist_medium_italic`: Geist font name R variable aliases
+- `font_geist_semibold`: Geist font name R variable aliases
 - `font_ar`: Archivo SemiCondensed font name R variable aliases
 - `font_ar_bold`: Archivo SemiCondensed font name R variable aliases
 - `font_ar_italic`: Archivo SemiCondensed font name R variable aliases
@@ -136,6 +142,26 @@ Bit12 Color Scales:
 - `scale_fill_bit12_spectrum`: Distiller Fill Scale Across All Bit12
   Colors
 
+Tern & omp Color Scales:
+
+- `theme_tern`: ggplot2 theme matching Tern’s `dark-cosmos` chrome and
+  omp chart styling
+- `scale_color_tern`: Discrete color scale using the omp chart series
+  palette
+- `scale_fill_tern`: Discrete fill scale using the omp chart series
+  palette
+- `scale_color_tern_continuous`: Continuous color scale through the omp
+  chart palette
+- `scale_fill_tern_continuous`: Continuous fill scale through the omp
+  chart palette
+- `omp_chart_palette`: Reproduce omp’s `--c1`..`--c6` series palette
+  from a theme accent
+
+Tern Palettes:
+
+- `tern_dark`: Named colors from Tern’s `dark-cosmos` terminal theme
+- `omp_titanium`: Named colors from omp’s `titanium` theme
+
 Flexoki Palettes:
 
 - `flexoki_light`: Vector of 8 colors in the light variant
@@ -151,6 +177,7 @@ Utilities:
   for the FT theme
 - `gg_check`: Spell check ggplot2 plot labels
 - `import_archivo`: Import Archivo SemiCondensed font for use in charts
+- `import_geist`: Import Geist font for use in charts
 - `import_econ_sans`: Import Econ Sans Condensed font for use in charts
 - `import_plex_sans`: Import IBM Plex Sans font for use in charts
 - `import_roboto_condensed`: Import Roboto Condensed font for use in
@@ -186,7 +213,7 @@ library(tidyverse)
 
 # current version
 packageVersion("hrbrthemes")
-## [1] '0.9.4'
+## [1] '0.9.5'
 ```
 
 ### Base theme (Arial Narrow)
@@ -471,14 +498,69 @@ names(bit12)[c(1,3,5,7,9,11)] |>
 
 <img src="man/figures/README-bit12-02-1.png" width="960" />
 
+### Tern & omp Color Scales
+
+[Tern](https://tern.stencil.so) is a terminal, and
+[omp](https://github.com/can1357/oh-my-pi) draws charts inside it. The
+`tern_*` functions match that pairing: `theme_tern()` follows Tern’s
+`dark-cosmos` chrome (page and panel `#07070d`, muted `#8c88a3`, dim
+`#66627b`, `#101019` grid, no axis lines or ticks), while the scales use
+the series palette omp derives for its chart SVGs. omp starts from the
+theme accent in OKLCH, picks six hues at least 30 degrees apart, clamps
+lightness to `[0.68, 0.82]` in dark themes (`[0.52, 0.66]` in light
+ones) and chroma to 0.19. `omp_chart_palette()` reproduces that
+derivation, so a different accent yields the palette omp would draw.
+With the `titanium` accent the six colors are `#00b4ff`, `#ff8500`,
+`#68e371`, `#b474f4`, `#f05b93`, and `#00dfe8`.
+
+``` r
+ggplot(mpg, aes(class, fill=class)) +
+  geom_bar() +
+  scale_fill_tern() +
+  theme_tern() +
+  labs(
+    title="Tern / omp color palette",
+    subtitle="dark-cosmos chrome with the omp chart series colors",
+    caption="Using scale_fill_tern() + theme_tern()"
+  ) +
+  theme(legend.position="none")
+```
+
+<img src="man/figures/README-tern-01-1.png" width="672" />
+
+``` r
+ggplot(faithfuld, aes(waiting, eruptions, fill=density)) +
+  geom_tile() +
+  scale_fill_tern_continuous() +
+  theme_tern() +
+  labs(
+    title="Tern / omp continuous scale",
+    subtitle="A Lab ramp through the omp chart palette",
+    caption="Using scale_fill_tern_continuous()"
+  )
+```
+
+<img src="man/figures/README-tern-02-1.png" width="960" />
+
+`theme_tern()` defaults to Geist, the first family in omp’s chart font
+stack. The package ships Geist TTFs in `inst/fonts/geist`; run
+`import_geist()` to find them and install them on your system before
+rendering, or pass a different `base_family`.
+
+``` r
+omp_chart_palette()
+omp_chart_palette("#5b4bb7")  # Tern dark-cosmos accent
+omp_chart_palette(light=TRUE)
+```
+
 ### hrbrthemes Metrics
 
 | Lang | \# Files |  (%) |  LoC |  (%) | Blank lines | (%) | \# Lines | (%) |
 |:-----|---------:|-----:|-----:|-----:|------------:|----:|---------:|----:|
-| R    |       26 | 0.43 | 2011 | 0.45 |         364 | 0.5 |     1324 | 0.5 |
+| R    |       29 | 0.44 | 2395 | 0.46 |         405 | 0.5 |     1476 | 0.5 |
 | SVG  |        2 | 0.03 |  150 | 0.03 |           0 | 0.0 |        0 | 0.0 |
 | JSON |        2 | 0.03 |   50 | 0.01 |           0 | 0.0 |        0 | 0.0 |
-| SUM  |       30 | 0.50 | 2211 | 0.50 |         364 | 0.5 |     1324 | 0.5 |
+| SUM  |       33 | 0.50 | 2595 | 0.50 |         405 | 0.5 |     1476 | 0.5 |
 
 {cloc} 📦 metrics for hrbrthemes
 

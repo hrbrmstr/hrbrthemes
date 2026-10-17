@@ -1,8 +1,8 @@
 Package: hrbrthemes
 Type: Package
 Title: Additional Themes, Theme Components and Utilities for 'ggplot2'
-Version: 0.9.4
-Date: 2026-10-06
+Version: 0.9.5
+Date: 2026-10-16
 Authors@R: c(
       person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"),
              comment = c(ORCID = "0000-0001-5670-2640")),
@@ -19,12 +19,14 @@ Authors@R: c(
       person("Thomas J.", "Leeper", role = c("ctb"), email = "thosjleeper@gmail.com",
              comment = c(ORCID = "0000-0003-4097-6326")),
       person("Joris", "Meys", email = "Joris.Meys@UGent.be", role = c("ctb")),
-      person("Steph", "Ango", role = c("ctb"), comment = "Flexoki creator")
+      person("Steph", "Ango", role = c("ctb"), comment = "Flexoki creator"),
+      person("Vercel, Inc.", role = c("cph"), comment = "Geist Font")
     )
 Maintainer: Bob Rudis <bob@rud.is>
 Description: A compilation of extra 'ggplot2' themes, scales and utilities, including a
     spell check function for plot label fields and an overall emphasis on typography.
-    A copy of the 'Google' font 'Roboto Condensed' is also included.
+    Copies of the 'Google' font 'Roboto Condensed' and the 'Vercel' font
+    'Geist' are also included.
 Copyright: file inst/COPYRIGHTS
 License: MIT + file LICENSE
 Encoding: UTF-8
